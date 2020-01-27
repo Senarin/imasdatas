@@ -15,4 +15,4 @@
 이 저장소의 일부 페이지는 [matsurihi.me](https://www.matsurihi.me/) (日) 및 [Starlight DB](https://starlight.kirara.ca/)에서 제공하는 컨텐츠를 이용합니다. 해당 컨텐츠의 정확성 및 무결성은 보장할 수 없으며, 해당 제공처의 사정에 따라 업데이트가 지연되거나 장애가 발생할 수 있는 점 양해 부탁드립니다.
 
 ## 의견 보내기
-이 사이트(저장소)에 대한 의견이나 피드백은 (GitHub 계정이 있을 경우) [이 저장소에 대한 이슈](https://github.com/Senarin/Senarin.github.io/issues/1)로 남겨주세요.
+이 사이트(저장소)에 대한 의견이나 피드백은 (GitHub 계정이 있을 경우) [이 저장소에 대한 이슈](https://github.com/Senarin/imasdatas/issues)로 남겨주세요.
