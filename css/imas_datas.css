@@ -9,7 +9,7 @@ line-height: 144%;
 
 
 #page_imasbirthday{
-background-image: url('./assets/imasprojects_trans.png');
+background-image: url('/assets/imasprojects_trans.png');
 background-size: 34.6%;
 background-repeat: no-repeat;
 background-position: center;
@@ -17,7 +17,7 @@ background-attachment: fixed;
 }
 
 #page_starlightevents,#page_starlightsongs,#page_starlightgachas,#page_cgidolsmisc,#page_cgelectiondatas,#page_cgelection7th,#page_cgelection8th,#page_imascg_idolnumbers{
-background-image: url('./assets/imas_cg_emblem_trans.png');
+background-image: url('/assets/imas_cg_emblem_trans.png');
 background-size: 17.3%;
 background-repeat: no-repeat;
 background-position: center;
@@ -25,7 +25,7 @@ background-attachment: fixed;
 }
 
 #page_theatersongs,#page_theaterevents,#page_theatergachas{
-background-image: url('./assets/imas_millionstars_emblem_trans.png');
+background-image: url('/assets/imas_millionstars_emblem_trans.png');
 background-size: 17.3%;
 background-repeat: no-repeat;
 background-position: center;
@@ -375,7 +375,7 @@ overflow: auto;
 text-align: center;
 justify-content: center;
 background-color: #F5F8FA;
-background-image: url('./assets/birthday_icon_trans.png');
+background-image: url('/assets/birthday_icon_trans.png');
 background-repeat: no-repeat;
 background-size: 87px;
 background-position: right bottom;
