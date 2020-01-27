@@ -1,0 +1,63 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url(//fonts.googleapis.com/earlyaccess/notosansjp.css);
+
+body{
+font-family: "Noto Sans KR", "Malgun Gothic";
+background-color: #FAFAFA;
+}
+
+
+span{
+color: #282828;
+text-decoration: none;
+}
+
+a:link{
+color: #BB0011;
+text-decoration: none;
+}
+a:active{
+color: #CCCCCC;
+text-decoration: none;
+}
+a:visited{
+color: #777777;
+text-decoration: none;
+}
+a:hover{
+color: #AAAAAA;
+text-decoration: none;
+}
+
+blockquote{
+font-family: "Courier New"
+}
+
+abbr{cursor: help;}
+
+table,tr,td{
+border: 1px solid #000000;
+border-collapse: collapse;
+}
+
+ul, ol{
+margin-left: -1.25em;
+margin-right: 1em;
+font-size: 13px;
+}
+
+.notyetavail{color: #DEDEDE;}
+
+.fonts_small{font-size: 72%;}
+
+#headtext{
+text-align: center;
+background-color: #F5F8FA;
+padding-top: 1em;
+padding-bottom: 1em;
+border-radius: 1.4em;
+}
+
+label{font-size: 80%;}
+
+.uinotes{font-size: 9px;}

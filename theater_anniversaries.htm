@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>시어터 데이즈(밀리시타) 주년 이벤트 데이터 (Beta)</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" type="text/css" href="./css/imas_datas.css" />
+<link rel="stylesheet" type="text/css" href="/CommonFiles/css/pageload.css" />
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" integrity="sha384-xyZLiqnBEFn1hDkS8VeG/YHoqOjS/ucimT8TI6GDr9+ZP1UNbZr6d/q0ldMi/xvL" crossorigin="anonymous" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="./js/pace.min.js"></script>
+<script type="text/javascript" src="./js/imas_events.js"></script>
+<script type="text/javascript" src="imas_eventdata.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+ getTDGameClientInfo.getContent();
+ showTDAnniversaryEventData.retrieveAll();
+ setInterval("showTDAnniversaryEventData.retrieveData();",3600 * 1000);
+ setInterval("showTDAnniversaryEventData.retrieveTotal();",1800 * 1000);
+});
+</script>
+</head>
+<body id="page_theateranniversaires" onload="showTDAnniversaryEventData.pageInit();">
+<div id="headtext">
+<h1><img src="./assets/theaterdays_logo_kr.png" id="theaterdayslogo" alt="Theater Days" title="Theater Days" />&nbsp;시어터 데이즈 n주년 이벤트 데이터 (Beta)</h1>
+<div id="author_info">제작자 : <a href="https://hanaya.me/">하나야</a> (<a href="http://blog.hanaya.me/">블로그</a>)</div>
+<div id="recent_edit">최근 수정 2019.7.11</div>
+</div>
+<p>(<a href="./">첫 페이지로 가기</a>)</p>
+<!-- ... -->
+<ul>
+ <li>같이 보기 : <a href="./theater_events.htm">역대 이벤트 일람</a>, <a href="./theater_gachas.htm">가챠 갱신 일람</a>, <a href="./starlight_events.htm">데레스테 이벤트 일람</a></li>
+</ul>
+
+<h3 style="text-align: center; color: #FF0000;">[중요] 이 페이지는 실험적이며 제공처의 사정에 따라 예고없이 변경되거나 폐지될 수 있습니다!!</h3>
+
+<div id="theater_client_info">
+ <h3>게임 버전 관련 정보 (현지판 기준)</h3>
+ <div id="tdclient_info_detail"><img src="./assets/loading.gif" style="width: 24px; height: auto;" alt="Loading" /> 가져오는 중...</div>
+ <script>setInterval(function(){getTDGameClientInfo.getContent();},(900 * 1000));</script>
+ <span style="font-size: 0.85em;"><span id="lastupdate_clientinfo"></span> / 정보제공: <a href="https://matsurihi.me">matsurihi.me</a> (日)</span>
+</div>
+
+<div class="anniv_countdown">
+ <h3>다음 n주년(6월 29일)까지 남은 시간</h3>
+ <div id="countdown_time_anniv"></div>
+ <script>var eAnnivTimestamp = new Array(6,29,0,0,0);setInterval(function(){showRemainingTime.showCountdownAnniversary(eAnnivTimestamp,"countdown_time_anniv");},50);</script>
+</div>
+
+<div id="theater_select_idol">
+ <h3>조회하려는 이벤트 및 아이돌을 선택하세요.</h3>
+ <select id="anniv_select" onchange="showTDAnniversaryEventData.retrieveAll();" onselect="showTDAnniversaryEventData.retrieveAll();">
+  <option value="1">1주년 (BRAND★NEW★PERFORM@NCE!!!)</option>
+  <option value="2" selected="selected">2주년 (UNI-ON@IR!!!!)</option>
+ </select>
+ <select id="idol_select" onchange="showTDAnniversaryEventData.retrieveAll();" onselect="showTDAnniversaryEventData.retrieveAll();">
+  <option value="0">(아이돌 선택)</option>
+ </select>
+
+ <div style="text-align: center; font-size: 0.85em; margin-top: 2em;">
+  [<a href="javascript:;" onclick="showTDAnniversaryEventData.goIdolBoard(1);">선택한 아이돌의 컨벤션 센터(전용 게시판) 보기</a>]<br /><span style="font-size: 0.85em;">(2주년 이벤트의 데이터만 조회 가능하며, 작성은 게임 내에서 가능합니다)</span>
+ </div>
+ <div style="text-align: center; font-size: 0.85em;">
+  [<a href="javascript:;" onclick="showTDAnniversaryEventData.goIdolInfo();">선택한 아이돌의 정보 페이지 바로가기</a>]
+ </div>
+</div>
+
+<div class="theater_events">
+
+ <h3 id="please_select">조회하려는 아이돌을 선택해주세요</h3>
+ <h3 id="idolrank_desc" style="display: none;"><span id="show_idolname_ml"></span>의 개별 랭킹 정보<br />(<span id="rank_timestamp"></span> 현재)</h3>
+
+ <div style="text-align: center; font-size: 0.85em; margin-bottom: 1em;">정보제공: <a href="https://matsurihi.me">matsurihi.me</a> (日)</div>
+
+ <table class="mlevents_list" style="width: 26em; text-align: center;">
+  <tr>
+   <td width="20%">순위</td>
+   <td width="80%">포인트 컷</td>
+  </tr>
+  <tr>
+   <td><b>1위</b></td>
+   <td id="idol_eventrank_1">--</td>
+  </td>
+  <tr>
+   <td><b>2위</b></td>
+   <td id="idol_eventrank_2">--</td>
+  </td>
+  <tr>
+   <td><b>3위</b></td>
+   <td id="idol_eventrank_3">--</td>
+  </td>
+  <tr>
+   <td>10위</td>
+   <td id="idol_eventrank_10">--</td>
+  </td>
+  <tr>
+   <td>100위</td>
+   <td id="idol_eventrank_100">--</td>
+  </td>
+  <tr>
+   <td>1000위</td>
+   <td id="idol_eventrank_1000">--</td>
+  </td>
+ </table>
+ 
+ <h3 id="totalrank_desc">전체 랭킹 (<span id="rank_timestamp_overall"></span> 현재)</h3>
+
+ <div style="text-align: center; font-size: 0.85em; margin-bottom: 1em;">정보제공: <a href="https://matsurihi.me">matsurihi.me</a> (日)</div>
+
+ <table class="mlevents_list" style="width: 26em; text-align: center;">
+  <tr>
+   <td width="20%">순위</td>
+   <td width="80%">포인트 컷</td>
+  </tr>
+  <tr>
+   <td><b>1위</b></td>
+   <td id="idol_totalrank_1">--</td>
+  </td>
+  <tr>
+   <td>100위</td>
+   <td id="idol_totalrank_100">--</td>
+  </td>
+  <tr>
+   <td>2500위</td>
+   <td id="idol_totalrank_2500">--</td>
+  </td>
+  <tr>
+   <td>5000위</td>
+   <td id="idol_totalrank_5000">--</td>
+  </td>
+  <tr>
+   <td>10000위</td>
+   <td id="idol_totalrank_10000">--</td>
+  </td>
+  <tr>
+   <td>25000위</td>
+   <td id="idol_totalrank_25000">--</td>
+  </td>
+  <tr>
+   <td>50000위</td>
+   <td id="idol_totalrank_50000">--</td>
+  </td>
+ </table>
+
+</div>
+
+<hr style="width: 100%; margin-top: 3em;" />
+
+<p id="page_disclaimer">
+<b>면책 조항</b> : 이 페이지는 <a href="http://www.bandainamcoent.co.kr/">반다이 남코 엔터테인먼트</a>와 <b>직접적 연관이 없으며, 작성자는 이 페이지를 통해 그 어떠한 금전적 이득도 취하고 있지 않습니다.</b><br />
+&quot;아이돌마스터&quot;, &quot;THE iDOLM@STER&quot;,&quot;PROJECT iM@S&quot; 및 관련 상표/공식 컨텐츠는 대한민국 및 일본, 그 외 국가에서 반다이 남코 엔터테인먼트의 재산입니다. (<a href="./license_disclaimer.htm">상세 면책 조항 및 사용권 정보</a>)<br />
+<div style="text-align: center;">(<a href="https://github.com/Senarin/Senarin.github.io">사이트 소스 및 이용 안내</a>)</div>
+</p>
+
+</body>
+</html>

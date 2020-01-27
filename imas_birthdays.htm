@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<title>아이마스 시리즈 아이돌 및 기타 캐릭터 생일 일람</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" type="text/css" href="./css/imas_datas.css" />
+<link rel="stylesheet" type="text/css" href="./css/pageload.css" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<script type="text/javascript" src="./js/common.js"></script>
+<script type="text/javascript" src="./js/pace.min.js"></script>
+<script type="text/javascript" src="./js/imas_birthdays.js"></script>
+<script type="text/javascript" src="./js/imas_types.js"></script>
+</head>
+<body id="page_imasbirthday" onload="initPage();">
+
+<!-- 이 페이지는 최신 버전의 모던 웹 브라우저(엣지/크롬/파이어폭스 등)에 최적화되어있습니다. -->
+
+<div id="scrollbutton">
+<a href="javascript:;" onclick="toPageTop();">&#9650;</a>&nbsp;&nbsp;<a href="javascript:;" onclick="toPageBottom();">&#9660;</a>
+</div>
+
+<div id="headtext">
+<h1><img src="./assets/imasproject_logo_trans.png" id="imaslogo" alt="PROJECT iM@S" title="PROJECT iM@S" />&nbsp;아이돌마스터 시리즈 캐릭터 생일 일람</h1>
+<div id="author_info">제작자 : <a href="https://hanaya.me/">하나야</a> (<a href="http://blog.hanaya.me/">블로그</a>)</div>
+<div id="recent_edit">최근 수정 2020.1.21</div>
+<div id="date_now"></div>
+<div id="series_birthday"></div>
+<div id="current_browser"></div>
+</div>
+
+<p>(<a href="./">첫 페이지로 가기</a>)</p>
+
+
+<div id="birthday_display_01">
+ <div id="birthday_today">
+  <h3>오늘(<span id="birthday_date_01"></span>)이 생일인 아이돌 &amp; 기타 캐릭터<br /><span style="font-size: 72%;">[<a href="javascript:;" onclick="location.reload();">새로고침</a>] [<a href="javascript:;" onclick="toggleBirthdayInfo();">생일이 가까운 아이돌 보기</a>]</span></h3>
+
+  <div id="non_birthday">오늘이 생일인 아이돌 혹은 캐릭터가 없습니다</div>
+  <div id="birthtoday_765"></div>
+  <div id="birthtoday_876"></div>
+  <div id="birthtoday_346"></div>
+  <div id="birthtoday_million"></div>
+  <div id="birthtoday_315"></div>
+  <div id="birthtoday_283"></div>
+  <div id="birthtoday_etc"></div>
+  <input type="hidden" name="birth_count" id="birthday_count" value="0" />
+ </div>
+</div>
+<div id="birthday_display_02">
+ <div id="birthday_nearest">
+ <h3>생일이 오늘(<span id="birthday_date_02"></span>) 전후인 아이돌 &amp; 기타 캐릭터<br /><span style="font-size: 72%;">[<a href="javascript:;" onclick="location.reload();">새로고침</a>] [<a href="javascript:;" onclick="toggleBirthdayInfo();">오늘이 생일인 아이돌 보기</a>]</span></h3>
+
+  <table width="100%" id="nearest_by_series">
+   <tr><td>765 프로덕션 전체: 본가(AS) 및 밀리언(ML)</td></tr>
+   <tr>
+    <td>
+    이전 : <span id="prevbirthday_765"></span><br />
+    다음 : <span id="nextbirthday_765"></span>
+    </td>
+   </tr>
+   <tr><td>신데렐라 걸즈</td></tr>
+   <tr>
+    <td>
+    이전 : <span id="prevbirthday_cg"></span><br />
+    다음 : <span id="nextbirthday_cg"></span>
+    </td>
+   </tr>
+   <tr><td>SideM (315 프로덕션)</td></tr>
+   <tr>
+    <td>
+    이전 : <span id="prevbirthday_315"></span><br />
+    다음 : <span id="nextbirthday_315"></span>
+    </td>
+   </tr>
+   <tr><td>샤이니 컬러즈 (283 프로덕션)</td></tr>
+   <tr>
+    <td>
+    이전 : <span id="prevbirthday_283"></span><br />
+    다음 : <span id="nextbirthday_283"></span>
+    </td>
+   </tr>
+  </table>
+ </div>
+</div>
+
+
+<p id="idol_legend_description">
+ <ul>
+  <li>일러두기
+   <ul>
+    <li>아래 표에서 <b>굵은 글씨</b>는 해당 시리즈(프로젝트) 내에서 센터격인 아이돌이며</li>
+    <li>아이돌 이름의 글자색은 해당 아이돌의 이미지 컬러 혹은 해당하는 속성을 나타내는 색입니다.</li>
+    <li><span style="background-color: #FFFFEE;">옅은 노랑색 배경</span>은 오늘 날짜에 해당하는 월 혹은 분기에 생일이 있는 아이돌들이며</li>
+    <li><span style="background-color: #EEEEAA;">짙은 노랑색 배경</span>은 오늘이 생일인 아이돌입니다.</li>
+    <li>각 아이돌 이름에 걸려있는 링크는 특별한 경우가 아닌 이상 대부분 해당 아이돌의 &#x300E;<a href="https://idreamlost.tistory.com/">iDRE@MLOST DB</a>&#x300F;상 항목의 주소입니다.</li>
+    <li>각 아이돌 캐릭터에 대한 캐스팅(성우) 목록은 <a href="https://878production.github.io/imas_voices.htm">이 페이지</a>를 참조하세요.</li>
+    <li>기타 아이마스 관련 기념일 목록은 <a href="https://878production.github.io/imas_anniversaries.htm">이 페이지</a>를 참조하세요.</li>
+    <li>좀 더 상세하게 정리된 목록은 <a href="http://imas.inven.co.kr/">아이마스 인벤</a> 내 <a href="http://imas.inven.co.kr/dataninfo/idol/">아이돌 DB</a>를 참조하세요.</li>
+    <li>각 아이돌 캐릭터의 시리즈 내 신규 등장시기별 목록은 &#x300E;iDRE@MLOST DB&#x300F;의 <a href="https://idreamlost.tistory.com/notice/330">해당 게시물</a>을 참조하세요.</li>
+   </ul>
+  </li>
+  <li>이 페이지에서 다루는 범위 및 대상
+   <ul>
+    <li>실사 미디어 프로젝트인 &#x300E;아이돌마스터.KR&#x300F; (통칭 &#x300E;R.G.P(Real Girls Project)&#x300F;) 및 스핀오프 작품인 &#x300E;아이돌마스터 제노그라시아&#x300F;를 제외한 모든 아이돌마스터 시리즈.</li>
+	<li>프로필에 생일이 기재되어 있는 모든 아이돌 및 기타 캐릭터</li>
+   </ul>
+  </li>
+ </ul>
+</p>
+
+<hr style="width: 100%;" />
+
+<div class="pageindex" id="series_index">
+<h4 class="indexhead">목차</h4>
+ <ul class="sectionlist">
+  <li class="sectionlist" id="s_765876"><a name="seriesmark_01" href="#series_765876">1. 765 프로덕션 올스타즈 (본가) &amp; 디어리 스타즈 (876 프로덕션)</a></li>
+  <li class="sectionlist" id="s_cg"><a name="seriesmark_02" href="#series_346">2. 신데렐라 걸즈 (346 프로덕션)</a></li>
+  <li class="sectionlist" id="s_million"><a name="seriesmark_03" href="#series_million">3. 밀리언 라이브 (765 라이브 시어터/39 프로젝트)</a></li>
+  <li class="sectionlist" id="s_315"><a name="seriesmark_04" href="#series_315">4. SideM (315 프로덕션)</a></li>
+  <li class="sectionlist" id="s_283"><a name="seriesmark_05" href="#series_283">5. 샤이니 컬러즈 (283 프로덕션)</a></li>
+  <li class="sectionlist" id="s_etc"><a name="seriesmark_etc" href="#series_etc">번외. 시리즈 내 기타</a></li>
+ </ul>
+</div>
+
+<!-- The Original Series -->
+<h2><a name="series_765876" href="#seriesmark_01">1.</a> <img src="./assets/imas_allstars_emblem.png" id="allstarslogo" alt="765PRO AllStars" />&nbsp;<time datetime="2005-07-26T09:00:00+09:00">765 프로덕션 올스타즈 (본가)</time> &amp; <img src="./assets/imas_876pro_emblem.png" id="dearlystarslogo" alt="Dearly Stars" />&nbsp;<time datetime="2009-09-17T09:00:00+09:00">디어리 스타즈 (876 프로덕션)</time></h2>
+
+<!-- 올스타즈 : 아이돌 13인 + 기타 1인 -->
+<!-- 디어리 스타즈 : 아이돌 3인 -->
+<!-- 올스타즈 대표곡 : THE iDOLM@STER ("우타마스") / READY!! / 자신 REST@RT / M@STERPIECE -->
+<!-- 디어리 스타즈 대표곡 : "HELLO!!" / 해피즈 -->
+
+<p id="as_legend_description">
+ <ul>
+ <li>시리즈 런칭일 : 2005/07/26 (올스타즈), 2009/09/17 (디어리 스타즈)</li>
+  <li>아래 목록에서
+   <ul>
+    <li><span style="text-decoration: underline;">밑줄 친 글씨</span>에 해당하는 아이돌은 디어리 스타즈에서 등장한 오리지널 아이돌입니다.</li>
+    <li>각 아이돌 이름을 클릭하면 나오는 링크에서 해당 아이돌의 소셜 게임 카드 일러스트를 볼 수 있습니다.</li>
+   </ul>
+  </li>
+ </ul>
+</p>
+
+
+<div id="birthdays_765876">
+<table width="961">
+<tr style="text-align: center; font-weight: bold;"><td>1분기 (1~3월)</td><td>2분기 (4~6월)</td><td>3분기 (7~9월)</td><td>4분기 (10~12월)</td></tr>
+<tr class="idolnames">
+ <td id="as_quarter_1">
+  <ul>
+   <li id="as_birthday_121"><span id="allstars_8" class="scriptlinks" style="color: #a6126a;" onclick="toggleDBLink(121);">시죠 타카네</span> (1월 21일)<div class="idollinks" id="idollinks_121"><span class="cgcool"><a style="color:inherit;" href="https://idreamlost.tistory.com/64">CG</a></span>&nbsp;/&nbsp;<span class="mlvocal"><a style="color:inherit;" href="https://idreamlost.tistory.com/211">ML</a></span></div></li>
+   <li id="as_birthday_225"><span id="allstars_2" class="scriptlinks" style="color: #2743d2;" onclick="toggleDBLink(225);"><b>키사라기 치하야</b></span> (2월 25일)<div class="idollinks" id="idollinks_225"><span class="cgcool"><a style="color:inherit;" href="https://idreamlost.tistory.com/61">CG</a></span>&nbsp;/&nbsp;<span class="mlvocal"><a style="color:inherit;" href="https://idreamlost.tistory.com/205">ML</a></span></div></li>
+   <li id="ds_birthday_307"><span class="scriptlinks dsidols" style="color: #0080FF;" onclick="toggleDBLink(307);"><b>미즈타니 에리</b></span> (3월 7일)<div class="idollinks" id="idollinks_307"><span class="cgcool"><a style="color:inherit;" href="https://idreamlost.tistory.com/309">CG</a></span></div></li>
+   <li id="as_birthday_325"><span id="allstars_5" class="scriptlinks" style="color: #f39939;" onclick="toggleDBLink(325);">타카츠키 야요이</span> (3월 25일)<div class="idollinks" id="idollinks_325"><span class="cgcute"><a style="color:inherit;" href="https://idreamlost.tistory.com/29">CG</a></span>&nbsp;/&nbsp;<span class="mldance"><a style="color:inherit;" href="https://idreamlost.tistory.com/208">ML</a></span></div></li>
+  </ul>
+ </td>
+ <td id="as_quarter_2">
+  <ul>
+   <li id="as_birthday_403"><span id="allstars_1" class="scriptlinks" style="color: #e22b30;" onclick="toggleDBLink(403);"><b>아마미 하루카</b></span> (4월 3일)<div class="idollinks" id="idollinks_403"><span class="cgcute"><a style="color:inherit;" href="https://idreamlost.tistory.com/33">CG</a></span>&nbsp;/&nbsp;<span class="mlvocal"><a style="color:inherit;" href="https://idreamlost.tistory.com/204">ML</a></span></div></li>
+   <li id="as_birthday_505"><span id="allstars_7" class="scriptlinks" style="color: #fd99e1;" onclick="toggleDBLink(505);">미나세 이오리</span> (5월 5일)<div class="idollinks" id="idollinks_505"><span class="cgpassion"><a style="color:inherit;" href="https://idreamlost.tistory.com/97">CG</a></span>&nbsp;/&nbsp;<span class="mlvocal"><a style="color:inherit;" href="https://idreamlost.tistory.com/210">ML</a></span></div></li>
+   <li id="as_birthday_522"><span id="allstars_11" class="scriptlinks" style="color: #ffe43f;" onclick="toggleDBLink(522);">후타미 아미&amp;마미</span> (5월 22일)<div class="idollinks" id="idollinks_522"><span class="cgpassion"><a style="color:inherit;" href="https://idreamlost.tistory.com/93">CG1</a>&amp;<a style="color:inherit;" href="https://idreamlost.tistory.com/94">CG2</a></span>&nbsp;/&nbsp;<span class="mlvisual"><a style="color:inherit;" href="https://idreamlost.tistory.com/214">ML1</a>&amp;<a style="color:inherit;" href="https://idreamlost.tistory.com/215">ML2</a></span></div></li>
+   <li id="as_birthday_623"><span id="allstars_9" class="scriptlinks" style="color: #01a860;" onclick="toggleDBLink(623);">아키즈키 리츠코</span> (6월 23일)<div class="idollinks" id="idollinks_623"><span class="cgcool"><a style="color:inherit;" href="https://idreamlost.tistory.com/63">CG</a></span>&nbsp;/&nbsp;<span class="mlvisual"><a style="color:inherit;" href="https://idreamlost.tistory.com/212">ML</a></span></div></li>
+   <li id="ds_birthday_625"><span class="scriptlinks dsidols" style="color: #FF0080;" onclick="toggleDBLink(625);"><b>히다카 아이</b></span> (6월 25일)<div class="idollinks" id="idollinks_625"><span class="cgcute"><a style="color:inherit;" href="https://idreamlost.tistory.com/308">CG</a></span></li>
+  </ul>
+ </td>
+ <td id="as_quarter_3">
+  <ul>
+   <li id="as_birthday_719"><span id="allstars_10" class="scriptlinks" style="color: #9238be;" onclick="toggleDBLink(719);">미우라 아즈사</span> (7월 19일)<div class="idollinks" id="idollinks_719"><span class="cgcool"><a style="color:inherit;" href="https://idreamlost.tistory.com/62">CG</a></span>&nbsp;/&nbsp;<span class="mlvocal"><a style="color:inherit;" href="https://idreamlost.tistory.com/213">ML</a></span></div></li>
+   <li id="as_birthday_829"><span id="allstars_6" class="scriptlinks" style="color: #515558;" onclick="toggleDBLink(829);">키쿠치 마코토</span> (8월 29일)<div class="idollinks" id="idollinks_829"><span class="cgcute"><a style="color:inherit;" href="https://idreamlost.tistory.com/30">CG</a></span>&nbsp;/&nbsp;<span class="mldance"><a style="color:inherit;" href="https://idreamlost.tistory.com/209">ML</a></span></div></li>
+   <li id="as_birthday_909"><span style="color: #00AA00;">오토나시 코토리</span> (9월 9일)</li>
+   <li id="ds_birthday_915"><span class="scriptlinks dsidols" style="color: #00FF80;" onclick="toggleDBLink(915);"><b>아키즈키 료</b></span> (9월 15일)<div class="idollinks" id="idollinks_915"><span class="cgpassion"><a style="color:inherit;" href="https://idreamlost.tistory.com/310">CG</a></span>&nbsp;/&nbsp;<span class="mental315"><a style="color:inherit;" href="https://idreamlost.tistory.com/296">SideM</a></span></div></li>
+  </ul>
+ </td>
+ <td id="as_quarter_4">
+  <ul>
+   <li id="as_birthday_1010"><span id="allstars_13" class="scriptlinks" style="color: #01adb9;" onclick="toggleDBLink(1010);">가나하 히비키</span> (10월 10일)<div class="idollinks" id="idollinks_1010"><span class="cgcute"><a style="color:inherit;" href="https://idreamlost.tistory.com/31">CG</a></span>&nbsp;/&nbsp;<span class="mldance"><a style="color:inherit;" href="https://idreamlost.tistory.com/216">ML</a></span></div></li>
+   <li id="as_birthday_1123"><span id="allstars_3" class="scriptlinks" style="color: #b4e04b;" onclick="toggleDBLink(1123);"><b>호시이 미키</b></span> (11월 23일)<div class="idollinks" id="idollinks_1123"><span class="cgpassion"><a style="color:inherit;" href="https://idreamlost.tistory.com/95">CG</a></span>&nbsp;/&nbsp;<span class="mlvisual"><a style="color:inherit;" href="https://idreamlost.tistory.com/206">ML</a></span></div></li>
+   <li id="as_birthday_1224"><span id="allstars_4" class="scriptlinks" style="color: #d3dde9;" onclick="toggleDBLink(1224);">하기와라 유키호</span> (12월 24일)<div class="idollinks" id="idollinks_1224"><span class="cgpassion"><a style="color:inherit;" href="https://idreamlost.tistory.com/92">CG</a></span>&nbsp;/&nbsp;<span class="mlvisual"><a style="color:inherit;" href="https://idreamlost.tistory.com/207">ML</a></span></div></li>
+  </ul>
+ </td>
+</tr>
+</table>
+</div>
+
+<!-- The Next Generation -->
+<h2><a name="series_346" href="#seriesmark_02">2.</a><img src="./assets/imas_cg_emblem.png" id="cinderellagirlslogo" alt="Cinderella Girls" />&nbsp;<time datetime="2011-11-28T09:00:00+09:00">신데렐라 걸즈 (346 프로덕션)</time></h2>
+
+<!-- 아이돌 190+3인 + 트레이너 4인 + 기타 1인 -->
+<!-- 대표곡 : 부탁할게! 신데렐라 / Star!! / 닿아라! 아이돌 / BEYOND THE STARLIGHT / EVERMORE / 일루져니스타! / 걸즈 인 더 프론티어 -->
+
+<p id="cg_legend_description">
+ <ul>
+  <li>시리즈 런칭일 : 2011/11/28 (소셜 게임), 2015/09/03 (스타라이트 스테이지)
+   <ul>
+    <li>한국 서비스 (소셜 게임) : 2014/12/03 (정식 런칭), 2016/03/14 (서비스 중단)</li>
+   </ul>
+  </li>
+  <li>아래 목록에서
+   <ul>
+    <li><span style="text-decoration: underline;">밑줄 친 글씨</span>에 해당하는 아이돌은 자신의 <b>신데렐라 마스터(CM) 싱글 앨범</b>이 출시되었거나 출시가 확정된 경우입니다.</li>
+    <li><sup>&#8224;</sup> 표시에 해당하는 아이돌은 CM 싱글 멤버는 아니지만 성우가 배정되었거나 배정이 확정된 경우입니다.</li>
+    <li><sup>&#8225;</sup> 표시에 해당하는 아이돌은 소셜 게임이나 스타라이트 스테이지 둘 중 한쪽에만 등장한 경우입니다.</li>
+    <li>아이돌 이름의 글자색별 속성 이름은 다음과 같습니다 : <span class="cgcute">큐트</span>, <span class="cgcool">쿨</span>, <span class="cgpassion">패션</span></li>
+    <li>같이 보기 : <a href="./cg_idolnumbers.htm">아이돌 넘버 일람</a>, <a href="./cgidols_misc.htm">아이돌 관련 기타 일람</a></li>
+   </ul>
+  </li>
+  <li>각 아이돌의 스타라이트 스테이지(데레스테) 게임 상에서의 일러스트는 <a href="https://starlight.kirara.ca/">&#x300E;스타라이트 DB&#x300F;</a>(고화질) 및 <a href="http://imas.gamedbs.jp/cgss/">이 사이트</a>를 참조하세요.</li>
+ </ul>
+</p>
+
+<p style="font-size: 0.85em;"><b>생일별 캐릭터 목록 (오리지널)</b></p>
+<div id="birthdays_cg">
+<table width="1111">
+<tr style="text-align: center; font-weight: bold;"><td width="33%">1월 (13명)</td><td width="33%">2월 (13명)</td><td width="33%">3월 (18명)</td></tr>
+<tr class="idolnames">
+ <td id="cg_month_1">
+  <ul>
+   <li id="cg_birthday_101"><a href="https://idreamlost.tistory.com/28"><span class="cgcute">도묘지 카린</span></a><sup>&#8224;</sup>, <a href="https://idreamlost.tistory.com/113"><span class="cgcool">타카후지 카코</span></a><sup>&#8224;</sup> (1일)</li>
+   <li id="cg_birthday_103"><a href="https://idreamlost.tistory.com/162"><span class="cgpassion cgmastersingle">무라카미 토모에</span></a>, <a href="https://idreamlost.tistory.com/81"><span class="cgpassion">노노무라 소라</span></a> (3일)</li>
+   <li id="cg_birthday_106"><a href="https://idreamlost.tistory.com/8"><span class="cgcute cgmastersingle">미무라 카나코</span></a>, <a href="https://idreamlost.tistory.com/129"><span class="cgcute">안자이 미야코</span></a> (6일)</li>
+   <li id="cg_birthday_110"><a href="https://idreamlost.tistory.com/58"><span class="cgcool">세나 시오리</span></a> (10일)</li>
+   <li id="cg_birthday_113"><a href="https://idreamlost.tistory.com/152"><span class="cgpassion">하마구치 아야메</span></a><sup>&#8224;</sup> (13일)</li>
+   <li id="cg_birthday_119"><a href="https://idreamlost.tistory.com/136"><span class="cgpassion">메어리 코크란</span></a> (19일)</li>
+   <li id="cg_birthday_121"><a href="https://idreamlost.tistory.com/71"><span class="cgpassion">마츠야마 쿠미코</span></a>, <a href="https://idreamlost.tistory.com/4"><span class="cgcute">후쿠야마 마이</span></a> (21일)</li>
+   <li id="cg_birthday_123"><a href="https://idreamlost.tistory.com/21"><span class="cgcute">사이온지 코토카</span></a> (23일)</li>
+   <li id="cg_birthday_128"><a href="https://idreamlost.tistory.com/167"><span class="cgcute">오오타 유우</span></a> (28일)</li>
+  </ul>
+ </td>
+ <td id="cg_month_2">
+  <ul>
+   <li id="cg_birthday_203"><a href="https://idreamlost.tistory.com/193"><span class="cgcool cgmastersingle">니노미야 아스카</span></a> (3일)</li>
+   <li id="cg_birthday_204"><a href="https://idreamlost.tistory.com/340"><span class="cgcute">시라유키 치요</span></a><sup>&#8224;</sup> (4일)</li>
+   <li id="cg_birthday_206"><a href="https://idreamlost.tistory.com/108"><span class="cgcute">에가미 츠바키</span></a> (6일)</li>
+   <li id="cg_birthday_207"><a href="https://idreamlost.tistory.com/44"><span class="cgcool">토고 아이</span></a> (7일)</li>
+   <li id="cg_birthday_208"><a href="https://idreamlost.tistory.com/115"><span class="cgpassion cgmastersingle">이치하라 니나</span></a> (8일)</li>
+   <li id="cg_birthday_211"><a href="https://idreamlost.tistory.com/132"><span class="cgcute">아사노 후카</span></a> (11일)</li>
+   <li id="cg_birthday_214"><a href="https://idreamlost.tistory.com/18"><span class="cgcute">아이하라 유키노</span></a>, <a href="https://idreamlost.tistory.com/19"><span class="cgcute cgmastersingle">미야모토 프레데리카</span></a> (14일)</li>
+   <li id="cg_birthday_217"><a href="https://idreamlost.tistory.com/131"><span class="cgpassion">키타가와 마히로</span></a> (17일)</li>
+   <li id="cg_birthday_219"><a href="https://idreamlost.tistory.com/186"><span class="cgcute">유사 코즈에</span></a><sup>&#8224;</sup> (19일)</li>
+   <li id="cg_birthday_222"><a href="https://idreamlost.tistory.com/15"><span class="cgcute cgmastersingle">마에카와 미쿠</span></a> (22일)</li>
+   <li id="cg_birthday_224"><a href="https://idreamlost.tistory.com/200"><span class="cgcool">키류 츠카사</span></a> (24일)</li>
+   <li id="cg_birthday_225"><a href="https://idreamlost.tistory.com/103"><span class="cgcool cgmastersingle">미후네 미유</span></a> (25일)</li>
+   <li id="cg_birthday_226"><a href="https://idreamlost.tistory.com/35"><span class="cgcool">쿠로카와 치아키</span></a> (26일)</li>
+  </ul>
+ </td>
+ <td id="cg_month_3">
+  <ul>
+   <li id="cg_birthday_303"><a href="https://idreamlost.tistory.com/6"><span class="cgcute">이마이 카나</span></a> (3일)</li>
+   <li id="cg_birthday_305"><a href="https://idreamlost.tistory.com/158"><span class="cgpassion">코세키 레이나</span></a> (5일)</li>
+   <li id="cg_birthday_306"><a href="https://idreamlost.tistory.com/189"><span class="cgcute">아리우라 칸나</span></a> (6일)</li>
+   <li id="cg_birthday_307"><a href="https://idreamlost.tistory.com/174"><span class="cgpassion cgmastersingle">카타기리 사나에</span></a> (7일)</li>
+   <li id="cg_birthday_309"><a href="https://idreamlost.tistory.com/139"><span class="cgcute">쿠도 시노부</span></a> (9일)</li>
+   <li id="cg_birthday_310"><a href="https://idreamlost.tistory.com/154"><span class="cgspecial">루키 트레이너</span></a> (10일)</li>
+   <li id="cg_birthday_312"><a href="https://idreamlost.tistory.com/203"><span class="cgcool"><b>주니</b></span></a> (12일)</li>
+   <li id="cg_birthday_313"><a href="https://idreamlost.tistory.com/178"><span class="cgpassion cgmastersingle">호리 유코</span></a> (13일)</li>
+   <li id="cg_birthday_316"><a href="https://idreamlost.tistory.com/14"><span class="cgcute">야나세 미유키</span></a> (16일)</li>
+   <li id="cg_birthday_318"><a href="https://idreamlost.tistory.com/161"><span class="cgpassion">에토 미사키</span></a> (18일)</li>
+   <li id="cg_birthday_319"><a href="https://idreamlost.tistory.com/124"><span class="cgcute">나가토미 하스미</span></a> (19일)</li>
+   <li id="cg_birthday_320"><a href="https://idreamlost.tistory.com/133"><span class="cgcute">오오니시 유리코</span></a> (20일)</li>
+   <li id="cg_birthday_321"><a href="https://idreamlost.tistory.com/168"><span class="cgcool">마츠오 치즈루</span></a> (21일)</li>
+   <li id="cg_birthday_323"><a href="https://idreamlost.tistory.com/2"><span class="cgcute cgmastersingle">나카노 유카</span></a> (23일)</li>
+   <li id="cg_birthday_325"><a href="https://idreamlost.tistory.com/51"><span class="cgcool">타카미네 노아</span></a> (25일)</li>
+   <li id="cg_birthday_327"><a href="https://idreamlost.tistory.com/164"><span class="cgcute"><b>무라마츠 사쿠라</b></span></a> (27일)</li>
+   <li id="cg_birthday_328"><a href="https://idreamlost.tistory.com/123"><span class="cgcool cgmastersingle">시라사카 코우메</span></a> (28일)</li>
+   <li id="cg_birthday_330"><a href="https://idreamlost.tistory.com/192"><span class="cgcute">오오누마 쿠루미</span></a> (30일)</li>
+  </ul>
+ </td>
+</tr>
+<tr style="text-align: center; font-weight: bold;"><td>4월 (17명)</td><td>5월 (15명)</td><td>6월 (18명)</td></tr>
+<tr class="idolnames">
+ <td id="cg_month_4">
+  <ul>
+   <li id="cg_birthday_401"><a href="https://idreamlost.tistory.com/146"><span class="cgcute">코가 코하루</span></a> (1일)</li>
+   <li id="cg_birthday_404"><a href="https://idreamlost.tistory.com/48"><span class="cgcool">헬렌</span></a> (4일)</li>
+   <li id="cg_birthday_406"><a href="https://idreamlost.tistory.com/122"><span class="cgpassion">키타 히나코</span></a><sup>&#8224;</sup> (6일)</li>
+   <li id="cg_birthday_407"><a href="https://idreamlost.tistory.com/119"><span class="cgcool">와쿠이 루미</span></a> (7일)</li>
+   <li id="cg_birthday_408"><a href="https://idreamlost.tistory.com/53"><span class="cgcool cgmastersingle">칸자키 란코</span></a>, <a href="https://idreamlost.tistory.com/101"><span class="cgcute cgmastersingle">사쿠라이 모모카</span></a>, <a href="https://idreamlost.tistory.com/37"><span class="cgcool">키리노 아야</span></a> (8일)</li>
+   <li id="cg_birthday_409"><a href="https://idreamlost.tistory.com/43"><span class="cgcool">아라키 히나</span></a><sup>&#8224;</sup> (9일)</li>
+   <li id="cg_birthday_410"><a href="https://idreamlost.tistory.com/42"><span class="cgcool">카미죠 하루나</span></a><sup>&#8224;</sup> (10일)</li>
+   <li id="cg_birthday_412"><a href="https://idreamlost.tistory.com/183"><span class="cgcute">오오하라 미치루</span></a> (12일)</li>
+   <li id="cg_birthday_414"><a href="https://idreamlost.tistory.com/75"><span class="cgpassion cgmastersingle">아카기 미리아</span></a> (14일)</li>
+   <li id="cg_birthday_415"><a href="https://idreamlost.tistory.com/80"><span class="cgpassion cgmastersingle">아이바 유미</span></a> (15일)</li>
+   <li id="cg_birthday_418"><a href="https://idreamlost.tistory.com/194"><span class="cgpassion">자이젠 토키코</span></a> (18일)</li>
+   <li id="cg_birthday_419"><a href="https://idreamlost.tistory.com/176"><span class="cgcute cgmastersingle">시라기쿠 호타루</span></a> (19일)</li>
+   <li id="cg_birthday_424"><a href="https://idreamlost.tistory.com/1"><span class="cgcute cgmastersingle"><b>시마무라 우즈키</b></span></a> (24일)</li>
+   <li id="cg_birthday_427"><a href="https://idreamlost.tistory.com/46"><span class="cgcool">미즈키 세이라</span></a>, <a href="https://idreamlost.tistory.com/91"><span class="cgpassion">마키하라 시호</span></a> (27일)</li>
+  </ul>
+ </td>
+ <td id="cg_month_5">
+  <ul>
+   <li id="cg_birthday_501"><a href="https://idreamlost.tistory.com/148"><span class="cgpassion">남바 에미</span></a><sup>&#8224;</sup> (1일)</li>
+   <li id="cg_birthday_502"><a href="https://idreamlost.tistory.com/166"><span class="cgpassion"><b>츠치야 아코</b></span></a> (2일)</li>
+   <li id="cg_birthday_504"><a href="https://idreamlost.tistory.com/117"><span class="cgcute">쿠사카베 와카바</span></a> (4일)</li>
+   <li id="cg_birthday_506"><a href="https://idreamlost.tistory.com/73"><span class="cgpassion">사와다 마리나</span></a> (6일)</li>
+   <li id="cg_birthday_507"><a href="https://idreamlost.tistory.com/78"><span class="cgpassion cgmastersingle">오오츠키 유이</span></a> (7일)</li>
+   <li id="cg_birthday_508"><a href="https://idreamlost.tistory.com/38"><span class="cgcool">타카하시 레이코</span></a>, <a href="https://idreamlost.tistory.com/120"><span class="cgcool">요시오카 사키</span></a> (8일)</li>
+   <li id="cg_birthday_509"><a href="https://idreamlost.tistory.com/180"><span class="cgcute cgmastersingle">하야사카 미레이</span></a> (9일)</li>
+   <li id="cg_birthday_512"><a href="https://idreamlost.tistory.com/32"><span class="cgcute">야나기 키요라</span></a> (12일)</li>
+   <li id="cg_birthday_515"><a href="https://idreamlost.tistory.com/138"><span class="cgcute cgmastersingle">아베 나나</span></a> (15일)</li>
+   <li id="cg_birthday_518"><a href="https://idreamlost.tistory.com/112"><span class="cgcool">후루사와 요리코</span></a> (18일)</li>
+   <li id="cg_birthday_521"><a href="https://idreamlost.tistory.com/190"><span class="cgcool">라이라</span></a> (21일)</li>
+   <li id="cg_birthday_525"><a href="https://idreamlost.tistory.com/82"><span class="cgpassion">하마카와 아유나</span></a> (25일)</li>
+   <li id="cg_birthday_529"><a href="https://idreamlost.tistory.com/59"><span class="cgcool">아야세 호노카</span></a> (29일)</li>
+   <li id="cg_birthday_530"><a href="https://idreamlost.tistory.com/195"><span class="cgcute cgmastersingle">이치노세 시키</span></a> (30일)</li>
+  </ul>
+ </td>
+ <td id="cg_month_6">
+  <ul>
+   <li id="cg_birthday_603"><a href="https://idreamlost.tistory.com/151"><span class="cgpassion">오이카와 시즈쿠</span></a><sup>&#8224;</sup> (3일)</li>
+   <li id="cg_birthday_604"><a href="https://idreamlost.tistory.com/171"><span class="cgcute">니와 히토미</span></a> (4일)</li>
+   <li id="cg_birthday_606"><a href="https://idreamlost.tistory.com/169"><span class="cgpassion cgmastersingle">호시 쇼코</span></a> (6일)</li>
+   <li id="cg_birthday_607"><a href="https://idreamlost.tistory.com/47"><span class="cgcool">사사키 치에</span></a><sup>&#8224;</sup> (7일)</li>
+   <li id="cg_birthday_609"><a href="https://idreamlost.tistory.com/50"><span class="cgcool">코무로 치나미</span></a> (9일)</li>
+   <li id="cg_birthday_610"><a href="https://idreamlost.tistory.com/98"><span class="cgspecial">트레이너</span></a>, <a href="https://idreamlost.tistory.com/110"><span class="cgcute">이케부쿠로 아키하</span></a> (10일)</li>
+   <li id="cg_birthday_611"><a href="https://idreamlost.tistory.com/12"><span class="cgcute cgmastersingle">오가타 치에리</span></a> (11일)</li>
+   <li id="cg_birthday_612"><a href="https://idreamlost.tistory.com/9"><span class="cgcute">오쿠야마 사오리</span></a> (12일)</li>
+   <li id="cg_birthday_614"><a href="https://idreamlost.tistory.com/52"><span class="cgcool cgmastersingle">타카가키 카에데</span></a> (14일)</li>
+   <li id="cg_birthday_615"><a href="https://idreamlost.tistory.com/147"><span class="cgcool cgmastersingle">후지와라 하지메</span></a> (15일)</li>
+   <li id="cg_birthday_616"><a href="https://idreamlost.tistory.com/341"><span class="cgpassion">히사카와 나기</span></a>&amp;<a href="https://idreamlost.tistory.com/342"><span class="cgcool">하야테</span></a><sup>&#8224;</sup> (16일)</li>
+   <li id="cg_birthday_620"><a href="https://idreamlost.tistory.com/127"><span class="cgcool">우메키 오토하</span></a> (20일)</li>
+   <li id="cg_birthday_625"><a href="https://idreamlost.tistory.com/142"><span class="cgpassion">미요시 사나</span></a> (25일)</li>
+   <li id="cg_birthday_627"><a href="https://idreamlost.tistory.com/86"><span class="cgpassion">센자키 에마</span></a> (27일)</li>
+   <li id="cg_birthday_629"><a href="https://idreamlost.tistory.com/89"><span class="cgpassion">나탈리아</span></a><sup>&#8224;</sup> (29일)</li>
+   <li id="cg_birthday_630"><a href="https://idreamlost.tistory.com/45"><span class="cgcool cgmastersingle">타다 리이나</span></a> (30일)</li>
+  </ul>
+ </td>
+</tr>
+<tr style="text-align: center; font-weight: bold;"><td>7월 (17명)</td><td>8월 (21명)</td><td>9월 (18명)</td></tr>
+<tr class="idolnames">
+ <td id="cg_month_7">
+  <ul>
+   <li id="cg_birthday_701"><a href="https://idreamlost.tistory.com/163"><span class="cgcool cgmastersingle">하야미 카나데</span></a>, <a href="https://idreamlost.tistory.com/144"><span class="cgcool">후지이 토모</span></a> (1일)</li>
+   <li id="cg_birthday_703"><a href="https://idreamlost.tistory.com/199"><span class="cgpassion cgmastersingle">요리타 요시노</span></a> (3일)</li>
+   <li id="cg_birthday_707"><a href="https://idreamlost.tistory.com/24"><span class="cgcute">모모이 아즈키</span></a>, <a href="https://idreamlost.tistory.com/16"><span class="cgcute">아카니시 에리카</span></a> (7일)</li>
+   <li id="cg_birthday_710"><a href="https://idreamlost.tistory.com/74"><span class="cgpassion">야구치 미우</span></a> (10일)</li>
+   <li id="cg_birthday_713"><a href="https://idreamlost.tistory.com/134"><span class="cgcool">우지이에 무츠미</span></a> (13일)</li>
+   <li id="cg_birthday_716"><a href="https://idreamlost.tistory.com/157"><span class="cgcool">오카자키 야스하</span></a> (16일)</li>
+   <li id="cg_birthday_717"><a href="https://idreamlost.tistory.com/185"><span class="cgcool">유우키 하루</span></a><sup>&#8224;</sup> (17일)</li>
+   <li id="cg_birthday_720"><a href="https://idreamlost.tistory.com/69"><span class="cgpassion">류자키 카오루</span></a><sup>&#8224;</sup>, <a href="https://idreamlost.tistory.com/121"><span class="cgpassion">스기사카 우미</span></a> (20일)</li>
+   <li id="cg_birthday_722"><a href="https://idreamlost.tistory.com/197"><span class="cgpassion cgmastersingle">사토 신</span></a> (22일)</li>
+   <li id="cg_birthday_723"><a href="https://idreamlost.tistory.com/90"><span class="cgpassion">소마 나츠미</span></a> (23일)</li>
+   <li id="cg_birthday_725"><a href="https://idreamlost.tistory.com/67"><span class="cgpassion cgmastersingle">타카모리 아이코</span></a> (25일)</li>
+   <li id="cg_birthday_727"><a href="https://idreamlost.tistory.com/156"><span class="cgcool cgmastersingle">닛타 미나미</span></a> (27일)</li>
+   <li id="cg_birthday_730"><a href="https://idreamlost.tistory.com/85"><span class="cgpassion cgmastersingle">죠가사키 리카</span></a> (30일)</li>
+   <li id="cg_birthday_731"><a href="https://idreamlost.tistory.com/172"><span class="cgcool cgmastersingle">타치바나 아리스</span></a> (31일)</li>
+  </ul>
+ </td>
+ <td id="cg_month_8">
+  <ul>
+   <li id="cg_birthday_801"><a href="https://idreamlost.tistory.com/175"><span class="cgcute">무나가타 아츠미</span></a><sup>&#8224;</sup>, <a href="https://idreamlost.tistory.com/76"><span class="cgpassion">아이노 나기사</span></a> (1일)</li>
+   <li id="cg_birthday_802"><a href="https://idreamlost.tistory.com/201"><span class="cgpassion"><b>임유진</b></span></a> (2일)</li>
+   <li id="cg_birthday_803"><a href="https://idreamlost.tistory.com/128"><span class="cgpassion">에비하라 나호</span></a> (3일)</li>
+   <li id="cg_birthday_804"><a href="https://idreamlost.tistory.com/107"><span class="cgpassion cgmastersingle">히노 아카네</span></a> (4일)</li>
+   <li id="cg_birthday_807"><a href="https://idreamlost.tistory.com/96"><span class="cgpassion">무카이 타쿠미</span></a><sup>&#8224;</sup> (7일)</li>
+   <li id="cg_birthday_808"><a href="https://idreamlost.tistory.com/126"><span class="cgcool">키바 마나미</span></a> (8일)</li>
+   <li id="cg_birthday_810"><a href="https://idreamlost.tistory.com/34"><span class="cgcool cgmastersingle"><b>시부야 린</b></span></a>, <a href="https://idreamlost.tistory.com/13"><span class="cgcute cgmastersingle">이가라시 쿄코</span></a> (10일)</li>
+   <li id="cg_birthday_815"><a href="https://idreamlost.tistory.com/57"><span class="cgcool">케이트</span></a> (15일)</li>
+   <li id="cg_birthday_817"><a href="https://idreamlost.tistory.com/149"><span class="cgcute cgmastersingle">세키 히로미</span></a>, <a href="https://idreamlost.tistory.com/182"><span class="cgpassion">니시지마 카이</span></a> (17일)</li>
+   <li id="cg_birthday_818"><a href="https://idreamlost.tistory.com/170"><span class="cgpassion">슈토 아오이</span></a> (18일)</li>
+   <li id="cg_birthday_819"><a href="https://idreamlost.tistory.com/70"><span class="cgpassion">키무라 나츠키</span></a><sup>&#8224;</sup> (19일)</li>
+   <li id="cg_birthday_824"><a href="https://idreamlost.tistory.com/7"><span class="cgcute">모치다 아리사</span></a> (24일)</li>
+   <li id="cg_birthday_826"><a href="https://idreamlost.tistory.com/155"><span class="cgcute">클라리스</span></a> (26일)</li>
+   <li id="cg_birthday_827"><a href="https://idreamlost.tistory.com/173"><span class="cgcool cgmastersingle">모리쿠보 노노</span></a>, <a href="https://idreamlost.tistory.com/102"><span class="cgcute">이무라 세츠나</span></a>, <a href="https://idreamlost.tistory.com/118"><span class="cgcute">사카키바라 사토미</span></a> (27일)</li>
+   <li id="cg_birthday_828"><a href="https://idreamlost.tistory.com/25"><span class="cgcute">스즈미야 세이카</span></a> (28일)</li>
+   <li id="cg_birthday_830"><a href="https://idreamlost.tistory.com/83"><span class="cgpassion">와카바야시 토모카</span></a> (30일)</li>
+  </ul>
+ </td>
+ <td id="cg_month_9">
+  <ul>
+   <li id="cg_birthday_901"><a href="https://idreamlost.tistory.com/36"><span class="cgcool">마츠모토 사리나</span></a>, <a href="https://idreamlost.tistory.com/87"><span class="cgpassion cgmastersingle">모로보시 키라리</span></a> (1일)</li>
+   <li id="cg_birthday_902"><a href="https://idreamlost.tistory.com/22"><span class="cgcute cgmastersingle">후타바 안즈</span></a> (2일)</li>
+   <li id="cg_birthday_905"><a href="https://idreamlost.tistory.com/56"><span class="cgcool cgmastersingle">호죠 카렌</span></a> (5일)</li>
+   <li id="cg_birthday_907"><a href="https://idreamlost.tistory.com/159"><span class="cgcute cgmastersingle">사쿠마 마유</span></a> (7일)</li>
+   <li id="cg_birthday_909"><a href="https://idreamlost.tistory.com/140"><span class="cgcute">쿠리하라 네네</span></a> (9일)</li>
+   <li id="cg_birthday_910"><a href="https://idreamlost.tistory.com/99"><span class="cgspecial">베테랑 트레이너</span></a> (10일)</li>
+   <li id="cg_birthday_912"><a href="https://idreamlost.tistory.com/335"><span class="cgpassion cgmastersingle">유메미 리아무</span></a> (12일)</li>
+   <li id="cg_birthday_913"><a href="https://idreamlost.tistory.com/116"><span class="cgpassion">난죠 히카루</span></a><sup>&#8224;</sup> (13일)</li>
+   <li id="cg_birthday_914"><a href="https://idreamlost.tistory.com/79"><span class="cgpassion cgmastersingle">히메카와 유키</span></a> (14일)</li>
+   <li id="cg_birthday_916"><a href="https://idreamlost.tistory.com/41"><span class="cgcool cgmastersingle">카미야 나오</span></a> (16일)</li>
+   <li id="cg_birthday_919"><a href="https://idreamlost.tistory.com/177"><span class="cgcool cgmastersingle">아나스타샤</span></a>, <a href="https://idreamlost.tistory.com/143"><span class="cgpassion">캐시 그라함</span></a> (19일)</li>
+   <li id="cg_birthday_920"><a href="https://idreamlost.tistory.com/153"><span class="cgcool">와키야마 타마미</span></a><sup>&#8224;</sup> (20일)</li>
+   <li id="cg_birthday_924"><a href="https://idreamlost.tistory.com/54"><span class="cgcool">이쥬인 메구미</span></a> (24일)</li>
+   <li id="cg_birthday_926"><a href="https://idreamlost.tistory.com/188"><span class="cgpassion">사에지마 키요미</span></a> (26일)</li>
+   <li id="cg_birthday_928"><a href="https://idreamlost.tistory.com/60"><span class="cgcool">사죠 유키미</span></a><sup>&#8224;</sup> (28일)</li>
+   <li id="cg_birthday_929"><a href="https://idreamlost.tistory.com/23"><span class="cgcute">야오 페이페이</span></a> (29일)</li>
+  </ul>
+ </td>
+</tr>
+<tr style="text-align: center; font-weight: bold;"><td>10월 (15명)</td><td>11월 (16명)</td><td>12월 (15명)</td></tr>
+<tr class="idolnames">
+ <td id="cg_month_10">
+  <ul>
+   <li id="cg_birthday_1001"><a href="https://idreamlost.tistory.com/49"><span class="cgcool cgmastersingle">마츠나가 료</span></a> (1일)</li>
+   <li id="cg_birthday_1003"><a href="https://idreamlost.tistory.com/27"><span class="cgcute">효도 레나</span></a> (3일)</li>
+   <li id="cg_birthday_1006"><a href="https://idreamlost.tistory.com/198"><span class="cgcute cgmastersingle">오토쿠라 유우키</span></a> (6일)</li>
+   <li id="cg_birthday_1007"><a href="https://idreamlost.tistory.com/334"><span class="cgcool">스나즈카 아키라</span></a> (7일)</li>
+   <li id="cg_birthday_1009"><a href="https://idreamlost.tistory.com/196"><span class="cgcool">아사리 나나미</span></a> (9일)</li>
+   <li id="cg_birthday_1010"><a href="https://idreamlost.tistory.com/5"><span class="cgcute">시이나 노리코</span></a><sup>&#8224;</sup> (10일)</li>
+   <li id="cg_birthday_1011"><a href="https://idreamlost.tistory.com/111"><span class="cgcool">핫토리 토코</span></a> (11일)</li>
+   <li id="cg_birthday_1014"><a href="https://idreamlost.tistory.com/179"><span class="cgcute">후지모토 리나</span></a><sup>&#8224;</sup>, <a href="https://idreamlost.tistory.com/68"><span class="cgpassion">나미키 메이코</span></a> (14일)</li>
+   <li id="cg_birthday_1018"><a href="https://idreamlost.tistory.com/20"><span class="cgcute cgmastersingle">코바야카와 사에</span></a>, <a href="https://idreamlost.tistory.com/3"><span class="cgcute">미즈모토 유카리</span></a><sup>&#8224;</sup> (18일)</li>
+   <li id="cg_birthday_1023"><a href="https://idreamlost.tistory.com/135"><span class="cgcool">니시카와 호나미</span></a> (23일)</li>
+   <li id="cg_birthday_1026"><a href="https://idreamlost.tistory.com/114"><span class="cgpassion">우에다 스즈호</span></a><sup>&#8224;</sup> (26일)</li>
+   <li id="cg_birthday_1027"><a href="https://idreamlost.tistory.com/184"><span class="cgcool cgmastersingle">사기사와 후미카</span></a> (27일)</li>
+   <li id="cg_birthday_1030"><a href="https://idreamlost.tistory.com/26"><span class="cgcute">츠키미야 미야비</span></a> (30일)</li>
+  </ul>
+ </td>
+ <td id="cg_month_11">
+  <ul>
+   <li id="cg_birthday_1103"><a href="https://idreamlost.tistory.com/141"><span class="cgcool">나루미야 유메</span></a> (3일)</li>
+   <li id="cg_birthday_1105"><a href="https://idreamlost.tistory.com/332"><span class="cgcute">츠지노 아카리</span></a> (5일)</li>
+   <li id="cg_birthday_1106"><a href="https://idreamlost.tistory.com/10"><span class="cgcute">마나카 미사토</span></a> (6일)</li>
+   <li id="cg_birthday_1107"><a href="https://idreamlost.tistory.com/187"><span class="cgcool">야가미 마키노</span></a> (7일)</li>
+   <li id="cg_birthday_1109"><a href="https://idreamlost.tistory.com/202"><span class="cgcute"><b>류해나</b></span></a> (9일)</li>
+   <li id="cg_birthday_1110"><a href="https://idreamlost.tistory.com/339"><span class="cgcute">쿠로사키 치토세</span></a><sup>&#8224;</sup> (10일)</li>
+   <li id="cg_birthday_1111"><a href="https://idreamlost.tistory.com/39"><span class="cgcool">아이카와 치나츠</span></a>, <a href="https://idreamlost.tistory.com/165"><span class="cgcool"><b>오오이시 이즈미</b></span></a> (11일)</li>
+   <li id="cg_birthday_1112"><a href="https://idreamlost.tistory.com/84"><span class="cgpassion cgmastersingle">죠가사키 미카</span></a> (12일)</li>
+   <li id="cg_birthday_1113"><a href="https://idreamlost.tistory.com/130"><span class="cgcool">키시베 아야카</span></a> (13일)</li>
+   <li id="cg_birthday_1114"><a href="https://idreamlost.tistory.com/109"><span class="cgcute">하라다 미요</span></a> (14일)</li>
+   <li id="cg_birthday_1117"><a href="https://idreamlost.tistory.com/137"><span class="cgpassion">코마츠 이부키</span></a> (17일)</li>
+   <li id="cg_birthday_1119"><a href="https://idreamlost.tistory.com/191"><span class="cgpassion">마토바 리사</span></a><sup>&#8224;</sup> (19일)</li>
+   <li id="cg_birthday_1122"><a href="https://idreamlost.tistory.com/65"><span class="cgcool">시노하라 레이</span></a> (22일)</li>
+   <li id="cg_birthday_1125"><a href="https://idreamlost.tistory.com/125"><span class="cgcute cgmastersingle">코시미즈 사치코</span></a>, <a href="https://idreamlost.tistory.com/40"><span class="cgcool cgmastersingle">카와시마 미즈키</span></a> (25일)</li>
+   <li id="cg_birthday_1128"><span class="cgspecial">센카와 치히로</span> (28일)</li>
+  </ul>
+ </td>
+ <td id="cg_month_12">
+  <ul>
+   <li id="cg_birthday_1201"><a href="https://idreamlost.tistory.com/66"><span class="cgpassion cgmastersingle"><b>혼다 미오</b></span></a> (1일)</li>
+   <li id="cg_birthday_1202"><a href="https://idreamlost.tistory.com/105"><span class="cgpassion">키타미 유즈</span></a><sup>&#8224;</sup> (2일)</li>
+   <li id="cg_birthday_1205"><a href="https://idreamlost.tistory.com/160"><span class="cgcool">미즈노 미도리</span></a> (5일)</li>
+   <li id="cg_birthday_1208"><a href="https://idreamlost.tistory.com/88"><span class="cgpassion cgmastersingle">토토키 아이리</span></a> (8일)</li>
+   <li id="cg_birthday_1210"><a href="https://idreamlost.tistory.com/100"><span class="cgspecial">마스터 트레이너</span></a> (10일)</li>
+   <li id="cg_birthday_1212"><a href="https://idreamlost.tistory.com/150"><span class="cgcool cgmastersingle">시오미 슈코</span></a> (12일)</li>
+   <li id="cg_birthday_1216"><a href="https://idreamlost.tistory.com/11"><span class="cgcute cgmastersingle">코히나타 미호</span></a>, <a href="https://idreamlost.tistory.com/181"><span class="cgcool">야마토 아키</span></a><sup>&#8224;</sup> (16일)</li>
+   <li id="cg_birthday_1218"><a href="https://idreamlost.tistory.com/145"><span class="cgcute">요코야마 치카</span></a> (18일)</li>
+   <li id="cg_birthday_1224"><a href="https://idreamlost.tistory.com/106"><span class="cgpassion">이브 산타클로스</span></a> (24일)</li>
+   <li id="cg_birthday_1225"><a href="https://idreamlost.tistory.com/104"><span class="cgcool">모치즈키 히지리</span></a>, <a href="https://idreamlost.tistory.com/55"><span class="cgcool">히이라기 시노</span></a> (25일)</li>
+   <li id="cg_birthday_1228"><a href="https://idreamlost.tistory.com/17"><span class="cgcute">마츠바라 사야</span></a> (28일)</li>
+   <li id="cg_birthday_1229"><a href="https://idreamlost.tistory.com/72"><span class="cgpassion">사이토 요코</span></a>, <a href="https://idreamlost.tistory.com/77"><span class="cgpassion">마나베 이츠키</span></a> (29일)</li>
+  </ul>
+ </td>
+</tr>
+</table>
+</div>
+
+<p style="font-size: 0.85em;"><b>본가 아이돌의 속성 보기</b> <span id="show_cgtype_table">[ <a href="javascript:;" onclick="showCGTypeTable_AS();">펼치기</a> ]</span><span id="hide_cgtype_table" style="display: none;">[ <a href="javascript:;" onclick="showCGTypeTable_AS();">접기</a> ]</span></p>
+
+<div id="astype_cg" style="display: none; margin-bottom: 2.5em;">
+
+<p style="font-size: 13px;">(소셜 게임 기준 속성입니다)</p>
+
+<table width="573">
+ <tr style="text-align: center; font-weight: bold;">
+  <td width="33%"><img src="./assets/imascg_cute.png" alt="Cute" style="width: 24px; height: auto; vertical-align: middle;" />&nbsp;큐트</td>
+  <td width="33%"><img src="./assets/imascg_cool.png" alt="Cool" style="width: 24px; height: auto; vertical-align: middle;" />&nbsp;쿨</td>
+  <td width="33%"><img src="./assets/imascg_passion.png" alt="Passion" style="width: 24px; height: auto; vertical-align: middle;" />&nbsp;패션</td>
+ </tr>
+ <tr>
+  <td class="idolnames"><ul id="table_cgtype_ascute"></ul></td>
+  <td class="idolnames"><ul id="table_cgtype_ascool"></ul></td>
+  <td class="idolnames"><ul id="table_cgtype_aspassion"></ul></td>
+ </tr>
+</table>
+</div>
+
+<!-- Deep Space Nine -->
+<h2><a name="series_million" href="#seriesmark_03">3.</a><img src="./assets/imas_millionstars_emblem.png" id="millionstarslogo" alt="Million Stars" />&nbsp;<time datetime="2013-02-27T09:00:00+09:00">765 밀리언 스타즈 (라이브 시어터 / 시어터 올스타즈 / &quot;39 프로젝트&quot;)</time></h2>
+
+<!-- 아이돌 37+2인 + (기타 1인) -->
+<!-- 대표곡 : Thank You! / Welcome!! / Dreaming! / Brand New Theater! / UNION!! / Flyers!!! -->
+
+<p id="ml_legend_description">
+ <ul>
+  <li>시리즈 런칭일 : 2013/02/27 (소셜 게임), 2017/06/29 (시어터 데이즈)
+   <ul>
+    <li>2018/03/19 소셜 게임(GREE) 서비스 종료</li>
+    <li>한국 서비스 (시어터 데이즈) : 2019/08/30</li>
+   </ul>
+  </li>
+  <li>아래 목록에서
+   <ul>
+    <li><sup>&#8224;</sup> 표시에 해당하는 아이돌은 시어터 데이즈(밀리시타)에서 새로 추가된 경우입니다.</li>
+	<li>소셜 게임(GREE)에서의 속성 (레거시) : <span class="mlvocal">보컬</span>, <span class="mldance">댄스</span>, <span class="mlvisual">비주얼</span></li>
+	<li>시어터 데이즈(밀리시타)에서의 속성 (현행) : <span class="princess765">프린세스</span>, <span class="fairy765">페어리</span>, <span class="angel765">엔젤</span></li>
+   </ul>
+  </li>
+  <li>각 아이돌의 시어터 데이즈(밀리시타) 게임 상에서의 일러스트는 <a href="http://imas.gamedbs.jp/mlth/">이 사이트</a>를 참고하세요.</li>
+ </ul>
+</p>
+
+<div id="theater_type" style="font-size: 0.85em;"><b>아이돌명 색상표시 설정</b></div>
+<input type="radio" name="live_theater" id="type_legacy" onclick="toggletypes_million();" /><label for="type_legacy">레거시(소셜 게임) 속성으로 보기</label><br />
+<input type="radio" name="live_theater" id="type_theaterdays" onclick="toggletypes_million();" /><label for="type_theaterdays">시어터 데이즈(밀리시타) 속성으로 보기</label><br />
+<input type="radio" name="live_theater" id="type_idolunique" onclick="toggletypes_million();" /><label for="type_idolunique">아이돌의 이미지 컬러로 보기</label><br />
+<div id="caution_theatertype" style="font-size: 0.75em;">(&nbsp;<img src="./assets/notice_01.png" style="width: 0.9em; height: auto;" alt="Caution" />&nbsp;위 설정은 기기 환경 및 브라우저 변경시 유지되지 않습니다)</div>
+
+
+<p style="font-size: 0.85em;"><b>생일별 캐릭터 목록</b></p>
+
+<div id="birthdays_ml">
+<table width="876">
+<tr style="text-align: center; font-weight: bold;"><td>1분기 (1~3월, 11명)</td><td>2분기 (4~6월, 9명)</td><td>3분기 (7~9월, 10명)</td><td>4분기 (10~12월, 9명)</td></tr>
+<tr class="idolnames">
+ <td id="ml_quarter_1">
+  <ul>
+   <li id="ml_birthday_108"><a href="https://idreamlost.tistory.com/235"><span id="millionstars_32" class="mldance">에밀리 스튜어트</span></a> (1월 8일)</li>
+   <li id="ml_birthday_118"><a href="https://idreamlost.tistory.com/236"><span id="millionstars_33" class="mlvisual">키타자와 시호</span></a> (1월 18일)</li>
+   <li id="ml_birthday_127"><a href="https://idreamlost.tistory.com/247"><span id="millionstars_44" class="mldance">마카베 미즈키</span></a> (1월 27일)</li>
+   <li id="ml_birthday_204"><a href="https://idreamlost.tistory.com/224"><span id="millionstars_21" class="mlvisual">도쿠가와 마츠리</span></a>   (2월 4일)</li>
+   <li id="ml_birthday_212"><a href="https://idreamlost.tistory.com/240"><span id="millionstars_37" class="mldance">요코야마 나오</span></a> (2월 12일)</li>
+   <li id="ml_birthday_220"><a href="https://idreamlost.tistory.com/225"><span id="millionstars_22" class="mlvocal">하코자키 세리카</span></a> (2월 20일)</li>
+   <li id="ml_birthday_301"><a href="https://idreamlost.tistory.com/228"><span id="millionstars_25" class="mlvisual">한다 로코</span></a> (3월 1일)</li>
+   <li id="ml_birthday_318"><a href="https://idreamlost.tistory.com/229"><span id="millionstars_26" class="mlvisual">나나오 유리코</span></a> (3월 18일)</li>
+   <li id="ml_birthday_322"><a href="https://idreamlost.tistory.com/222"><span id="millionstars_19" class="mldance">사타케 미나코</span></a> (3월 22일)</li>
+   <li id="ml_birthday_327"><a href="http://imas.gamedbs.jp/mlth/chara/show/52"><span id="millionstars_52" class="mlspecial">사쿠라모리 카오리</span></a><sup>&#8224;</sup> (3월 27일)</li>
+   <li id="ml_birthday_330"><a href="https://idreamlost.tistory.com/246"><span id="millionstars_43" class="mldance">후쿠다 노리코</span></a> (3월 30일)</li>
+  </ul>
+ </td>
+ <td id="ml_quarter_2">
+  <ul>
+   <li id="ml_birthday_415"><a href="https://idreamlost.tistory.com/223"><span id="millionstars_20" class="mlvisual">토코로 메구미</span></a> (4월 15일)</li>
+   <li id="ml_birthday_424"><a href="https://idreamlost.tistory.com/245"><span id="millionstars_42" class="mlvisual">미야오 미야</span></a> (4월 24일)</li>
+   <li id="ml_birthday_429"><a href="https://idreamlost.tistory.com/243"><span id="millionstars_40" class="mldance">오오가미 타마키</span></a> (4월 29일)</li>
+   <li id="ml_birthday_517"><a href="https://idreamlost.tistory.com/251"><span id="millionstars_48" class="mldance">키타카미 레이카</span></a> (5월 17일)</li>
+   <li id="ml_birthday_529"><a href="http://imas.gamedbs.jp/mlth/chara/show/51"><span id="millionstars_51" class="mlspecial">시라이시 츠무기</span></a><sup>&#8224;</sup> (5월 29일)</li>
+   <li id="ml_birthday_531"><a href="https://idreamlost.tistory.com/227"><span id="millionstars_24" class="mlvocal">모치즈키 안나</span></a> (5월 31일)</li>
+   <li id="ml_birthday_607"><a href="https://idreamlost.tistory.com/231"><span id="millionstars_28" class="mlvocal">마츠다 아리사</span></a> (6월 7일)</li>
+   <li id="ml_birthday_612"><a href="https://idreamlost.tistory.com/242"><span id="millionstars_39" class="mldance">바바 코노미</span></a> (6월 12일)</li>
+   <li id="ml_birthday_628"><a href="https://idreamlost.tistory.com/217"><span id="millionstars_14" class="mlvocal"><b>카스가 미라이</b></span></a> (6월 28일)</li>
+   <li id="ml_birthday_629"><span class="mlspecial">아오바 미사키</span><sup>&#8224;</sup> (6월 29일)</li>
+  </ul>
+ </td>
+ <td id="ml_quarter_3">
+  <ul>
+   <li id="ml_birthday_704"><a href="https://idreamlost.tistory.com/238"><span id="millionstars_35" class="mlvocal">키노시타 히나타</span></a> (7월 4일)</li>
+   <li id="ml_birthday_723"><a href="https://idreamlost.tistory.com/237"><span id="millionstars_34" class="mldance">마이하마 아유무</span></a> (7월 23일)</li>
+   <li id="ml_birthday_730"><a href="https://idreamlost.tistory.com/219"><span id="millionstars_16" class="mlvisual"><b>이부키 츠바사</b></span></a> (7월 30일)</li>
+   <li id="ml_birthday_810"><a href="https://idreamlost.tistory.com/232"><span id="millionstars_29" class="mldance">코사카 우미</span></a> (8월 10일)</li>
+   <li id="ml_birthday_818"><a href="https://idreamlost.tistory.com/239"><span id="millionstars_36" class="mlvocal">야부키 카나</span></a> (8월 18일)</li>
+   <li id="ml_birthday_827"><a href="https://idreamlost.tistory.com/248"><span id="millionstars_45" class="mlvisual">시노미야 카렌</span></a> (8월 27일)</li>
+   <li id="ml_birthday_902"><a href="https://idreamlost.tistory.com/244"><span id="millionstars_41" class="mlvisual">토요카와 후카</span></a> (9월 2일)</li>
+   <li id="ml_birthday_914"><a href="https://idreamlost.tistory.com/218"><span id="millionstars_15" class="mlvocal"><b>모가미 시즈카</b></span></a> (9월 14일)</li>
+   <li id="ml_birthday_920"><a href="https://idreamlost.tistory.com/250"><span id="millionstars_47" class="mldance">나가요시 스바루</span></a> (9월 20일)</li>
+   <li id="ml_birthday_926"><a href="https://idreamlost.tistory.com/253"><span id="millionstars_50" class="mlvocal">줄리아</span></a> (9월 26일)</li>
+  </ul>
+ </td>
+ <td id="ml_quarter_4">
+  <ul>
+   <li id="ml_birthday_1005"><a href="https://idreamlost.tistory.com/220"><span id="millionstars_17" class="mlvocal">타나카 코토하</span></a> (10월 5일)</li>
+   <li id="ml_birthday_1021"><a href="https://idreamlost.tistory.com/241"><span id="millionstars_38" class="mlvisual">니카이도 치즈루</span></a> (10월 21일)</li>
+   <li id="ml_birthday_1026"><a href="https://idreamlost.tistory.com/221"><span id="millionstars_18" class="mldance">시마바라 엘레나</span></a> (10월 26일)</li>
+   <li id="ml_birthday_1106"><a href="https://idreamlost.tistory.com/252"><span id="millionstars_49" class="mlvisual">스오 모모코</span></a> (11월 6일)</li>
+   <li id="ml_birthday_1111"><a href="https://idreamlost.tistory.com/234"><span id="millionstars_31" class="mlvocal">텐쿠바시 토모카</span></a> (11월 11일)</li>
+   <li id="ml_birthday_1121"><a href="https://idreamlost.tistory.com/249"><span id="millionstars_46" class="mldance">모모세 리오</span></a> (11월 21일)</li>
+   <li id="ml_birthday_1203"><a href="https://idreamlost.tistory.com/226"><span id="millionstars_23" class="mldance">노노하라 아카네</span></a> (12월 3일)</li>
+   <li id="ml_birthday_1216"><a href="https://idreamlost.tistory.com/233"><span id="millionstars_30" class="mlvisual">나카타니 이쿠</span></a> (12월 16일)</li>
+   <li id="ml_birthday_1229"><a href="https://idreamlost.tistory.com/230"><span id="millionstars_27" class="mlvocal">타카야마 사요코</span></a> (12월 29일)</li>
+  </ul>
+ </td>
+</tr>
+</table>
+</div>
+
+<p style="font-size: 0.85em;"><b>속성별 캐릭터 목록 (본가 올스타즈 멤버 포함)</b> <span id="show_mltype_table">[ <a href="javascript:;" onclick="showMLTypeTable();">펼치기</a> ]</span><span id="hide_mltype_table" style="display: none;">[ <a href="javascript:;" onclick="showMLTypeTable();">접기</a> ]</span></p>
+
+<div id="typecomp_ml" style="display: none;">
+
+<p style="font-size: 13px;">(<i>기울어진 글씨</i>는 본가 올스타즈 멤버입니다)</p>
+
+<table width="573">
+ <tr style="text-align: center; font-weight: bold;">
+  <td width="10%">타입</td>
+  <td width="30%"><img src="./assets/imasml_princess.png" alt="Princess" style="width: 24px; height: auto; vertical-align: middle;" />&nbsp;프린세스</td>
+  <td width="30%"><img src="./assets/imasml_fairy.png" alt="Fairy" style="width: 24px; height: auto; vertical-align: middle;" />&nbsp;페어리</td>
+  <td width="30%"><img src="./assets/imasml_angel.png" alt="Angel" style="width: 24px; height: auto; vertical-align: middle;" />&nbsp;엔젤</td>
+ </tr>
+ <tr>
+  <td style="text-align: center; font-weight: bold;">보컬</td>
+  <td class="idolnames"><ul id="table_mltype_0_0"></ul></td>
+  <td class="idolnames"><ul id="table_mltype_0_1"></ul></td>
+  <td class="idolnames"><ul id="table_mltype_0_2"></ul></td>
+ </tr>
+ <tr>
+  <td style="text-align: center; font-weight: bold;">댄스</td>
+  <td class="idolnames"><ul id="table_mltype_1_0"></ul></td>
+  <td class="idolnames"><ul id="table_mltype_1_1"></ul></td>
+  <td class="idolnames"><ul id="table_mltype_1_2"></ul></td>
+ </tr>
+ <tr>
+  <td style="text-align: center; font-weight: bold;">비주얼</td>
+  <td class="idolnames"><ul id="table_mltype_2_0"></ul></td>
+  <td class="idolnames"><ul id="table_mltype_2_1"></ul></td>
+  <td class="idolnames"><ul id="table_mltype_2_2"></ul></td>
+ </tr>
+ <tr>
+  <td style="text-align: center; font-weight: bold;">기타</td>
+  <td class="idolnames"><ul id="table_mltype_others_0"></ul></td>
+  <td class="idolnames"><ul id="table_mltype_others_1"></ul></td>
+  <td class="idolnames"><ul id="table_mltype_others_2"></ul></td>
+ </tr>
+</table>
+</div>
+
+<!-- Voyager -->
+<h2><a name="series_315" href="#seriesmark_04">4.</a><img src="./assets/imas_315pro_emblem.png" id="sidemlogo" alt="315 Production" />&nbsp;<time datetime="2014-07-17T09:00:00+09:00">SideM (315 프로덕션)</time></h2>
+
+<!-- 아이돌 45+1인 + 기타 1인 -->
+<!-- 대표곡 : DRIVE A LIVE / Beyond the Dream / Reason!! / GLORIOUS RO@D -->
+
+<p id="sm_legend_description">
+ <ul>
+  <li>시리즈 런칭일 : 2014/07/17 (소셜 게임), 2017/08/30 (라이브 온 스테이지)</li>
+  <li>아래 목록에서
+   <ul>
+    <li>아이돌 이름의 글자색별 속성 이름은 다음과 같습니다 : <span class="physical315">피지컬</span>, <span class="intelli315">인텔리</span>, <span class="mental315">멘탈</span></li>
+    <li>각 아이돌의 라이브 온 스테이지(엠스테) 게임 상에서의 일러스트는 <a href="https://wikiwiki.jp/sidemstage/">이 사이트</a>를 참고하세요.</li>
+   </ul>
+  </li>
+ </ul>
+</p>
+
+<div id="birthdays_315">
+<table width="876">
+<tr style="text-align: center; font-weight: bold;"><td>1분기 (1~3월, 12명)</td><td>2분기 (4~6월, 11명)</td><td>3분기 (7~9월, 12+1명)</td><td>4분기 (10~12월, 11명)</td></tr>
+<tr class="idolnames">
+ <td id="sm_quarter_1">
+  <ul>
+   <li id="sm_birthday_102"><a href="https://idreamlost.tistory.com/275"><span class="intelli315">후유미 쥰</span></a> (1월 2일)</li>
+   <li id="sm_birthday_113"><a href="https://idreamlost.tistory.com/289"><span class="intelli315">하자마 미치오</span></a> (1월 13일)</li>
+   <li id="sm_birthday_117"><a href="https://idreamlost.tistory.com/281"><span class="mental315">카미야 유키히로</span></a> (1월 17일)</li>
+   <li id="sm_birthday_202"><a href="https://idreamlost.tistory.com/263"><span class="intelli315">타카죠 쿄지</span></a> (2월 2일)</li>
+   <li id="sm_birthday_210"><a href="https://idreamlost.tistory.com/288"><span class="mental315">히메노 카논</span></a> (2월 10일)</li>
+   <li id="sm_birthday_214"><a href="https://idreamlost.tistory.com/257"><span class="intelli315"><b>이쥬인 호쿠토</b></span></a> (2월 14일)</li>
+   <li id="sm_birthday_223"><a href="https://idreamlost.tistory.com/258"><span class="physical315"><b>텐도 테루</b></span></a> (2월 23일)</li>
+   <li id="sm_birthday_303"><a href="https://idreamlost.tistory.com/255"><span class="physical315"><b>아마가세 토우마</b></span></a> (3월 3일)</li>
+   <li id="sm_birthday_307"><a href="https://idreamlost.tistory.com/268"><span class="intelli315">아쿠노 히데오</span></a> (3월 7일)</li>
+   <li id="sm_birthday_322"><a href="https://idreamlost.tistory.com/265"><span class="physical315">와타나베 미노리</span></a> (3월 22일)</li>
+   <li id="sm_birthday_325"><a href="https://idreamlost.tistory.com/286"><span class="intelli315">오카무라 나오</span></a> (3월 25일)</li>
+   <li id="sm_birthday_330"><a href="https://idreamlost.tistory.com/277"><span class="physical315">와카자토 하루나</span></a> (3월 30일)</li>
+  </ul>
+ </td>
+ <td id="sm_quarter_2">
+  <ul>
+   <li id="sm_birthday_402"><a href="https://idreamlost.tistory.com/261"><span class="mental315">츠즈키 케이</span></a> (4월 2일)</li>
+   <li id="sm_birthday_404"><a href="https://idreamlost.tistory.com/279"><span class="physical315">아카이 스자쿠</span></a> (4월 4일)</li>
+   <li id="sm_birthday_412"><a href="https://idreamlost.tistory.com/278"><span class="physical315">이세야 시키</span></a> (4월 12일)</li>
+   <li id="sm_birthday_420"><a href="https://idreamlost.tistory.com/256"><span class="mental315"><b>미타라이 쇼타</b></span></a> (4월 20일)</li>
+   <li id="sm_birthday_422"><a href="https://idreamlost.tistory.com/287"><span class="physical315">타치바나 시로</span></a> (4월 22일)</li>
+   <li id="sm_birthday_505"><a href="https://idreamlost.tistory.com/269"><span class="physical315">키무라 류</span></a> (5월 5일)</li>
+   <li id="sm_birthday_514"><a href="https://idreamlost.tistory.com/294"><span class="physical315">키자키 렌</span></a> (5월 14일)</li>
+   <li id="sm_birthday_520"><a href="https://idreamlost.tistory.com/297"><span class="physical315">카부토 다이고</span></a> (5월 20일)</li>
+   <li id="sm_birthday_602"><a href="https://idreamlost.tistory.com/260"><span class="mental315"><b>카시와기 츠바사</b></span></a> (6월 2일)</li>
+   <li id="sm_birthday_617"><a href="https://idreamlost.tistory.com/262"><span class="intelli315">카구라 레이</span></a> (6월 17일)</li>
+   <li id="sm_birthday_618"><a href="https://idreamlost.tistory.com/276"><span class="intelli315">사카키 나츠키</span></a> (6월 18일)</li>
+  </ul>
+ </td>
+ <td id="sm_quarter_3">
+  <ul>
+   <li id="sm_birthday_702"><span class="special315">야마무라 켄</span> (7월 2일)</li>
+   <li id="sm_birthday_703"><a href="https://idreamlost.tistory.com/273"><span class="mental315">키요스미 쿠로</span></a> (7월 3일)</li>
+   <li id="sm_birthday_707"><a href="https://idreamlost.tistory.com/266"><span class="mental315">아오이 유스케</span></a>&amp;<a href="https://idreamlost.tistory.com/267"><span class="intelli315">쿄스케</span></a> (7월 7일)</li>
+   <li id="sm_birthday_722"><a href="https://idreamlost.tistory.com/280"><span class="intelli315">쿠로노 겐부</span></a> (7월 22일)</li>
+   <li id="sm_birthday_801"><a href="https://idreamlost.tistory.com/264"><span class="mental315">피에르</span></a> (8월 1일)</li>
+   <li id="sm_birthday_808"><a href="https://idreamlost.tistory.com/290"><span class="mental315">마이타 루이</span></a> (8월 8일)</li>
+   <li id="sm_birthday_819"><a href="https://idreamlost.tistory.com/285"><span class="physical315">미즈시마 사키</span></a> (8월 19일)</li>
+   <li id="sm_birthday_824"><a href="https://idreamlost.tistory.com/272"><span class="mental315">하나무라 쇼마</span></a> (8월 24일)</li>
+   <li id="sm_birthday_901"><a href="https://idreamlost.tistory.com/291"><span class="intelli315">야마시타 지로</span></a> (9월 1일)</li>
+   <li id="sm_birthday_914"><a href="https://idreamlost.tistory.com/293"><span class="physical315">엔죠지 미치루</span></a> (9월 14일)</li>
+   <li id="sm_birthday_915"><a href="https://idreamlost.tistory.com/296"><span class="mental315"><i>아키즈키 료</i></span></a> (9월 15일)</li>
+   <li id="sm_birthday_924"><a href="https://idreamlost.tistory.com/259"><span class="intelli315"><b>사쿠라바 카오루</b></span></a> (9월 24일)</li>
+  </ul>
+ </td>
+ <td id="sm_quarter_4">
+  <ul>
+   <li id="sm_birthday_1009"><a href="https://idreamlost.tistory.com/283"><span class="physical315">아스란 BB 2세</span></a> (10월 9일)</li>
+   <li id="sm_birthday_1011"><a href="https://idreamlost.tistory.com/301"><span class="intelli315">코론 크리스</span></a> (10월 11일)</li>
+   <li id="sm_birthday_1013"><a href="https://idreamlost.tistory.com/298"><span class="intelli315">츠쿠모 카즈키</span></a> (10월 13일)</li>
+   <li id="sm_birthday_1031"><a href="https://idreamlost.tistory.com/299"><span class="intelli315">쿠즈노하 아메히코</span></a> (10월 31일)</li>
+   <li id="sm_birthday_1108"><a href="https://idreamlost.tistory.com/282"><span class="intelli315">시노노메 소이치로</span></a> (11월 8일)</li>
+   <li id="sm_birthday_1112"><a href="https://idreamlost.tistory.com/271"><span class="intelli315">네코야나기 키리오</span></a> (11월 12일)</li>
+   <li id="sm_birthday_1122"><a href="https://idreamlost.tistory.com/274"><span class="physical315">아키야마 하야토</span></a> (11월 22일)</li>
+   <li id="sm_birthday_1128"><a href="https://idreamlost.tistory.com/300"><span class="mental315">키타무라 소라</span></a> (11월 28일)</li>
+   <li id="sm_birthday_1212"><a href="https://idreamlost.tistory.com/284"><span class="mental315">우즈키 마키오</span></a> (12월 12일)</li>
+   <li id="sm_birthday_1221"><a href="https://idreamlost.tistory.com/292"><span class="physical315">타이가 타케루</span></a> (12월 21일)</li>
+   <li id="sm_birthday_1224"><a href="https://idreamlost.tistory.com/270"><span class="mental315">신겐 세이지</span></a> (12월 24일)</li>
+  </ul>
+ </td>
+</tr>
+</table>
+</div>
+
+<!-- Discovery -->
+<h2><a name="series_283" href="#seriesmark_05">5.</a><img src="./assets/imas_283pro_emblem_03.png" id="shinycolorslogo" alt="283 Production" />&nbsp;<time datetime="2018-04-24T10:00:00+09:00">샤이니 컬러즈 (283 프로덕션)</time></h2>
+<!-- 아이돌 19인 + 기타 1인 -->
+<!-- 대표곡 : Spread the Wings!! / Multicolored Sky / Ambitious Eve / 언젠가 Shiny Days -->
+
+<p id="sc_legend_description">
+ <ul>
+  <li>시리즈 런칭일 : 2018/04/24 (오리지널)</li>
+  <li>아래 목록에서
+   <ul>
+    <li>각 아이돌 이름의 글자색은 해당 아이돌의 이미지 컬러를 나타낸 것입니다.</li>
+    <li>각 아이돌 이름에 붙은 첨자는 해당 아이돌이 어느 유닛 소속인지를 나타낸 것입니다.
+     <ul>
+      <li>I - 일루미네이션 스타즈 / L - L'Antica (안티카) / A - ALSTROEMERIA / H - 방과후 클라이맥스 걸즈 / S - Straylight</li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+ </ul>
+</p>
+
+<div id="birthdays_283">
+<table width="961">
+<tr style="text-align: center; font-weight: bold;"><td>1분기 (1~3월)</td><td>2분기 (4~6월)</td><td>3분기 (7~9월)</td><td>4분기 (10~12월)</td></tr>
+<tr class="idolnames">
+ <td id="sc_quarter_1">
+  <ul>
+   <li id="sc_birthday_104"><a href="https://idreamlost.tistory.com/337"><span style="color: #F30100;">세리자와 아사히</span></a><sup>S</sup> (1월 4일)</li>
+   <li id="sc_birthday_116"><a href="https://idreamlost.tistory.com/319"><span style="color: #3890C3;">미츠미네 유이카</span></a><sup>L</sup> (1월 16일)</li>
+   <li id="sc_birthday_203"><span class="special283">나나쿠사 하즈키</span> (2월 3일)</li>
+   <li id="sc_birthday_224"><a href="https://idreamlost.tistory.com/322"><span style="color: #F93B90;">소노다 치요코</span></a><sup>H</sup> (2월 24일)</li>
+   <li id="sc_birthday_225"><a href="https://idreamlost.tistory.com/316"><span style="color: #F94CAD;">츠키오카 코가네</span></a><sup>L</sup> (2월 25일)</li>
+   <li id="sc_birthday_304"><a href="https://idreamlost.tistory.com/314"><span style="color: #1C4988;"><b>카자노 히오리</b></span></a><sup>I</sup> (3월 4일)</li>
+  </ul>
+ </td>
+ <td id="sc_quarter_2">
+  <ul>
+   <li id="sc_birthday_418"><a href="https://idreamlost.tistory.com/328"><span style="color: #E5E5E5; text-shadow: 0px -1px #888888, 1px 0px #888888, 0px 1px #888888, -1px 0px #888888 !important;">쿠와야마 치유키</span></a><sup>A</sup> (4월 18일)</li>
+   <li id="sc_birthday_425"><a href="https://idreamlost.tistory.com/313"><span style="color: #FFBAD6;"><b>사쿠라기 마노</b></span></a><sup>I</sup> (4월 25일)</li>
+   <li id="sc_birthday_524"><a href="https://idreamlost.tistory.com/317"><span style="color: #A846FB;">타나카 마미미</span></a><sup>L</sup> (5월 24일)</li>
+   <li id="sc_birthday_627"><a href="https://idreamlost.tistory.com/318"><span style="color: #08664E;">시라세 사쿠야</span></a><sup>L</sup> (6월 27일)</li>
+  </ul>
+ </td>
+ <td id="sc_quarter_3">
+  <ul>
+   <li id="sc_birthday_722"><a href="https://idreamlost.tistory.com/315"><span style="color: #FFE012;"><b>하치미야 메구루</b></span></a><sup>I</sup> (7월 22일)</li>
+   <li id="sc_birthday_729"><a href="https://idreamlost.tistory.com/321"><span style="color: #E5416C;">코미야 카호</span></a><sup>H</sup> (7월 29일)</li>
+   <li id="sc_birthday_802"><a href="https://idreamlost.tistory.com/343"><span style="color: #FF00FF;">이즈미 메이</span></a><sup>S</sup> (8월 2일)</li>
+   <li id="sc_birthday_816"><a href="https://idreamlost.tistory.com/325"><span style="color: #90E667;">아리스가와 나츠하</span></a><sup>H</sup> (8월 16일)</li>
+   <li id="sc_birthday_923"><a href="https://idreamlost.tistory.com/320"><span style="color: #D9F2FF; text-shadow: 0px -1px #888888, 1px 0px #888888, 0px 1px #888888, -1px 0px #888888 !important;">유코쿠 키리코</span></a><sup>L</sup> (9월 23일)</li>
+  </ul>
+ </td>
+ <td id="sc_quarter_4">
+  <ul>
+   <li id="sc_birthday_1019"><a href="https://idreamlost.tistory.com/324"><span style="color: #88C2EB;">모리노 린제</span></a><sup>H</sup> (10월 19일)</li>
+   <li id="sc_birthday_1126"><a href="https://idreamlost.tistory.com/323"><span style="color: #FFC602;">사이죠 쥬리</span></a><sup>H</sup> (11월 26일)</li>
+   <li id="sc_birthday_1204"><a href="https://idreamlost.tistory.com/338"><span style="color: #5CE626;">마유즈미 후유코</span></a><sup>S</sup> (12월 4일)</li>
+   <li id="sc_birthday_1225"><a href="https://idreamlost.tistory.com/326"><span style="color: #F6497A;">오사키 아마나</span></a>&amp;<a href="https://idreamlost.tistory.com/327"><span style="color: #E75BEC;">텐카</span></a><sup>A</sup> (12월 25일)</li>
+  </ul>
+ </td>
+</tr>
+</table>
+</div>
+
+
+<h2><a name="series_etc" href="#seriesmark_etc">번외. </a><time datetime="2007-04-03T09:00:00+09:00">시리즈 내 기타</time></h2>
+
+<p id="etc_legend_description">
+ <ul>
+  <li>시리즈 내 어느 프로젝트에서도 정규 멤버가 아니지만, 세계관 설정상 중요한 포지션을 차지하는 아이돌 및 기타 캐릭터들의 생일 목록입니다.</li>
+ </ul>
+</p>
+
+<div id="birthdays_etc">
+<table width="1111">
+<tr style="text-align: center; font-weight: bold;"><td>1분기 (1~3월)</td><td>2분기 (4~6월)</td><td>3분기 (7~9월)</td><td>4분기 (10~12월)</td></tr>
+<tr class="idolnames">
+ <td id="etc_quarter_1">
+  <ul>
+   <li id="etc_birthday_108">[SideM] <span style="color: #000000;">이가리 레오</span> (1월 8일)</li>
+   <li id="etc_birthday_222">[SideM] <span style="color: #000000;">카자마 시노부</span> (2월 22일)</li>
+  </ul>
+ </td>
+ <td id="etc_quarter_2">
+  <ul>
+   <li id="etc_birthday_505">[ETC] <span style="color: #000000;">사노미 코코로</span> (5월 5일)</li>
+   <li id="etc_birthday_613">[SideM] <span style="color: #000000;">미마사카 타케시</span> (6월 13일)</li>
+  </ul>
+ </td>
+ <td id="etc_quarter_3">
+  <ul>
+   <li id="etc_birthday_706">[765] <span style="color: #000000;">타카기 준이치로</span>, <span style="color: #000000;">타카기 준지로</span> (7월 6일)</li>
+   <li id="etc_birthday_906">[961] <span style="color: #000000;">쿠로이 타카오</span> (9월 6일)</li>
+   <li id="etc_birthday_916">[961] <span style="color: #000000;"><a href="http://imas.gamedbs.jp/mlth/chara/show/55">시이카</a></span> (9월 16일)</li>
+  </ul>
+ </td>
+ <td id="etc_quarter_4">
+  <ul>
+   <li id="etc_birthday_1008">[SideM] <span style="color: #000000;">산죠 고로</span> (10월 8일)</li>
+   <li id="etc_birthday_1024">[876] <span style="color: #000000;"><a href="https://idreamlost.tistory.com/336">사쿠라이 유메코</a></span> (10월 24일)</li>
+   <li id="etc_birthday_1102">[SideM] <span style="color: #000000;">안도 마리오</span> (11월 2일)</li>
+   <li id="etc_birthday_1214">[876] <span style="color: #000000;"><a href="https://idreamlost.tistory.com/344">사이네리아</a></span> (12월 14일)</li>
+   <li id="etc_birthday_1218">[SideM] <span style="color: #000000;">시라이시 에루</span> (12월 18일)</li>
+  </ul>
+ </td>
+</tr>
+</table>
+</div>
+
+<hr style="width: 100%; margin-top: 3em;" />
+
+<p id="page_disclaimer">
+<b>면책 조항</b> : 이 페이지는 <a href="http://www.bandainamcoent.co.kr/">반다이 남코 엔터테인먼트</a> 및 <a href="https://www.cygames.co.kr/">사이게임즈(Cygames)</a>와 <b>직접적 연관이 없으며, 작성자는 이 페이지를 통해 그 어떠한 금전적 이득도 취하고 있지 않습니다.</b><br />
+&quot;아이돌마스터&quot;, &quot;THE iDOLM@STER&quot;,&quot;PROJECT iM@S&quot; 및 관련 상표/공식 컨텐츠는 대한민국 및 일본, 그 외 국가에서 반다이 남코 엔터테인먼트의 재산입니다. (<a href="./license_disclaimer.htm">상세 면책 조항 및 사용권 정보</a>)<br />
+<div style="text-align: center;">(<a href="https://github.com/Senarin/Senarin.github.io">사이트 소스 및 이용 안내</a>)</div>
+</p>
+</body>
+</html>

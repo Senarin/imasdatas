@@ -1,0 +1,477 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url(//fonts.googleapis.com/earlyaccess/notosansjp.css);
+
+body{
+font-family: 'Noto Sans KR', 'Noto Sans JP', sans-serif;
+font-size: 1em;
+line-height: 144%;
+}
+
+
+#page_imasbirthday{
+background-image: url('./assets/imasprojects_trans.png');
+background-size: 34.6%;
+background-repeat: no-repeat;
+background-position: center;
+background-attachment: fixed;
+}
+
+#page_starlightevents,#page_starlightsongs,#page_starlightgachas,#page_cgidolsmisc,#page_cgelectiondatas,#page_cgelection7th,#page_cgelection8th,#page_imascg_idolnumbers{
+background-image: url('./assets/imas_cg_emblem_trans.png');
+background-size: 17.3%;
+background-repeat: no-repeat;
+background-position: center;
+background-attachment: fixed;
+}
+
+#page_theatersongs,#page_theaterevents,#page_theatergachas{
+background-image: url('./assets/imas_millionstars_emblem_trans.png');
+background-size: 17.3%;
+background-repeat: no-repeat;
+background-position: center;
+background-attachment: fixed;
+}
+
+#scrollbutton{
+bottom: 0;
+right: 0;
+width: 3.3em;
+height: 2em;
+line-height: 2em;
+font-size: 140%;
+text-align: center;
+background-color: #E8E8FF;
+border: 2px solid #5F5F5F;
+border-radius: 0.25em 0em 0em 0em;
+position: fixed;
+opacity: 0.72;
+}
+
+span{
+color: #282828;
+text-decoration: none;
+}
+
+a:link{
+color: #282828;
+text-decoration: none;
+}
+a:active{
+color: #CCCCCC;
+text-decoration: none;
+}
+a:visited{
+color: #777777;
+text-decoration: none;
+}
+a:hover{
+color: #AAAAAA;
+text-decoration: none;
+}
+
+label{cursor: pointer;}
+
+input{
+font-family: Tahoma;
+}
+
+input[type="number"]{width: 55px;}
+
+input.inNum{
+height: 2em;
+width: 7em;
+font-size: 1em;
+}
+
+input.generalBtns{
+background-color: #FFFFFF;
+cursor: pointer;
+font-family: NanumGothic;
+border: 1px solid #0000FF;
+border-radius: 3px;
+}
+
+input.calcBtns{
+margin-top: 1em;
+margin-bottom: 1em;
+padding : 1.4em 8em;
+font-size : 1.1em;
+}
+
+abbr{cursor: help;}
+
+table,tr,td,th{
+border: 1px solid #000000;
+border-collapse: collapse;
+}
+
+ul{
+margin-left: -1.25em;
+margin-right: 1em;
+font-size: 13px;
+}
+
+ol{
+margin-right: 1em;
+font-size: 13px;
+}
+
+#mainpage{
+display: block;
+margin-left: 1em;
+margin-right: 1em;
+margin-top: 1em;
+margin-bottom: 1em;
+}
+
+#main_01,#main_02{
+background-color: #F5F8FA;
+width: 22em;
+border-radius: 1.4em;
+margin: 0.5em auto;
+padding: 0.5em 0.5em;
+height: auto;
+}
+
+.pageindex{
+margin: auto;
+width: 20em;
+border: 1px solid #C0B1A2;
+background-color: #FFFFFF;
+}
+
+ul.sectionlist{
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: inherit;
+border: 1px solid #000000;
+}
+
+li.sectionlist{
+display: block;
+color: #000000;
+text-align: center;
+padding: 0.5em 1em;
+text-decoration: none;
+border-bottom: 1px solid #000000;
+}
+
+li.sectionlist:last-child{border-bottom: none;}
+
+.sectionhead{margin-top: 2.5em;}
+
+#s_765876{background-color:#FF82FF;}
+#s_765876 a{color: #FFFFFF !important;}
+
+#s_cg{background-color:#00C6ED;}
+#s_cg a{color: #FFFFFF !important;}
+
+#s_million{background-color:#DFC11F;}
+#s_million a{color: #FFFFFF !important;}
+
+#s_315{background-color:#00D8FF;}
+#s_315 a{color: #FFFFFF !important;}
+
+#s_283{background-color:#78CDED;}
+#s_283 a{color: #FFFFFF !important;}
+
+#s_etc{background-color:#FFFFFF;}
+#s_etc a{color: #000000 !important;}
+
+.indexhead{text-align: center;}
+
+.idollinks{
+margin-top: -0.5em;
+display: none;
+}
+
+.nonvoice{font-style: italic;}
+
+.elected{text-decoration: underline;}
+
+.withssrare{font-weight: bold;}
+
+.scriptlinks{cursor: pointer;}
+
+.idolnames,.cgevent_lists,.cgelection_lists{font-size: 12.5px;}
+
+.cgcute,.mlvocal,.princess765,.physical315{color: #FF00FF;}
+
+.cgcool,.mldance,.fairy765,.intelli315{color: #0000FF;}
+
+.cgpassion,.mlvisual,.angel765,.mental315{color: #FFC000;}
+
+.cgspecial,.mlspecial,.special315,.special283{color: #00CC00;}
+
+.cgmastersingle,.dsidols{text-decoration: underline;}
+
+.nonavail{
+opacity: 0.5;
+filter: Alpha(opacity=50);
+}
+
+
+.cgevents_list,.cgsongs_list,.cggachas_list,.mlevents_list,.mlsongs_list,.mlgachas_list{
+margin: auto;
+font-size: 12px;
+}
+
+.cg_starlight_atapon,.ml_platinum_theater{
+color: #FFFFFF;
+background-color: #E99003;
+}
+.cg_starlight_burst,.ml_platinum_tour{
+color: #FFFFFF;
+background-color: #44AC6B;
+}
+.cg_starlight_nonrank,.ml_theater_nonrank{
+color: #FFFFFF;
+background-color: #018CBA;
+}
+.ml_event_special,.cg_starlight_special{
+color: #FFFFFF;
+background-color: #FFBF50;
+}
+
+
+#idolrank_desc,#please_select,#totalrank_desc{text-align: center;}
+
+.cgsongs_periodic,.cggachas_pickups,.mlgachas_pickups{text-align: left;}
+
+
+.cgevents_cute,.cgsongs_cute,.cgelections_cute,.mlsongs_princess,.mlevents_princess{
+background-color: #FF00FF;
+color: #FFFFFF;
+}
+.cgevents_cool,.cgsongs_cool,.cgelections_cool,.mlsongs_fairy,.mlevents_fairy{
+background-color: #0000FF;
+color: #FFFFFF;
+}
+.cgevents_passion,.cgsongs_passion,.cgelections_passion,.mlsongs_angel,.mlevents_angel{
+background-color: #FFC000;
+color: #000000;
+}
+.cgevents_all,.cgsongs_all,.mlsongs_all,.mlevents_all{
+background-color: #00CC00;
+color: #000000;
+}
+.mlsongs_special,.mlevents_special{
+background-color: #006400;
+color: #FFFFFF;
+}
+
+.notyetavail{color: #DEDEDE;}
+
+.cgelections_topidol{padding: 0.25em;}
+
+#birthdays_765876,#birthdays_cg,#birthdays_ml,#birthdays_315,#birthdays_283,#birthdays_etc,#typecomp_ml,#astype_cg{
+width: 100%;
+overflow: auto;
+}
+
+.starlight_gachas,.starlight_events,#starlight_songs,#starlight_masterrank_01,#starlight_masterrank_02,#starlight_events_special,#starlight_masterplus,#starlight_smartlive{
+margin: auto;
+overflow: auto;
+}
+
+.theater_gachas,.theater_events,.theater_albumidols,#theater_songs,#idols765_theater_ssr{
+margin: auto;
+overflow: auto;
+}
+
+
+input[name='list_tabs']{display: none;}
+
+label.tabs{
+ display: inline-block;
+ margin: 0 0 -1px;
+ padding: 0.5em 1em;
+ text-align: center;
+ color: #000000;
+ border-radius: 5px 5px 0 0;
+}
+
+label.tabs:hover{
+ color: #000000;
+ background-color: #F5F8FA;
+ cursor: pointer;
+}
+
+input[name='list_tabs']:checked + label.tabs{
+ color: #000000;
+ background-color: #F5F8FA;
+ font-weight: bold;
+ border: 1px solid #000000;
+}
+
+#theater_elist_j,#theater_elist_k,#theater_glist_j,#theater_glist_k{display: none;}
+
+#tab_j:checked ~ #theater_elist_j,
+#tab_k:checked ~ #theater_elist_k,
+#tab_j:checked ~ #theater_glist_j,
+#tab_k:checked ~ #theater_glist_k{
+ display: block;
+ padding-top: 1.5em;
+ padding-bottom: 1.5em;
+ border-top: 1px solid #000000;
+}
+
+#cgidols_starlight_ssr,#cgidols_masteralbum_series,#cgidols_voiceothers_series,#cgidols_nonvoiced_series,#cgidols_election7th_overall,#cgidols_election7th_types,#cgidols_election8th_overall,
+#cgidols_election8th_types,#cgidols_election8th_mid_overall,#cgidols_election8th_mid_types,#cgidols_elections_top1{
+width: 100%;
+overflow: auto;
+}
+
+#imasprojects_timeline,#games_765876,#followups_timeline{
+width: 100%;
+overflow: auto;
+}
+
+@keyframes fadeInOut{
+ 0% {opacity: 1;}
+ 50% {opacity: 0;}
+ 100% {opacity: 1;}
+}
+@-o-keyframes fadeInOut{
+ 0% {opacity: 1;}
+ 50% {opacity: 0;}
+ 100% {opacity: 1;}
+}
+@-moz-keyframes fadeInOut{
+ 0% {opacity: 1;}
+ 50% {opacity: 0;}
+ 100% {opacity: 1;}
+}
+@-webkit-keyframes fadeInOut{
+ 0% {opacity: 1;}
+ 50% {opacity: 0;}
+ 100% {opacity: 1;}
+}
+
+#nearend_event{
+ -webkit-animation: fadeInOut 2s infinite;
+ -moz-animation: fadeInOut 2s infinite;
+ -o-animation: fadeInOut 2s infinite;
+ animation: fadeInOut 2s infinite;
+}
+
+#cgidols_numbers_765876,#cgidols_numbers_346{
+ width: 17em;
+ margin: auto;
+ resize: none;
+}
+
+
+.cg_partialvoice{color: #CCCCCC;}
+
+.cgelection_idols{
+width: 100%;
+overflow: auto;
+}
+
+#birthday_today,#birthday_nearest{
+text-align: center;
+justify-content: center;
+background-color: #F5F8FA;
+background-image: url('./assets/birthday_icon_trans.png');
+background-repeat: no-repeat;
+background-size: 87px;
+background-position: right bottom;
+font-size: 13px;
+width: 28.5em;
+margin-top: 1em;
+margin-left: auto;
+margin-right: auto;
+padding-top: 0.5em;
+padding-bottom: 1.5em;
+padding-left: 0.375em;
+padding-right: 0.375em;
+border-radius: 1.4em;
+}
+
+#birthday_display_01{display: inline;}
+#birthday_display_02{display: none;}
+
+
+#event_countdown,#boost_countdown,#resannounce_countdown,#gacha_countdown,#masterrank_countdown,#slsong_countdown,
+#starlight_daily,#starlight_client_info,#theater_client_info,#theater_select_idol,.anniv_countdown{
+text-align: center;
+justify-content: center;
+background-color: #F5F8FA;
+background-repeat: no-repeat;
+background-size: 87px;
+background-position: right bottom;
+font-size: 13px;
+width: 28.5em;
+margin-top: 1em;
+margin-left: auto;
+margin-right: auto;
+padding-top: 0.5em;
+padding-bottom: 1.5em;
+padding-left: 0.375em;
+padding-right: 0.375em;
+border-radius: 1.4em;
+}
+
+#nearest_by_series{
+font-size: 0.9em;
+margin: 0 auto 0 auto;
+}
+
+
+#today_birth{text-align: center;}
+
+#birthtoday_765,#birthtoday_876,#birthtoday_346,#birthtoday_million,#birthtoday_315,#birthtoday_283,#birthtoday_etc{display: none;}
+
+#idol_legend_description,#as_legend_description,#cg_legend_description,#ml_legend_description,
+#sm_legend_description,#sc_legend_description,#etc_legend_description,#series_birthday{font-size: 13px;}
+
+#page_disclaimer{font-size: 13px;}
+
+#date_now{
+font-size: 14px;
+text-decoration: underline;
+}
+
+#current_browser{font-size: 11px;}
+
+#headtext{
+text-align: center;
+background-color: #F5F8FA;
+padding-top: 1em;
+padding-bottom: 1em;
+border-radius: 1.4em;
+}
+
+#imaslogo{
+width: 121px;
+height: auto;
+display: inline-block;
+vertical-align: middle;
+}
+
+#starlightlogo,#imascglogo,#theaterdayslogo{
+width: 144px;
+height: auto;
+display: inline-block;
+vertical-align: middle;
+}
+
+
+#allstarslogo,#dearlystarslogo,#cinderellagirlslogo,#millionstarslogo,#sidemlogo,#shinycolorslogo{
+width: 50px;
+height: auto;
+display: inline-block;
+vertical-align: middle;
+}
+
+label{font-size: 80%;}
+
+#author_info,#recent_edit{
+text-align: right;
+padding-left: 0.5em;
+padding-right: 0.5em;
+font-size: 80%;
+}

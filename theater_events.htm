@@ -1,0 +1,1640 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>시어터 데이즈(밀리시타) 역대 이벤트 일람</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" type="text/css" href="./css/imas_datas.css" />
+<link rel="stylesheet" type="text/css" href="/CommonFiles/css/pageload.css" />
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" integrity="sha384-xyZLiqnBEFn1hDkS8VeG/YHoqOjS/ucimT8TI6GDr9+ZP1UNbZr6d/q0ldMi/xvL" crossorigin="anonymous" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="./js/pace.min.js"></script>
+<script type="text/javascript" src="./js/imas_events.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+ showRemainingTime.showRemainingTD();
+ showRemainingTime.showResultRemainingTD();
+ setInterval("showRemainingTime.showRemainingTD();",600 * 1000);
+ setInterval("showRemainingTime.showResultRemainingTD();",3600 * 1000);
+
+ $("#theater_elist_j td[data-event-id][class^='mlsongs_']").each(function(index,item){
+  $(item).click(function(){getTDEventRanksInfo.retrieveData($(item).data("eventId"));});
+  $(item).css("cursor","pointer");
+ });
+});
+</script>
+</head>
+<body id="page_theaterevents" onload="getTDGameClientInfo.getContent();">
+<div id="headtext">
+<h1><img src="./assets/theaterdays_logo_kr.png" id="theaterdayslogo" alt="Theater Days" title="Theater Days" />&nbsp;시어터 데이즈 역대 정규 이벤트 일람</h1>
+<div id="author_info">제작자 : <a href="https://hanaya.me/">하나야</a> (<a href="http://blog.hanaya.me/">블로그</a>)</div>
+<div id="recent_edit">최근 수정 2020.1.24</div>
+</div>
+<p>(<a href="./">첫 페이지로 가기</a>)</p>
+<!-- ... -->
+<ul>
+ <li>같이 보기 : <a href="./theater_gachas.htm">가챠 갱신 일람</a>, <a href="./starlight_events.htm">데레스테 이벤트 일람</a>, <a href="./theater_anniversaries.htm">n주년 이벤트 관련 데이터</a></li>
+</ul>
+
+<div id="theater_client_info">
+ <h3>게임 버전 관련 정보 (현지판 기준)</h3>
+ <div id="tdclient_info_detail"><img src="./assets/loading.gif" style="width: 24px; height: auto;" alt="Loading" /> 가져오는 중...</div>
+ <script>setInterval(function(){getTDGameClientInfo.getContent();},(900 * 1000));</script>
+ <span style="font-size: 0.85em;"><span id="lastupdate_clientinfo"></span> / 정보제공: <a href="https://matsurihi.me">matsurihi.me</a> (日)</span>
+</div>
+
+<div class="anniv_countdown">
+ <h3>다음 n주년(6월 29일)까지 남은 시간</h3>
+ <div id="countdown_time_anniv"></div>
+ <script>var eAnnivTimestamp = new Array(6,29,0,0,0);setInterval(function(){showRemainingTime.showCountdownAnniversary(eAnnivTimestamp,"countdown_time_anniv");},50);</script>
+</div>
+
+<div class="anniv_countdown">
+ <h3>다음 한국어판 n주년(8월 30일)까지 남은 시간</h3>
+ <div id="countdown_time_anniv_k"></div>
+ <script>var eOrigTimestamp = new Array(8,30,0,0,0);setInterval(function(){showRemainingTime.showCountdownAnniversary(eOrigTimestamp,"countdown_time_anniv_k");},50);</script>
+</div>
+
+<div id="imas_theaterdays_official" style="text-align: center; font-size: 1.25em; margin-top: 1.25em;">[<a href="https://twitter.com/imasml_theater">게임 공식 트위터(日) 바로가기</a>]</div>
+<div id="imas_theaterdays_ko_official" style="text-align: center; font-size: 1.25em; margin-top: 1.25em;">[<a href="https://twitter.com/imasmltd_kr">한국어판 공식 트위터 바로가기</a>]</div>
+
+<div id="imas_theaterdays_calc_ko" style="text-align: center; font-size: 1.25em; margin-top: 1.25em;">[<a href="https://milli-calc.tistory.com/">이벤트 계산기(비공식) 바로가기</a>]</div>
+
+
+
+<br />
+<br />
+<div class="pageindex">
+<h4 class="indexhead">목차</h4>
+ <ul class="sectionlist">
+  <li class="sectionlist"><a name="section_01" href="#e_periodic">1. 일반 정규 이벤트 일람</a></li>
+  <li class="sectionlist"><a name="section_02" href="#e_musicrecords_01">2. <abbr title="MILLION THE@TER GENERATION">MTG</abbr> 시리즈 앨범별 인선</a></li>
+ </li>
+</div>
+
+<h2 class="sectionhead"><a name="e_periodic" href="#section_01">1.</a> <time datetime="2017-06-29T12:00:00+09:00">일반 정규 이벤트</time></h2>
+<hr style="width: 100%; margin-top: -0.5em;" />
+
+<div id="event_countdown">
+ <h3>현재 개최중인 이벤트 제목 (현지판 기준)</h3>
+ <div id="theater_event_name_j"><img src="./assets/loading.gif" style="width: 24px; height: auto;" alt="Loading" /> 가져오는 중...</div>
+ <sub id="theater_ename_orig_j" style="display: none;"></sub>
+ <input type="hidden" id="theater_eid_j" value="0" />
+ <h3>이벤트 종료까지 남은 시간 (현지판 기준)</h3>
+ <div id="countdown_time"><img src="./assets/loading.gif" style="width: 24px; height: auto;" alt="Loading" /> 가져오는 중...</div>
+ <sub id="nearend_event" style="display: none;">종료 임박!!</sub>
+ <sub id="underday_event" style="display: none;">얼마 남지 않았습니다. 서두르세요.</sub>
+
+ <sub>정보제공: <a href="https://matsurihi.me">matsurihi.me</a> (日)</sub>
+</div>
+
+<div id="boost_countdown">
+ <h3>후반전 시작까지 남은 시간 (현지판 기준)</h3>
+ <div id="boost_time"><img src="./assets/loading.gif" style="width: 24px; height: auto;" alt="Loading" /> 가져오는 중...</div>
+ <sub>정보제공: <a href="https://matsurihi.me">matsurihi.me</a> (日)</sub>
+</div>
+
+<div id="resannounce_countdown">
+ <h3>이벤트 결과발표까지 남은 시간 (현지판 기준)</h3>
+ <div id="resannounce_time"><img src="./assets/loading.gif" style="width: 24px; height: auto;" alt="Loading" /> 가져오는 중...</div>
+ <sub>정보제공: <a href="https://matsurihi.me">matsurihi.me</a> (日)</sub>
+</div>
+
+
+<div id="theater_elist">
+
+<input name="list_tabs" id="tab_j" type="radio" checked="checked" />
+<label class="tabs" for="tab_j">현지(일본어)판</label>
+
+<input name="list_tabs" id="tab_k" type="radio" />
+<label class="tabs" for="tab_k">한국어(국제)판</label>
+
+
+<section id="theater_elist_j">
+
+<ul>
+ <li>특별한 조건이 없이 모든 프로듀서가 참여 가능한 이벤트입니다.</li>
+ <li>경쟁형 이벤트(즉 입상 랭킹이 존재하는)인 경우 시간 단위(24시간 = 1일), 기타 비경쟁형 이벤트는 &#39;a박 b일&#39; 식으로 표기합니다.</li>
+ <li>연도 표기는 해당 이벤트의 시작 일자를 기준으로 합니다.</li>
+ <li><b>참고</b> : 전반적인 이벤트 개최 로테이션 (2019년 1월부터 적용)
+  <ul>
+   <li>매달 초순 - 워킹 및 재화(PSTheater)</li>
+   <li>매달 중순 - 컬렉션</li>
+   <li>매달 하순 - 투어(PSTour)</li>
+  </ul>
+ </li>
+ <li>매달 초순과 하순(n주년이 되는 6월 말 ~ 7월 초 제외)에는 신규 악곡이 추가되며 입상 랭킹이 존재하는 이벤트(PST -- 재화/투어)가 개최되고, 중순에는 컬렉션 이벤트가 개최됩니다.</li>
+ <li>매달 월말에서 다음달 월초 사이에는 워킹 이벤트가 개최됩니다.</li>
+ <li>다만 이는 어디까지나 2019년 1월 이후로 예측되는 일반적인 패턴으로, <b>공식 측의 사정에 따라 변동될 수 있습니다.</b></li>
+ <li>각 이벤트의 제목을 클릭하면 <b>해당 이벤트의 최종 개인 포인트 랭킹 정보</b>(현재 진행중인 이벤트인 경우 가장 최근에 갱신된 데이터)를 확인할 수 있습니다. (2018년 6월 시어터 이벤트부터 적용)</li>
+</ul>
+
+<h3>2017년도</h3>
+
+<div class="theater_events">
+<table width="1876" class="mlevents_list" style="text-align: center;">
+<tr><td width="2%">순번</td><td width="8%">형식</td><td width="20%">이벤트 및 대상곡명</td><td width="8%">대상곡 분류</td><td width="14%">개최기간</td><td width="8%">상위보상 아이돌명</td><td width="8%">하위보상 아이돌명</td><td width="32%">비고</td></tr>
+<tr>
+ <td>1</td>
+ <td class="ml_theater_nonrank">추가보상형</td>
+ <td data-event-id="1">THEATER SHOW TIME☆ (1차)</td>
+ <td>-</td>
+ <td>7월 14일 15시 ~ 20일 21시 (6박 7일)</td>
+ <td>-</td>
+ <td>-</td>
+ <td>첫 정규 이벤트</td>
+</tr>
+<tr>
+ <td>2</td>
+ <td class="ml_theater_nonrank"><b>컬렉션</b></td>
+ <td data-event-id="2">밀리언 라이브 콜렉션 (1차)</td>
+ <td>-</td>
+ <td>7월 21일 15시 ~ 28일 21시 (6박 7일)</td>
+ <td class="mlevents_angel">시마바라 엘레나</td>
+ <td class="mlevents_fairy">마카베 미즈키</td>
+ <td>박스가챠형 이벤트</td>
+</tr>
+<tr>
+ <td>3</td>
+ <td class="ml_theater_nonrank">추가보상형</td>
+ <td data-event-id="3">THEATER SHOW TIME☆ (2차)</td>
+ <td>-</td>
+ <td>7월 31일 15시 ~ 8월 7일 21시 (6박 7일)</td>
+ <td>-</td>
+ <td>-</td>
+ <td></td>
+</tr>
+<tr>
+ <td>4</td>
+ <td class="ml_platinum_theater"><b>재화(PSTheater)</b></td>
+ <td class="mlsongs_fairy" data-event-id="4">플래티넘 스타 시어터 ~Shooting Stars~</td>
+ <td><abbr title="Live The@ter Harmony">LTH</abbr> (3탄)</td>
+ <td>8월 12일 15시 ~ 21일 21시 (222시간)</td>
+ <td class="mlevents_fairy">키타자와 시호</td>
+ <td class="mlevents_angel">노노하라 아카네</td>
+ <td><b>첫 악곡(PST) 이벤트</b></td>
+</tr>
+<tr>
+ <td>5</td>
+ <td class="ml_theater_nonrank">컬렉션</td>
+ <td data-event-id="5">밀리언 라이브 콜렉션 (2차)</td>
+ <td>-</td>
+ <td>8월 23일 15시 ~ 30일 21시 (7박 8일)</td>
+ <td class="mlevents_princess">사타케 미나코</td>
+ <td class="mlevents_princess">키쿠치 마코토</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>6</td>
+ <td class="ml_theater_nonrank">추가보상형</td>
+ <td data-event-id="6">THEATER SHOW TIME☆ (3차)</td>
+ <td>-</td>
+ <td>8월 31일 15시 ~ 9월 5일 21시 (5박 6일)</td>
+ <td>-</td>
+ <td>-</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>7</td>
+ <td class="ml_platinum_theater">재화(PSTheater)</td>
+ <td class="mlsongs_angel" data-event-id="7">플래티넘 스타 시어터 ~Good-Sleep, Baby♡~</td>
+ <td><abbr title="Live The@ter Performance">LTP</abbr> (8탄)</td>
+ <td>9월 8일 15시 ~ 19일 21시 (<b>270시간</b>)</td>
+ <td class="mlevents_angel">타카츠키 야요이</td>
+ <td class="mlevents_princess">나카타니 이쿠</td>
+ <td>두번째 악곡 이벤트, 가장 개최기간이 긴 일반 이벤트</td>
+</tr>
+<tr>
+ <td>8</td>
+ <td class="ml_theater_nonrank">컬렉션</td>
+ <td data-event-id="8">밀리언 라이브 콜렉션 (3차)</td>
+ <td>-</td>
+ <td>9월 21일 15시 ~ 28일 21시 (7박 8일)</td>
+ <td class="mlevents_fairy">시죠 타카네</td>
+ <td class="mlevents_angel">오오가미 타마키</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>9</td>
+ <td class="ml_platinum_theater">재화(PSTheater)</td>
+ <td class="mlsongs_princess" data-event-id="9">플래티넘 스타 시어터 ~Growing Storm!~</td>
+ <td><abbr title="Live The@ter Harmony">LTH</abbr> (2탄)</td>
+ <td>9월 30일 15시 ~ 10월 10일 21시 (246시간)</td>
+ <td class="mlevents_princess">나나오 유리코</td>
+ <td class="mlevents_fairy">마카베 미즈키</td>
+ <td>세번째 악곡 이벤트</td>
+</tr>
+<tr>
+ <td>10</td>
+ <td class="ml_theater_nonrank">컬렉션</td>
+ <td data-event-id="10">밀리언 라이브 콜렉션 (4차)</td>
+ <td>-</td>
+ <td>10월 13일 15시 ~ 10월 18일 21시 (5박 6일)</td>
+ <td class="mlevents_angel">하코자키 세리카</td>
+ <td class="mlevents_princess">에밀리 스튜어트</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>11</td>
+ <td class="ml_platinum_tour"><b>투어(PSTour)</b></td>
+ <td class="mlsongs_fairy" data-event-id="11">플래티넘 스타 투어 ~FairyTale로는 있을 수 없어~</td>
+ <td><b>오리지널 <abbr title="Million The@ter Generation">(MTG)</abbr></b></td>
+ <td>10월 20일 15시 ~ 30일 21시 (246시간)</td>
+ <td class="mlevents_fairy">모가미 시즈카</td>
+ <td class="mlevents_fairy">시라이시 츠무기</td>
+ <td>첫 투어 이벤트, 오리지널 곡(MTG)로 개최되는 첫 이벤트.</td>
+</tr>
+<tr>
+ <td>12</td>
+ <td class="ml_platinum_theater">재화(PSTheater)</td>
+ <td class="mlsongs_angel" data-event-id="12">플래티넘 스타 시어터 ~STANDING ALIVE~</td>
+ <td><abbr title="Live The@ter Harmony">LTH</abbr> (10탄)</td>
+ <td>11월 1일 15시 ~ 9일 21시 (199시간)</td>
+ <td class="mlevents_fairy">모모세 리오</td>
+ <td class="mlevents_angel">시마바라 엘레나</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>13</td>
+ <td class="ml_theater_nonrank">컬렉션</td>
+ <td data-event-id="13">밀리언 라이브 콜렉션 (5차)</td>
+ <td>-</td>
+ <td>11월 11일 15시 ~ 19일 21시 (8박 9일)</td>
+ <td class="mlevents_princess">코사카 우미</td>
+ <td class="mlevents_fairy">나가요시 스바루</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>14</td>
+ <td class="ml_platinum_tour">투어(PSTour)</td>
+ <td class="mlsongs_angel" data-event-id="14">플래티넘 스타 투어 ~Angelic Parade♪~</td>
+ <td>오리지널 (MTG)</td>
+ <td>11월 21일 15시 ~ 28일 21시 (174시간)</td>
+ <td class="mlevents_angel">이부키 츠바사</td>
+ <td class="mlevents_angel">사쿠라모리 카오리</td>
+ <td>오리지널 곡(MTG)로 개최되는 첫 엔젤 타입 이벤트.</td>
+</tr>
+<tr>
+ <td>15</td>
+ <td class="ml_theater_nonrank">추가보상형</td>
+ <td data-event-id="36">THEATER SHOW TIME☆ (4차)</td>
+ <td>-</td>
+ <td>11월 30일 15시 ~ 12월 2일 21시 (<b>2박 3일</b>)</td>
+ <td>-</td>
+ <td>-</td>
+ <td>추가보상형 이벤트 복각</td>
+</tr>
+<tr>
+ <td>16</td>
+ <td class="ml_platinum_theater">재화(PSTheater)</td>
+ <td class="mlsongs_angel" data-event-id="15">플래티넘 스타 시어터 ~드림 트래블러~</td>
+ <td><abbr title="Live The@ter Harmony">LTH</abbr> (8탄)</td>
+ <td>12월 4일 15시 ~ 11일 21시 (174시간)</td>
+ <td class="mlevents_angel">후타미 마미</td>
+ <td class="mlevents_princess">사타케 미나코</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>17</td>
+ <td class="ml_theater_nonrank">컬렉션</td>
+ <td data-event-id="16">밀리언 라이브 콜렉션 (6차)</td>
+ <td>-</td>
+ <td>12월 13일 15시 ~ 19일 21시 (6박 7일)</td>
+ <td class="mlevents_fairy">한다 로코</td>
+ <td class="mlevents_angel">키타카미 레이카</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>18</td>
+ <td class="ml_platinum_tour">투어(PSTour)</td>
+ <td class="mlsongs_princess" data-event-id="17">플래티넘 스타 투어 ~Princess Be Ambitious!!~</td>
+ <td>오리지널 (MTG)</td>
+ <td>12월 21일 15시 ~ 29일 21시 (198시간)</td>
+ <td class="mlevents_princess">카스가 미라이</td>
+ <td class="mlevents_princess">도쿠가와 마츠리</td>
+ <td>첫 프린세스 타입 투어 이벤트</td>
+</tr>
+<tr>
+ <td>19</td>
+ <td class="ml_theater_nonrank">추가보상형</td>
+ <td data-event-id="37">THEATER SHOW TIME☆ (5차)</td>
+ <td>-</td>
+ <td>12월 31일 15시 ~ 18년 1월 2일 21시 (2박 3일)</td>
+ <td>-</td>
+ <td>-</td>
+ <td>-</td>
+</tr>
+</table>
+</div>
+
+<h3>2018년도</h3>
+
+<div class="theater_events">
+<table width="1876" class="mlevents_list" style="text-align: center;">
+<tr><td width="2%">순번</td><td width="8%">형식</td><td width="20%">이벤트 및 대상곡명</td><td width="8%">대상곡 분류</td><td width="14%">개최기간</td><td width="8%">상위보상 아이돌명</td><td width="8%">하위보상 아이돌명</td><td width="32%">비고</td></tr>
+<tr>
+ <td>20</td>
+ <td class="ml_platinum_theater">재화(PSTheater)</td>
+ <td class="mlsongs_princess" data-event-id="18">플래티넘 스타 시어터 ~HOME, SWEET FRIENDSHIP~</td>
+ <td><abbr title="Live The@ter Harmony">LTH</abbr> (5탄)</td>
+ <td>1월 4일 15시 ~ 10일 21시 (150시간)</td>
+ <td class="mlevents_princess">마츠다 아리사</td>
+ <td class="mlevents_fairy">스오 모모코</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>21</td>
+ <td class="ml_theater_nonrank">컬렉션</td>
+ <td data-event-id="19">밀리언 라이브 콜렉션 (7차)</td>
+ <td>-</td>
+ <td>1월 12일 15시 ~ 17일 21시 (5박 6일)</td>
+ <td class="mlevents_angel">바바 코노미</td>
+ <td class="mlevents_princess">아마미 하루카</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>22</td>
+ <td class="ml_platinum_tour">투어(PSTour)</td>
+ <td class="mlsongs_fairy" data-event-id="20">플래티넘 스타 투어 ~어둑한 별, 머나먼 달~</td>
+ <td>오리지널 (MTG)</td>
+ <td>1월 19일 15시 ~ 25일 21시 (150시간)</td>
+ <td class="mlevents_fairy">니카이도 치즈루</td>
+ <td class="mlevents_fairy">텐쿠바시 토모카</td>
+ <td>10번째 일반 악곡(PST) 이벤트</td>
+</tr>
+<tr>
+ <td>23</td>
+ <td class="ml_theater_nonrank">추가보상형</td>
+ <td data-event-id="38">THEATER SHOW TIME☆ (6차)</td>
+ <td>-</td>
+ <td>1월 27일 15시 ~ 1월 29일 21시 (2박 3일)</td>
+ <td>-</td>
+ <td>-</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>24</td>
+ <td class="ml_platinum_theater">재화(PSTheater)</td>
+ <td class="mlsongs_princess" data-event-id="21">플래티넘 스타 시어터 ~암호는 스타트 업!~</td>
+ <td><abbr title="Live The@ter Harmony">LTH</abbr> (1탄)</td>
+ <td>1월 31일 15시 ~ 2월 7일 21시 (174시간)</td>
+ <td class="mlevents_fairy">미나세 이오리</td>
+ <td class="mlevents_angel">후타미 아미</td>
+ <td><b>첫 올스타즈 유닛곡 이벤트</b>, 악곡 및 보상 아이돌의 속성이 각각 별개인 첫 이벤트</td>
+</tr>
+<tr>
+ <td>25</td>
+ <td class="ml_theater_nonrank">컬렉션</td>
+ <td data-event-id="22">밀리언 라이브 콜렉션 (8차)</td>
+ <td>-</td>
+ <td>2월 9일 15시 ~ 14일 21시 (4박 5일)</td>
+ <td class="mlevents_princess">하기와라 유키호</td>
+ <td class="mlevents_fairy">아키즈키 리츠코</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>26</td>
+ <td class="ml_platinum_tour">투어(PSTour)</td>
+ <td class="mlsongs_angel" data-event-id="23">플래티넘 스타 투어 ~무지개색 letters~</td>
+ <td>오리지널 (MTG)</td>
+ <td>2월 16일 15시 ~ 24일 21시 (198시간)</td>
+ <td class="mlevents_angel">시마바라 엘레나</td>
+ <td class="mlevents_angel">미야오 미야</td>
+ <td>첫 2인 유닛곡 이벤트</td>
+</tr>
+<tr>
+ <td>27</td>
+ <td class="ml_theater_nonrank">추가보상형</td>
+ <td data-event-id="39">THEATER SHOW TIME☆ (7차)</td>
+ <td>-</td>
+ <td>2월 26일 15시 ~ 3월 1일 21시 (3박 4일)</td>
+ <td>-</td>
+ <td>-</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>28</td>
+ <td class="ml_platinum_theater">재화(PSTheater)</td>
+ <td class="mlsongs_angel" data-event-id="24">플래티넘 스타 시어터 ~별무리의 심포니아~</td>
+ <td><abbr title="Live The@ter Harmony">LTH</abbr> (9탄)</td>
+ <td>3월 3일 15시 ~ 11일 21시 (198시간)</td>
+ <td class="mlevents_angel">호시이 미키</td>
+ <td class="mlevents_fairy">나가요시 스바루</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>29</td>
+ <td class="ml_theater_nonrank">컬렉션</td>
+ <td data-event-id="25">밀리언 라이브 콜렉션 (9차)</td>
+ <td>-</td>
+ <td>3월 13일 15시 ~ 18일 21시 (5박 6일)</td>
+ <td class="mlevents_fairy">토코로 메구미</td>
+ <td class="mlevents_princess">야부키 카나</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>30</td>
+ <td class="ml_platinum_tour">투어(PSTour)</td>
+ <td class="mlsongs_princess" data-event-id="26">플래티넘 스타 투어 ~ZETTAI×BREAK!! 트윙클 리듬~</td>
+ <td>오리지널 (MTG)</td>
+ <td>3월 20일 15시 ~ 27일 21시 (174시간)</td>
+ <td class="mlevents_princess">나카타니 이쿠</td>
+ <td class="mlevents_princess">나나오 유리코</td>
+ <td>첫 3인 유닛곡 이벤트, 대상 악곡 <abbr title="Million Mix">MM 난이도</abbr> 첫 18레벨 출현</td>
+</tr>
+<tr>
+ <td>31</td>
+ <td class="ml_theater_nonrank">추가보상형</td>
+ <td data-event-id="40">THEATER SHOW TIME☆ (8차)</td>
+ <td>-</td>
+ <td>3월 29일 15시 ~ 31일 21시 (2박 3일)</td>
+ <td>-</td>
+ <td>-</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>32</td>
+ <td class="ml_event_special">특별 이벤트</td>
+ <td>MILLION LIE!? FISHER DAYS</td>
+ <td>-</td>
+ <td>4월 1일 0시 ~ 24시 (24시간)</td>
+ <td>-</td>
+ <td>-</td>
+ <td>2018 만우절 기념 특별 이벤트</td>
+</tr>
+<tr>
+ <td>33</td>
+ <td class="ml_platinum_theater">재화(PSTheater)</td>
+ <td class="mlsongs_princess" data-event-id="27" data-appeal-bonus="1">플래티넘 스타 시어터 ~애타는 마음에 불을 붙이고~</td>
+ <td><abbr title="Live The@ter Harmony">LTH</abbr> (6탄)</td>
+ <td>4월 3일 15시 ~ 10일 21시 (174시간)</td>
+ <td class="mlevents_princess">타나카 코토하</td>
+ <td class="mlevents_fairy">토코로 메구미</td>
+ <td>이벤트곡에 특정 어필치 보너스가 적용된 첫 시어터 이벤트<br /><b>가장 과열된 재화(시어터) 이벤트 (개인 입상랭킹 <abbr title="상위보상 마스터랭크 4">2000위</abbr> 및 <abbr title="상위보상 마스터랭크 3">5000위</abbr> 이내 기준)</b></td>
+</tr>
+<tr>
+ <td>34</td>
+ <td class="ml_theater_nonrank">컬렉션</td>
+ <td data-event-id="28">밀리언 라이브 콜렉션 (10차)</td>
+ <td>-</td>
+ <td>4월 12일 15시 ~ 18일 21시 (6박 7일)</td>
+ <td class="mlevents_angel">키노시타 히나타</td>
+ <td class="mlevents_princess">요코야마 나오</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>35</td>
+ <td class="ml_platinum_tour">투어(PSTour)</td>
+ <td class="mlsongs_fairy" data-event-id="29">플래티넘 스타 투어 ~Melty Fantasia~</td>
+ <td>오리지널 (MTG)</td>
+ <td>4월 20일 15시 ~ 28일 21시 (198시간)</td>
+ <td class="mlevents_fairy">마카베 미즈키</td>
+ <td class="mlevents_fairy">키타자와 시호</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>36</td>
+ <td class="ml_theater_nonrank">추가보상형</td>
+ <td data-event-id="41">THEATER SHOW TIME☆ (9차)</td>
+ <td>-</td>
+ <td>4월 30일 15시 ~ 5월 2일 21시 (2박 3일)</td>
+ <td>-</td>
+ <td>-</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>37</td>
+ <td class="ml_platinum_theater">재화(PSTheater)</td>
+ <td class="mlsongs_princess" data-event-id="30" data-appeal-bonus="3">플래티넘 스타 시어터 ~Birth of Color~</td>
+ <td><abbr title="Live The@ter Harmony">LTH</abbr> (7탄)</td>
+ <td>5월 4일 15시 ~ 11일 21시 (174시간)</td>
+ <td class="mlevents_fairy">마이하마 아유무</td>
+ <td class="mlevents_angel">미우라 아즈사</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>38</td>
+ <td class="ml_theater_nonrank">컬렉션</td>
+ <td data-event-id="31">밀리언 라이브 콜렉션 (11차)</td>
+ <td>-</td>
+ <td>5월 13일 15시 ~ 19일 21시 (6박 7일)</td>
+ <td class="mlevents_princess">후쿠다 노리코</td>
+ <td class="mlevents_fairy">니카이도 치즈루</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>39</td>
+ <td class="ml_platinum_tour">투어(PSTour)</td>
+ <td class="mlsongs_angel" data-event-id="32">플래티넘 스타 투어 ~꽃이 만발한 Weekend&#x1F338;~</td>
+ <td>오리지널 (MTG)</td>
+ <td>5월 21일 15시 ~ 29일 21시 (198시간)</td>
+ <td class="mlevents_angel">사쿠라모리 카오리</td>
+ <td class="mlevents_angel">토요카와 후카</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>40</td>
+ <td class="ml_theater_nonrank">추가보상형</td>
+ <td data-event-id="42">THEATER SHOW TIME☆ (10차)</td>
+ <td>-</td>
+ <td>5월 31일 15시 ~ 6월 2일 21시 (2박 3일)</td>
+ <td>-</td>
+ <td>-</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>41</td>
+ <td class="ml_platinum_theater">재화(PSTheater)</td>
+ <td class="mlsongs_fairy" data-event-id="33" data-appeal-bonus="2">플래티넘 스타 시어터 ~Eternal Harmony~</td>
+ <td><abbr title="Live The@ter Harmony">LTH</abbr> (4탄)</td>
+ <td>6월 4일 15시 ~ 11일 21시 (174시간)</td>
+ <td class="mlevents_princess">에밀리 스튜어트</td>
+ <td class="mlevents_fairy">줄리아</td>
+ <td><b>상위 보상을 포인트 보상으로도 확정 획득 가능하게 되는 첫 악곡 이벤트</b><br /><b>개인 입상랭킹 일부 보상 컷 조정(<abbr title="상위보상 마스터랭크 4">2000&#8594;2500위</abbr>, <abbr title="상위보상 마스터랭크 1">20000&#8594;25000위</abbr>)</b><br />시어터 이벤트 대상 악곡 <abbr title="Million Mix">MM 난이도</abbr> 첫 18레벨 출현, LTH 앨범곡으로 진행된 마지막 이벤트</td>
+</tr>
+<tr>
+ <td>42</td>
+ <td class="ml_theater_nonrank">컬렉션</td>
+ <td data-event-id="34">밀리언 라이브 콜렉션 (12차)</td>
+ <td>-</td>
+ <td>6월 13일 15시 ~ 18일 21시 (5박 6일)</td>
+ <td class="mlevents_fairy">텐쿠바시 토모카</td>
+ <td class="mlevents_angel">노노하라 아카네</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>43</td>
+ <td class="ml_platinum_tour">투어(PSTour)</td>
+ <td class="mlsongs_princess" data-event-id="35">플래티넘 스타 투어 ~피는 것은 속세의 그대란 불꽃~</td>
+ <td>오리지널 (MTG)</td>
+ <td>6월 20일 15시 ~ 27일 21시 (174시간)</td>
+ <td class="mlevents_princess">타카야마 사요코</td>
+ <td class="mlevents_princess">코사카 우미</td>
+ <td>20번째 일반 악곡(PST) 이벤트</td>
+</tr>
+<tr>
+ <td>44</td>
+ <td class="ml_event_special">n주년 이벤트</td>
+ <td class="mlsongs_all" data-event-id="44">BRAND★NEW★PERFORM@NCE!!!</td>
+ <td>오리지널 (MTG)</td>
+ <td>6월 29일 0시 ~ 7월 11일 24시 (<b>312시간</b>)</td>
+ <td colspan="2"><b>765 밀리언 올스타즈 52명 전원</b></td>
+ <td>게임 서비스 1주년 (6월 29일) 기념 특별 이벤트<br /><b>가장 개최기간이 긴 이벤트</b></td>
+</tr>
+<tr>
+ <td>45</td>
+ <td class="ml_theater_nonrank">컬렉션</td>
+ <td data-event-id="45">밀리언 라이브 콜렉션 (13차)</td>
+ <td>-</td>
+ <td>7월 13일 15시 ~ 19일 21시 (6박 7일)</td>
+ <td class="mlevents_fairy">시라이시 츠무기</td>
+ <td class="mlevents_princess">카스가 미라이</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td rowspan="2">46</td>
+ <td rowspan="2" class="ml_platinum_tour">투어(PSTour)</td>
+ <td rowspan="2" class="mlsongs_all" data-event-id="46">플래티넘 스타 투어 ~Blooming Star~</td>
+ <td rowspan="2">기타</td>
+ <td rowspan="2">7월 21일 15시 ~ 29일 21시 (198시간)</td>
+ <td colspan="2" class="mlevents_special">시이카 (특별 보상)</td>
+ <td rowspan="2"><b>Ex 타입 아이돌이 등장하는 첫 악곡 이벤트</b><br />첫 전속성 투어 이벤트</td>
+</tr>
+<tr>
+ <td class="mlevents_fairy">나가요시 스바루</td>
+ <td class="mlevents_angel">시노미야 카렌</td>
+</tr>
+<tr>
+ <td>47</td>
+ <td class="ml_theater_nonrank">추가보상형</td>
+ <td data-event-id="47">THEATER SHOW TIME☆ (11차)</td>
+ <td>-</td>
+ <td>7월 31일 15시 ~ 8월 1일 21시 (1박 2일)</td>
+ <td>-</td>
+ <td>-</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>48</td>
+ <td class="ml_platinum_theater">재화(PSTheater)</td>
+ <td class="mlsongs_angel" data-event-id="48" data-appeal-bonus="1">플래티넘 스타 시어터 ~선리듬 오케스트라~</td>
+ <td><b><abbr title="Live The@ter Forward">LTF</abbr> (1탄)</b></td>
+ <td>8월 3일 15시 ~ 11일 21시 (198시간)</td>
+ <td class="mlevents_princess">야부키 카나</td>
+ <td class="mlevents_angel">이부키 츠바사</td>
+ <td>LTF 앨범곡으로 진행된 첫 이벤트</td>
+</tr>
+<tr>
+ <td>49</td>
+ <td class="ml_theater_nonrank">컬렉션</td>
+ <td data-event-id="49">밀리언 라이브 콜렉션 (14차)</td>
+ <td>-</td>
+ <td>8월 13일 15시 ~ 18일 21시 (5박 6일)</td>
+ <td class="mlevents_angel">미우라 아즈사</td>
+ <td class="mlevents_fairy">줄리아</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>50</td>
+ <td class="ml_platinum_tour">투어(PSTour)</td>
+ <td class="mlsongs_princess" data-event-id="50">플래티넘 스타 투어 ~빅 밴즈 발리보!!!!!~</td>
+ <td><b>시어터 부스트 (<abbr title="THE@TER BOOST!">TB</abbr>/1탄)</b></td>
+ <td>8월 20일 15시 ~ 28일 21시 (198시간)</td>
+ <td class="mlevents_princess">코사카 우미</td>
+ <td class="mlevents_fairy">토코로 메구미</td>
+ <td>[시어터 부스트] 결과발표 인선으로 진행되는 첫 이벤트 (테마명: &quot;초 비치발리볼&quot;)</td>
+</tr>
+<tr>
+ <td>51</td>
+ <td class="ml_theater_nonrank">추가보상형</td>
+ <td data-event-id="51">THEATER SHOW TIME☆ (12차)</td>
+ <td>-</td>
+ <td>8월 30일 15시 ~ 9월 2일 24시 (3박 4일)</td>
+ <td>-</td>
+ <td>-</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>52</td>
+ <td class="ml_platinum_theater">재화(PSTheater)</td>
+ <td class="mlsongs_fairy" data-event-id="52" data-appeal-bonus="1">플래티넘 스타 시어터 ~brave HARMONY~</td>
+ <td><abbr title="Live The@ter Forward">LTF</abbr> (2탄)</td>
+ <td>9월 3일 15시 ~ 10일 21시 (174시간)</td>
+ <td class="mlevents_fairy">텐쿠바시 토모카</td>
+ <td class="mlevents_angel">키타카미 레이카</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>53</td>
+ <td class="ml_theater_nonrank">컬렉션</td>
+ <td data-event-id="53">밀리언 라이브 콜렉션 (15차)</td>
+ <td>-</td>
+ <td>9월 12일 15시 ~ 19일 21시 (7박 8일)</td>
+ <td class="mlevents_princess">나나오 유리코</td>
+ <td class="mlevents_fairy">마이하마 아유무</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>54</td>
+ <td class="ml_platinum_tour">투어(PSTour)</td>
+ <td class="mlsongs_angel" data-event-id="54">플래티넘 스타 투어 ~오디너리 클로버~</td>
+ <td>시어터 부스트 (<abbr title="THE@TER BOOST!">TB</abbr>/2탄)</td>
+ <td>9월 21일 15시 ~ 27일 21시 (150시간)</td>
+ <td class="mlevents_angel">사쿠라모리 카오리</td>
+ <td class="mlevents_angel">모치즈키 안나</td>
+ <td>[시어터 부스트] 결과발표 인선으로 진행되는 두번째 이벤트 (테마명: &quot;세자매 카페&quot;)</td>
+</tr>
+<tr>
+ <td>55</td>
+ <td class="ml_theater_nonrank">추가보상형</td>
+ <td data-event-id="55">THEATER SHOW TIME☆ (13차)</td>
+ <td>-</td>
+ <td>9월 29일 15시 ~ 10월 2일 24시 (3박 4일)</td>
+ <td>-</td>
+ <td>-</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>56</td>
+ <td class="ml_platinum_theater">재화(PSTheater)</td>
+ <td class="mlsongs_princess" data-event-id="56" data-appeal-bonus="2">플래티넘 스타 시어터 ~Starry Melody~</td>
+ <td><abbr title="Live The@ter Forward">LTF</abbr> (3탄)</td>
+ <td>10월 3일 15시 ~ 11일 21시 (198시간)</td>
+ <td class="mlevents_angel">하코자키 세리카</td>
+ <td class="mlevents_princess">카스가 미라이</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>57</td>
+ <td class="ml_theater_nonrank">컬렉션</td>
+ <td data-event-id="57">밀리언 라이브 콜렉션 (16차)</td>
+ <td>-</td>
+ <td>10월 13일 15시 ~ 20일 21시 (7박 8일)</td>
+ <td class="mlevents_fairy">키타자와 시호</td>
+ <td class="mlevents_angel">후타미 아미</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>58</td>
+ <td class="ml_platinum_tour">투어(PSTour)</td>
+ <td class="mlsongs_fairy" data-event-id="58">플래티넘 스타 투어 ~라스트 액트리스~</td>
+ <td>시어터 부스트 (<abbr title="THE@TER BOOST!">TB</abbr>/3탄)</td>
+ <td>10월 22일 15시 ~ 30일 21시 (198시간)</td>
+ <td class="mlevents_princess">타나카 코토하</td>
+ <td class="mlevents_fairy">스오 모모코</td>
+ <td>[시어터 부스트] 결과발표 인선으로 진행되는 마지막 이벤트 (테마명: &quot;극장 서스펜스&quot;)<br /><b>가장 과열된 투어 이벤트 (개인 입상랭킹 <abbr title="탑 플래티넘 칭호 + 상위보상 마스터랭크 4">100위</abbr>, <abbr title="상위보상 마스터랭크 4">2500위</abbr> ~ <abbr title="상위보상 컷">50000위</abbr> 이내 기준), 가장 과열된 일반 악곡(PST) 이벤트</b></td>
+</tr>
+<tr>
+ <td>59</td>
+ <td class="ml_theater_nonrank">추가보상형</td>
+ <td data-event-id="59">THEATER SHOW TIME☆ (13차)</td>
+ <td>-</td>
+ <td>11월 1일 15시 ~ 4일 24시 (3박 4일)</td>
+ <td>-</td>
+ <td>-</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>60</td>
+ <td class="ml_platinum_theater">재화(PSTheater)</td>
+ <td class="mlsongs_angel" data-event-id="60" data-appeal-bonus="2">플래티넘 스타 시어터 ~정글☆파티~</td>
+ <td><b><abbr title="Live The@ter Dreamers">LTD</abbr> (6탄)</b></td>
+ <td>11월 5일 15시 ~ 12일 21시 (174시간)</td>
+ <td class="mlevents_angel">오가미 타마키</td>
+ <td class="mlevents_angel">후타미 마미</td>
+ <td>LTD 앨범곡으로 진행되는 첫 이벤트</td>
+</tr>
+<tr>
+ <td>61</td>
+ <td class="ml_theater_nonrank">컬렉션</td>
+ <td data-event-id="61">밀리언 라이브 콜렉션 (17차)</td>
+ <td>-</td>
+ <td>11월 14일 15시 ~ 19일 21시 (5박 6일)</td>
+ <td class="mlevents_angel">사쿠라모리 카오리</td>
+ <td class="mlevents_princess">가나하 히비키</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>62</td>
+ <td class="ml_platinum_tour">투어(PSTour)</td>
+ <td class="mlsongs_fairy" data-event-id="62">플래티넘 스타 투어 ~하모닉스~</td>
+ <td>오리지널 (MTG)</td>
+ <td>11월 21일 15시 ~ 28일 21시 (174시간)</td>
+ <td class="mlevents_fairy">줄리아</td>
+ <td class="mlevents_fairy">모가미 시즈카</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>63</td>
+ <td class="ml_theater_nonrank">추가보상형</td>
+ <td data-event-id="63">THEATER SHOW TIME☆ (14차)</td>
+ <td>-</td>
+ <td>11월 30일 15시 ~ 12월 3일 24시 (3박 4일)</td>
+ <td>-</td>
+ <td>-</td>
+ <td><b>마지막 쇼타임 이벤트</b></td>
+</tr>
+<tr>
+ <td>64</td>
+ <td class="ml_platinum_theater">재화(PSTheater)</td>
+ <td class="mlsongs_princess" data-event-id="64" data-appeal-bonus="2">플래티넘 스타 시어터 ~PRETTY DREAMER~</td>
+ <td><abbr title="Live The@ter Performance">LTP</abbr> (3탄)</td>
+ <td>12월 4일 15시 ~ 12일 21시 (174시간)</td>
+ <td class="mlevents_princess">가나하 히비키</td>
+ <td class="mlevents_princess">요코야마 나오</td>
+ <td>30번째 일반 악곡(PST) 이벤트</td>
+</tr>
+<tr>
+ <td>65</td>
+ <td class="ml_theater_nonrank">컬렉션</td>
+ <td data-event-id="65">밀리언 라이브 콜렉션 (18차)</td>
+ <td>-</td>
+ <td>12월 14일 15시 ~ 19일 21시 (5박 6일)</td>
+ <td class="mlevents_fairy">마카베 미즈키</td>
+ <td class="mlevents_angel">토요카와 후카</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>66</td>
+ <td class="ml_platinum_tour">투어(PSTour)</td>
+ <td class="mlsongs_angel" data-event-id="66">플래티넘 스타 투어 ~봄을 기다리는 여자~</td>
+ <td>오리지널 (MTG)</td>
+ <td>12월 21일 15시 ~ 28일 21시 (174시간)</td>
+ <td class="mlevents_angel">시노미야 카렌</td>
+ <td class="mlevents_angel">노노하라 아카네</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>67</td>
+ <td class="ml_theater_nonrank"><b>워킹</b></td>
+ <td data-event-id="67">MILLION LIVE WORKING☆ ~크리스마스 페스타 스토리~</td>
+ <td>-</td>
+ <td>12월 30일 15시 ~ 19년 1월 3일 24시 (4박 5일)</td>
+ <td>-</td>
+ <td>-</td>
+ <td>첫 워킹 이벤트</td>
+</tr>
+</table>
+</div>
+
+<h3>2019년도</h3>
+
+<div class="theater_events">
+<table width="1876" class="mlevents_list" style="text-align: center;">
+<tr><td width="2%">순번</td><td width="8%">형식</td><td width="20%">이벤트 및 대상곡명</td><td width="8%">대상곡 분류</td><td width="14%">개최기간</td><td width="8%">상위보상 아이돌명</td><td width="8%">하위보상 아이돌명</td><td width="32%">비고</td></tr>
+<tr>
+ <td>68</td>
+ <td class="ml_platinum_theater">재화(PSTheater)</td>
+ <td class="mlsongs_fairy" data-event-id="68" data-appeal-bonus="2">플래티넘 스타 시어터 ~Raise the FLAG~</td>
+ <td><abbr title="Live The@ter Forward">LTF</abbr> (2탄)</td>
+ <td>1월 4일 15시 ~ 11일 21시 (174시간)</td>
+ <td class="mlevents_fairy">토코로 메구미</td>
+ <td class="mlevents_fairy">마카베 미즈키</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>69</td>
+ <td class="ml_theater_nonrank">컬렉션</td>
+ <td data-event-id="69">밀리언 라이브 콜렉션 (19차)</td>
+ <td>-</td>
+ <td>1월 13일 15시 ~ 18일 21시 (5박 6일)</td>
+ <td class="mlevents_princess">마츠다 아리사</td>
+ <td class="mlevents_fairy">키사라기 치하야</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>70</td>
+ <td class="ml_platinum_tour">투어(PSTour)</td>
+ <td class="mlsongs_princess" data-event-id="70">플래티넘 스타 투어 ~왜냐면 당신은 프린세스~</td>
+ <td>오리지널 (MTG)</td>
+ <td>1월 20일 15시 ~ 27일 21시 (174시간)</td>
+ <td class="mlevents_princess">도쿠가와 마츠리</td>
+ <td class="mlevents_princess">에밀리 스튜어트</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>71</td>
+ <td class="ml_theater_nonrank">워킹</td>
+ <td data-event-id="71">MILLION LIVE WORKING☆<br />~아이돌 입춘 전날 패닉! &amp; 홍매백매 패션쇼~</td>
+ <td>-</td>
+ <td>1월 29일 15시 ~ 2월 1일 24시 (3박 4일)</td>
+ <td>-</td>
+ <td>-</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>72</td>
+ <td class="ml_platinum_theater">재화(PSTheater)</td>
+ <td class="mlsongs_angel" data-event-id="72" data-appeal-bonus="3">플래티넘 스타 시어터 ~성장중→LOVER!!~</td>
+ <td><abbr title="Live The@ter Dreamers">LTD</abbr> (2탄)</td>
+ <td>2월 2일 15시 ~ 10일 21시 (198시간)</td>
+ <td class="mlevents_angel">모치즈키 안나</td>
+ <td class="mlevents_princess">나나오 유리코</td>
+ <td><b>가장 과열된 재화(시어터) 이벤트 (개인 입상랭킹 <abbr title="상위보상 마스터랭크 4">2500위</abbr> 및 <abbr title="상위보상 마스터랭크 3">5000위</abbr> 이내 기준)</b></td>
+</tr>
+<tr>
+ <td>73</td>
+ <td class="ml_theater_nonrank">컬렉션</td>
+ <td data-event-id="73">밀리언 라이브 콜렉션 (20차)</td>
+ <td>-</td>
+ <td>2월 12일 15시 ~ 17일 21시 (5박 6일)</td>
+ <td class="mlevents_fairy">모모세 리오</td>
+ <td class="mlevents_angel">미야오 미야</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>74</td>
+ <td class="ml_platinum_tour">투어(PSTour)</td>
+ <td class="mlsongs_fairy" data-event-id="74">플래티넘 스타 투어 ~월요일의 크림소다~</td>
+ <td>오리지널 (MTG)</td>
+ <td>2월 19일 15시 ~ 26일 21시 (174시간)</td>
+ <td class="mlevents_fairy">한다 로코</td>
+ <td class="mlevents_fairy">마이하마 아유무</td>
+ <td><b>MTG 앨범곡으로 개최된 마지막 페어리 타입 이벤트</b></td>
+</tr>
+<tr>
+ <td>75</td>
+ <td class="ml_theater_nonrank">워킹</td>
+ <td data-event-id="75">MILLION LIVE WORKING☆ ~다다르자! 아이돌의 길~</td>
+ <td>-</td>
+ <td>2월 28일 15시 ~ 3월 3일 24시 (3박 4일)</td>
+ <td>-</td>
+ <td>-</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>76</td>
+ <td class="ml_platinum_theater">재화(PSTheater)</td>
+ <td class="mlsongs_princess" data-event-id="76" data-appeal-bonus="2">플래티넘 스타 시어터 ~Bonnes! Bonnes!! Vacances!!!~</td>
+ <td><abbr title="Live The@ter Forward">LTF</abbr> (1탄)</td>
+ <td>3월 4일 15시 ~ 10일 21시 (150시간)</td>
+ <td class="mlevents_princess">후쿠다 노리코</td>
+ <td class="mlevents_princess">사타케 미나코</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>77</td>
+ <td class="ml_theater_nonrank">컬렉션</td>
+ <td data-event-id="77">밀리언 라이브 콜렉션 (21차)</td>
+ <td>-</td>
+ <td>3월 12일 15시 ~ 17일 21시 (5박 6일)</td>
+ <td class="mlevents_angel">이부키 츠바사</td>
+ <td class="mlevents_princess">하기와라 유키호</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>78</td>
+ <td class="ml_platinum_tour">투어(PSTour)</td>
+ <td class="mlsongs_angel" data-event-id="78">플래티넘 스타 투어 ~피코피코이코 인베이더~</td>
+ <td>오리지널 (MTG)</td>
+ <td>3월 19일 15시 ~ 25일 21시 (150시간)</td>
+ <td class="mlevents_angel">키노시타 히나타</td>
+ <td class="mlevents_angel">하코자키 세리카</td>
+ <td><b>MTG 앨범곡으로 개최된 마지막 엔젤 타입 이벤트</b></td>
+</tr>
+<tr>
+ <td>79</td>
+ <td class="ml_theater_nonrank">워킹</td>
+ <td data-event-id="79">MILLION LIVE WORKING☆ ~향진하자! 아이돌 파이트!~</td>
+ <td>-</td>
+ <td>3월 27일 15시 ~ 31일 24시 (4박 5일)</td>
+ <td>-</td>
+ <td>-</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>80</td>
+ <td class="ml_event_special">특별 이벤트</td>
+ <td data-event-id="80">출격! 아이돌 히어로즈</td>
+ <td>-</td>
+ <td>4월 1일 0시 ~ 24시 (24시간)</td>
+ <td>-</td>
+ <td>-</td>
+ <td>2019 만우절 기념 특별 이벤트</td>
+</tr>
+<tr>
+ <td>81</td>
+ <td class="ml_platinum_theater">재화(PSTheater)</td>
+ <td class="mlsongs_all" data-event-id="81" data-appeal-bonus="-1">플래티넘 스타 시어터 SP<br />~아이돌 히어로즈 제네시스 Justice OR Voice~</td>
+ <td><b>오리지널 (<abbr title="Million The@ter Wave">MTW</abbr>/1탄)</b></td>
+ <td>4월 2일 15시 ~ 10일 21시 (198시간)</td>
+ <td class="mlevents_fairy">시라이시 츠무기</td>
+ <td class="mlevents_fairy">줄리아</td>
+ <td>[아이돌 히어로즈] 연계 이벤트, <b>첫 전속성 시어터 이벤트</b>, <b>오리지널 악곡으로 개최된 첫 시어터 이벤트</b><br /><b>올스타즈 멤버가 참가한 오리지널 악곡으로 진행되는 첫 이벤트</b>, <b>MTW 앨범곡으로 개최된 첫 일반 악곡(PST) 이벤트</b></td>
+</tr>
+<tr>
+ <td>82</td>
+ <td class="ml_theater_nonrank">컬렉션</td>
+ <td data-event-id="82">밀리언 라이브 콜렉션 (22차)</td>
+ <td>-</td>
+ <td>4월 12일 15시 ~ 17일 21시 (5박 6일)</td>
+ <td class="mlevents_princess">아마미 하루카</td>
+ <td class="mlevents_angel">시마바라 엘레나</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>83</td>
+ <td class="ml_platinum_tour">투어(PSTour)</td>
+ <td class="mlsongs_princess" data-event-id="83">플래티넘 스타 투어 ~Episode. Tiara~</td>
+ <td>오리지널 (MTG)</td>
+ <td>4월 19일 15시 ~ 26일 21시 (174시간)</td>
+ <td class="mlevents_princess">카스가 미라이</td>
+ <td class="mlevents_princess">야부키 카나</td>
+ <td><b>MTG 앨범곡으로 개최된 마지막 시어터조 참여 악곡(PST) 이벤트</b>, 39번째 일반 악곡(PST) 이벤트<br /><b>헤이세이(平成) 연호에 개최된 마지막 악곡(PST) 이벤트</b></td>
+</tr>
+<tr>
+ <td>84</td>
+ <td class="ml_theater_nonrank">워킹</td>
+ <td data-event-id="84">MILLION LIVE WORKING☆ ~이어라! 아이돌 철인삼종경기!~</td>
+ <td>-</td>
+ <td>4월 28일 15시 ~ 5월 1일 24시 (3박 4일)</td>
+ <td>-</td>
+ <td>-</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>85</td>
+ <td class="ml_platinum_theater">재화(PSTheater)</td>
+ <td class="mlsongs_fairy" data-event-id="85" data-appeal-bonus="1">플래티넘 스타 시어터 ~프리뮬러~</td>
+ <td><abbr title="Live The@ter Forward">LTF</abbr> (2탄)</td>
+ <td>5월 2일 15시 ~ 10일 21시 (198시간)</td>
+ <td class="mlevents_fairy">나가요시 스바루</td>
+ <td class="mlevents_fairy">모가미 시즈카</td>
+ <td><b>레이와(令和) 연호에 개최되는 첫 악곡(PST) 이벤트</b>, 40번째 일반 악곡(PST) 이벤트</td>
+</tr>
+<tr>
+ <td>86</td>
+ <td class="ml_theater_nonrank">컬렉션</td>
+ <td data-event-id="86">밀리언 라이브 콜렉션 (23차)</td>
+ <td>-</td>
+ <td>5월 12일 15시 ~ 18일 21시 (6박 7일)</td>
+ <td class="mlevents_fairy">미나세 이오리</td>
+ <td class="mlevents_angel">이부키 츠바사</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>87</td>
+ <td class="ml_platinum_tour">투어(PSTour)</td>
+ <td class="mlsongs_all" data-event-id="87">플래티넘 스타 투어 ~LEADER!!~</td>
+ <td><b>오리지널 (MTG)</b></td>
+ <td>5월 20일 15시 ~ 28일 21시 (198시간)</td>
+ <td class="mlevents_princess">아마미 하루카</td>
+ <td class="mlevents_fairy">키사라기 치하야</td>
+ <td><b>MTG 앨범곡으로 개최되는 마지막 악곡(PST) 이벤트</b>, <b>올스타즈 멤버가 참여하는 악곡으로 개최되는 첫 투어 이벤트</b><br /><b>첫 전체곡 투어 이벤트</b>, <b>레이와(令和) 연호에 개최되는 첫 투어 이벤트</b></td>
+</tr>
+<tr>
+ <td>88</td>
+ <td class="ml_theater_nonrank">워킹</td>
+ <td data-event-id="88">MILLION LIVE WORKING☆ ~극한! 서바이벌 아일랜드~</td>
+ <td>-</td>
+ <td>5월 30일 15시 ~ 6월 2일 24시 (3박 4일)</td>
+ <td>-</td>
+ <td>-</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>89</td>
+ <td class="ml_platinum_theater">재화(PSTheater)</td>
+ <td class="mlsongs_angel" data-event-id="89" data-appeal-bonus="1">플래티넘 스타 시어터 ~fruity love~</td>
+ <td><abbr title="Live The@ter Dreamers">LTD</abbr> (5탄)</td>
+ <td>6월 3일 15시 ~ 10일 21시 (174시간)</td>
+ <td class="mlevents_angel">노노하라 아카네</td>
+ <td class="mlevents_fairy">한다 로코</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>90</td>
+ <td class="ml_theater_nonrank">컬렉션</td>
+ <td data-event-id="90">밀리언 라이브 콜렉션 (24차)</td>
+ <td>-</td>
+ <td>6월 12일 15시 ~ 17일 21시 (5박 6일)</td>
+ <td class="mlevents_angel">타카츠키 야요이</td>
+ <td class="mlevents_princess">타카야마 사요코</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>91</td>
+ <td class="ml_platinum_tour">투어(PSTour)</td>
+ <td class="mlsongs_angel" data-event-id="91">플래티넘 스타 투어 ~White Vows~</td>
+ <td>오리지널 (MTW/1탄)</td>
+ <td>6월 19일 15시 ~ 26일 21시 (174시간)</td>
+ <td class="mlevents_angel">토요카와 후카</td>
+ <td class="mlevents_fairy">모모세 리오</td>
+ <td>게임 내 100번째 수록곡, <b>MTW 앨범곡으로 개최된 첫 투어 이벤트</b></td>
+</tr>
+<tr>
+ <td>92</td>
+ <td class="ml_theater_nonrank">워킹</td>
+ <td data-event-id="116">MILLION LIVE WORKING☆ ~분투! 처음 해보는 아르바이트~</td>
+ <td>-</td>
+ <td>6월 27일 15시 ~ 30일 24시 (3박 4일)</td>
+ <td>-</td>
+ <td>-</td>
+ <td>2주년 기념 워킹 이벤트</td>
+</tr>
+<tr>
+ <td>93</td>
+ <td class="ml_event_special">n주년 이벤트</td>
+ <td class="mlsongs_all" data-event-id="92">UNI-ON@IR!!!!</td>
+ <td>오리지널 (MTW/1탄)</td>
+ <td>7월 1일 0시 ~ 13일 24시 (<b>312시간</b>)</td>
+ <td colspan="2"><b>765 밀리언 올스타즈 52명 전원</b></td>
+ <td>게임 서비스 2주년 (6월 29일) 기념 특별 이벤트</td>
+</tr>
+<tr>
+ <td>94</td>
+ <td class="ml_theater_nonrank">컬렉션</td>
+ <td data-event-id="93">밀리언 라이브 콜렉션 (25차)</td>
+ <td>-</td>
+ <td>7월 15일 15시 ~ 21일 21시 (6박 7일)</td>
+ <td class="mlevents_princess">마츠다 아리사</td>
+ <td class="mlevents_angel">시노미야 카렌</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>95</td>
+ <td class="ml_platinum_tour">투어(PSTour)</td>
+ <td class="mlsongs_fairy" data-event-id="94">플래티넘 스타 투어 ~dans l‘obscurité~</td>
+ <td>오리지널 (MTW/2탄)</b></td>
+ <td>7월 23일 15시 ~ 29일 21시 (150시간)</td>
+ <td class="mlevents_princess">나나오 유리코</td>
+ <td class="mlevents_fairy">나가요시 스바루</td>
+ <td>대상 악곡 <abbr title="Million Mix">MM 난이도</abbr> 첫 19레벨 출현</td>
+</tr>
+<tr>
+ <td>96</td>
+ <td class="ml_theater_nonrank">워킹</td>
+ <td data-event-id="95">MILLION LIVE WORKING☆ ~납량! 아이돌 여름축제 in 항구도시~</td>
+ <td>-</td>
+ <td>7월 31일 15시 ~ 8월 3일 24시 (3박 4일)</td>
+ <td>-</td>
+ <td>-</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>97</td>
+ <td class="ml_platinum_theater">재화(PSTheater)</td>
+ <td class="mlsongs_princess" data-event-id="96" data-appeal-bonus="3">플래티넘 스타 시어터 ~러닝 하잇~</td>
+ <td><abbr title="Live The@ter Forward">LTF</abbr> (1탄)</td>
+ <td>8월 4일 15시 ~ 12일 21시 (198시간)</td>
+ <td class="mlevents_princess">요코야마 나오</td>
+ <td class="mlevents_angel">키노시타 히나타</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>98</td>
+ <td class="ml_theater_nonrank">컬렉션</td>
+ <td data-event-id="97">밀리언 라이브 콜렉션 (26차)</td>
+ <td>-</td>
+ <td>8월 14일 15시 ~ 19일 21시 (5박 6일)</td>
+ <td class="mlevents_fairy">아키즈키 리츠코</td>
+ <td class="mlevents_princess">에밀리 스튜어트</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>99</td>
+ <td class="ml_platinum_tour">투어(PSTour)</td>
+ <td class="mlsongs_princess" data-event-id="98">플래티넘 스타 투어 ~래빗파~</td>
+ <td>오리지널 (MTW/3탄)</b></td>
+ <td>8월 21일 15시 ~ 28일 21시 (174시간)</td>
+ <td class="mlevents_princess">하기와라 유키호</td>
+ <td class="mlevents_angel">호시이 미키</td>
+ <td><b>올스타즈 참여 MTW 앨범곡으로 개최되는 첫 일반 악곡(PST) 이벤트</b></td>
+</tr>
+<tr>
+ <td>100</td>
+ <td class="ml_theater_nonrank">워킹</td>
+ <td data-event-id="99">MILLION LIVE WORKING☆<br />~공포! 아이돌 두근두근 담력시험&amp;아이돌 담력시험 병동~</td>
+ <td>-</td>
+ <td>8월 30일 15시 ~ 9월 2일 24시 (3박 4일)</td>
+ <td>-</td>
+ <td>-</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>101</td>
+ <td class="ml_platinum_theater">재화(PSTheater)</td>
+ <td class="mlsongs_fairy" data-event-id="100" data-appeal-bonus="3">플래티넘 스타 시어터 ~붉은 세계가 사라질때~</td>
+ <td><b><abbr title="THE@TER ACTIVITIES">TA</abbr> (3탄)</b></td>
+ <td>9월 3일 15시 ~ 10일 21시 (174시간)</td>
+ <td class="mlevents_princess">야부키 카나</td>
+ <td class="mlevents_angel">키타카미 레이카</td>
+ <td><b>TA 앨범곡으로 진행되는 첫 이벤트</b></td>
+</tr>
+<tr>
+ <td>102</td>
+ <td class="ml_theater_nonrank">컬렉션</td>
+ <td data-event-id="101">밀리언 라이브 콜렉션 (27차)</td>
+ <td>-</td>
+ <td>9월 12일 15시 ~ 17일 21시 (5박 6일)</td>
+ <td class="mlevents_angel">시노미야 카렌</td>
+ <td class="mlevents_fairy">마이하마 아유무</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>103</td>
+ <td class="ml_platinum_tour">투어(PSTour)</td>
+ <td class="mlsongs_angel" data-event-id="102">플래티넘 스타 투어 ~Girl meets Wonder~</td>
+ <td><b>시어터 챌린지 (<abbr title="THE@TER CHALLENGE!!">TC</abbr>/1탄)</b></td>
+ <td>9월 19일 15시 ~ 26일 21시 (174시간)</td>
+ <td class="mlevents_angel">하코자키 세리카</td>
+ <td class="mlevents_fairy">스오 모모코</td>
+ <td>[시어터 챌린지] 결과발표 인선으로 진행되는 첫 이벤트 (테마명: &quot;동화나라 이야기&quot;)</td>
+</tr>
+<tr>
+ <td>104</td>
+ <td class="ml_theater_nonrank">워킹</td>
+ <td data-event-id="103">MILLION LIVE WORKING☆<br />~가을을 만끽! 밀리언 가을 전시회~</td>
+ <td>-</td>
+ <td>9월 28일 15시 ~ 10월 2일 24시 (4박 5일)</td>
+ <td>-</td>
+ <td>-</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>105</td>
+ <td class="ml_platinum_theater">재화(PSTheater)</td>
+ <td class="mlsongs_angel" data-event-id="104" data-appeal-bonus="3">플래티넘 스타 시어터 ~G♡F~</td>
+ <td><abbr title="Live The@ter Dreamers">LTD</abbr> (4탄)</td>
+ <td>10월 3일 15시 ~ 10일 21시 (174시간)</td>
+ <td class="mlevents_fairy">아키즈키 리츠코</td>
+ <td class="mlevents_angel">시노미야 카렌</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>106</td>
+ <td class="ml_theater_nonrank">컬렉션</td>
+ <td data-event-id="105">밀리언 라이브 콜렉션 (28차)</td>
+ <td>-</td>
+ <td>10월 12일 15시 ~ 18일 21시 (6박 7일)</td>
+ <td class="mlevents_princess">타나카 코토하</td>
+ <td class="mlevents_fairy">토코로 메구미</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>107</td>
+ <td class="ml_platinum_tour">투어(PSTour)</td>
+ <td class="mlsongs_princess" data-event-id="106">플래티넘 스타 투어 ~World Changer~</td>
+ <td>시어터 챌린지 (<abbr title="THE@TER CHALLENGE!!">TC</abbr>/2탄)</td>
+ <td>10월 20일 15시 ~ 27일 21시 (174시간)</td>
+ <td class="mlevents_fairy">키사라기 치하야</td>
+ <td class="mlevents_angel">호시이 미키</td>
+ <td>[시어터 챌린지] 결과발표 인선으로 진행되는 두번째 이벤트 (테마명: &quot;근미래 아웃사이더&quot;)<br />50번째 일반 악곡(PST) 이벤트</td>
+</tr>
+<tr>
+ <td>108</td>
+ <td class="ml_theater_nonrank">워킹</td>
+ <td data-event-id="107">MILLION LIVE WORKING☆<br />~광조! 할로윈 페스타&amp;트릿♪트와일라잇 팰리스~</td>
+ <td>-</td>
+ <td>10월 29일 15시 ~ 11월 1일 24시 (3박 4일)</td>
+ <td>-</td>
+ <td>-</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>109</td>
+ <td class="ml_platinum_theater">재화(PSTheater)</td>
+ <td class="mlsongs_angel" data-event-id="108" data-appeal-bonus="1">플래티넘 스타 시어터 ~기다림의 Lacrima~</td>
+ <td><abbr title="Live The@ter Forward">LTF</abbr> (2탄)</td>
+ <td>11월 2일 15시 ~ 8일 21시 (150시간)</td>
+ <td class="mlevents_angel">키타카미 레이카</td>
+ <td class="mlevents_princess">타카야마 사요코</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>110</td>
+ <td class="ml_theater_nonrank">컬렉션</td>
+ <td data-event-id="109">밀리언 라이브 콜렉션 (29차)</td>
+ <td>-</td>
+ <td>11월 10일 15시 ~ 16일 21시 (6박 7일)</td>
+ <td class="mlevents_fairy">줄리아</td>
+ <td class="mlevents_angel">모치즈키 안나</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>111</td>
+ <td class="ml_platinum_tour">투어(PSTour)</td>
+ <td class="mlsongs_angel" data-event-id="110">플래티넘 스타 투어 ~Cherry Colored Love~</td>
+ <td>오리지널 (MTW/4탄)</td>
+ <td>11월 18일 15시 ~ 25일 21시 (174시간)</td>
+ <td class="mlevents_angel">바바 코노미</td>
+ <td class="mlevents_fairy">모모세 리오</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>112</td>
+ <td class="ml_theater_nonrank">워킹</td>
+ <td data-event-id="111">MILLION LIVE WORKING☆<br />~백열! 아이돌 학원 정상 결전~</td>
+ <td>-</td>
+ <td>11월 27일 15시 ~ 30일 24시 (3박 4일)</td>
+ <td>-</td>
+ <td>-</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>113</td>
+ <td class="ml_platinum_theater">재화(PSTheater)</td>
+ <td class="mlsongs_fairy" data-event-id="112" data-appeal-bonus="1">플래티넘 스타 시어터 ~눈동자 속의 시리우스~</td>
+ <td><abbr title="Live The@ter Performance">LTP</abbr> (10탄)</td>
+ <td>12월 1일 15시 ~ 8일 21시 (174시간)</td>
+ <td class="mlevents_fairy">시죠 타카네</td>
+ <td class="mlevents_princess">코사카 우미</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>114</td>
+ <td class="ml_theater_nonrank">컬렉션</td>
+ <td data-event-id="113">밀리언 라이브 콜렉션 (30차)</td>
+ <td>-</td>
+ <td>12월 10일 15시 ~ 15일 21시 (5박 6일)</td>
+ <td class="mlevents_angel">오가미 타마키</td>
+ <td class="mlevents_princess">나카타니 이쿠</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>115</td>
+ <td class="ml_platinum_tour">투어(PSTour)</td>
+ <td class="mlsongs_fairy" data-event-id="114">플래티넘 스타 투어 ~Fermata in Rapsodia~</td>
+ <td>오리지널 (MTW/5탄)</td>
+ <td>12월 17일 15시 ~ 24일 21시 (174시간)</td>
+ <td class="mlevents_angel">미우라 아즈사</td>
+ <td class="mlevents_fairy">키사라기 치하야</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>116</td>
+ <td class="ml_theater_nonrank">워킹</td>
+ <td data-event-id="115">MILLION LIVE WORKING☆ SP<br />~꿈이 가득! 메르헨 아이돌 이야기~</td>
+ <td>-</td>
+ <td>12월 26일 15시 ~ 20년 1월 1일 24시 (6박 7일)</td>
+ <td>-</td>
+ <td>-</td>
+ <td>-</td>
+</tr>
+</table>
+</div>
+
+<h3>2020년도</h3>
+
+<div class="theater_events">
+<table width="1876" class="mlevents_list" style="text-align: center;">
+<tr><td width="2%">순번</td><td width="8%">형식</td><td width="20%">이벤트 및 대상곡명</td><td width="8%">대상곡 분류</td><td width="14%">개최기간</td><td width="8%">상위보상 아이돌명</td><td width="8%">하위보상 아이돌명</td><td width="32%">비고</td></tr>
+<tr>
+ <td>117</td>
+ <td class="ml_platinum_theater">재화(PSTheater)</td>
+ <td class="mlsongs_fairy" data-event-id="117" data-appeal-bonus="2">플래티넘 스타 시어터 ~협기난무~</td>
+ <td><abbr title="THE@TER ACTIVITIES">TA</abbr> (2탄)</td>
+ <td>1월 2일 15시 ~ 10일 21시 (198시간)</td>
+ <td class="mlevents_fairy">스오 모모코</td>
+ <td class="mlevents_angel">키노시타 히나타</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>118</td>
+ <td class="ml_theater_nonrank">컬렉션</td>
+ <td data-event-id="118">밀리언 라이브 콜렉션 (31차)</td>
+ <td>-</td>
+ <td>12월 12일 15시 ~ 18일 21시 (6박 7일)</td>
+ <td class="mlevents_princess">카스가 미라이</td>
+ <td class="mlevents_angel">호시이 미키</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>119</td>
+ <td class="ml_platinum_tour">투어(PSTour)</td>
+ <td class="mlsongs_princess" data-event-id="119">플래티넘 스타 투어 ~백화(百花)는 월하(月下)에 져버리거늘~</td>
+ <td>오리지널 (MTW/6탄)</td>
+ <td>1월 20일 15시 ~ 27일 21시 (174시간)</td>
+ <td class="mlevents_princess">에밀리 스튜어트</td>
+ <td class="mlevents_fairy">시라이시 츠무기</td>
+ <td>-</td>
+</tr>
+</table>
+</div>
+
+</section>
+
+
+<section id="theater_elist_k">
+
+<ul>
+ <li>특별한 조건이 없이 모든 프로듀서가 참여 가능한 이벤트입니다.</li>
+ <li>경쟁형 이벤트(즉 입상 랭킹이 존재하는)인 경우 시간 단위(24시간 = 1일), 기타 비경쟁형 이벤트는 &#39;a박 b일&#39; 식으로 표기합니다.</li>
+ <li>연도 표기는 해당 이벤트의 시작 일자를 기준으로 합니다.</li>
+ <li>한국어(및 국제)판의 경우, 2020년 기준으로 2018년 당시의 일본어판의 개최 로테이션을 따라갑니다. (단, 일부 이벤트는 공식 측의 사정에 의해 일정이 변경되거나 누락될 수 있습니다)</li>
+</ul>
+
+<h3>2019년도</h3>
+
+<div class="theater_events">
+<table width="1876" class="mlevents_list" style="text-align: center;">
+<tr><td width="2%">순번</td><td width="8%">형식</td><td width="20%">이벤트 및 대상곡명</td><td width="8%">대상곡 분류</td><td width="14%">개최기간</td><td width="8%">상위보상 아이돌명</td><td width="8%">하위보상 아이돌명</td><td width="32%">비고</td></tr>
+<tr>
+ <td>A-1</td>
+ <td class="ml_platinum_theater"><b>재화(PSTheater)</b></td>
+ <td class="mlsongs_fairy">플래티넘 스타 시어터 ~Shooting Stars~</td>
+ <td><abbr title="Live The@ter Harmony">LTH</abbr> (3탄)</td>
+ <td>9월 4일 15시 ~ 12일 21시 (198시간)</td>
+ <td class="mlevents_fairy">키타자와 시호</td>
+ <td class="mlevents_angel">노노하라 아카네</td>
+ <td><b>첫 악곡(PST) 이벤트</b></td>
+</tr>
+<tr>
+ <td rowspan="3">A-2</td>
+ <td rowspan="3" class="ml_theater_nonrank">컬렉션</td>
+ <td rowspan="3">밀리언 라이브 콜렉션 (A-1차)</td>
+ <td rowspan="3">-</td>
+ <td rowspan="3">9월 13일 15시 ~ 19일 21시 (6박 7일)</td>
+ <td class="mlevents_princess">사타케 미나코</td>
+ <td class="mlevents_princess">키쿠치 마코토</td>
+ <td rowspan="3">-</td>
+</tr>
+<tr>
+ <td class="mlevents_fairy">시죠 타카네</td>
+ <td class="mlevents_angel">오가미 타마키</td>
+</tr>
+<tr>
+ <td class="mlevents_angel">시마바라 엘레나</td>
+ <td class="mlevents_fairy">마카베 미즈키</td>
+</tr>
+<tr>
+ <td>A-3</td>
+ <td class="ml_platinum_theater">재화(PSTheater)</td>
+ <td class="mlsongs_angel">플래티넘 스타 시어터 ~Good-Sleep, Baby♡~</td>
+ <td><abbr title="Live The@ter Performance">LTP</abbr> (8탄)</td>
+ <td>9월 20일 15시 ~ 27일 21시 (174시간)</td>
+ <td class="mlevents_angel">타카츠키 야요이</td>
+ <td class="mlevents_princess">나카타니 이쿠</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>A-4</td>
+ <td class="ml_theater_nonrank">추가보상형</td>
+ <td>THEATER SHOW TIME☆ (A-1차)</td>
+ <td>-</td>
+ <td>9월 28일 15시 ~ 29일 21시 (1박 2일)</td>
+ <td>-</td>
+ <td>-</td>
+ <td><b>한국어판 내 첫 쇼타임 이벤트</b></td>
+</tr>
+<tr>
+ <td>A-5</td>
+ <td class="ml_platinum_theater">재화(PSTheater)</td>
+ <td class="mlsongs_princess">플래티넘 스타 시어터 ~Growing Storm!~</td>
+ <td><abbr title="Live The@ter Harmony">LTH</abbr> (2탄)</td>
+ <td>9월 30일 15시 ~ 10월 10일 21시 (<b>246시간</b>)</td>
+ <td class="mlevents_princess">나나오 유리코</td>
+ <td class="mlevents_fairy">마카베 미즈키</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>A-6</td>
+ <td class="ml_theater_nonrank">컬렉션</td>
+ <td>밀리언 라이브 콜렉션 (A-2차)</td>
+ <td>-</td>
+ <td>10월 12일 15시 ~ 18일 21시 (6박 7일)</td>
+ <td class="mlevents_angel">하코자키 세리카</td>
+ <td class="mlevents_princess">에밀리 스튜어트</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>A-7</td>
+ <td class="ml_platinum_tour"><b>투어(PSTour)</b></td>
+ <td class="mlsongs_fairy">플래티넘 스타 투어 ~FairyTale로는 있을 수 없어~</td>
+ <td><b>오리지널 <abbr title="Million The@ter Generation">(MTG)</abbr></b></td>
+ <td>10월 20일 15시 ~ 30일 21시 (246시간)</td>
+ <td class="mlevents_fairy">모가미 시즈카</td>
+ <td class="mlevents_fairy">시라이시 츠무기</td>
+ <td>첫 투어 이벤트, 일본어판과 동일.</td>
+</tr>
+<tr>
+ <td>A-8</td>
+ <td class="ml_platinum_theater">재화(PSTheater)</td>
+ <td class="mlsongs_angel">플래티넘 스타 시어터 ~STANDING ALIVE~</td>
+ <td><abbr title="Live The@ter Harmony">LTH</abbr> (10탄)</td>
+ <td>11월 1일 15시 ~ 9일 21시 (199시간)</td>
+ <td class="mlevents_fairy">모모세 리오</td>
+ <td class="mlevents_angel">시마바라 엘레나</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>A-9</td>
+ <td class="ml_theater_nonrank">컬렉션</td>
+ <td>밀리언 라이브 콜렉션 (A-3차)</td>
+ <td>-</td>
+ <td>11월 11일 15시 ~ 19일 21시 (8박 9일)</td>
+ <td class="mlevents_princess">코사카 우미</td>
+ <td class="mlevents_fairy">나가요시 스바루</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>A-10</td>
+ <td class="ml_platinum_tour">투어(PSTour)</td>
+ <td class="mlsongs_angel">플래티넘 스타 투어 ~Angelic Parade♪~</td>
+ <td>오리지널 (MTG)</td>
+ <td>11월 21일 15시 ~ 28일 21시 (174시간)</td>
+ <td class="mlevents_angel">이부키 츠바사</td>
+ <td class="mlevents_angel">사쿠라모리 카오리</td>
+ <td>일본어판과 동일</td>
+</tr>
+<tr>
+ <td>A-11</td>
+ <td class="ml_theater_nonrank">추가보상형</td>
+ <td>THEATER SHOW TIME☆ (A-1차)</td>
+ <td>-</td>
+ <td>11월 30일 15시 ~ 12월 2일 21시 (2박 3일)</td>
+ <td>-</td>
+ <td>-</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>A-12</td>
+ <td class="ml_platinum_theater">재화(PSTheater)</td>
+ <td class="mlsongs_angel">플래티넘 스타 시어터 ~드림 트래블러~</td>
+ <td><abbr title="Live The@ter Harmony">LTH</abbr> (8탄)</td>
+ <td>12월 4일 15시 ~ 11일 21시 (174시간)</td>
+ <td class="mlevents_angel">후타미 마미</td>
+ <td class="mlevents_princess">사타케 미나코</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>A-13</td>
+ <td class="ml_theater_nonrank">컬렉션</td>
+ <td>밀리언 라이브 콜렉션 (A-4차)</td>
+ <td>-</td>
+ <td>12월 13일 15시 ~ 19일 21시 (6박 7일)</td>
+ <td class="mlevents_fairy">한다 로코</td>
+ <td class="mlevents_angel">키타카미 레이카</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>A-14</td>
+ <td class="ml_platinum_tour">투어(PSTour)</td>
+ <td class="mlsongs_princess">플래티넘 스타 투어 ~Princess Be Ambitious!!~</td>
+ <td>오리지널 (MTG)</td>
+ <td>12월 21일 15시 ~ 29일 21시 (198시간)</td>
+ <td class="mlevents_princess">카스가 미라이</td>
+ <td class="mlevents_princess">도쿠가와 마츠리</td>
+ <td>첫 프린세스 타입 투어 이벤트</td>
+</tr>
+<tr>
+ <td>A-15</td>
+ <td class="ml_theater_nonrank">추가보상형</td>
+ <td>THEATER SHOW TIME☆ (5차)</td>
+ <td>-</td>
+ <td>12월 31일 15시 ~ 20년 1월 2일 21시 (2박 3일)</td>
+ <td>-</td>
+ <td>-</td>
+ <td>-</td>
+</tr>
+</table>
+</div>
+
+<h3>2020년도</h3>
+
+<div class="theater_events">
+<table width="1876" class="mlevents_list" style="text-align: center;">
+<tr><td width="2%">순번</td><td width="8%">형식</td><td width="20%">이벤트 및 대상곡명</td><td width="8%">대상곡 분류</td><td width="14%">개최기간</td><td width="8%">상위보상 아이돌명</td><td width="8%">하위보상 아이돌명</td><td width="32%">비고</td></tr>
+<tr>
+ <td>A-16</td>
+ <td class="ml_platinum_theater">재화(PSTheater)</td>
+ <td class="mlsongs_princess">플래티넘 스타 시어터 ~HOME, SWEET FRIENDSHIP~</td>
+ <td><abbr title="Live The@ter Harmony">LTH</abbr> (5탄)</td>
+ <td>1월 4일 15시 ~ 10일 21시 (150시간)</td>
+ <td class="mlevents_princess">마츠다 아리사</td>
+ <td class="mlevents_fairy">스오 모모코</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>A-17</td>
+ <td class="ml_theater_nonrank">컬렉션</td>
+ <td>밀리언 라이브 콜렉션 (7차)</td>
+ <td>-</td>
+ <td>1월 12일 15시 ~ 17일 21시 (5박 6일)</td>
+ <td class="mlevents_angel">바바 코노미</td>
+ <td class="mlevents_princess">아마미 하루카</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>A-18</td>
+ <td class="ml_platinum_tour">투어(PSTour)</td>
+ <td class="mlsongs_fairy">플래티넘 스타 투어 ~어둑한 별, 머나먼 달~</td>
+ <td>오리지널 (MTG)</td>
+ <td>1월 19일 15시 ~ 25일 21시 (150시간)</td>
+ <td class="mlevents_fairy">니카이도 치즈루</td>
+ <td class="mlevents_fairy">텐쿠바시 토모카</td>
+ <td>10번째 일반 악곡(PST) 이벤트</td>
+</tr>
+</table>
+</div>
+
+</section>
+
+</div>
+
+
+<h2 class="sectionhead"><a name="e_musicrecords_01" href="#section_02">2.</a> <time datetime="2017-07-26T09:00:00+09:00">MTG(MILLION THE@TER GENERATION) 시리즈 앨범별 인선</time></h2>
+<hr style="width: 100%; margin-top: -0.5em;" />
+
+
+
+<h3><img src="./assets/imas_millionstars_emblem.png" alt="765 MILLION ALLSTARS" style="width: 24px; height: auto;" />&nbsp;전체/속성 테마곡</h3>
+
+<div class="theater_albumidols">
+<table width="1111" class="mlsongs_list" style="text-align: center;">
+<tr><td width="5%">앨범 순번</td><td width="20%">게임내 수록시기 (현지판 기준)</td><td width="15%">앨범 발매일</td><td width="25%">곡명</td><td width="40%">비고</td></tr>
+<tr><td>01</td><td>17년 6월 29일</td><td>17년 7월 26일</td><td class="mlsongs_all">Brand New Theater!</td><td>런칭 기념 전체곡</td></tr>
+<tr><td>02</td><td>17년 10월 20일</td><td>17년 11월 22일</td><td class="mlsongs_fairy">FairyTale로는 있을 수 없어</td><td>타입 대표곡 (페어리)</td></tr>
+<tr><td>03</td><td>17년 11월 21일</td><td>17년 12월 27일</td><td class="mlsongs_angel">Angelic Parade♪</td><td>타입 대표곡 (엔젤)</td></tr>
+<tr><td>04</td><td>17년 12월 21일</td><td>18년 1월 31일</td><td class="mlsongs_princess">Princess Be Ambitious!!</td><td>타입 대표곡 (프린세스)</td></tr>
+<tr><td>11</td><td>18년 6월 29일</td><td>18년 8월 29일</td><td class="mlsongs_all">UNION!!</td><td>1주년 기념 전체곡</td></tr>
+<tr><td>18</td><td>19년 5월 20일</td><td>19년 6월 26일</td><td class="mlsongs_all">LEADER!!</td><td>올스타즈 전체곡</td></tr>
+</table>
+</div>
+
+<h3><img src="./assets/imasml_princess.png" alt="Princess" style="width: 24px; height: auto;" />&nbsp;프린세스 (Princess Stars)</h3>
+
+<div class="theater_albumidols">
+<table width="1111" class="mlsongs_list" style="text-align: center;">
+<tr><td width="5%">앨범 순번</td><td width="8%">이벤트 개최시기<br />(현지판 기준)</td><td width="12%">앨범 발매일</td><td width="20%">곡명</td><td width="17%">유닛명</td><td width="45%">참여 아이돌명</td></tr>
+<tr><td>07</td><td>18년 3월</td><td>18년 4월 25일</td><td class="mlsongs_princess">ZETTAI×BREAK!! 트윙클 리듬</td><td>트윙클 리듬</td><td>나나오 유리코, 나카타니 이쿠, 마츠다 아리사</td></tr>
+<tr><td>10</td><td>18년 6월</td><td>18년 7월 25일</td><td class="mlsongs_princess">피는 것은 속세의 그대란 불꽃</td><td>섬광 하나비단</td><td>타카야마 사요코, 요코야마 나오, 코사카 우미, 사타케 미나코, 후쿠다 노리코</td></tr>
+<tr><td>14</td><td>19년 1월</td><td>19년 2월 27일</td><td class="mlsongs_princess">왜냐면 당신은 프린세스</td><td>Charlotte・Charlotte</td><td>도쿠가와 마츠리, 에밀리 스튜어트</td></tr>
+<tr><td>17</td><td>19년 4월</td><td>19년 5월 29일</td><td class="mlsongs_princess">Episode. Tiara</td><td>Star Elements</td><td>카스가 미라이, 야부키 카나, 타나카 코토하</td></tr>
+</table>
+</div>
+
+<h3><img src="./assets/imasml_fairy.png" alt="Fairy" style="width: 24px; height: auto;" />&nbsp;페어리 (Fairy Stars)</h3>
+
+<div class="theater_albumidols">
+<table width="1111" class="mlsongs_list" style="text-align: center;">
+<tr><td width="5%">앨범 순번</td><td width="8%">이벤트 개최시기<br />(현지판 기준)</td><td width="12%">앨범 발매일</td><td width="20%">곡명</td><td width="17%">유닛명</td><td width="45%">참여 아이돌명</td></tr>
+<tr><td>05</td><td>18년 1월</td><td>18년 2월 28일</td><td class="mlsongs_fairy">어둑한 별, 머나먼 달</td><td>야상영양 -GRAC&amp;E NOCTURNE-</td><td>니카이도 치즈루, 텐쿠바시 토모카, 토코로 메구미, 모모세 리오</td></tr>
+<tr><td>08</td><td>18년 4월</td><td>18년 5월 30일</td><td class="mlsongs_fairy">Melty Fantasia</td><td>EScape</td><td>마카베 미즈키, 키타자와 시호, 시라이시 츠무기</td></tr>
+<tr><td>12</td><td>18년 11월</td><td>18년 12월 26일</td><td class="mlsongs_fairy">하모닉스</td><td>D/Zeal</td><td>모가미 시즈카, 줄리아</td></tr>
+<tr><td>15</td><td>19년 2월</td><td>19년 3월 27일</td><td class="mlsongs_fairy">월요일의 크림소다</td><td>Jelly PoP Beans</td><td>한다 로코, 마이하마 아유무, 나가요시 스바루, 스오 모모코</td></tr>
+</table>
+</div>
+
+
+<h3><img src="./assets/imasml_angel.png" alt="Angel" style="width: 24px; height: auto;" />&nbsp;엔젤 (Angel Stars)</h3>
+
+<div class="theater_albumidols">
+<table width="1111" class="mlsongs_list" style="text-align: center;">
+<tr><td width="5%">앨범 순번</td><td width="8%">이벤트 개최시기<br />(현지판 기준)</td><td width="12%">앨범 발매일</td><td width="20%">곡명</td><td width="17%">유닛명</td><td width="45%">참여 아이돌명</td></tr>
+<tr><td>06</td><td>18년 2월</td><td>18년 3월 28일</td><td class="mlsongs_angel">무지개색 letters</td><td>Cleasky</td><td>시마바라 엘레나, 미야오 미야</td></tr>
+<tr><td>09</td><td>18년 5월</td><td>18년 6월 27일</td><td class="mlsongs_angel">꽃이 만발한 Weekend&#x1F338;</td><td>4Luxury</td><td>사쿠라모리 카오리, 토요카와 후카, 키타카미 레이카, 바바 코노미</td></tr>
+<tr><td>13</td><td>18년 12월</td><td>19년 1월 30일</td><td class="mlsongs_angel">봄을 기다리는 여자</td><td>리루컁 ~3 little candy~</td><td>시노미야 카렌, 노노하라 아카네, 이부키 츠바사</td></tr>
+<tr><td>16</td><td>19년 3월</td><td>19년 4월 24일</td><td class="mlsongs_angel">피코피코이코 인베이더</td><td>피코피코 플래닛츠</td><td>키노시타 히나타, 하코자키 세리카, 모치즈키 안나, 오가미 타마키</td></tr>
+</table>
+</div>
+
+<hr style="width: 100%; margin-top: 3em;" />
+
+<p id="page_disclaimer">
+<b>면책 조항</b> : 이 페이지는 <a href="http://www.bandainamcoent.co.kr/">반다이 남코 엔터테인먼트</a>와 <b>직접적 연관이 없으며, 작성자는 이 페이지를 통해 그 어떠한 금전적 이득도 취하고 있지 않습니다.</b><br />
+&quot;아이돌마스터&quot;, &quot;THE iDOLM@STER&quot;,&quot;PROJECT iM@S&quot; 및 관련 상표/공식 컨텐츠는 대한민국 및 일본, 그 외 국가에서 반다이 남코 엔터테인먼트의 재산입니다. (<a href="./license_disclaimer.htm">상세 면책 조항 및 사용권 정보</a>)<br />
+<div style="text-align: center;">(<a href="https://github.com/Senarin/Senarin.github.io">사이트 소스 및 이용 안내</a>)</div>
+</p>
+</body>
+</html>

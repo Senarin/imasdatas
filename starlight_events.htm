@@ -1,0 +1,2497 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>스타라이트 스테이지(데레스테) 역대 이벤트 일람</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" type="text/css" href="./css/imas_datas.css" />
+<link rel="stylesheet" type="text/css" href="/CommonFiles/css/pageload.css" />
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" integrity="sha384-xyZLiqnBEFn1hDkS8VeG/YHoqOjS/ucimT8TI6GDr9+ZP1UNbZr6d/q0ldMi/xvL" crossorigin="anonymous" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="./js/pace.min.js"></script>
+<script type="text/javascript" src="./js/imas_events.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+ showRemainingTime.showRemainingSL();
+ setInterval("showRemainingTime.showRemainingSL();",600 * 1000);
+});
+</script>
+</head>
+<body id="page_starlightevents" onload="getSLGameClientInfo.getContent();">
+
+<div id="headtext">
+<h1><img src="./assets/starlightstage_logo.png" id="starlightlogo" alt="Starlight Stage" title="Starlight Stage" />&nbsp;스타라이트 스테이지 역대 정규 이벤트 일람</h1>
+<div id="author_info">제작자 : <a href="https://hanaya.me/">하나야</a> (<a href="http://blog.hanaya.me/">블로그</a>)</div>
+<div id="recent_edit">최근 수정 2020.1.20</div>
+</div>
+<p>(<a href="./">첫 페이지로 가기</a>)</p>
+
+<ul>
+ <li>같이 보기 : <a href="https://docs.google.com/spreadsheets/d/15mVqyjvWMgPhMy3W9r2PUJ0cBO3J3cibuOYFikStsAc/edit?usp=sharing">[外]수록곡 일람</a>, <a href="./cgidols_misc.htm">신데렐라 걸즈 아이돌 관련 일람</a>, <a href="./starlight_gachas.htm">가챠 갱신 일람</a>, <a href="./theater_events.htm">밀리시타 이벤트 일람</a></li>
+</ul>
+
+<div id="starlight_client_info">
+ <h3>게임 버전 관련 정보</h3>
+ <div id="slclient_info_detail"><img src="./assets/loading.gif" style="width: 24px; height: auto;" alt="Loading" /> 가져오는 중...</div>
+ <script>setInterval(function(){getSLGameClientInfo.getContent();},(900 * 1000));</script>
+ <div style="font-size: 0.85em;"><span id="lastupdate_clientinfo"></span> / 정보제공: <a href="https://matsurihi.me">matsurihi.me</a> (日)</div>
+</div>
+
+<div class="anniv_countdown">
+ <h3>다음 n주년(9월 3일)까지 남은 시간</h3>
+ <div id="countdown_time_anniv"></div>
+ <script>var eAnnivTimestamp = new Array(9,3,0,0,0);setInterval(function(){showRemainingTime.showCountdownAnniversary(eAnnivTimestamp,"countdown_time_anniv");},50);</script>
+</div>
+
+<!--
+<div class="anniv_countdown">
+ <h3>다음 원작 n주년(11월 28일)까지 남은 시간</h3>
+ <div id="countdown_time_orig"></div>
+ <script>var eOrigTimestamp = new Array(11,28,0,0,0);setInterval(function(){showRemainingTime.showCountdownAnniversary(eOrigTimestamp,"countdown_time_orig");},50);</script>
+</div>
+-->
+
+<div id="imas_starlight_official" style="text-align: center; font-size: 1.25em; margin-top: 1.25em;">[<a href="https://twitter.com/imascg_stage">게임 공식 트위터 바로가기</a>]</div>
+<br />
+<br />
+<div class="pageindex">
+<h4 class="indexhead">목차</h4>
+ <ul class="sectionlist">
+  <li class="sectionlist"><a name="section_01" href="#e_periodic">1. 일반 정규 이벤트 일람</a></li>
+  <li class="sectionlist"><a name="section_02" href="#e_info">2. 정기 컨텐츠 갱신 안내</a></li>
+  <li class="sectionlist"><a name="section_03" href="#e_masterrank">3. P랭크 SSS 승급 랭킹전 (월간)</a></li>
+  <li class="sectionlist"><a name="section_04" href="#e_special">4. 기타 특별 이벤트 일람</a></li>
+ </li>
+</div>
+
+<h2 class="sectionhead"><a name="e_periodic" href="#section_01">1.</a> <time datetime="2015-09-03T15:00:00+09:00">일반 정규 이벤트 일람</time></h2>
+<hr style="width: 100%; margin-top: -0.5em;" />
+
+<div id="event_countdown">
+ <h3>이번 이벤트 종료까지 남은 시간</h3>
+ <div id="countdown_time"><img src="./assets/loading.gif" style="width: 24px; height: auto;" alt="Loading" /> 가져오는 중...</div>
+ <sub id="nearend_event" style="display: none;">종료 임박!!</sub>
+ <sub id="underday_event" style="display: none;">얼마 남지 않았습니다. 서두르세요.</sub>
+
+ <sub>(정보제공: <a href="https://starlight.kirara.ca/">Starlight Database</a>)</sub>
+</div>
+
+<ul>
+ <li>특별한 조건이 없이 모든 프로듀서가 참여 가능한 이벤트입니다.</li>
+ <li>만일 언어 문제 등으로 이벤트 진행에 어려움을 겪는다면
+  <ul>
+   <li><a href="http://imas.inven.co.kr/dataninfo/guide/">아이마스 인벤 데레스테 기초 가이드 페이지</a>의 [이벤트] 부분을 참고하세요.</li>
+   <li>안드로이드 기기 이용자의 경우, [구글 번역] 앱(<a href="https://play.google.com/store/apps/details?id=com.google.android.apps.translate">다운로드 링크</a>)의 스크린샷 번역 기능을 이용하면 도움이 될 수 있습니다.</li>
+  </ul>
+ </li>
+ <li>경쟁형 이벤트(즉 포인트 입상 랭킹이 존재하는)인 경우 시간 단위(24시간 = 1일), 캐러밴/퍼레이드 등의 비경쟁형 이벤트는 &#39;a박 b일&#39; 식으로 표기합니다.</li>
+ <li>연도 표기는 해당 이벤트의 시작 일자를 기준으로 합니다.</li>
+ <li>2017년 9월 3일부터 라이브 파티가 <b>과거 이벤트 보상 복각용</b>의 <b>상시개최 모드</b>로 전환됨으로서 이벤트로서의 라이브 파티(협력 이벤트)는 폐지되었습니다.</li>
+</ul>
+
+<h3>2015년도</h3>
+
+<div class="starlight_events">
+
+<table width="1876" class="cgevents_list" style="text-align: center;">
+<tr><td width="2%">순번</td><td width="5%">형식</td><td width="17%">이벤트 및 대상곡명</td><td width="7%">대상곡 분류</td><td width="14%">개최기간</td><td width="8%">대상곡 레벨</td><td width="8%">상위보상 아이돌명</td><td width="8%">하위보상 아이돌명</td><td width="35%">비고</td></tr>
+<tr>
+ <td>1</td>
+ <td class="cg_starlight_atapon">재화수집</td>
+ <td class="cgevents_cute">나는야 고철 안드로이드</td>
+ <td><b>쥬얼리즈 (1탄)</b></td>
+ <td>9월 25일 12시 ~ 10월 5일 21시 (<b>249시간</b>)</td>
+ <td>25&#8594;26(마스터)</td>
+ <td class="cgevents_cute">아베 나나</td>
+ <td class="cgevents_cute">코히나타 미호</td>
+ <td>첫 정규 이벤트, 가장 개최기간이 길었던 이벤트</td>
+</tr>
+<tr>
+ <td>2</td>
+ <td class="cg_starlight_nonrank">캐러밴</td>
+ <td>신데렐라 캐러밴 1차</td>
+ <td>-</td>
+ <td>10월 9일 15시 ~ 16일 21시 (7박 8일)</td>
+ <td>-</td>
+ <td class="cgevents_passion">호시 쇼코</td>
+ <td class="cgevents_cool">아야세 호노카</td>
+ <td>첫 비경쟁형 이벤트</td>
+</tr>
+<tr>
+ <td>3</td>
+ <td class="cg_starlight_atapon">재화수집</td>
+ <td class="cgevents_cool">Nation Blue</td>
+ <td>쥬얼리즈 (1탄)</td>
+ <td>10월 19일 15시 ~ 27일 21시 (198시간)</td>
+ <td>26(마스터)</td>
+ <td class="cgevents_cool">타카가키 카에데</td>
+ <td class="cgevents_cool">칸자키 란코</td>
+ <td>첫 쿨타입 이벤트</td>
+</tr>
+<tr>
+ <td>4</td>
+ <td class="cg_starlight_burst">그루브(버스트)</td>
+ <td>(보컬 1차) 꿈빛 하모니</td>
+ <td><b>TVA 앨범곡</b></td>
+ <td>10월 31일 15시 ~ 11월 8일 21시 (198시간)</td>
+ <td>26(마스터)/29(마스터+)</td>
+ <td class="cgevents_cute">미즈모토 유카리</td>
+ <td class="cgevents_passion">호리 유코</td>
+ <td>첫 그루브(버스트) 이벤트, 첫 대상곡 마스터+ 난이도 출현</td>
+</tr>
+<tr>
+ <td>5</td>
+ <td class="cg_starlight_nonrank">캐러밴</td>
+ <td>신데렐라 캐러밴 2차</td>
+ <td>-</td>
+ <td>11월 12일 15시 ~ 18일 21시 (6박 7일)</td>
+ <td>-</td>
+ <td class="cgevents_cool">하야미 카나데</td>
+ <td class="cgevents_cute">모모이 아즈키</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>6</td>
+ <td class="cg_starlight_atapon">재화수집</td>
+ <td class="cgevents_passion">Orange Sapphire</td>
+ <td>쥬얼리즈 (1탄)</td>
+ <td>11월 20일 15시 ~ 26일 21시 (<b>150시간</b>)</td>
+ <td>26(마스터)</td>
+ <td class="cgevents_passion">죠가사키 미카</td>
+ <td class="cgevents_passion">모로보시 키라리</td>
+ <td>최초의 패션타입 이벤트</td>
+</tr>
+<tr>
+ <td>7</td>
+ <td class="cg_starlight_burst">그루브(버스트)</td>
+ <td>(보컬 2차) 별똥별 기적</td>
+ <td>TVA 앨범곡</td>
+ <td>12월 4일 15시 ~ 13일 21시 (222시간)</td>
+ <td>26(마스터)/29(마스터+)</td>
+ <td class="cgevents_cool">니노미야 아스카</td>
+ <td class="cgevents_cute">사이온지 코토카</td>
+ <td>-</td>
+<tr>
+ <td>8</td>
+ <td class="cg_starlight_atapon">재화수집</td>
+ <td class="cgevents_all">Snow Wings</td>
+ <td><b>오리지널</b></td>
+ <td>12월 18일 15시 ~ 27일 21시 (222시간)</td>
+ <td>26(마스터)</td>
+ <td class="cgevents_passion">오오츠키 유이</td>
+ <td class="cgevents_cool">카미죠 하루나</td>
+ <td>첫 전속성 재화 이벤트, <b>오리지널 곡(스타라이트 마스터)으로 개최된 첫 이벤트</b></td>
+</tr>
+<tr>
+ <td>9</td>
+ <td class="cg_starlight_burst">그루브(버스트)</td>
+ <td>(댄스 1차) 즐거운 Party Night</td>
+ <td><b>쥬얼리즈 (2탄)</b></td>
+ <td>12월 30일 15시 ~ 16년 1월 8일 21시 (222시간)</td>
+ <td>26(마스터)/29(마스터+)</td>
+ <td class="cgevents_passion">혼다 미오</td>
+ <td class="cgevents_cool">타다 리이나</td>
+ <td>첫 연말연시 이벤트, 첫 댄스 특화 그루브 이벤트, 쥬얼리즈 곡으로 진행된 유일한 그루브 이벤트</td>
+</tr>
+</table>
+
+</div>
+
+<h3>2016년도</h3>
+
+<div class="starlight_events">
+
+<table width="1876" class="cgevents_list" style="text-align: center;">
+<tr><td width="2%">순번</td><td width="5%">형식</td><td width="17%">이벤트 및 대상곡명</td><td width="7%">대상곡 분류</td><td width="14%">개최기간</td><td width="8%">대상곡 레벨</td><td width="8%">상위보상 아이돌명</td><td width="8%">하위보상 아이돌명</td><td width="35%">비고</td></tr>
+<tr>
+ <td>10</td>
+ <td class="cg_starlight_nonrank">캐러밴</td>
+ <td>신데렐라 캐러밴 3차</td>
+ <td>-</td>
+ <td>1월 12일 15시 ~ 18일 21시 (6박 7일)</td>
+ <td>-</td>
+ <td class="cgevents_cool">사사키 치에</td>
+ <td class="cgevents_passion">키타미 유즈</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>11</td>
+ <td class="cg_starlight_atapon">재화수집</td>
+ <td class="cgevents_cute">파스텔 핑크 사랑</td>
+ <td>쥬얼리즈 (2탄)</td>
+ <td>1월 20일 15시 ~ 27일 21시 (174시간)</td>
+ <td>26(마스터)</td>
+ <td class="cgevents_cute">코바야카와 사에</td>
+ <td class="cgevents_cute">미무라 카나코</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>12</td>
+ <td class="cg_starlight_burst">그루브(버스트)</td>
+ <td>(비주얼 1차) Tulip</td>
+ <td>오리지널</td>
+ <td>1월 31일 15시 ~ 2월 7일 21시 (174시간)</td>
+ <td>26(마스터)/<b>30</b>(마스터+)</td>
+ <td class="cgevents_cute">미야모토 프레데리카</td>
+ <td class="cgevents_cool">시오미 슈코</td>
+ <td>오리지널 곡(스타라이트 마스터)으로 개최된 첫 그루브 이벤트, <b>대상곡 마스터+ 난이도 첫 30레벨 출현</b><br />역대 30레벨 최소 노트수(869개, 마스터+ 기준)</td>
+</tr>
+<tr>
+ <td>13</td>
+ <td class="cg_starlight_nonrank">캐러밴</td>
+ <td>신데렐라 캐러밴 4차</td>
+ <td>-</td>
+ <td>2월 10일 15시 ~ 16일 21시 (6박 7일)</td>
+ <td>-</td>
+ <td class="cgevents_passion">무라카미 토모에</td>
+ <td class="cgevents_cute">후지모토 리나</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>14</td>
+ <td class="cg_starlight_atapon">재화수집</td>
+ <td class="cgevents_cool">작은 오르골 상자</td>
+ <td>쥬얼리즈 (2탄)</td>
+ <td>2월 18일 15시 ~ 25일 21시 (174시간)</td>
+ <td>25(마스터)</td>
+ <td class="cgevents_cool">아나스타샤</td>
+ <td class="cgevents_cool">시라사카 코우메</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>15</td>
+ <td class="cg_starlight_burst">그루브(버스트)</td>
+ <td>(보컬 3차) Absolute NIne</td>
+ <td><b>총선</b></td>
+ <td>2월 29일 15시 ~ 3월 8일 21시 (198시간)</td>
+ <td>26(마스터)/<b>30</b>(마스터+)</td>
+ <td class="cgevents_cool">타치바나 아리스</td>
+ <td class="cgevents_cute">하라다 미요</td>
+ <td>역대 전속성 최다 노트수 (999개, 마스터+), 신데렐라 걸 총선 앨범곡으로 진행된 첫 이벤트<br />이벤트 전용 스토리와 커뮤가 없는 마지막 그루브 이벤트</td>
+</tr>
+<tr>
+ <td>16</td>
+ <td class="cg_starlight_nonrank">캐러밴</td>
+ <td>신데렐라 캐러밴 5차</td>
+ <td>-</td>
+ <td>3월 11일 15시 ~ 18일 21시 (7박 8일)</td>
+ <td>-</td>
+ <td class="cgevents_cute">시이나 노리코</td>
+ <td class="cgevents_passion">카타기리 사나에</td>
+ <td>해당 이벤트 시작 기점으로 프로듀서 레벨 상한 확장(150&#8594;300)</td>
+</tr>
+<tr>
+ <td>17</td>
+ <td class="cg_starlight_atapon">재화수집</td>
+ <td class="cgevents_passion">절대 특권 주장합니닷!!</td>
+ <td>쥬얼리즈 (2탄)</td>
+ <td>3월 20일 15시 ~ 27일 21시 (174시간)</td>
+ <td><b>27</b>(마스터)</td>
+ <td class="cgevents_passion">토토키 아이리</td>
+ <td class="cgevents_passion">호리 유코</td>
+ <td>역대 최고 레벨(마스터 기준) 대상곡</td>
+</tr>
+<tr>
+ <td>18</td>
+ <td class="cg_starlight_burst">그루브(버스트)</td>
+ <td>(댄스 2차) 하이파이 데이즈</td>
+ <td>오리지널</td>
+ <td>3월 31일 15시 ~ 4월 7일 21시 (174시간)</td>
+ <td><b>24</b>(마스터)/28(마스터+)</td>
+ <td class="cgevents_passion">류자키 카오루</td>
+ <td class="cgevents_cool">사사키 치에</td>
+ <td>역대 최저 레벨(마스터 기준) 대상곡</td>
+</tr>
+<tr>
+ <td>19</td>
+ <td class="cg_starlight_nonrank">캐러밴</td>
+ <td>신데렐라 캐러밴 6차</td>
+ <td>-</td>
+ <td>4월 11일 15시 ~ 17일 21시 (6박 7일)</td>
+ <td>-</td>
+ <td class="cgevents_cool">미즈키 세이라</td>
+ <td class="cgevents_cute">클라리스</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>20</td>
+ <td class="cg_starlight_atapon">재화수집</td>
+ <td class="cgevents_all">꽃봉오리</td>
+ <td>총선</td>
+ <td>4월 19일 15시 ~ 26일 21시 (174시간)</td>
+ <td>25&#8594;26(마스터)</td>
+ <td class="cgevents_cute">이치노세 시키</td>
+ <td class="cgevents_passion">아이바 유미</td>
+ <td>신데렐라 걸 총선 앨범곡으로 진행된 첫 재화 이벤트</td>
+</tr>
+<tr>
+ <td>21</td>
+ <td class="cg_starlight_burst">그루브(버스트)</td>
+ <td>(비주얼 2차) 생존본능 발큐리아</td>
+ <td>오리지널</td>
+ <td>4월 30일 15시 ~ 5월 8일 21시 (198시간)</td>
+ <td>26(마스터)/<b>30</b>(마스터+)</td>
+ <td class="cgevents_cool">닛타 미나미</td>
+ <td class="cgevents_passion">타카모리 아이코</td>
+ <td><b>가장 과열된 그루브 이벤트 (입상랭킹 10만위 이내 기준)</b>, 일본 골든 위크 시즌(4월 29일 ~ 5월 8일)과 중첩</td>
+</tr>
+<tr>
+ <td>22</td>
+ <td class="cg_starlight_nonrank">캐러밴</td>
+ <td>신데렐라 캐러밴 7차</td>
+ <td>-</td>
+ <td>5월 11일 15시 ~ 17일 21시 (6박 7일)</td>
+ <td>-</td>
+ <td class="cgevents_passion">마토바 리사</td>
+ <td class="cgevents_cool">오카자키 야스하</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>23</td>
+ <td class="cg_starlight_atapon">재화수집</td>
+ <td class="cgevents_cute">내일 또 만날 수 있겠지</td>
+ <td><b>쥬얼리즈 (3탄)</b></td>
+ <td>5월 19일 15시 ~ 27일 21시 (198시간)</td>
+ <td>25(마스터)</td>
+ <td class="cgevents_cute">사쿠라이 모모카</td>
+ <td class="cgevents_cute">나카노 유카</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>24</td>
+ <td class="cg_starlight_burst">그루브(버스트)</td>
+ <td>(보컬 4차) 순정 미드나잇 전설</td>
+ <td>오리지널</td>
+ <td>5월 31일 15시 ~ 6월 7일 21시 (174시간)</td>
+ <td>25(마스터)/29(마스터+)</td>
+ <td class="cgevents_passion">무카이 타쿠미</td>
+ <td class="cgevents_cute">후지모토 리나</td>
+ <td>오리지널 곡(스타라이트 마스터)으로 개최된 첫 보컬 특화 그루브 이벤트</td>
+</tr>
+<tr>
+ <td>25</td>
+ <td class="cg_starlight_nonrank">협력(파티)</td>
+ <td>라이브 파티 1차</td>
+ <td>-</td>
+ <td>6월 10일 15시 ~ 17일 21시 (7박 8일)</td>
+ <td>-</td>
+ <td class="cgevents_cute">하야사카 미레이</td>
+ <td class="cgevents_passion">미요시 사나</td>
+ <td>첫 협력 이벤트</td>
+</tr>
+<tr>
+ <td>26</td>
+ <td class="cg_starlight_atapon">재화수집</td>
+ <td class="cgevents_cool">피어라 Jewel</td>
+ <td>쥬얼리즈 (3탄)</td>
+ <td>6월 20일 15시 ~ 27일 21시 (174시간)</td>
+ <td>25(마스터)/<span style="text-decoration: underline;">28(마스터+)</span></td>
+ <td class="cgevents_cool">사기사와 후미카</td>
+ <td class="cgevents_cool">니노미야 아스카</td>
+ <td><b>상위보상 컷 10만위&#8594;12만위로 조정</b>, 10번째 재화 이벤트<br /><b>재화 이벤트 최초 마스터+ 난이도 출현</b>역대 28레벨 최다 노트수(822개, 마스터+ 기준)</td>
+</tr>
+<tr>
+ <td>27</td>
+ <td class="cg_starlight_burst">그루브(버스트)</td>
+ <td>(댄스 3차) Love&#8734;Destiny</td>
+ <td>오리지널</td>
+ <td>6월 30일 15시 ~ 7월 7일 21시 (174시간)</td>
+ <td>26(마스터)/29(마스터+)</td>
+ <td class="cgevents_cute">사쿠마 마유</td>
+ <td class="cgevents_cool">호죠 카렌</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>28</td>
+ <td class="cg_starlight_nonrank">캐러밴</td>
+ <td>신데렐라 캐러밴 8차</td>
+ <td>-</td>
+ <td>7월 11일 15시 ~ 17일 21시 (6박 7일)</td>
+ <td>-</td>
+ <td class="cgevents_cool">후지와라 하지메</td>
+ <td class="cgevents_cute">세키 히로미</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>29</td>
+ <td class="cg_starlight_atapon">재화수집</td>
+ <td class="cgevents_passion">너에게 잔뜩&#9734;</td>
+ <td>쥬얼리즈 (3탄)</td>
+ <td>7월 19일 15시 ~ 27일 21시 (198시간)</td>
+ <td>25(마스터)/28(마스터+)</td>
+ <td class="cgevents_passion">히메카와 유키</td>
+ <td class="cgevents_passion">이치하라 니나</td>
+ <td>순위 발표시 이벤트 순위 칭호가 지급되기 시작한 첫 이벤트</td>
+</tr>
+<tr>
+ <td>30</td>
+ <td class="cg_starlight_burst">그루브(버스트)</td>
+ <td>(비주얼 3차) 서머카니!!</td>
+ <td>오리지널</td>
+ <td>7월 31일 15시 ~ 8월 8일 21시 (198시간)</td>
+ <td>26(마스터)/<b>30</b>(마스터+)</td>
+ <td class="cgevents_cool">카와시마 미즈키</td>
+ <td class="cgevents_passion">히노 아카네</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>31</td>
+ <td class="cg_starlight_nonrank">협력(파티)</td>
+ <td>라이브 파티 2차</td>
+ <td>-</td>
+ <td>8월 12일 15시 ~ 17일 21시 (<b>5박 6일</b>)</td>
+ <td>-</td>
+ <td class="cgevents_cute">무나카타 아츠미</td>
+ <td class="cgevents_cool">아라키 히나</td>
+ <td>가장 기간이 짧았던 정규 이벤트들 중 하나</td>
+</tr>
+<tr>
+ <td>32</td>
+ <td class="cg_starlight_atapon">재화수집</td>
+ <td class="cgevents_all">Near to You</td>
+ <td>쥬얼리즈 (3탄)</td>
+ <td>8월 19일 15시 ~ 27일 21시 (198시간)</td>
+ <td>26(마스터)/29(마스터+)</td>
+ <td class="cgevents_passion">카타기리 사나에</td>
+ <td class="cgevents_cool">타치바나 아리스</td>
+ <td>쥬얼리즈 앨범곡으로 진행된 마지막 이벤트</td>
+</tr>
+<tr>
+ <td>33</td>
+ <td class="cg_starlight_burst">그루브(버스트)</td>
+ <td>(보컬 5차) BEYOND THE STARLIGHT</td>
+ <td>오리지널</td>
+ <td>8월 31일 15시 ~ 9월 8일 21시 (198시간)
+ <td>26(마스터)/29(마스터+)</td>
+ <td class="cgevents_passion">죠가사키 리카</td>
+ <td class="cgevents_cute">오가타 치에리</td>
+ <td>게임 서비스 1주년(9월 3일) 기념 이벤트</td>
+</tr>
+<tr>
+ <td>34</td>
+ <td class="cg_starlight_nonrank">캐러밴</td>
+ <td>신데렐라 캐러밴 9차</td>
+ <td>-</td>
+ <td>9월 12일 15시 ~ 18일 21시 (6박 7일)</td>
+ <td>-</td>
+ <td class="cgevents_cool">야가미 마키노</td>
+ <td class="cgevents_passion">센자키 에마</td>
+ <td>해당 이벤트 기간 중 아이돌 포텐셜 기능 추가(9월 16일 15시 ~ )</td>
+</tr>
+<tr>
+ <td>35</td>
+ <td class="cg_starlight_atapon">재화수집</td>
+ <td class="cgevents_cute">러브레터</td>
+ <td>오리지널</td>
+ <td>9월 20일 15시 ~ 26일 21시 (150시간)</td>
+ <td>26(마스터)/29(마스터+)</td>
+ <td class="cgevents_cute">시마무라 우즈키</td>
+ <td class="cgevents_cute">이가라시 쿄코</td>
+ <td><b>오리지널곡으로 개최된 첫 단일 타입 재화 이벤트</b><br />첫 3인 구성의 라이브/MV 화면, 포텐셜 추가 이후 첫 경쟁형 이벤트</td>
+</tr>
+<tr>
+ <td>36</td>
+ <td class="cg_starlight_nonrank">퍼레이드(투어)</td>
+ <td class="cgevents_all">(라이브 퍼레이드 1차) STORY</td>
+ <td>TVA 앨범곡</td>
+ <td>9월 30일 15시 ~ 10월 8일 21시 (8박 9일)</td>
+ <td>25(마스터)/28(마스터+)</td>
+ <td class="cgevents_cool">시부야 린</td>
+ <td class="cgevents_passion">혼다 미오</td>
+ <td>첫 투어 이벤트, TVA 앨범곡으로 개최된 마지막 이벤트</td>
+</tr>
+<tr>
+ <td>37</td>
+ <td class="cg_starlight_nonrank">협력(파티)</td>
+ <td>라이브 파티 3차</td>
+ <td>-</td>
+ <td>10월 12일 15시 ~ 18일 21시 (6박 7일)</td>
+ <td>-</td>
+ <td class="cgevents_passion">사토 신</td>
+ <td class="cgevents_cool">미즈노 미도리</td>
+ <td>포텐셜 추가 이후 첫 협력 이벤트, 해당 이벤트 기간 중 신데렐라 걸즈 4th 라이브(<abbr title="사이타마 슈퍼 아레나(Saitama Super Arena)">SSA</abbr>) 개최</td>
+</tr>
+<tr>
+ <td>38</td>
+ <td class="cg_starlight_atapon">재화수집</td>
+ <td class="cgevents_cool">Jet to the Future</td>
+ <td>오리지널</td>
+ <td>10월 20일 15시 ~ 27일 21시 (174시간)</td>
+ <td>26(마스터)/29(마스터+)</td>
+ <td class="cgevents_cool">타다 리이나</td>
+ <td class="cgevents_passion">키무라 나츠키</td>
+ <td>오리지널 곡으로 개최된 첫 쿨타입 재화 이벤트, 첫 2인 구성의 라이브/MV 화면<br />첫 단일속성 재화 이벤트 상하위 보상 속성 불일치</td>
+</tr>
+<tr>
+ <td>39</td>
+ <td class="cg_starlight_burst">그루브(버스트)</td>
+ <td>(댄스 4차) 아이쿠루시이</td>
+ <td><b>셀렉션</b></td>
+ <td>10월 31일 15시 ~ 11월 8일 21시 (198시간)</td>
+ <td>25(마스터)/28(마스터+)</td>
+ <td class="cgevents_cute">코바야카와 사에</td>
+ <td class="cgevents_cool">하야미 카나데</td>
+ <td>포텐셜 추가 이후 첫 그루브 이벤트, 셀렉션 곡으로 개최된 첫 이벤트, <b>최초로 동일 아이돌의 2회차 상위 보상 출현</b><br />역대 28레벨 최소 노트수(573개, 마스터+ 기준)</td>
+</tr>
+<tr>
+ <td>40</td>
+ <td class="cg_starlight_nonrank">캐러밴</td>
+ <td>신데렐라 캐러밴 10차</td>
+ <td>-</td>
+ <td>11월 11일 15시 ~ 17일 21시 (6박 7일)</td>
+ <td>-</td>
+ <td class="cgevents_cute">유사 코즈에</td>
+ <td class="cgevents_cool">우지이에 무츠미</td>
+ <td>신규 레어가 선행공개된 마지막 캐러밴 이벤트</td>
+</tr>
+<tr>
+ <td>41</td>
+ <td class="cg_starlight_atapon">재화수집</td>
+ <td class="cgevents_passion">Flip Flop</td>
+ <td>셀렉션</td>
+ <td>11월 19일 15시 ~ 27일 21시 (198시간)</td>
+ <td>25(마스터)/29(마스터+)</td>
+ <td class="cgevents_passion">히노 아카네</td>
+ <td class="cgevents_cool">와키야마 타마미</td>
+ <td>셀렉션 곡으로 개최된 첫 재화 이벤트</td>
+</tr>
+<tr>
+ <td>42</td>
+ <td class="cg_starlight_nonrank">퍼레이드(투어)</td>
+ <td class="cgevents_all">(라이브 퍼레이드 2차) EVERMORE</td>
+ <td>기타</td>
+ <td>11월 30일 15시 ~ 12월 8일 21시 (8박 9일)</td>
+ <td><b>27</b>(마스터)/29(마스터+)</td>
+ <td class="cgevents_passion">죠가사키 미카</td>
+ <td class="cgevents_cute">마에카와 미쿠</td>
+ <td>신데렐라 걸즈 5주년(11월 28일) 기념 이벤트, 투어 이벤트 정규화, 역대 최고 레벨(마스터 기준) 전속성 이벤트곡</td>
+</tr>
+<tr>
+ <td>43</td>
+ <td class="cg_starlight_nonrank">협력(파티)</td>
+ <td>라이브 파티 4차</td>
+ <td>-</td>
+ <td>12월 12일 15시 ~ 19일 21시 (7박 8일)</td>
+ <td>-</td>
+ <td class="cgevents_cool">나루미야 유메</td>
+ <td class="cgevents_cute">이무라 세츠나</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>44</td>
+ <td class="cg_starlight_atapon">재화수집</td>
+ <td class="cgevents_cute">안키라!? 광소곡</td>
+ <td>오리지널</td>
+ <td>12월 21일 15시 ~ 27일 21시 (150시간)</td>
+ <td>26(마스터)/<b>30</b>(마스터+)</td>
+ <td class="cgevents_cute">후타바 안즈</td>
+ <td class="cgevents_passion">모로보시 키라리</td>
+ <td><b>재화 이벤트 최초 마스터+ 난이도 30레벨 출현</b>, 재화 이벤트 개최 속성 로테이션 변경 (전속성&#8594;큐트)<br /><b>상위 보상을 포인트 달성 보상으로도 획득 가능한 첫 경쟁형 이벤트</b></td>
+</tr>
+<tr>
+ <td>45</td>
+ <td class="cg_starlight_burst">그루브(버스트)</td>
+ <td>(비주얼 4차) 목숨을 불태워라 사랑하는 소녀여</td>
+ <td>오리지널</td>
+ <td>12월 31일 15시 ~ 17년 1월 9일 21시 (222시간)</td>
+ <td>25(마스터)/29(마스터+)</td>
+ <td class="cgevents_cool">타카가키 카에데</td>
+ <td class="cgevents_passion">카타기리 사나에</td>
+ <td>두번째 연말연시 이벤트</td>
+</tr>
+</table>
+
+</div>
+
+<h3>2017년도</h3>
+
+<div class="starlight_events">
+
+<table width="1876" class="cgevents_list" style="text-align: center;">
+<tr><td width="2%">순번</td><td width="5%">형식</td><td width="17%">이벤트 및 대상곡명</td><td width="7%">대상곡 분류</td><td width="14%">개최기간</td><td width="8%">대상곡 레벨</td><td width="8%">상위보상 아이돌명</td><td width="8%">하위보상 아이돌명</td><td width="35%">비고</td></tr>
+<tr>
+ <td>46</td>
+ <td class="cg_starlight_nonrank">캐러밴</td>
+ <td>신데렐라 캐러밴 11차</td>
+ <td>-</td>
+ <td>1월 12일 15시 ~ 18일 21시 (6박 7일)</td>
+ <td>-</td>
+ <td class="cgevents_passion">난죠 히카루</td>
+ <td class="cgevents_cool">이쥬인 메구미</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>47</td>
+ <td class="cg_starlight_atapon">재화수집</td>
+ <td class="cgevents_cool">Lunatic Show</td>
+ <td>셀렉션</td>
+ <td>1월 20일 15시 ~ 27일 21시 (174시간)</td>
+ <td>26(마스터)/29(마스터+)</td>
+ <td class="cgevents_cool">시라사카 코우메</td>
+ <td class="cgevents_cute">코시미즈 사치코</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>48</td>
+ <td class="cg_starlight_nonrank">퍼레이드(투어)</td>
+ <td class="cgevents_all">(라이브 퍼레이드 3차) Sweet Witches&#39; Night</td>
+ <td>오리지널</td>
+ <td>1월 31일 15시 ~ 2월 7일 21시 (7박 8일)</td>
+ <td>26(마스터)/29(마스터+)</td>
+ <td class="cgevents_cute">미무라 카나코</td>
+ <td class="cgevents_cool">모리쿠보 노노</td>
+ <td>오리지널 곡(스타라이트 마스터)으로 개최된 첫 투어 이벤트, <b>게임 내 100번째 수록곡</b></td>
+</tr>
+<tr>
+ <td>49</td>
+ <td class="cg_starlight_nonrank">협력(파티)</td>
+ <td>라이브 파티 5차</td>
+ <td>-</td>
+ <td>2월 10일 15시 ~ 15일 21시 (<b>5박 6일</b>)</td>
+ <td>-</td>
+ <td class="cgevents_cute">쿠리하라 네네</td>
+ <td class="cgevents_passion">스기사카 우미</td>
+ <td>가장 기간이 짧았던 정규 이벤트들 중 하나</td>
+</tr>
+<tr>
+ <td>50</td>
+ <td class="cg_starlight_atapon">재화수집</td>
+ <td class="cgevents_passion">정열 팡팡파레</td>
+ <td>오리지널</td>
+ <td>2월 17일 15시 ~ 25일 21시 (198시간)</td>
+ <td>26(마스터)/29(마스터+)</td>
+ <td class="cgevents_passion">혼다 미오</td>
+ <td class="cgevents_passion">타카모리 아이코</td>
+ <td><b>오리지널곡(스타라이트 마스터)으로 개최된 첫 패션 타입 재화 이벤트</b>, <b>50번째 정규 이벤트</b></td>
+</tr>
+<tr>
+ <td>51</td>
+ <td class="cg_starlight_burst">그루브(버스트)</td>
+ <td>(보컬 6차) 벛꽃이 피는 때</td>
+ <td>오리지널</td>
+ <td>2월 28일 15시 ~ 3월 9일 21시 (222시간)</td>
+ <td>26(마스터)/29(마스터+)</td>
+ <td class="cgevents_passion">요리타 요시노</td>
+ <td class="cgevents_cute">도묘지 카린</td>
+ <td>포텐셜 추가 이후 첫 보컬 특화 그루브 이벤트, 역대 29레벨 최소 노트수(586개, 마스터+ 기준)</td>
+</tr>
+<tr>
+ <td>52</td>
+ <td class="cg_starlight_nonrank">캐러밴</td>
+ <td>신데렐라 캐러밴 12차</td>
+ <td>-</td>
+ <td>3월 13일 15시 ~ 19일 21시 (6박 7일)</td>
+ <td>-</td>
+ <td class="cgevents_cool">타카미네 노아</td>
+ <td class="cgevents_cute">마츠바라 사야</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>53</td>
+ <td class="cg_starlight_atapon">재화수집</td>
+ <td class="cgevents_all">&forall;NSWER</td>
+ <td>오리지널</td>
+ <td>3월 21일 15시 ~ 28일 21시 (174시간)</td>
+ <td>26(마스터)/<b>30</b>(마스터+)</td>
+ <td class="cgevents_cute">하야사카 미레이</td>
+ <td class="cgevents_passion">호시 쇼코</td>
+ <td><b>게임 내 첫 보이스 특채(성우 배정)</b>, <b>참여멤버에 대한 보이스 추가와 동시에 개최된 첫 이벤트</b><br />전속성 재화 이벤트 최초 마스터+ 난이도 30레벨 출현</td>
+</tr>
+<tr>
+ <td>54</td>
+ <td class="cg_starlight_nonrank">퍼레이드(투어)</td>
+ <td class="cgevents_cute">(라이브 퍼레이드 4차) shabon song</td>
+ <td>셀렉션</td>
+ <td><del datetime="2017-03-31T15:00:00+09:00">3월 31일</del> 4월 1일 15시 ~ 8일 21시 (7박 8일)</td>
+ <td>25(마스터)/28(마스터+)</td>
+ <td class="cgevents_cute">코히나타 미호</td>
+ <td class="cgevents_passion">아카기 미리아</td>
+ <td>셀렉션 곡으로 개최된 유일한 투어 이벤트, <b>운영 상 문제로 인해 처음으로 기간이 조정된 이벤트</b><br />대상곡이 단일 속성인 첫 투어 이벤트</td>
+</tr>
+<tr>
+ <td>55</td>
+ <td class="cg_starlight_nonrank">협력(파티)</td>
+ <td>라이브 파티 6차</td>
+ <td>-</td>
+ <td>4월 11일 15시 ~ 17일 21시 (6박 7일)</td>
+ <td>-</td>
+ <td class="cgevents_passion">사에지마 키요미</td>
+ <td class="cgevents_cute">아리우라 칸나</td>
+ <td>&#39;로컬 매칭&#39; 기능이 추가되는 첫 협력 이벤트</td>
+</tr>
+<tr>
+ <td>56</td>
+ <td class="cg_starlight_atapon">재화수집</td>
+ <td class="cgevents_cool">Nocturne</td>
+ <td><b>셀렉션</b></td>
+ <td>4월 19일 15시 ~ 26일 21시 (174시간)</td>
+ <td>26(마스터)/29(마스터+)</td>
+ <td class="cgevents_cool">카와시마 미즈키</td>
+ <td class="cgevents_cool">마츠나가 료</td>
+ <td><b>셀렉션 곡으로 개최된 마지막 이벤트</b>, 20번째 재화 이벤트</td>
+</tr>
+<tr>
+ <td>57</td>
+ <td class="cg_starlight_burst">그루브(버스트)</td>
+ <td>(댄스 5차) Nothing but You</td>
+ <td>오리지널</td>
+ <td>4월 30일 15시 ~ 5월 8일 21시 (198시간)</td>
+ <td>26(마스터)/29(마스터+)</td>
+ <td class="cgevents_cool">아나스타샤</td>
+ <td class="cgevents_cute">나카노 유카</td>
+ <td>두번째 골든 위크 시즌 이벤트</td>
+</tr>
+<tr>
+ <td>58</td>
+ <td class="cg_starlight_nonrank">캐러밴</td>
+ <td>신데렐라 캐러밴 13차</td>
+ <td>-</td>
+ <td>5월 11일 15시 ~ 17일 21시 (6박 7일)</td>
+ <td>-</td>
+ <td class="cgevents_cute">시라기쿠 호타루</td>
+ <td class="cgevents_cool">케이트</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>59</td>
+ <td class="cg_starlight_atapon">재화수집</td>
+ <td class="cgevents_passion">맹렬☆세상개혁 섹시길티!</td>
+ <td>오리지널</td>
+ <td>5월 19일 15시 ~ 28일 21시 (222시간)</td>
+ <td>26(마스터)/29(마스터+)</td>
+ <td class="cgevents_passion">호리 유코</td>
+ <td class="cgevents_passion">오이카와 시즈쿠</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>60</td>
+ <td class="cg_starlight_nonrank">퍼레이드(투어)</td>
+ <td class="cgevents_all">(라이브 퍼레이드 5차) With Love</td>
+ <td>오리지널</td>
+ <td>5월 31일 15시 ~ 6월 8일 21시 (8박 9일)</td>
+ <td>25(마스터)/28(마스터+)</td>
+ <td class="cgevents_passion">모로보시 키라리</td>
+ <td class="cgevents_cute">이가라시 쿄코</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>61</td>
+ <td class="cg_starlight_nonrank">협력(파티)</td>
+ <td>라이브 파티 7차</td>
+ <td>-</td>
+ <td>6월 12일 15시 ~ 17일 21시 (<b>5박 6일</b>)</td>
+ <td>-</td>
+ <td class="cgevents_cool">헬렌</td>
+ <td class="cgevents_passion">캐시 그라함</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>62</td>
+ <td class="cg_starlight_atapon">재화수집</td>
+ <td class="cgevents_all">Yes! Party Time!!</td>
+ <td><b>VR 수록곡</b></td>
+ <td>6월 19일 15시 ~ 26일 21시 (174시간)</td>
+ <td>25(마스터)/29(마스터+)</td>
+ <td class="cgevents_cute">사쿠라이 모모카</td>
+ <td class="cgevents_cool">사사키 치에</td>
+ <td><b>VR판 수록곡 및 악곡 총선거 상위권 곡으로 개최된 첫 이벤트</b>, 역대 전속성 29레벨 최다 노트수(974개, 마스터+)<br />첫 [3D 리치] 모드 전용 연출을 도입한 MV 화면</td>
+</tr>
+<tr>
+ <td>63</td>
+ <td class="cg_starlight_burst">그루브(버스트)</td>
+ <td>(비주얼 5차) 리틀 리들</td>
+ <td>오리지널</td>
+ <td>6월 30일 15시 ~ 7월 9일 21시 (222시간)</td>
+ <td>26(마스터)/29(마스터+)</td>
+ <td class="cgevents_cool">시라사카 코우메</td>
+ <td class="cgevents_cute">후타바 안즈</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>64</td>
+ <td class="cg_starlight_nonrank">캐러밴</td>
+ <td>신데렐라 캐러밴 14차</td>
+ <td>-</td>
+ <td>7월 12일 15시 ~ 18일 21시 (6박 7일)</td>
+ <td>-</td>
+ <td class="cgevents_passion">키타 히나코</td>
+ <td class="cgevents_cool">히이라기 시노</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>65</td>
+ <td class="cg_starlight_atapon">재화수집</td>
+ <td class="cgevents_cute">Kawaii make MY day!</td>
+ <td>오리지널</td>
+ <td>7월 20일 15시 ~ 27일 21시 (174시간)</td>
+ <td>26(마스터)/29(마스터+)</td>
+ <td class="cgevents_cute">시이나 노리코</td>
+ <td class="cgevents_cute">미즈모토 유카리</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>66</td>
+ <td class="cg_starlight_nonrank">퍼레이드(투어)</td>
+ <td class="cgevents_all">(라이브 퍼레이드 6차) Take me☆Take you</td>
+ <td>총선</td>
+ <td>7월 31일 15시 ~ 8월 8일 21시 (8박 9일)</td>
+ <td>24(마스터)/<b>27</b>(마스터+)</td>
+ <td class="cgevents_cute">마에카와 미쿠</td>
+ <td class="cgevents_passion">요리타 요시노</td>
+ <td>신데렐라 걸 총선 앨범곡으로 진행되는 첫 투어 이벤트, 이벤트곡 역대 최저 레벨(마스터+)</td>
+</tr>
+<tr>
+ <td>67</td>
+ <td class="cg_starlight_nonrank">협력(파티)</td>
+ <td>라이브 파티 8차</td>
+ <td>-</td>
+ <td>8월 12일 15시 ~ 19일 21시 (7박 8일)</td>
+ <td>-</td>
+ <td class="cgevents_passion">자이젠 토키코</td>
+ <td class="cgevents_cute">안자이 미야코</td>
+ <td><b>마지막 협력 이벤트</b></td>
+</tr>
+<tr>
+ <td>68</td>
+ <td class="cg_starlight_atapon">재화수집</td>
+ <td class="cgevents_cool">쌍익의 아리아</td>
+ <td>오리지널</td>
+ <td>8월 21일 15시 ~ 27일 21시 (<b>150시간</b>)</td>
+ <td><b>27</b>(마스터)/<b>30</b>(마스터+)</td>
+ <td class="cgevents_cool">칸자키 란코</td>
+ <td class="cgevents_cool">니노미야 아스카</td>
+ <td><b>쿨타입 최초 마스터+ 난이도 30레벨 출현</b>, 역대 최고 레벨(마스터 기준) 쿨타입 이벤트곡</td>
+</tr>
+<tr>
+ <td>69</td>
+ <td class="cg_starlight_burst">그루브(버스트)</td>
+ <td>(보컬 7차) 일루져니스타!</td>
+ <td>오리지널</td>
+ <td>8월 31일 15시 ~ 9월 7일 21시 (174시간)
+ <td>26(마스터)/29(마스터+)</td>
+ <td class="cgevents_cool">사기사와 후미카</td>
+ <td class="cgevents_cute">사쿠마 마유</td>
+ <td>게임 서비스 2주년(9월 3일) 기념 이벤트</td>
+</tr>
+<tr>
+ <td>70</td>
+ <td class="cg_starlight_nonrank">캐러밴</td>
+ <td>신데렐라 캐러밴 15차</td>
+ <td>-</td>
+ <td>9월 11일 15시 ~ 18일 21시 (7박 8일)</td>
+ <td>-</td>
+ <td class="cgevents_cute">쿠도 시노부</td>
+ <td class="cgevents_cool">마츠모토 사리나</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>71</td>
+ <td class="cg_starlight_atapon">재화수집</td>
+ <td class="cgevents_passion">Twin☆빙글★테일</td>
+ <td>오리지널</td>
+ <td>9월 20일 15시 ~ 27일 21시 (174시간)</td>
+ <td>26(마스터)/<b>30</b>(마스터+)</td>
+ <td class="cgevents_passion">죠가사키 미카</td>
+ <td class="cgevents_passion">죠가사키 리카</td>
+ <td>오리지널 곡으로 개최된 첫 패션타입 듀엣(2인) 유닛 재화 이벤트, <b>최초로 동일 아이돌의 3회차 상위 보상 출현</b><br /><b>패션 타입 최초 마스터+ 난이도 30레벨 출현</b></td>
+</tr>
+<tr>
+ <td>72</td>
+ <td class="cg_starlight_nonrank">퍼레이드(투어)</td>
+ <td class="cgevents_all">(라이브 퍼레이드 7차) 너의 곁에서 계속</td>
+ <td>총선</td>
+ <td>9월 30일 15시 ~ 10월 9일 21시 (<b>9박 10일</b>)</td>
+ <td>24(마스터)/<b>27</b>(마스터+)</td>
+ <td class="cgevents_passion">하마구치 아야메</td>
+ <td class="cgevents_cool">와키야마 타마미</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>73</td>
+ <td class="cg_starlight_nonrank">캐러밴</td>
+ <td>신데렐라 캐러밴 16차</td>
+ <td>-</td>
+ <td>10월 12일 15시 ~ 18일 21시 (6박 7일)</td>
+ <td>-</td>
+ <td class="cgevents_cool">와쿠이 루미</td>
+ <td class="cgevents_passion">마나베 이츠키</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>74</td>
+ <td class="cg_starlight_atapon">재화수집</td>
+ <td class="cgevents_cute">Halloween♥Code</td>
+ <td><b>시즌 앨범곡</b></td>
+ <td>10월 20일 15시 ~ 27일 21시 (174시간)</td>
+ <td>26(마스터)/29(마스터+)</td>
+ <td class="cgevents_cute">오토쿠라 유우키</td>
+ <td class="cgevents_cute">아베 나나</td>
+ <td>마스터 시즌(MASTER SEASONS) 앨범곡으로 개최된 첫 이벤트.</td>
+</tr>
+<tr>
+ <td>75</td>
+ <td class="cg_starlight_burst">그루브(버스트)</td>
+ <td>(댄스 6차) 가을바람에 손을 흔들며</td>
+ <td>시즌 앨범곡</td>
+ <td>10월 31일 15시 ~ 11월 7일 21시 (174시간)
+ <td>26(마스터)/29(마스터+)</td>
+ <td class="cgevents_cute">나카노 유카</td>
+ <td class="cgevents_passion">아이바 유미</td>
+ <td>마스터 시즌(MASTER SEASONS) 앨범곡으로 개최된 첫 그루브 이벤트<br /><b>참여율이 가장 저조했던 그루브 이벤트 (입상랭킹 12만위 이내 기준)</b></td>
+</tr>
+<tr>
+ <td>76</td>
+ <td class="cg_starlight_nonrank">캐러밴</td>
+ <td>신데렐라 캐러밴 17차</td>
+ <td>-</td>
+ <td>11월 10일 15시 ~ 16일 21시 (6박 7일)</td>
+ <td>-</td>
+ <td class="cgevents_passion">코세키 레이나</td>
+ <td class="cgevents_cute">마나카 미사토</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>77</td>
+ <td class="cg_starlight_atapon">재화수집</td>
+ <td class="cgevents_cool">Trinity Field</td>
+ <td>오리지널</td>
+ <td>11월 19일 15시 ~ 26일 21시 (174시간)</td>
+ <td>26(마스터)/<b>30</b>(마스터+)</td>
+ <td class="cgevents_cool">호죠 카렌</td>
+ <td class="cgevents_cool">카미야 나오</td>
+ <td><b>첫 2차(2집) 유닛곡으로 개최된 이벤트</b>, 첫 [2D 리치] 모드 전용 연출을 도입한 MV 화면</td>
+</tr>
+<tr>
+ <td>78</td>
+ <td class="cg_starlight_nonrank">퍼레이드(투어)</td>
+ <td class="cgevents_all">(라이브 퍼레이드 8차) 사랑이 꽃피는 계절</td>
+ <td>총선</td>
+ <td>11월 30일 15시 ~ 12월 9일 21시 (<b>9박 10일</b>)</td>
+ <td>25(마스터)/28(마스터+)</td>
+ <td class="cgevents_cool">후지와라 하지메</td>
+ <td class="cgevents_cute">세키 히로미</td>
+ <td><b>과거 특정 이벤트와 보상 아이돌이 모두 동일한 첫 이벤트</b></td>
+</tr>
+<tr>
+ <td>79</td>
+ <td class="cg_starlight_nonrank">캐러밴</td>
+ <td>신데렐라 캐러밴 18차</td>
+ <td>-</td>
+ <td>12월 13일 15시 ~ 18일 21시 (<b>5박 6일</b>)</td>
+ <td>-</td>
+ <td class="cgevents_cute">효도 레나</td>
+ <td class="cgevents_cool">나루미야 유메</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>80</td>
+ <td class="cg_starlight_atapon">재화수집</td>
+ <td class="cgevents_passion">겨울 하늘 프레셔스</td>
+ <td>시즌 앨범곡</td>
+ <td>12월 20일 15시 ~ 27일 21시 (174시간)</td>
+ <td>26(마스터)/29(마스터+)</td>
+ <td class="cgevents_passion">히메카와 유키</td>
+ <td class="cgevents_passion">카타기리 사나에</td>
+ <td>마스터 시즌(MASTER SEASONS) 앨범곡으로 개최된 첫 패션타입 이벤트.</td>
+</tr>
+</table>
+
+</div>
+
+<h3>2018년도</h3>
+
+<div class="starlight_events">
+
+<table width="1876" class="cgevents_list" style="text-align: center;">
+<tr><td width="2%">순번</td><td width="5%">형식</td><td width="17%">이벤트 및 대상곡명</td><td width="7%">대상곡 분류</td><td width="14%">개최기간</td><td width="8%">대상곡 레벨</td><td width="8%">상위보상 아이돌명</td><td width="8%">하위보상 아이돌명</td><td width="35%">비고</td></tr>
+<tr>
+ <td>81</td>
+ <td class="cg_starlight_burst">그루브(버스트)</td>
+ <td>(비주얼 6차) Happy New Yeah!</td>
+ <td>오리지널</td>
+ <td>1월 1일 15시 ~ 9일 21시 (198시간)
+ <td>26(마스터)/29(마스터+)</td>
+ <td class="cgevents_passion">사토 신</td>
+ <td class="cgevents_cool">시부야 린</td>
+ <td>세번째 연말연시 시즌 이벤트</td>
+</tr>
+<tr>
+ <td>82</td>
+ <td class="cg_starlight_atapon">재화수집</td>
+ <td class="cgevents_all">아름다움의 색채를 입고</td>
+ <td>오리지널</td>
+ <td>1월 12일 15시 ~ 18일 21시 (150시간)</td>
+ <td>27(마스터)/<b>30</b>(마스터+)</td>
+ <td class="cgevents_cool">시오미 슈코</td>
+ <td class="cgevents_cute">코바야카와 사에</td>
+ <td><b>이벤트 로테이션 변경</b></td>
+</tr>
+<tr>
+ <td>83</td>
+ <td class="cg_starlight_nonrank">로드</td>
+ <td>전진하라! 신데렐라 로드 (1차)</td>
+ <td>-</td>
+ <td>1월 22일 15시 ~ 29일 21시 (7박 8일)</td>
+ <td>-</td>
+ <td class="cgevents_cute">유사 코즈에</td>
+ <td class="cgevents_passion">슈토 아오이</td>
+ <td><b>첫 로드 이벤트</b></td>
+</tr>
+<tr>
+ <td>84</td>
+ <td class="cg_starlight_nonrank">퍼레이드(투어)</td>
+ <td class="cgevents_all">(라이브 퍼레이드 9차) always</td>
+ <td>총선</td>
+ <td>1월 31일 15시 ~ 2월 8일 21시 (8박 9일)</td>
+ <td>25(마스터)/28(마스터+)</td>
+ <td class="cgevents_passion">무라카미 토모에</td>
+ <td class="cgevents_cool">아라키 히나</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>85</td>
+ <td class="cg_starlight_nonrank">캐러밴</td>
+ <td>신데렐라 캐러밴 19차</td>
+ <td>-</td>
+ <td>2월 12일 15시 ~ 17일 21시 (5박 6일)</td>
+ <td>-</td>
+ <td class="cgevents_cool">유우키 하루</td>
+ <td class="cgevents_passion">마토바 리사</td>
+ <td>연계 코믹스 대응 이벤트</td>
+</tr>
+<tr>
+ <td>86</td>
+ <td class="cg_starlight_atapon">재화수집</td>
+ <td class="cgevents_cool">Frost</td>
+ <td>시즌 앨범곡</td>
+ <td>2월 19일 15시 ~ 25일 21시 (150시간)</td>
+ <td>25(마스터)/29(마스터+)</td>
+ <td class="cgevents_cool">카미야 나오</td>
+ <td class="cgevents_cool">와키야마 타마미</td>
+ <td>마스터 시즌(MASTER SEASONS) 앨범곡으로 개최된 첫 쿨타입 이벤트, 30번째 재화 이벤트<br /><b>참여율이 가장 저조했던 재화 이벤트 (입상랭킹 30만위 이내 기준)</b></td>
+</tr>
+<tr>
+ <td>87</td>
+ <td class="cg_starlight_burst">그루브(버스트)</td>
+ <td>(보컬 8차) 트윈테일의 바람</td>
+ <td>시즌 앨범곡</td>
+ <td>2월 28일 15시 ~ 3월 8일 21시 (198시간)
+ <td>26(마스터)/29(마스터+)</td>
+ <td class="cgevents_cute">코히나타 미호</td>
+ <td class="cgevents_cool">하야미 카나데</td>
+ <td>후반전(배수) 모드가 도입된 첫 그루브 이벤트</td>
+</tr>
+<tr>
+ <td>88</td>
+ <td class="cg_starlight_nonrank">로드</td>
+ <td>전진하라! 신데렐라 로드 (2차)</td>
+ <td>-</td>
+ <td>3월 12일 15시 ~ 18일 21시 (6박 7일)</td>
+ <td>-</td>
+ <td class="cgevents_passion">코마츠 이부키</td>
+ <td class="cgevents_cute">안자이 미야코</td>
+ <td>로드 이벤트 정규화</td>
+</tr>
+<tr>
+ <td>89</td>
+ <td class="cg_starlight_atapon">재화수집</td>
+ <td class="cgevents_cute">반짝! 만개 스마일</td>
+ <td><b>극장 앨범곡</b></td>
+ <td>3월 20일 15시 ~ 28일 21시 (198시간)</td>
+ <td>26(마스터)/29(마스터+)</td>
+ <td class="cgevents_cute">시마무라 우즈키</td>
+ <td class="cgevents_cute">사쿠라이 모모카</td>
+ <td><b>신데렐라 극장(리틀 스타즈) 앨범곡으로 개최되는 첫 이벤트</b>, 게임 내 30번째 큐트 타입 수록곡</td>
+</tr>
+<tr>
+ <td>90</td>
+ <td class="cg_starlight_nonrank">퍼레이드(투어)</td>
+ <td class="cgevents_all">(라이브 퍼레이드 10차) Vast World</td>
+ <td>기타</td>
+ <td>4월 2일 15시 ~ 9일 21시 (7박 8일)</td>
+ <td>25(마스터)/28(마스터+)</td>
+ <td class="cgevents_cool">시라사카 코우메</td>
+ <td class="cgevents_cute">오가타 치에리</td>
+ <td>[영업] 기능 추가 (3월 29일 15시 ~ ) 이후 개최되는 첫 이벤트</td>
+</tr>
+<tr>
+ <td>91</td>
+ <td class="cg_starlight_nonrank">캐러밴</td>
+ <td>신데렐라 캐러밴 20차</td>
+ <td>-</td>
+ <td>4월 12일 15시 ~ 17일 21시 (5박 6일)</td>
+ <td>-</td>
+ <td class="cgevents_cute">오오누마 쿠루미</td>
+ <td class="cgevents_cool">미즈노 미도리</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>92</td>
+ <td class="cg_starlight_atapon">재화수집</td>
+ <td class="cgevents_passion">Spring Screaming</td>
+ <td>시즌 앨범곡</td>
+ <td>4월 19일 15시 ~ 26일 21시 (174시간)</td>
+ <td>26(마스터)/29(마스터+)</td>
+ <td class="cgevents_passion">키타미 유즈</td>
+ <td class="cgevents_passion">류자키 카오루</td>
+ <td>게임 내 30번째 패션 타입 수록곡, <b>랭킹 보상과 포인트 보상의 실질적 구분이 없어진 첫 경쟁형 이벤트</b></td>
+</tr>
+<tr>
+ <td>93</td>
+ <td class="cg_starlight_burst">그루브(버스트)</td>
+ <td>(댄스 7차) 벛꽃의 바람</td>
+ <td>시즌 앨범곡</td>
+ <td>4월 30일 15시 ~ 5월 7일 21시 (174시간)
+ <td>26(마스터)/29(마스터+)</td>
+ <td class="cgevents_cute">이가라시 쿄코</td>
+ <td class="cgevents_cool">아나스타샤</td>
+ <td>세번째 골든 위크 시즌 이벤트</td>
+</tr>
+<tr>
+ <td>94</td>
+ <td class="cg_starlight_nonrank">로드</td>
+ <td>전진하라! 신데렐라 로드 (3차)</td>
+ <td>-</td>
+ <td>5월 10일 15시 ~ 17일 21시 (7박 8일)</td>
+ <td>-</td>
+ <td class="cgevents_passion">미요시 사나</td>
+ <td class="cgevents_cool">후루사와 요리코</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>95</td>
+ <td class="cg_starlight_atapon">재화수집</td>
+ <td class="cgevents_cute">HARURUNRUN</td>
+ <td>시즌 앨범곡</td>
+ <td>5월 21일 15시 ~ 28일 21시 (174시간)</td>
+ <td>26(마스터)/29(마스터+)</td>
+ <td class="cgevents_cute">무나카타 아츠미</td>
+ <td class="cgevents_cute">미즈모토 유카리</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>96</td>
+ <td class="cg_starlight_nonrank">퍼레이드(투어)</td>
+ <td class="cgevents_passion">(라이브 퍼레이드 11차) Virgin Love</td>
+ <td>기타</td>
+ <td>5월 31일 15시 ~ 6월 7일 21시 (7박 8일)</td>
+ <td>25(마스터)/28(마스터+)</td>
+ <td class="cgevents_passion">무카이 타쿠미</td>
+ <td class="cgevents_cute">후지모토 리나</td>
+ <td>대상곡이 단일 속성인 두번째 투어 이벤트, 연계 코믹스 앨범곡으로 진행되는 첫 이벤트</td>
+</tr>
+<tr>
+ <td>97</td>
+ <td class="cg_starlight_nonrank">캐러밴</td>
+ <td>신데렐라 캐러밴 21차</td>
+ <td>-</td>
+ <td>6월 11일 15시 ~ 16일 21시 (5박 6일)</td>
+ <td>-</td>
+ <td class="cgevents_cool">아야세 호노카</td>
+ <td class="cgevents_passion">센자키 에마</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>98</td>
+ <td class="cg_starlight_atapon">재화수집</td>
+ <td class="cgevents_cool">에튀드는 1곡만</td>
+ <td>극장 앨범곡</td>
+ <td>6월 19일 15시 ~ 26일 21시 (174시간)</td>
+ <td>26(마스터)/28(마스터+)</td>
+ <td class="cgevents_cool">미후네 미유</td>
+ <td class="cgevents_cool">카미죠 하루나</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>99</td>
+ <td class="cg_starlight_burst">그루브(버스트)</td>
+ <td>(비주얼 7차) 은빛 돌고래와 뜨거운 바람</td>
+ <td>시즌 앨범곡</td>
+ <td>6월 30일 12시 ~ 7월 7일 21시 (177시간)
+ <td>26(마스터)/29(마스터+)</td>
+ <td class="cgevents_cool">닛타 미나미</td>
+ <td class="cgevents_cute">오가타 치에리</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>100</td>
+ <td class="cg_starlight_nonrank">로드</td>
+ <td>전진하라! 신데렐라 로드 (4차)</td>
+ <td>-</td>
+ <td>7월 10일 15시 ~ 17일 21시 (7박 8일)</td>
+ <td>-</td>
+ <td class="cgevents_cute">사이온지 코토카</td>
+ <td class="cgevents_cool">시노하라 레이</td>
+ <td><b>100번째 정규 이벤트</b></td>
+</tr>
+<tr>
+ <td>101</td>
+ <td class="cg_starlight_atapon">재화수집</td>
+ <td class="cgevents_passion">SUN♡FLOWER</td>
+ <td>극장 앨범곡</td>
+ <td>7월 19일 15시 ~ 27일 21시 (198시간)</td>
+ <td>26(마스터)/29(마스터+)</td>
+ <td class="cgevents_passion">모로보시 키라리</td>
+ <td class="cgevents_passion">죠가사키 미카</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>102</td>
+ <td class="cg_starlight_nonrank">퍼레이드(투어)</td>
+ <td class="cgevents_cute">(라이브 퍼레이드 12차) 데코보코 스피드스타</td>
+ <td>오리지널</td>
+ <td>7월 31일 15시 ~ 8월 7일 21시 (7박 8일)</td>
+ <td><b>27</b>(마스터)/<b>31</b>(마스터+)</td>
+ <td class="cgevents_cute">아베 나나</td>
+ <td class="cgevents_passion">사토 신</td>
+ <td><b>대상곡 마스터+ 난이도 첫 31레벨 출현</b></td>
+</tr>
+<tr>
+ <td>103</td>
+ <td class="cg_starlight_nonrank">캐러밴</td>
+ <td>신데렐라 캐러밴 22차</td>
+ <td>-</td>
+ <td>8월 11일 15시 ~ 16일 21시 (5박 6일)</td>
+ <td>-</td>
+ <td class="cgevents_cool">키류 츠카사</td>
+ <td class="cgevents_passion">사이토 요코</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>104</td>
+ <td class="cg_starlight_atapon">재화수집</td>
+ <td class="cgevents_cute">크레이지 크레이지</td>
+ <td>오리지널</td>
+ <td>8월 19일 15시 ~ 27일 21시 (198시간)</td>
+ <td>26(마스터)/29(마스터+)</td>
+ <td class="cgevents_cute">미야모토 프레데리카</td>
+ <td class="cgevents_cute">이치노세 시키</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>105</td>
+ <td class="cg_starlight_burst">그루브(버스트)</td>
+ <td>(보컬 9차) 걸즈 인 더 프론티어</td>
+ <td>오리지널</td>
+ <td>8월 31일 15시 ~ 9월 7일 21시 (174시간)</td>
+ <td>26(마스터)/30(마스터+)</td>
+ <td class="cgevents_cool">시부야 린</td>
+ <td class="cgevents_passion">키무라 나츠키</td>
+ <td>게임 서비스 3주년(9월 3일) 기념 이벤트</td>
+</tr>
+<tr>
+ <td>106</td>
+ <td class="cg_starlight_nonrank">로드</td>
+ <td>전진하라! 신데렐라 로드 (5차)</td>
+ <td>-</td>
+ <td>9월 11일 15시 ~ 17일 21시 (6박 7일)</td>
+ <td>-</td>
+ <td class="cgevents_passion">호리 유코</td>
+ <td class="cgevents_cute">야오 페이페이</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>107</td>
+ <td class="cg_starlight_atapon">재화수집</td>
+ <td class="cgevents_cool">Pretty Liar</td>
+ <td>오리지널</td>
+ <td>9월 19일 15시 ~ 27일 21시 (198시간)</td>
+ <td>26(마스터)/29(마스터+)</td>
+ <td class="cgevents_cool">하야미 카나데</td>
+ <td class="cgevents_cool">타카가키 카에데</td>
+ <td><b>가장 과열된 재화 이벤트 (입상랭킹 2000위~12만위 이내 기준)</b></td>
+</tr>
+<tr>
+ <td>108</td>
+ <td class="cg_starlight_nonrank">퍼레이드(투어)</td>
+ <td class="cgevents_all">(라이브 퍼레이드 13차) 도레미 팩토리!</td>
+ <td>기타</td>
+ <td>9월 30일 15시 ~ 10월 8일 21시 (8박 9일)</td>
+ <td>24(마스터)/28(마스터+)</td>
+ <td class="cgevents_cute">사쿠라이 모모카</td>
+ <td class="cgevents_cool">유우키 하루</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>109</td>
+ <td class="cg_starlight_nonrank">캐러밴</td>
+ <td>신데렐라 캐러밴 23차</td>
+ <td>-</td>
+ <td>10월 11일 15시 ~ 16일 21시 (5박 6일)</td>
+ <td>-</td>
+ <td class="cgevents_cute">클라리스</td>
+ <td class="cgevents_passion">사와다 마리나</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>110</td>
+ <td class="cg_starlight_atapon">재화수집</td>
+ <td class="cgevents_cool">언데드 댄스록</td>
+ <td>오리지널</td>
+ <td>10월 19일 15시 ~ 27일 21시 (198시간)</td>
+ <td>26(마스터)/29(마스터+)</td>
+ <td class="cgevents_cool">마츠나가 료</td>
+ <td class="cgevents_cool">시라사카 코우메</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>111</td>
+ <td class="cg_starlight_burst">그루브(버스트)</td>
+ <td>(댄스 8차) Starry-Go-Round</td>
+ <td>오리지널</td>
+ <td>10월 31일 15시 ~ 11월 7일 21시 (177시간)</td>
+ <td><b>27</b>(마스터)/<b>30</b>(마스터+)</td>
+ <td class="cgevents_passion">오오츠키 유이</td>
+ <td class="cgevents_cute">마에카와 미쿠</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>112</td>
+ <td class="cg_starlight_nonrank">로드</td>
+ <td>전진하라! 신데렐라 로드 (6차)</td>
+ <td>-</td>
+ <td>11월 10일 15시 ~ 16일 21시 (6박 7일)</td>
+ <td>-</td>
+ <td class="cgevents_cool">라이라</td>
+ <td class="cgevents_cute">야나세 미유키</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>113</td>
+ <td class="cg_starlight_atapon">재화수집</td>
+ <td class="cgevents_passion">Sunshine See May</td>
+ <td>오리지널</td>
+ <td>11월 19일 15시 ~ 27일 21시 (198시간)</td>
+ <td>26(마스터)/29(마스터+)</td>
+ <td class="cgevents_passion">요리타 요시노</td>
+ <td class="cgevents_cool">후지와라 하지메</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>114</td>
+ <td class="cg_starlight_nonrank">퍼레이드(투어)</td>
+ <td class="cgevents_all">(라이브 퍼레이드 14차) 너에게로의 시</td>
+ <td>총선</td>
+ <td>11월 30일 15시 ~ 12월 8일 21시 (8박 9일)</td>
+ <td>25(마스터)/28(마스터+)</td>
+ <td class="cgevents_cool">타카후지 카코</td>
+ <td class="cgevents_passion">혼다 미오</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>115</td>
+ <td class="cg_starlight_nonrank">캐러밴</td>
+ <td>신데렐라 캐러밴 24차</td>
+ <td>-</td>
+ <td>12월 11일 15시 ~ 16일 21시 (5박 6일)</td>
+ <td>-</td>
+ <td class="cgevents_passion">나탈리아</td>
+ <td class="cgevents_cool">세나 시오리</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>116</td>
+ <td class="cg_starlight_atapon">재화수집</td>
+ <td class="cgevents_all">Trust me</td>
+ <td>총선</td>
+ <td>12월 19일 15시 ~ 27일 21시 (198시간)</td>
+ <td>27(마스터)/<b>30</b>(마스터+)</td>
+ <td class="cgevents_passion">난죠 히카루</td>
+ <td class="cgevents_passion">키타 히나코</td>
+ <td><b>이벤트 대상곡이 종료 후 결과발표 시 통상해금되는 첫 이벤트</b>, 40번째 재화 이벤트</td>
+</tr>
+</table>
+
+</div>
+
+<h3>2019년도</h3>
+
+<div class="starlight_events">
+
+<table width="1876" class="cgevents_list" style="text-align: center;">
+<tr><td width="2%">순번</td><td width="5%">형식</td><td width="17%">이벤트 및 대상곡명</td><td width="7%">대상곡 분류</td><td width="14%">개최기간</td><td width="8%">대상곡 레벨</td><td width="8%">상위보상 아이돌명</td><td width="8%">하위보상 아이돌명</td><td width="35%">비고</td></tr>
+<tr>
+ <td>117</td>
+ <td class="cg_starlight_burst">그루브(버스트)</td>
+ <td>(비주얼 8차) Palette</td>
+ <td>오리지널</td>
+ <td>1월 1일 15시 ~ 8일 21시 (174시간)</td>
+ <td>26(마스터)/29(마스터+)</td>
+ <td class="cgevents_cute">코히나타 미호</td>
+ <td class="cgevents_cute">이가라시 쿄코</td>
+ <td><b>가장 과열된 그루브 이벤트 (입상랭킹 2000위 이내 기준)</b>, 첫 단일속성 유닛곡으로 개최된 그루브 이벤트<br /><b>이벤트 대상곡이 종료 후 결과발표 시 통상해금되는 첫 그루브 이벤트</b></td>
+</tr>
+<tr>
+ <td>118</td>
+ <td class="cg_starlight_nonrank">로드</td>
+ <td>전진하라! 신데렐라 로드 (7차)</td>
+ <td>-</td>
+ <td>1월 12일 15시 ~ 18일 21시 (6박 7일)</td>
+ <td>-</td>
+ <td class="cgevents_cool">아사리 나나미</td>
+ <td class="cgevents_cute">요코야마 치카</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>119</td>
+ <td class="cg_starlight_atapon">재화수집</td>
+ <td class="cgevents_passion">스파이스 파라다이스</td>
+ <td>기타</td>
+ <td>1월 21일 15시 ~ 28일 21시 (174시간)</td>
+ <td>25(마스터)/28(마스터+)</td>
+ <td class="cgevents_passion">타카모리 아이코</td>
+ <td class="cgevents_passion">히노 아카네</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>120</td>
+ <td class="cg_starlight_nonrank">퍼레이드(투어)</td>
+ <td class="cgevents_all">(라이브 퍼레이드 15차) 의용인협 하나후부키</td>
+ <td>오리지널</td>
+ <td>1월 31일 15시 ~ 2월 8일 21시 (8박 9일)</td>
+ <td>26(마스터)/29(마스터+)</td>
+ <td class="cgevents_passion">하마구치 아야메</td>
+ <td class="cgevents_cute">도묘지 카린</td>
+ <td><b>이벤트 대상곡이 종료 후 결과발표 시 통상해금되는 첫 투어 이벤트</b></td>
+</tr>
+<tr>
+ <td>121</td>
+ <td class="cg_starlight_nonrank">캐러밴</td>
+ <td>신데렐라 캐러밴 25차</td>
+ <td>-</td>
+ <td>2월 12일 15시 ~ 17일 21시 (5박 6일)</td>
+ <td>-</td>
+ <td class="cgevents_cute">모치다 아리사</td>
+ <td class="cgevents_passion">슈토 아오이</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>122</td>
+ <td class="cg_starlight_atapon">재화수집</td>
+ <td class="cgevents_cool">Needle Light</td>
+ <td>오리지널</td>
+ <td>2월 19일 15시 ~ 25일 21시 (150시간)</td>
+ <td>26(마스터)/29(마스터+)</td>
+ <td class="cgevents_cool">카미죠 하루나</td>
+ <td class="cgevents_cool">아라키 히나</td>
+ <td><b>참여율이 가장 저조했던 재화 이벤트 (입상랭킹 12만위 이내 기준)</b></td>
+</tr>
+<tr>
+ <td>123</td>
+ <td class="cg_starlight_burst">그루브(버스트)</td>
+ <td>(비주얼 9차) Fascinate</td>
+ <td>오리지널</td>
+ <td>2월 28일 15시 ~ 3월 7일 21시 (174시간)</td>
+ <td>26(마스터)/30(마스터+)</td>
+ <td class="cgevents_cute">쿠로사키 치토세</td>
+ <td class="cgevents_cute">시라유키 치요</td>
+ <td><b>신규 아이돌이 추가되는 첫 경쟁형 이벤트</b></td>
+</tr>
+<tr>
+ <td>124</td>
+ <td class="cg_starlight_nonrank">로드</td>
+ <td>전진하라! 신데렐라 로드 (8차)</td>
+ <td>-</td>
+ <td>3월 11일 15시 ~ 17일 21시 (6박 7일)</td>
+ <td>-</td>
+ <td class="cgevents_passion">마키하라 시호</td>
+ <td class="cgevents_cute">오쿠야마 사오리</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>125</td>
+ <td class="cg_starlight_atapon">재화수집</td>
+ <td class="cgevents_cool">미완성의 역사</td>
+ <td>시즌 앨범곡</td>
+ <td>3월 20일 15시 ~ 27일 21시 (174시간)</td>
+ <td>25(마스터)/28(마스터+)</td>
+ <td class="cgevents_cool">니노미야 아스카</td>
+ <td class="cgevents_cool">호죠 카렌</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>126</td>
+ <td class="cg_starlight_nonrank">퍼레이드(투어)</td>
+ <td class="cgevents_passion">(라이브 퍼레이드 16차) O-Ku-Ri-Mo-No Sunday!</td>
+ <td>오리지널</td>
+ <td>4월 2일 15시 ~ 9일 21시 (7박 8일)</td>
+ <td>26(마스터)/29(마스터+)</td>
+ <td class="cgevents_passion">히사카와 나기</td>
+ <td class="cgevents_cool">히사카와 하야테</td>
+ <td><b>신규 아이돌이 추가되는 첫 투어 이벤트</b></td>
+</tr>
+<tr>
+ <td>127</td>
+ <td class="cg_starlight_nonrank">캐러밴</td>
+ <td>신데렐라 캐러밴 26차</td>
+ <td>-</td>
+ <td>4월 12일 15시 ~ 17일 21시 (5박 6일)</td>
+ <td>-</td>
+ <td class="cgevents_cool">우메키 오토하</td>
+ <td class="cgevents_passion">나미키 메이코</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>128</td>
+ <td class="cg_starlight_atapon">재화수집</td>
+ <td class="cgevents_cute">큥 큥 맥스</td>
+ <td>극장 앨범곡</td>
+ <td>4월 19일 15시 ~ 26일 21시 (174시간)</td>
+ <td>25(마스터)/28(마스터+)</td>
+ <td class="cgevents_cute">시이나 노리코</td>
+ <td class="cgevents_cute">무나카타 아츠미</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>129</td>
+ <td class="cg_starlight_burst">그루브(버스트)</td>
+ <td>(댄스 9차) 무중력 셔틀</td>
+ <td>기타</td>
+ <td>4월 30일 15시 ~ 5월 7일 21시 (174시간)</td>
+ <td>26(마스터)/29(마스터+)</td>
+ <td class="cgevents_passion">아이바 유미</td>
+ <td class="cgevents_cool">닛타 미나미</td>
+ <td>콜라보곡으로 개최되는 첫 이벤트<br /><b>헤이세이(平成) 연호에 개최된 마지막 이벤트</b>, <b>레이와(令和) 연호에 진행되는 첫 이벤트</b></td>
+</tr>
+<tr>
+ <td>130</td>
+ <td class="cg_starlight_nonrank">로드</td>
+ <td>전진하라! 신데렐라 로드 (9차)</td>
+ <td>-</td>
+ <td>5월 10일 15시 ~ 17일 21시 (7박 8일)</td>
+ <td>-</td>
+ <td class="cgevents_cute">츠키미야 미야비</td>
+ <td class="cgevents_passion">아이노 나기사</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>131</td>
+ <td class="cg_starlight_atapon">재화수집</td>
+ <td class="cgevents_cool">Max Beat</td>
+ <td>극장 앨범곡</td>
+ <td>5월 21일 15시 ~ 28일 21시 (174시간)</td>
+ <td>26(마스터)/29(마스터+)</td>
+ <td class="cgevents_cool">야마토 아키</td>
+ <td class="cgevents_cool">타카후지 카코</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>132</td>
+ <td class="cg_starlight_nonrank">퍼레이드(투어)</td>
+ <td class="cgevents_all">(라이브 퍼레이드 17차) 푸른 하늘 엘</td>
+ <td>기타</td>
+ <td>5월 31일 15시 ~ 6월 7일 21시 (7박 8일)</td>
+ <td>25(마스터)/28(마스터+)</td>
+ <td class="cgevents_cool">유우키 하루</td>
+ <td class="cgevents_passion">아카기 미리아</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>133</td>
+ <td class="cg_starlight_nonrank">캐러밴</td>
+ <td>신데렐라 캐러밴 27차</td>
+ <td>-</td>
+ <td>6월 11일 15시 ~ 18일 21시 (7박 8일)</td>
+ <td>-</td>
+ <td class="cgevents_cute">나가토미 하스미</td>
+ <td class="cgevents_cool">오카자키 야스하</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>134</td>
+ <td class="cg_starlight_atapon">재화수집</td>
+ <td class="cgevents_passion">TAKAMARI☆CLIMAXXX!!!!!</td>
+ <td>극장 앨범곡</td>
+ <td>6월 21일 15시 ~ 29일 21시 (198시간)</td>
+ <td>27(마스터)/<b>30</b>(마스터+)</td>
+ <td class="cgevents_passion">키타미 유즈</td>
+ <td class="cgevents_passion">난죠 히카루</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>135</td>
+ <td class="cg_starlight_nonrank">카니발</td>
+ <td class="cgevents_all">(라이브 카니발 1차) Stage Bye Stage</td>
+ <td>기타</td>
+ <td>7월 2일 15시 ~ 9일 21시 (7박 8일)</td>
+ <td>25(마스터)/28(마스터+)</td>
+ <td class="cgevents_cute">시마무라 우즈키</td>
+ <td class="cgevents_passion">혼다 미오</td>
+ <td>첫 카니발 이벤트</td>
+</tr>
+<tr>
+ <td>136</td>
+ <td class="cg_starlight_nonrank">로드</td>
+ <td>전진하라! 신데렐라 로드 (10차)</td>
+ <td>-</td>
+ <td>7월 12일 15시 ~ 19일 21시 (7박 8일)</td>
+ <td>-</td>
+ <td class="cgevents_passion">사이토 요코</td>
+ <td class="cgevents_cool">미즈키 세이라</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>137</td>
+ <td class="cg_starlight_atapon">재화수집</td>
+ <td class="cgevents_cool">바벨</td>
+ <td>오리지널</td>
+ <td>7월 22일 15시 ~ <del datetime="2019-07-26T15:00:00+09:00">28일</del> 29일 21시 (198시간)</td>
+ <td><b>27</b>(마스터)/<b>31</b>(마스터+)</td>
+ <td class="cgevents_cute">이치노세 시키</td>
+ <td class="cgevents_cool">니노미야 아스카</td>
+ <td><b>재화 이벤트 및 쿨타입 최초 마스터+ 난이도 31레벨 출현</b><br /><b>운영 상 문제로 인해 처음으로 개최 도중 기간이 조정된 이벤트</b></td>
+</tr>
+<tr>
+ <td>138</td>
+ <td class="cg_starlight_burst">그루브(버스트)</td>
+ <td>(보컬 10차) 여름 사랑 -NATSU KOI-</td>
+ <td>시즌 앨범곡</td>
+ <td>8월 1일 15시 ~ 8일 21시 (174시간)</td>
+ <td>25(마스터)/28(마스터+)</td>
+ <td class="cgevents_cool">타치바나 아리스</td>
+ <td class="cgevents_cool">시오미 슈코</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>139</td>
+ <td class="cg_starlight_nonrank">캐러밴</td>
+ <td>신데렐라 캐러밴 28차</td>
+ <td>-</td>
+ <td>8월 11일 15시 ~ 17일 21시 (6박 7일)</td>
+ <td>-</td>
+ <td class="cgevents_cute">야나기 키요라</td>
+ <td class="cgevents_passion">에비하라 나호</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>140</td>
+ <td class="cg_starlight_atapon">재화수집</td>
+ <td class="cgevents_all">comic cosmic</td>
+ <td>오리지널</td>
+ <td>8월 20일 15시 ~ 27일 21시 (174시간)</td>
+ <td>26(마스터)/29(마스터+)</td>
+ <td class="cgevents_cute">나카노 유카</td>
+ <td class="cgevents_cool">히사카와 하야테</td>
+ <td>신데렐라 걸즈 7th 라이브 투어 기념 이벤트곡</td>
+</tr>
+<tr>
+ <td>141</td>
+ <td class="cg_starlight_nonrank">카니발</td>
+ <td class="cgevents_all">(라이브 카니발 2차) TRUE COLORS</td>
+ <td>오리지널</td>
+ <td>8월 31일 15시 ~ 9월 8일 21시 (8박 9일)</td>
+ <td>26(마스터)/29(마스터+)</td>
+ <td class="cgevents_passion">죠가사키 미카</td>
+ <td class="cgevents_cool">아나스타샤</td>
+ <td>게임 서비스 4주년(9월 3일) 기념 이벤트, <b>최초로 동일 아이돌의 4회차 상위 보상 출현</b></td>
+</tr>
+<tr>
+ <td>142</td>
+ <td class="cg_starlight_nonrank">로드</td>
+ <td>전진하라! 신데렐라 로드 (11차)</td>
+ <td>-</td>
+ <td>9월 11일 15시 ~ 17일 21시 (6박 7일)</td>
+ <td>-</td>
+ <td class="cgevents_passion">자이젠 토키코</td>
+ <td class="cgevents_cute">오오하라 미치루</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>143</td>
+ <td class="cg_starlight_atapon">재화수집</td>
+ <td class="cgevents_cute">스텝 &amp; 스킵</td>
+ <td>오리지널</td>
+ <td>9월 20일 15시 ~ 27일 21시 (174시간)</td>
+ <td>26(마스터)/29(마스터+)</td>
+ <td class="cgevents_cool">모리쿠보 노노</td>
+ <td class="cgevents_cute">시라기쿠 호타루</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>144</td>
+ <td class="cg_starlight_nonrank">퍼레이드(투어)</td>
+ <td class="cgevents_passion">(라이브 퍼레이드 18차) Gossip Club</td>
+ <td>기타</td>
+ <td>9월 30일 15시 ~ 10월 8일 21시 (8박 9일)</td>
+ <td>27(마스터)/<b>31</b>(마스터+)</td>
+ <td class="cgevents_passion">오오츠키 유이</td>
+ <td class="cgevents_cute">후지모토 리나</td>
+ <td>패션타입 최초 마스터+ 난이도 31레벨 출현</b>, 역대 최다 노트수(1290개, 마스터+ 기준)</td>
+</tr>
+<tr>
+ <td>145</td>
+ <td class="cg_starlight_nonrank">캐러밴</td>
+ <td>신데렐라 캐러밴 29차</td>
+ <td>-</td>
+ <td>10월 11일 15시 ~ 17일 21시 (6박 7일)</td>
+ <td>-</td>
+ <td class="cgevents_cool">마츠오 치즈루</td>
+ <td class="cgevents_cute">요코야마 치카</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>146</td>
+ <td class="cg_starlight_atapon">재화수집</td>
+ <td class="cgevents_passion">공상탐사계획</td>
+ <td>시즌 앨범곡</td>
+ <td>10월 21일 15시 ~ 28일 21시 (174시간)</td>
+ <td>25(마스터)/28(마스터+)</td>
+ <td class="cgevents_passion">키무라 나츠키</td>
+ <td class="cgevents_passion">하마구치 아야메</td>
+ <td>50번째 재화 이벤트</td>
+</tr>
+<tr>
+ <td>147</td>
+ <td class="cg_starlight_burst">그루브(버스트)</td>
+ <td>(비주얼 10차) 미러볼 러브</td>
+ <td>오리지널</td>
+ <td>10월 31일 15시 ~ 11월 7일 21시 (174시간)</td>
+ <td>26(마스터)/29(마스터+)</td>
+ <td class="cgevents_cute">미야모토 프레데리카</td>
+ <td class="cgevents_passion">오이카와 시즈쿠</td>
+ <td>신데렐라 걸즈 7th 라이브 투어 기념 이벤트곡</td>
+</tr>
+<tr>
+ <td>148</td>
+ <td class="cg_starlight_nonrank">로드</td>
+ <td>전진하라! 신데렐라 로드 (12차)</td>
+ <td>-</td>
+ <td>11월 11일 15시 ~ 17일 21시 (6박 7일)</td>
+ <td>-</td>
+ <td class="cgevents_cool">오오이시 이즈미</td>
+ <td class="cgevents_cute">효도 레나</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>149</td>
+ <td class="cg_starlight_atapon">재화수집</td>
+ <td class="cgevents_cool">Secret Daybreak</td>
+ <td>오리지널</td>
+ <td>11월 20일 15시 ~ <del datetime="2019-11-26T15:00:00+09:00">27일</del> 28일 21시 (198시간)</td>
+ <td>26(마스터)/29(마스터+)</td>
+ <td class="cgevents_cool">닛타 미나미</td>
+ <td class="cgevents_cool">하야미 카나데</td>
+ <td>운영 상 문제로 인해 개최 도중 기간 조정</td>
+</tr>
+<tr>
+ <td>150</td>
+ <td class="cg_starlight_nonrank">퍼레이드(투어)</td>
+ <td class="cgevents_all">(라이브 퍼레이드 19차) Sun! High! Gold!</td>
+ <td>총선</td>
+ <td>11월 30일 15시 ~ 12월 8일 21시 (8박 9일)</td>
+ <td><b>27</b>(마스터)/<b>30</b>(마스터+)</td>
+ <td class="cgevents_cool">사죠 유키미</td>
+ <td class="cgevents_passion">혼다 미오</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>151</td>
+ <td class="cg_starlight_nonrank">캐러밴</td>
+ <td>신데렐라 캐러밴 30차</td>
+ <td>-</td>
+ <td>12월 12일 15시 ~ 17일 21시 (5박 6일)</td>
+ <td>-</td>
+ <td class="cgevents_passion">이브 산타클로스</td>
+ <td class="cgevents_cool">이쥬인 메구미</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>152</td>
+ <td class="cg_starlight_atapon">재화수집</td>
+ <td class="cgevents_cute">꼬옥 Milky Way</td>
+ <td>오리지널</td>
+ <td>12월 20일 15시 ~ 27일 21시 (174시간)</td>
+ <td>26(마스터)/28(마스터+)</td>
+ <td class="cgevents_cute">사쿠마 마유</td>
+ <td class="cgevents_passion">키타 히나코</td>
+ <td>-</td>
+</tr>
+</table>
+</div>
+
+<h3>2020년도</h3>
+
+<div class="starlight_events">
+
+<table width="1876" class="cgevents_list" style="text-align: center;">
+<tr><td width="2%">순번</td><td width="5%">형식</td><td width="17%">이벤트 및 대상곡명</td><td width="7%">대상곡 분류</td><td width="14%">개최기간</td><td width="8%">대상곡 레벨</td><td width="8%">상위보상 아이돌명</td><td width="8%">하위보상 아이돌명</td><td width="35%">비고</td></tr>
+<tr>
+ <td>153</td>
+ <td class="cg_starlight_nonrank">카니발</td>
+ <td class="cgevents_all">(라이브 카니발 3차) 꿈을 들여다보면</td>
+ <td>총선</td>
+ <td>1월 1일 15시 ~ 8일 21시 (7박 8일)</td>
+ <td>26(마스터)/29(마스터+)</td>
+ <td class="cgevents_passion">유메미 리아무</td>
+ <td class="cgevents_cute">유사 코즈에</td>
+ <td><b>신데렐라 걸 총선 앨범곡으로 진행되는 첫 카니발 이벤트</b></td>
+</tr>
+<tr>
+ <td>154</td>
+ <td class="cg_starlight_nonrank">로드</td>
+ <td>전진하라! 신데렐라 로드 (13차)</td>
+ <td>-</td>
+ <td>1월 11일 15시 ~ 17일 21시 (6박 7일)</td>
+ <td>-</td>
+ <td class="cgevents_cute">이마이 카나</td>
+ <td class="cgevents_passion">와카바야시 토모카</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>155</td>
+ <td class="cg_starlight_atapon">재화수집</td>
+ <td class="cgevents_cute">행복의 법칙 ~룰~</td>
+ <td>오리지널</td>
+ <td>1월 20일 15시 ~ 28일 21시 (198시간)</td>
+ <td>25(마스터)/28(마스터+)</td>
+ <td class="cgevents_cool">타카후지 카코</td>
+ <td class="cgevents_cute">시라기쿠 호타루</td>
+ <td>-</td>
+</tr>
+</table>
+</div>
+
+<h2 class="sectionhead"><a name="e_info" href="#section_02">2.</a> <time datetime="2015-09-03T15:00:00+09:00">정기 컨텐츠 갱신 안내</time></h2>
+<hr style="width: 100%; margin-top: -0.5em;" />
+
+<div id="starlight_daily">
+ <h3>오늘(<span id="cgsongs_weekday"></span>)의 속성 안내</h3>
+ <div id="slitems_daily">오늘은 라이브 클리어 시 <span id="daily_type_slitems"></span> 아이템을 획득할 확률이 상승하며 <span id="daily_other_slitems"></span></div>
+ <script>setInterval(function(){showSLDailyType.todayType();},1000);</script>
+</div>
+
+<div id="slsong_countdown">
+ <h3>현재 마스터+ 앨범</h3>
+ <div id="s_album_epoch"></div>
+ <h3><span id="s_countdown_type_a"></span> 앨범 <span id="s_countdown_type_b"></span>까지 남은 시간</h3>
+ <div id="s_countdown_time"></div>
+ <script>setInterval(function(){showRemainingTime.showSLSongSpecial();},100);</script>
+</div>
+
+<ul>
+ <li>다음 사항들은 정규 이벤트 개최와 상관없이 정기적으로 갱신됩니다.
+  <ul>
+   <li><b>통상 라이브 클리어 시의 아이템 보상</b>: 매일 획득할 확률이 상승하는 보상의 속성이 달라집니다.
+    <ul>
+     <li><b>트레이너 티켓 타임</b>: 매일 오전 8시부터 오후 10시 사이 일정 시간 간격으로 각 1시간씩 총 2번 진행되며 현재 플레이하고 있는 계정이 속한 그룹(게임 시작 화면에서 확인 가능)에 따라 그 개최 시간이 다릅니다.</li>
+    </ul>
+   </li>
+   <li><b>2019년 9월 3일부터 요일 한정 악곡 제도가 폐지되어 모든 악곡이 요일에 상관없이 플레이 가능합니다.</b></li>
+   <li><b>통상 해금 마스터+ 앨범의 악곡들</b>: 17년 2월 13일을 기점으로 2주에 한번씩 교체되며 특징은 다음과 같습니다.
+    <ul>
+     <li>기본적으로 1회 플레이시 (일정량의 스태미나를 소모하는 마스터 난이도 이하의 통상적인 채보들과는 별도로) 전용 소모성 아이템인 &quot;마스터+ 티켓&quot;을 1장 소모하여 플레이할 수 있습니다.
+      <ul>
+       <li>&quot;마스터+ 티켓&quot;은 [머니 샵]에서 구입하거나 주간 미션 등으로 획득할 수 있으며, 통상 마스터+ 라이브 클리어 시에도 확률적으로 획득할 수 있습니다.</li>
+      </ul>
+     </li>
+     <li>이들 채보는 3개의 앨범(A/B/C조)으로 나뉘어지고, 신규 악곡이 추가될 경우 <b>기존 곡이 삭제되지 않고</b> 각 앨범에 덧대어지는 형식으로 추가됩니다.</li>
+     <li>단, 통상 해금 마스터+ 채보들은 계정 프로필 상의 클리어 기록 및 PRP 기록에는 반영이 되지만 <b>정규 이벤트(재화수집, 캐러밴 및 로드)의 추가 보상 획득 대상은 아닙니다. 즉 이벤트 기록에는 반영이 되지 않으므로 유의하시기 바랍니다.</b>
+      <ul>
+       <li>단, 상시 개최되는 [라이브 파티]에서 마스터+ 난이도를 플레이(이 경우 &quot;마스터+ 티켓&quot; 대신 일정량의 스태미나를 소모하며, 계정 프로필 상의 클리어 기록 및 PRP에는 반영되지 않음)할 경우 정규 이벤트(재화수집, 그루브 및 퍼레이드, 캐러밴 및 로드)의 추가 보상을 제한적으로 획득할 수 있습니다.</li>
+      </ul>
+     </li>
+     <li>이전 이벤트 대상곡은 &quot;레거시 마스터+&quot; 모드(17년 7월 19일부로 추가)를 통해 구버전(이벤트 당시의) 채보를 플레이할 수 있습니다.<br />다만 이 경우 <b>계정 프로필 상의 클리어 기록 및 PRP에 반영되지 않으며, 따라서 이와 관련된 보상(스코어/콤보/클리어 횟수별)을 받을 수 없다는 점을 유의하세요.</b></li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+<h2 class="sectionhead"><a name="e_masterrank" href="#section_03">3.</a> 특수 상설 이벤트 : P랭크 SSS(&quot;아이돌마스터&quot;) 승급 랭킹전 (월간)</h2>
+<hr style="width: 100%; margin-top: -0.5em;" />
+
+<div id="masterrank_countdown">
+ <h3>현재 기수 집계 종료까지 남은 시간</h3>
+ <div id="countdown_time_monthly"></div>
+ <script>setInterval(function(){showRemainingTime.showCountdownMonthlyNow();},100);</script>
+</div>
+
+<ul>
+ <li>이 특수 이벤트의 참가 자격을 얻기 위한 필수 조건은 아래의 2가지이다.
+  <ul>
+   <li><b>P랭크 SS(누적 팬수 1500만) 이상</b></li>
+   <li><b>1000 이상의 PRP</b> ([스마트 라이브] 및 [그랜드 라이브]의 수치까지 합산한 기준)</li>
+  </ul>
+ </li>
+ <li>위 2가지 조건을 <b>모두</b> 만족하는 계정에서 플레이하고 있는 프로듀서만 참가 자격이 주어지며 랭킹의 확인이 가능합니다.</li>
+ <li>만일 집계 기간 중 위의 조건을 만족하게 될 경우, 조건을 만족한 <b>이후</b> 누적되는 팬수만 랭킹에 반영됩니다.</li>
+ <li>단, <b>라이브 및 영업</b> 이외의 부가적인 방법(ex. SSR 카드의 스타랭크 증가)으로 얻는 팬수는 <b>랭킹에 반영되지 않습니다.</b></li>
+ <li>집계기간 종료 직전 칭호컷(2001위) 안에 들어가 있더라도 기간 종료 후 12시간동안(즉 매월 1일 0시에서 랭킹 발표시간인 12시까지)은 무조건 SS랭크입니다.</li>
+ <li>랭크인(2000위 이내) 기본 보상 : <b>P랭크 SSS 승급</b> (<b>승급한 월말까지 유효하다</b>), 칭호 &quot;제 n기 아이돌마스터&quot;, 룸 아이템 &quot;트로피 SSS/아이돌마스터&quot;, 스타쥬얼 250개
+  <ul>
+   <li>13기(집계기간 2017년 9월)부터 랭크인 조건이 기존의 <b>1000위 이내</b>에서 <b>2000위 이내</b>로 변경되었습니다.</li>
+  </ul>
+ </li>
+ <li>참고 페이지
+  <ul>
+   <li><a href="https://twitter.com/imas_SSS_bot">SSS 랭킹 집계 트위터 (日)</a></li>
+  </ul>
+ </li>
+</ul>
+
+
+<h3>랭크인 조건 변경 이전 (16년 9월 ~ 17년 8월)</h3>
+
+<div id="starlight_masterrank_01">
+<table width="1792" class="cgevents_list" style="text-align: center;">
+<tr><td width="3%">기수</td><td width="15%">집계 기간</td><td width="5%">랭크 유지기간</td><td width="8%">1위 누적 팬수</td><td width="8%">칭호컷(1001위) 팬수</td><td width="8%">일간 평균 증가량(1위)</td><td width="8%">일간 평균 증가량(1001위)</td><td width="8%">1일차 증가량(1001위)</td><td width="8%">최종일 증가량(1001위)</td><td width="28%">비고</td></tr>
+<tr>
+<td><b>1기</b></td>
+<td>16년 9월 9일 15시 ~ 30일 24시 (22일)</td>
+<td>16년 10월</td>
+<td><abbr title="30059216">3005.92만</abbr></td>
+<td><abbr title="12537984"><b>1253.80만</b></abbr></td>
+<td><abbr title="1366328">136.63만</abbr></td>
+<td><abbr title="569908.36"><b>56.99만</b></abbr></td>
+<td><abbr title="57586">5.76만</abbr></td>
+<td><abbr title="1720961"><b>172.10만</b></abbr></td>
+<td><b>첫 기수</b>, <b>가장 과열되었던 SSS 승급 랭킹전</b> (랭크인 조건 변경 이전), 월말 퍼레이드</td>
+</tr>
+<tr>
+<td>2기</td>
+<td>16년 10월 1일 0시 ~ 31일 24시 (31일)</td>
+<td>16년 11월</td>
+<td><abbr title="45029481">4502.95만</abbr></td>
+<td><abbr title="7334219">733.42만</abbr></td>
+<td><abbr title="1452563.90">145.26만</abbr></td>
+<td><abbr title="236587.71">23.66만</abbr></td>
+<td><abbr title="255946">25.59만</abbr></td>
+<td><abbr title="781378">78.14만</abbr></td>
+<td>-</td>
+</tr>
+<tr>
+<td>3기</td>
+<td>16년 11월 1일 0시 ~ 30일 24시 (30일)</td>
+<td>16년 12월</td>
+<td><abbr title="37415094">3741.51만</abbr></td>
+<td><abbr title="7743591">774.36만</abbr></td>
+<td><abbr title="1247169.80">124.72만</abbr></td>
+<td><abbr title="258119.70">25.81만</abbr></td>
+<td><abbr title="227705">22.77만</abbr></td>
+<td><abbr title="954125">95.41만</abbr></td>
+<td>월말 퍼레이드</td>
+</tr>
+<tr>
+<td>4기</td>
+<td>16년 12월 1일 0시 ~ 31일 24시 (31일)</td>
+<td>17년 1월</td>
+<td><abbr title="60917123">6091.71만</abbr></td>
+<td><abbr title="8212648">821.26만</abbr></td>
+<td><abbr title="1965068.48">196.51만</abbr></td>
+<td><abbr title="264924.13">26.49만</abbr></td>
+<td><abbr title="251765">25.18만</abbr></td>
+<td><abbr title="819739">81.97만</abbr></td>
+<td>-</td>
+</tr>
+<tr>
+<td>5기</td>
+<td>17년 1월 1일 0시 ~ 31일 24시 (31일)</td>
+<td>17년 2월</td>
+<td><abbr title="45806268">4580.63만</abbr></td>
+<td><abbr title="8961914">896.19만</abbr></td>
+<td><abbr title="1477621.55">147.76만</abbr></td>
+<td><abbr title="289094">28.91만</abbr></td>
+<td><abbr title="367595">36.76만</abbr></td>
+<td><abbr title="920571">92.06만</abbr></td>
+<td>월말 퍼레이드</td>
+</tr>
+<tr>
+<td>6기</td>
+<td>17년 2월 1일 0시 ~ 28일 24시 (28일)</td>
+<td>17년 3월</td>
+<td><abbr title="57788180">5778.82만</abbr></td>
+<td><abbr title="11722040">1172.20만</abbr></td>
+<td><abbr title="2063863.57">206.39만</abbr></td>
+<td><abbr title="418644.29">42.86만</abbr></td>
+<td><abbr title="423535">42.35만</abbr></td>
+<td><abbr title="1104791">110.48만</abbr></td>
+<td>-</td>
+</tr>
+<tr>
+<td>7기</td>
+<td>17년 3월 1일 0시 ~ 31일 24시 (31일)</td>
+<td>17년 4월</td>
+<td><abbr title="34247535">3424.75만</abbr></td>
+<td><abbr title="8175615">817.56만</abbr></td>
+<td><abbr title="1104759.19">110.05만</abbr></td>
+<td><abbr title="263729.52">26.37만</abbr></td>
+<td><abbr title="337640">33.76만</abbr></td>
+<td><abbr title="980385">98.04만</abbr></td>
+<td>월말 퍼레이드</td>
+</tr>
+<tr>
+<td>8기</td>
+<td>17년 4월 1일 0시 ~ 30일 24시 (30일)</td>
+<td>17년 5월</td>
+<td><abbr title="48719825">4871.98만</abbr></td>
+<td><abbr title="8851950">885.20만</abbr></td>
+<td><abbr title="1623994.17">162.40만</abbr></td>
+<td><abbr title="295065">29.51만</abbr></td>
+<td><abbr title="332580">33.26만</abbr></td>
+<td><abbr title="1033090">103.31만</abbr></td>
+<td>-</td>
+</tr>
+<tr>
+<td>9기</td>
+<td>17년 5월 1일 0시 ~ 31일 24시 (31일)</td>
+<td>17년 6월</td>
+<td><abbr title="41602300">4160.23만</abbr></td>
+<td><abbr title="7787765">778.78만</abbr></td>
+<td><abbr title="1342009.68">134.20만</abbr></td>
+<td><abbr title="251218.23">25.12만</abbr></td>
+<td><abbr title="324325">32.43만</abbr></td>
+<td><abbr title="872264">87.23만</abbr></td>
+<td>월말 퍼레이드</td>
+</tr>
+<tr>
+<td>10기</td>
+<td>17년 6월 1일 0시 ~ 30일 24시 (30일)</td>
+<td>17년 7월</td>
+<td><abbr title="50769615">5076.96만</abbr></td>
+<td><abbr title="10690685">1069.07만</abbr></td>
+<td><abbr title="1692320.50">169.23만</abbr></td>
+<td><abbr title="356356.17">35.64만</abbr></td>
+<td><abbr title="382055">38.21만</abbr></td>
+<td><abbr title="950280">95.03만</abbr></td>
+<td>-</td>
+</tr>
+<tr>
+<td>11기</td>
+<td>17년 7월 1일 0시 ~ 31일 24시 (31일)</td>
+<td>17년 8월</td>
+<td><abbr title="47000000">4700.00만</abbr></td>
+<td><abbr title="7876655">787.67만</abbr></td>
+<td><abbr title="1516129.03">151.61만</abbr></td>
+<td><abbr title="254085.65">25.41만</abbr></td>
+<td><abbr title="304990">30.50만</abbr></td>
+<td><abbr title="931130">93.11만</abbr></td>
+<td>월말 퍼레이드</td>
+</tr>
+<tr>
+<td>12기</td>
+<td>17년 8월 1일 0시 ~ 31일 24시 (31일)</td>
+<td>17년 9월</td>
+<td><abbr title="80000000"><b>8000.00만</b></abbr></td>
+<td>-</td>
+<td><abbr title="2580645.16">258.06만</abbr></td>
+<td>-</td>
+<td><abbr title="401085">40.11만</abbr></td>
+<td>-</td>
+<td>-</td>
+</tr>
+</table>
+</div>
+
+<h3>랭크인 조건 변경 이후 (17년 9월 ~ 현재)</h3>
+
+<div id="starlight_masterrank_02">
+<table width="1792" class="cgevents_list" style="text-align: center;">
+<tr><td width="3%">기수</td><td width="15%">집계 기간</td><td width="5%">랭크 유지기간</td><td width="8%">1위 누적 팬수</td><td width="8%">칭호컷(2001위) 팬수</td><td width="8%">일간 평균 증가량(1위)</td><td width="8%">일간 평균 증가량(2001위)</td><td width="8%">1일차 증가량(2001위)</td><td width="8%">최종일 증가량(2001위)</td><td width="28%">비고</td></tr>
+<tr>
+<td><b>13기</b></td>
+<td>17년 9월 1일 0시 ~ 30일 24시 (30일)</td>
+<td>17년 10월</td>
+<td><abbr title="45481425">4548.24만</abbr></td>
+<td><abbr title="7380210">738.02만</abbr></td>
+<td><abbr title="1516047.50">151.60만</abbr></td>
+<td><abbr title="246007">24.60만</abbr></td>
+<td><abbr title="303870">30.39만</abbr></td>
+<td><abbr title="790135">79.01만</abbr></td>
+<td><b>랭크인 조건 변경 (1000위&#8594;2000위)</b>, 2주년 기념, 월말 퍼레이드</td>
+</tr>
+<tr>
+<td>14기</td>
+<td>17년 10월 1일 0시 ~ 31일 24시 (31일)</td>
+<td>17년 11월</td>
+<td><abbr title="70503000">7050.30만</abbr></td>
+<td><abbr title="7831780">783.18만</abbr></td>
+<td><abbr title="2274290.32">227.43만</abbr></td>
+<td><abbr title="252638.06">25.26만</abbr></td>
+<td><abbr title="331565">33.16만</abbr></td>
+<td><abbr title="662165">66.22만</abbr></td>
+<td>-</td>
+</tr>
+<tr>
+<td>15기</td>
+<td>17년 11월 1일 0시 ~ 30일 24시 (30일)</td>
+<td>17년 12월</td>
+<td><abbr title="42041950">4204.20만</abbr></td>
+<td><abbr title="7216065">721.61만</abbr></td>
+<td><abbr title="1401398.33">140.14만</abbr></td>
+<td><abbr title="240535.50">24.05만</abbr></td>
+<td><abbr title="226925">22.69만</abbr></td>
+<td><abbr title="657985">65.80만</abbr></td>
+<td>월말 퍼레이드</td>
+</tr>
+<tr>
+<td>16기</td>
+<td>17년 12월 1일 0시 ~ 31일 24시 (31일)</td>
+<td>18년 1월</td>
+<td><abbr title="107653460">1억 765.35만</abbr></td>
+<td><abbr title="6912655">691.27만</abbr></td>
+<td><abbr title="3472692.26">347.27만</abbr></td>
+<td><abbr title="222988.87">22.30만</abbr></td>
+<td><abbr title="261485">26.15만</abbr></td>
+<td><abbr title="669555">66.96만</abbr></td>
+<td>-</td>
+</tr>
+<tr>
+<td>17기</td>
+<td>18년 1월 1일 0시 ~ 31일 24시 (31일)</td>
+<td>18년 2월</td>
+<td><abbr title="64400115">6440.01만</abbr></td>
+<td><abbr title="6430125">643.01만</abbr></td>
+<td><abbr title="2077423.06">207.74만</abbr></td>
+<td><abbr title="207423.39">20.74만</abbr></td>
+<td><abbr title="273260">27.33만</abbr></td>
+<td><abbr title="608710">60.87만</abbr></td>
+<td>월말 퍼레이드</td>
+</tr>
+<tr>
+<td>18기</td>
+<td>18년 2월 1일 0시 ~ 28일 24시 (28일)</td>
+<td>18년 3월</td>
+<td><abbr title="72519350">7251.94만</abbr></td>
+<td><abbr title="6711115">671.11만</abbr></td>
+<td><abbr title="2589976.79">259.00만</abbr></td>
+<td><abbr title="239682.68">23.97만</abbr></td>
+<td><abbr title="246755">24.68만</abbr></td>
+<td><abbr title="674375">67.44만</abbr></td>
+<td>-</td>
+</tr>
+<tr>
+<td>19기</td>
+<td>18년 3월 1일 0시 ~ 31일 24시 (31일)</td>
+<td>18년 4월</td>
+<td><abbr title="44510672">4451.07만</abbr></td>
+<td><abbr title="7140115">714.01만</abbr></td>
+<td><abbr title="1435828.13">143.58만</abbr></td>
+<td><abbr title="230326.29">23.03만</abbr></td>
+<td><abbr title="278230">27.82만</abbr></td>
+<td><abbr title="793325">79.33만</abbr></td>
+<td>-</td>
+</tr>
+<tr>
+<td>20기</td>
+<td>18년 4월 1일 0시 ~ 30일 24시 (30일)</td>
+<td>18년 5월</td>
+<td><abbr title="71838274">7183.83만</abbr></td>
+<td><abbr title="7441620">744.16만</abbr></td>
+<td><abbr title="2394609.13">239.46만</abbr></td>
+<td><abbr title="248054">24.81만</abbr></td>
+<td><abbr title="137270">13.73만</abbr></td>
+<td><abbr title="757131">75.71만</abbr></td>
+<td>-</td>
+</tr>
+<tr>
+<td>21기</td>
+<td>18년 5월 1일 0시 ~ 31일 24시 (31일)</td>
+<td>18년 6월</td>
+<td><abbr title="53667213">5366.72만</abbr></td>
+<td><abbr title="6638920">663.89만</abbr></td>
+<td><abbr title="1731200.42">173.12만</abbr></td>
+<td><abbr title="214158.71">21.42만</abbr></td>
+<td><abbr title="293375">29.34만</abbr></td>
+<td><abbr title="672114">67.21만</abbr></td>
+<td>-</td>
+</tr>
+<tr>
+<td>22기</td>
+<td>18년 6월 1일 0시 ~ 30일 24시 (30일)</td>
+<td>18년 7월</td>
+<td><abbr title="72567194">7256.72만</abbr></td>
+<td><abbr title="7489843">748.98만</abbr></td>
+<td><abbr title="2418906.47">241.89만</abbr></td>
+<td><abbr title="249661.43">24.97만</abbr></td>
+<td><abbr title="269625">26.96만</abbr></td>
+<td><abbr title="718875">71.89만</abbr></td>
+<td>-</td>
+</tr>
+<tr>
+<td>23기</td>
+<td>18년 7월 1일 0시 ~ 31일 24시 (31일)</td>
+<td>18년 8월</td>
+<td><abbr title="47756361">4775.64만</abbr></td>
+<td><abbr title="6826171">682.62만</abbr></td>
+<td><abbr title="1540527.77">154.05만</abbr></td>
+<td><abbr title="220199.06">22.02만</abbr></td>
+<td><abbr title="313345">31.34만</abbr></td>
+<td><abbr title="689466">68.95만</abbr></td>
+<td>-</td>
+</tr>
+<tr>
+<td>24기</td>
+<td>18년 8월 1일 0시 ~ 31일 24시 (31일)</td>
+<td>18년 9월</td>
+<td><abbr title="85000000">8500.00만</abbr></td>
+<td><abbr title="8636648">863.66만</abbr></td>
+<td><abbr title="2741935.48">274.19만</abbr></td>
+<td><abbr title="278601.54">27.86만</abbr></td>
+<td><abbr title="322985">32.30만</abbr></td>
+<td><abbr title="729053">72.91만</abbr></td>
+<td>-</td>
+</tr>
+<tr>
+<td>25기</td>
+<td>18년 9월 1일 0시 ~ 30일 24시 (30일)</td>
+<td>18년 10월</td>
+<td><abbr title="85102023">8510.20만</abbr></td>
+<td><abbr title="9624830">962.48만</abbr></td>
+<td><abbr title="2836734.10">283.67만</abbr></td>
+<td><abbr title="320827.67">32.08만</abbr></td>
+<td><abbr title="359255">35.93만</abbr></td>
+<td><abbr title="1101610"><b>110.16만</b></abbr></td>
+<td>3주년 기념</td>
+</tr>
+<tr>
+<td>26기</td>
+<td>18년 10월 1일 0시 ~ 31일 24시 (31일)</td>
+<td>18년 11월</td>
+<td><abbr title="96624215">9662.42만</abbr></td>
+<td><abbr title="10075615"><b>1007.56만</b></abbr></td>
+<td><abbr title="3116910.16">311.69만</abbr></td>
+<td><abbr title="325019.84"><b>32.50만</b></abbr></td>
+<td><abbr title="399730">39.97만</abbr></td>
+<td><abbr title="779830">77.98만</abbr></td>
+<td><b>가장 과열되었던 SSS 승급 랭킹전</b> (랭크인 조건 변경 이후)</td>
+</tr>
+<tr>
+<td>27기</td>
+<td>18년 11월 1일 0시 ~ 30일 24시 (30일)</td>
+<td>18년 12월</td>
+<td><abbr title="62828880">6282.89만</abbr></td>
+<td><abbr title="8538855">853.89만</abbr></td>
+<td><abbr title="2094296">209.43만</abbr></td>
+<td><abbr title="284628.50">28.46만</abbr></td>
+<td><abbr title="314485">31.45만</abbr></td>
+<td><abbr title="904105">90.41만</abbr></td>
+<td>-</td>
+</tr>
+<tr>
+<td>28기</td>
+<td>18년 12월 1일 0시 ~ 31일 24시 (31일)</td>
+<td>19년 1월</td>
+<td><abbr title="80857797">8085.78만</abbr></td>
+<td><abbr title="9100870">910.09만</abbr></td>
+<td><abbr title="2608316.03">260.83만</abbr></td>
+<td><abbr title="293576.45">29.36만</abbr></td>
+<td><abbr title="329645">32.96만</abbr></td>
+<td><abbr title="991880">99.19만</abbr></td>
+<td>-</td>
+</tr>
+<tr>
+<td>29기</td>
+<td>19년 1월 1일 0시 ~ 31일 24시 (31일)</td>
+<td>19년 2월</td>
+<td><abbr title="70262244">7026.22만</abbr></td>
+<td><abbr title="9208567">920.86만</abbr></td>
+<td><abbr title="2266524">226.65만</abbr></td>
+<td><abbr title="297050.55">29.71만</abbr></td>
+<td><abbr title="377238">37.72만</abbr></td>
+<td><abbr title="861378">86.14만</abbr></td>
+<td>-</td>
+</tr>
+<tr>
+<td>30기</td>
+<td>19년 2월 1일 0시 ~ 28일 24시 (28일)</td>
+<td>19년 3월</td>
+<td><abbr title="113033820">1억 1303.38만</abbr></td>
+<td><abbr title="8761523">876.15만</abbr></td>
+<td><abbr title="4036922.14"><b>403.69만</b></abbr></td>
+<td><abbr title="312911.54">31.29만</abbr></td>
+<td>-</td>
+<td>-</td>
+<td><b>운영상 사유(부정 이용자 제재)로 재집계된 첫 기수</b></td>
+</tr>
+<tr>
+<td>31기</td>
+<td>19년 3월 1일 0시 ~ 31일 24시 (31일)</td>
+<td>19년 4월</td>
+<td><abbr title="90001175">9000.12만</abbr></td>
+<td><abbr title="8491234">849.12만</abbr></td>
+<td><abbr title="2903263.71">290.33만</abbr></td>
+<td><abbr title="273910.77">27.39만</abbr></td>
+<td><abbr title="321715">32.17만</abbr></td>
+<td><abbr title="869947">86.99만</abbr></td>
+<td>-</td>
+</tr>
+<tr>
+<td>32기</td>
+<td>19년 4월 1일 0시 ~ 30일 24시 (30일)</td>
+<td>19년 5월</td>
+<td><abbr title="118056340">1억 1805.63만</abbr></td>
+<td><abbr title="8601001">860.10만</abbr></td>
+<td><abbr title="3935211.33">393.52만</abbr></td>
+<td><abbr title="286700.03">28.67만</abbr></td>
+<td><abbr title="136280">13.63만</abbr></td>
+<td><abbr title="876334">87.63만</abbr></td>
+<td>-</td>
+</tr>
+<tr>
+<td>33기</td>
+<td>19년 5월 1일 0시 ~ 31일 24시 (31일)</td>
+<td>19년 6월</td>
+<td><abbr title="102898215">1억 289.82만</abbr></td>
+<td><abbr title="7356374">735.64만</abbr></td>
+<td><abbr title="3319297.26">331.93만</abbr></td>
+<td><abbr title="237302.39">23.73만</abbr></td>
+<td><abbr title="344875">34.49만</abbr></td>
+<td><abbr title="749471">74.95만</abbr></td>
+<td>-</td>
+</tr>
+<tr>
+<td>34기</td>
+<td>19년 6월 1일 0시 ~ 30일 24시 (30일)</td>
+<td>19년 7월</td>
+<td><abbr title="120554780"><b>1억 2055.48만</b></abbr></td>
+<td><abbr title="8468942">846.89만</abbr></td>
+<td><abbr title="4018492.67">401.85만</abbr></td>
+<td><abbr title="282298.07">28.23만</abbr></td>
+<td><abbr title="374325">37.43만</abbr></td>
+<td><abbr title="893027">89.30만</abbr></td>
+<td>-</td>
+</tr>
+<tr>
+<td>35기</td>
+<td>19년 7월 1일 0시 ~ 31일 24시 (31일)</td>
+<td>19년 8월</td>
+<td><abbr title="101673130">1억 167.31만</abbr></td>
+<td><abbr title="8733419">873.34만</abbr></td>
+<td><abbr title="3279778.39">327.98만</abbr></td>
+<td><abbr title="281723.19">28.17만</abbr></td>
+<td><abbr title="215690">21.57만</abbr></td>
+<td><abbr title="948385">94.84만</abbr></td>
+<td>-</td>
+</tr>
+<tr>
+<td>36기</td>
+<td>19년 8월 1일 0시 ~ 31일 24시 (31일)</td>
+<td>19년 9월</td>
+<td><abbr title="123456789">1억 2345.68만</abbr></td>
+<td><abbr title="8301714">830.17만</abbr></td>
+<td><abbr title="3982477.065">398.25만</abbr></td>
+<td><abbr title="267797.23">26.78만</abbr></td>
+<td><abbr title="292935">29.29만</abbr></td>
+<td><abbr title="875712">87.57만</abbr></td>
+<td>-</td>
+</tr>
+<tr>
+<td>37기</td>
+<td>19년 9월 1일 0시 ~ 30일 24시 (30일)</td>
+<td>19년 10월</td>
+<td><abbr title="318102271"><b>3억 1810.22만</b></abbr></td>
+<td><abbr title="26881987"><b>2688.20만</b></abbr></td>
+<td><abbr title="10603409.03"><b>1060.34만</b></abbr></td>
+<td><abbr title="896066.23"><b>89.61만</b></abbr></td>
+<td><abbr title="319299">31.93만</abbr></td>
+<td><abbr title="2589082"><b>268.91만</b></abbr></td>
+<td><b>게임 서비스 4주년 기념 라이브 획득 팬 2배수 캠페인(9.3 ~ 10.6)</b></td>
+</tr>
+<tr>
+<td>38기</td>
+<td>19년 10월 1일 0시 ~ 31일 24시 (31일)</td>
+<td>19년 11월</td>
+<td><abbr title="277817117">2억 7781.71만</abbr></td>
+<td><abbr title="22898180">2289.82만</abbr></td>
+<td><abbr title="8961842.48">896.18만</abbr></td>
+<td><abbr title="738650.97">73.87만</abbr></td>
+<td><abbr title="889985">89.00만</abbr></td>
+<td><abbr title="2153481">215.35만</abbr></td>
+<td><b>라이브 획득 팬 2배수 캠페인(10.13 ~ 31)</b></td>
+</tr>
+<tr>
+<td>39기</td>
+<td>19년 11월 1일 0시 ~ 30일 24시 (30일)</td>
+<td>19년 12월</td>
+<td><abbr title="125393939">1억 2539.39만</abbr></td>
+<td><abbr title="9351752">935.18만</abbr></td>
+<td><abbr title="4179797.97">417.98만</abbr></td>
+<td><abbr title="311725.07">31.17만</abbr></td>
+<td><abbr title="274445">27.44만</abbr></td>
+<td><abbr title="1317447">131.74만</abbr></td>
+<td>-</td>
+</tr>
+<tr>
+<td>40기</td>
+<td>19년 12월 1일 0시 ~ 31일 24시 (31일)</td>
+<td>20년 1월</td>
+<td><abbr title="169710330">1억 6971.03만</abbr></td>
+<td><abbr title="9494985">949.50만</abbr></td>
+<td><abbr title="5474526.77">547.45만</abbr></td>
+<td><abbr title="306289.84">30.63만</abbr></td>
+<td><abbr title="375293">37.53만</abbr></td>
+<td><abbr title="1229109">122.91만</abbr></td>
+<td>-</td>
+</tr>
+<tr>
+<td>41기</td>
+<td>20년 1월 1일 0시 ~ 31일 24시 (31일, 진행중)</td>
+<td>20년 2월</td>
+<td><abbr title="진행중">???</abbr></td>
+<td><abbr title="진행중">???</abbr></td>
+<td><abbr title="진행중">???</abbr></td>
+<td><abbr title="진행중">???</abbr></td>
+<td><abbr title="진행중">???</abbr></td>
+<td><abbr title="진행중">???</abbr></td>
+<td>-</td>
+</tr>
+</table>
+</div>
+
+<h2 class="sectionhead"><a name="e_special" href="#section_04">4.</a> 기타 특별 이벤트 목록</h2>
+<hr style="width: 100%; margin-top: -0.5em;" />
+
+<ul>
+ <li>정규 이벤트 이외에 공식 측의 사정에 따라 비정기적으로 개최된 특별 이벤트의 목록이다. 참여조건 및 내용, 개최기간 등은 이벤트마다 다르다.</li>
+</ul>
+
+<div id="starlight_events_special">
+<table width="1111" class="cgevents_list" style="text-align: center;">
+<tr>
+ <td width="4%">순번</td>
+ <td width="24%">이벤트명</td>
+ <td width="20%">개최기간</td>
+ <td width="36%">내용 및 비고</td>
+</tr>
+<tr>
+ <td>1</td>
+ <td>2017 올스타 카운트다운 라이브</td>
+ <td>2017년 12월 31일 0시 ~ 24시 (24시간)</td>
+ <td>2017년 연말 특별 이벤트.<br />모든 프로듀서의 특정 대상악곡 클리어 횟수 합계로 지급 보상 결정</td>
+</tr>
+<tr>
+ <td>2</td>
+ <td>강철공연 키라링로보 외전 -모로보시티 S.O.S!-</td>
+ <td>2018년 4월 1일 0시 ~ 24시 (24시간)</td>
+ <td>2018년 만우절 기념 특별 이벤트. 각종 미니게임 클리어로 보상 획득.</td>
+</tr>
+<tr>
+ <td>3</td>
+ <td>2018 올스타 카운트다운 라이브</td>
+ <td>2018년 12월 31일 0시 ~ 24시 (24시간)</td>
+ <td>2018년 연말 특별 이벤트.<br />모든 프로듀서의 특정 대상악곡 클리어 횟수 합계로 지급 보상 결정</td>
+</tr>
+<tr>
+ <td>4</td>
+ <td>노노를 찾아라! ~노노와 신기한 그림책~</td>
+ <td>2019년 4월 1일 0시 ~ 24시 (24시간)</td>
+ <td>2019년 만우절 기념 특별 이벤트. 지뢰찾기류의 미니게임 클리어로 보상 획득.<br />이전 만우절에 실장된 컨텐츠들에 대한 기간한정 복각.</td>
+</tr>
+<tr>
+ <td>5</td>
+ <td>2019 올스타 카운트다운 라이브</td>
+ <td>2019년 12월 31일 0시 ~ 24시 (24시간)</td>
+ <td>2019년 연말 특별 이벤트.<br />모든 프로듀서의 특정 대상악곡 클리어 횟수 합계로 지급 보상 결정</td>
+</tr>
+</table>
+</div>
+
+<hr style="width: 100%; margin-top: 3em;" />
+
+<p id="page_disclaimer">
+<b>면책 조항</b> : 이 페이지는 <a href="http://www.bandainamcoent.co.kr/">반다이 남코 엔터테인먼트</a> 및 <a href="https://www.cygames.co.kr/">사이게임즈(Cygames)</a>와 <b>직접적 연관이 없으며, 작성자는 이 페이지를 통해 그 어떠한 금전적 이득도 취하고 있지 않습니다.</b><br />
+&quot;아이돌마스터&quot;, &quot;THE iDOLM@STER&quot;,&quot;PROJECT iM@S&quot; 및 관련 상표/공식 컨텐츠는 대한민국 및 일본, 그 외 국가에서 반다이 남코 엔터테인먼트의 재산입니다. (<a href="./license_disclaimer.htm">상세 면책 조항 및 사용권 정보</a>)<br />
+<div style="text-align: center;">(<a href="https://github.com/Senarin/Senarin.github.io">사이트 소스 및 이용 안내</a>)</div>
+</p>
+</body>
+</html>
