@@ -4,7 +4,7 @@
 
 ## 사용권(라이선스) 안내
 
-이 저장소의 주요 코드(```/css``` 및 ```/js```, ```/embedpages``` 경로에 있는 대부분의 파일들)는 [MIT 사용 허가서](https://r1.senarin.kr/LICENSE.txt)에 명시된 사용권 규약을 따르나, 일부 예외가 있습니다.
+이 저장소의 주요 코드(```/css``` 및 ```/js```, ```/embedpages``` 경로에 있는 대부분의 파일들)는 [MIT 사용 허가서](https://r1.senarin.kr/LICENSE.txt)에 명시된 사용권 규약을 따르며, 그 외에는 다음과 같습니다.
 
 - 이 저장소에 게시된 일부 저작물(```/assets``` 경로에 있는 파일들 및 ```/js``` 경로 아래에 있는 일부 파일)에 대한 권리는 [반다이 남코 엔터테인먼트](http://www.bandainamcoent.co.kr/)를 비롯한 각 당사자에게 있습니다. 자세한 사항은 [이 페이지](https://r1.senarin.kr/license_disclaimer.htm)를 참고 바랍니다.
 - 이 저장소의 페이지에 사용된 일부 글꼴(폰트)은 [SIL 오픈 폰트 라이선스 (버전 1.1)](https://opensource.org/licenses/OFL-1.1)에 명시된 사용권 규약을 따릅니다.
