@@ -1,9 +1,7 @@
 # 하나야의 작업물 저장소 (1차)
-
 개인적인 작업물들 중 [아이돌 마스터 시리즈](http://ko.878production.wikidok.net/wp-d/5e12b606db0c16cc1bfd83de/View) 관련 개인적 정리자료를 관리 및 공개하기 위한 페이지입니다. 기본적으로 https://r1.senarin.kr/ 주소로 접속 가능합니다.
 
 ## 사용권(라이선스) 안내
-
 이 사이트(저장소)의 주요 코드(```/css``` 및 ```/js```, ```/embedpages``` 경로 아래에 있는 파일들)는 MIT 사용 허가서(MIT License)에 명시된 사용권 규약을 따르며, 그 외에는 다음과 같습니다.
 
 - 이 사이트(저장소)에 게시된 일부 저작물(```/assets``` 경로에 있는 파일들)에 대한 권리는 [반다이 남코 엔터테인먼트](http://www.bandainamcoent.co.kr/)를 비롯한 각 당사자에게 있습니다.
@@ -20,4 +18,4 @@
 ## 면책 조항 (Disclaimer)
 이 사이트는 [반다이 남코 엔터테인먼트](http://www.bandainamcoent.co.kr/) 및 [사이게임즈(Cygames)](https://www.cygames.co.kr/)와 **어떠한 직접적 관계도 없는 비공식 페이지이며 이 페이지에 사용된 공식 데이터에 대한 모든 권리는 반다이 남코 엔터테인먼트를 비롯한 각 당사자에게 있습니다.** "아이돌마스터", "THE iDOLM@STER","PROJECT iM@S" 및 관련 상표/공식 컨텐츠는 대한민국 및 일본, 그 외 국가에서 반다이 남코 엔터테인먼트의 재산입니다.  
 
-This website is an _unofficial_ page that are **not directly related to nor endorsed by** [Bandai Namco Entertainment Inc.](https://bandainamcoent.co.jp/english/) and [Cygames Inc.](https://www.cygames.co.jp/en/), and some materials(e.g. brand logos) used in this website are **property of their respective owners**, including Bandai Namco.
+This website is an _unofficial_ page that are **not directly related to nor endorsed by** [Bandai Namco Entertainment Inc.](https://bandainamcoent.co.jp/english/) and/or [Cygames Inc.](https://www.cygames.co.jp/en/), and some materials(e.g. brand logos, emblems, etc.) used in this website are **property of their respective owners**, including Bandai Namco.
