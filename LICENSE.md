@@ -1,31 +1,8 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-<title>M@STER Catalogue : 면책 조항 및 사용권 고지</title>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="stylesheet" type="text/css" href="./css/imas_datas.css" />
-</head>
-<body>
-<div id="headtext">
-<h1>면책 조항 및 사용권 정보 (Disclaimer and License Information)</h1>
-<div id="recent_edit">최근 수정 (Recent Change) 2020.1.28</div>
-</div>
+## 사용권 정보 (License Information)
 
-<h2>면책 조항 (Content Disclaimer)</h2>
-<p id="page_disclaimer">
-&#x300E;M@STER Catalogue&#x300F;는 <a href="http://www.bandainamcoent.co.kr/">반다이 남코 엔터테인먼트</a> 및 <a href="https://www.cygames.co.kr/">사이게임즈(Cygames)</a>와 <b>어떠한 직접적 관계도 없는 <span style="color: #FF0000;">비공식 페이지</span>이며</b><br />
-<b>이 페이지에 사용된 공식 데이터에 대한 모든 권리는 반다이 남코 엔터테인먼트를 비롯한 각 당사자에게 있습니다.</b><br />
-&quot;아이돌마스터&quot;, &quot;THE iDOLM@STER&quot;,&quot;PROJECT iM@S&quot; 및 관련 상표/공식 컨텐츠는 대한민국 및 일본, 그 외 국가에서 반다이 남코 엔터테인먼트의 재산입니다.<br />
-<br />
-This website is an <i>unofficial</i> page that are <b>not directly related to nor endorsed by</b> <a href="https://bandainamcoent.co.jp/english/">Bandai Namco Entertainment Inc.</a> and <a href="https://www.cygames.co.jp/en/">Cygames Inc.</a><br />And some materials(e.g. brand logos) used in this website are <b>property of their respective owners</b>, including Bandai Namco.
+### 페이지 오리지널 코드 (Original Codes)
 
-
-</p>
-
-<h2>사용권 정보 (License Information)</h2>
-<h3>페이지 오리지널 코드 (Original Codes)</h3>
-<pre id="license_text_code">
+<pre>
 Copyright (c) 2020 Yukina Hoshizora (Hanaya)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
@@ -35,23 +12,22 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 </pre>
 
-<h3>이외의 내용들 (Other Contents)</h3>
-<pre id="license_text_contents">
+### 이외의 내용들 (Other Contents)
 Copyright (c) 2017-2020 Yukina Hoshizora (Hanaya)
-Licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike v3.0</a> (unless otherwise noted)
 
-Some materials (e.g. brand logos, emblems, etc.) used in this page are Copyrighted and Trademarked by <a href="https://bandainamcoent.co.jp/english/">Bandai Namco Entertainment Inc.</a>, and used for informational/non-commercial purposes only.
-</pre>
+Original contents on the website are licensed under [Creative Commons Attribution-ShareAlike v3.0](https://creativecommons.org/licenses/by-sa/3.0/) (unless otherwise noted)
 
-<h2>OSS Notice / Open Source License</h2>
-<h3><a href="https://www.google.com/get/noto/">Noto Sans KR/JP</a></h3>
+Some materials (e.g. brand logos, emblems, etc.) used in the website are Copyrighted and Trademarked by [Bandai Namco Entertainment Inc.](https://bandainamcoent.co.jp/english/), and used for informational/non-commercial purposes only.
 
-<pre id="license_text_font" style="width: 100%; word-wrap: break-word;">
+## OSS Notice / Open Source License
+
+### [Noto Sans KR/JP](https://www.google.com/get/noto/)
+
 This Font Software is licensed under the SIL Open Font License, Version 1.1.
 This license is copied below, and is also available with a FAQ at:
 http://scripts.sil.org/OFL
 
-
+<pre>
 -----------------------------------------------------------
 SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
 -----------------------------------------------------------
@@ -91,7 +67,7 @@ new environment.
 "Author" refers to any designer, engineer, programmer, technical
 writer or other person who contributed to the Font Software.
 
-PERMISSION &amp; CONDITIONS
+PERMISSION & CONDITIONS
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of the Font Software, to use, study, copy, merge, embed, modify,
 redistribute, and sell modified and unmodified copies of the Font
@@ -140,9 +116,9 @@ FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
 OTHER DEALINGS IN THE FONT SOFTWARE.
 </pre>
 
-<h3><a href="https://github.hubspot.com/pace/docs/welcome/">pace.js</a></h3>
+### [pace.js](https://github.hubspot.com/pace/docs/welcome/)
 
-<pre id="license_text_others_01">
+<pre>
 Copyright (c) 2013 HubSpot, Inc.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
@@ -151,5 +127,3 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 </pre>
-</body>
-</html>
