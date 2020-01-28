@@ -7,6 +7,14 @@ font-size: 1em;
 line-height: 144%;
 }
 
+pre{
+white-space: pre-wrap;
+white-space: -moz-pre-wrap;
+white-space: -pre-wrap;
+white-space: -o-pre-wrap;
+word-wrap: break-word;
+}
+
 
 #page_imasbirthday{
 background-image: url('/assets/imasprojects_trans.png');
