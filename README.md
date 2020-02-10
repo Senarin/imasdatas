@@ -1,5 +1,5 @@
 # 하나야의 작업물 저장소 (1차)
-개인적인 작업물들 중 [아이돌 마스터 시리즈](http://ko.878production.wikidok.net/wp-d/5e12b606db0c16cc1bfd83de/View) 관련 개인적 정리자료를 관리 및 공개하기 위한 페이지입니다. 기본적으로 https://r1.senarin.kr/ 주소로 접속 가능합니다.
+개인적인 작업물들 중 [아이돌 마스터 시리즈](https://ko.wikipedia.org/wiki/%EC%95%84%EC%9D%B4%EB%8F%8C%EB%A7%88%EC%8A%A4%ED%84%B0_%EC%8B%9C%EB%A6%AC%EC%A6%88%EC%9D%98_%EC%9E%91%ED%92%88_%EB%AA%A9%EB%A1%9D) 관련 개인적 정리자료를 관리 및 공개하기 위한 페이지입니다. 기본적으로 https://r1.senarin.kr/ 주소로 접속 가능합니다.
 
 ## 사용권(라이선스) 안내
 이 사이트(저장소)의 주요 코드(```/css``` 및 ```/js```, ```/embedpages``` 경로 아래에 있는 파일들)는 MIT 사용 허가서(MIT License)에 명시된 사용권 규약을 따르며, 그 외에는 다음과 같습니다.
