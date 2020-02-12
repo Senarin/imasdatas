@@ -3,7 +3,7 @@
 ### 페이지 오리지널 코드 (Original Codes)
 
 <pre>
-Copyright (c) 2020 Yukina Hoshizora (Hanaya)
+Copyright (c) 2020 Hanaya
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
@@ -13,7 +13,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 </pre>
 
 ### 이외의 내용들 (Other Contents)
-Copyright (c) 2017-2020 Yukina Hoshizora (Hanaya)
+Copyright (c) 2017-2020 Hanaya
 
 Original contents on the website are licensed under [Creative Commons Attribution-ShareAlike v3.0](https://creativecommons.org/licenses/by-sa/3.0/) (unless otherwise noted)
 
