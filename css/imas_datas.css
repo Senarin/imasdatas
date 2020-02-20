@@ -15,6 +15,11 @@ white-space: -o-pre-wrap;
 word-wrap: break-word;
 }
 
+#notice_i{
+text-align: center;
+color: #FF0000;
+}
+
 
 #page_imasbirthday{
 background-image: url('/assets/imasprojects_trans.png');
