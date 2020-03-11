@@ -17,7 +17,7 @@ Copyright (c) 2017-2020 Yukina
 
 Original contents on the website are licensed under [Creative Commons Attribution-ShareAlike v3.0](https://creativecommons.org/licenses/by-sa/3.0/) (unless otherwise noted)
 
-Some materials (e.g. brand logos, emblems, etc.) used in the website are Copyrighted and Trademarked by [Bandai Namco Entertainment Inc.](https://bandainamcoent.co.jp/english/), and used for informational/non-commercial purposes only.
+Some materials (e.g. brand logos, emblems, etc.) used in the website are Copyrighted and Trademarked by [Bandai Namco Entertainment Inc.](https://bandainamcoent.co.jp/english/) and others, and used for informational/non-commercial purposes only.
 
 ## OSS Notice / Open Source License
 
