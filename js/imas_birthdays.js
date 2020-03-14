@@ -333,7 +333,7 @@ function makeMLTypeTable(){
       else{continue;}
       var idolNameItem = document.createElement("li");
       idolNameItem.appendChild(document.createTextNode(idolNameText));
-      idolNameItem.style.fontStyle = "italic";
+      idolNameItem.style.fontWeight = "bold";
       document.getElementById("table_mltype_"+datas[n].type_g+"_"+datas[n].type_t).appendChild(idolNameItem);
      }
     }
