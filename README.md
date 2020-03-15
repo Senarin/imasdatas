@@ -13,7 +13,7 @@
 이 사이트(저장소)의 일부 페이지는 [matsurihi.me](https://www.matsurihi.me/) (日) 및 [Starlight DB](https://starlight.kirara.ca/)에서 제공하는 컨텐츠를 이용합니다. 해당 컨텐츠의 정확성 및 무결성은 보장할 수 없으며, 해당 제공처의 사정에 따라 업데이트가 지연되거나 장애가 발생할 수 있는 점 양해 부탁드립니다.
 
 ## 의견 보내기
-이 사이트(저장소)에 대한 의견이나 피드백은 (GitHub 계정이 있을 경우) [이 저장소에 대한 이슈](https://github.com/Senarin/imasdatas/issues)로 남겨주시거나 <themunyang21@naver.com>으로 메일을 보내주시면 감사하겠습니다.
+이 사이트(저장소)에 대한 의견이나 피드백, 기타 문의는 (GitHub 계정이 있을 경우) [이 저장소에 대한 이슈](https://github.com/Senarin/imasdatas/issues)로 남겨주시거나 <themunyang21@naver.com>으로 메일을 보내주시면 감사하겠습니다.
 
 ## 면책 조항 (Disclaimer)
 이 사이트(저장소)는 [반다이 남코 엔터테인먼트](http://www.bandainamcoent.co.kr/) 및 [사이게임즈(Cygames)](https://www.cygames.co.kr/)와 **어떠한 직접적 관계도 없는 비공식 페이지이며 이 페이지에 사용된 공식 데이터에 대한 모든 권리는 반다이 남코 엔터테인먼트를 비롯한 각 당사자에게 있습니다.** "아이돌마스터", "THE iDOLM@STER","PROJECT iM@S" 및 관련 상표/공식 컨텐츠는 대한민국 및 일본, 그 외 국가에서 반다이 남코 엔터테인먼트의 재산입니다.  
