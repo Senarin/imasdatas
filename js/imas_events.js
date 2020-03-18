@@ -652,7 +652,7 @@ var getTDEventRanksInfo = {
       else{etype = s.type;}
 
       if(etype == 0){alert("존재하지 않는 이벤트입니다.");return;}
-      else if(etype == 3 || etype == 4){
+      else if(etype == 3 || etype == 4 || etype == 10){
        var r = new XMLHttpRequest();
 
        r.onreadystatechange = function(){
