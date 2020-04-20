@@ -29,7 +29,7 @@ background-position: center;
 background-attachment: fixed;
 }
 
-#page_starlightevents,#page_starlightsongs,#page_starlightgachas,#page_cgidolsmisc,#page_cgelectiondatas,#page_cgelection7th,#page_cgelection8th,#page_imascg_idolnumbers{
+#page_starlightevents,#page_starlightsongs,#page_starlightgachas,#page_cgidolsmisc,#page_cgelectiondatas,#page_cgelection7th,#page_cgelection8th,#page_cgelection9th,#page_imascg_idolnumbers{
 background-image: url('/assets/imas_cg_emblem_trans.png');
 background-size: 17.3%;
 background-repeat: no-repeat;
@@ -277,7 +277,7 @@ color: #FFFFFF;
 
 .notyetavail{color: #DEDEDE;}
 
-.cgelections_topidol{padding: 0.25em;}
+.cgelections_topidol,.cgelections_voiceidol_2nd{padding: 0.25em;}
 
 #birthdays_765876,#birthdays_cg,#birthdays_ml,#birthdays_315,#birthdays_283,#birthdays_etc,#typecomp_ml,#astype_cg{
 width: 100%;
@@ -332,7 +332,7 @@ input[name='list_tabs']:checked + label.tabs{
 }
 
 #cgidols_starlight_ssr,#cgidols_masteralbum_series,#cgidols_voiceothers_series,#cgidols_nonvoiced_series,#cgidols_election7th_overall,#cgidols_election7th_types,#cgidols_election8th_overall,
-#cgidols_election8th_types,#cgidols_election8th_mid_overall,#cgidols_election8th_mid_types,#cgidols_elections_top1{
+#cgidols_election8th_types,#cgidols_election8th_mid_overall,#cgidols_election8th_mid_types,#cgidols_elections_top1,#cgidols_election9th_overall,#cgidols_election9th_types,#cgidols_voice2nd_overall{
 width: 100%;
 overflow: auto;
 }
