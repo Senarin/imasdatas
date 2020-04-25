@@ -125,8 +125,8 @@ function birthdayhighlight_cg(){
    if(typeof matchingIdol.getElementsByTagName("span")[i] != "undefined"){matchingIdols += matchingIdol.getElementsByTagName("span")[i].innerText+", ";}
   }
   matchingIdols = matchingIdols.slice(0,-2);
-  document.getElementById("birthtoday_346").style.display = "block";
-  document.getElementById("birthtoday_346").innerHTML = matchingIdols+" (신데렐라 걸즈)";
+  document.getElementById("birthtoday_cg").style.display = "block";
+  document.getElementById("birthtoday_cg").innerHTML = matchingIdols+" (신데렐라 걸즈)";
  }
 }
 
