@@ -601,7 +601,7 @@ function reloadBirthday(){
  document.getElementById("series_birthday").innerHTML = "";
  document.getElementById("birthtoday_765").innerHTML = "";
  document.getElementById("birthtoday_876").innerHTML = "";
- document.getElementById("birthtoday_346").innerHTML = "";
+ document.getElementById("birthtoday_cg").innerHTML = "";
  document.getElementById("birthtoday_million").innerHTML = "";
  document.getElementById("birthtoday_315").innerHTML = "";
  document.getElementById("birthtoday_283").innerHTML = "";
