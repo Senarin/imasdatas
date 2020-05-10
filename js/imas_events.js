@@ -264,6 +264,8 @@ showGachaRemainingSL : function(){
      document.getElementById("theater_eid_j").value = eid;
      var $eTitle = document.createTextNode($("#theater_elist_j td[data-event-id]").last().html().replace(/<[^>]*>/g,"").replace("&amp;","&"));
      var $eLast = new Number($("#theater_elist_j td[data-event-id]").last()[0].getAttribute("data-event-id"));
+
+     if($eLast < 0){$("#theater_elist_j td[data-event-id]").last()[0].setAttribute("data-event-id",eid);}
      
      if($eLast > 0){
       var eInfoLink = document.createElement("a");
