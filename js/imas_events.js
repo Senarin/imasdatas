@@ -266,7 +266,7 @@ showGachaRemainingSL : function(){
      var $eLast = new Number($("#theater_elist_j td[data-event-id]").last()[0].getAttribute("data-event-id"));
 
      if($eLast < 0){$("#theater_elist_j td[data-event-id]").last()[0].setAttribute("data-event-id",eid);}
-     
+
      if($eLast > 0){
       var eInfoLink = document.createElement("a");
       eInfoLink.href = "https://mltd.matsurihi.me/events/"+eid;
