@@ -265,7 +265,7 @@ showGachaRemainingSL : function(){
      var $eTitle = document.createTextNode($("#theater_elist_j td[data-event-id!='-1']").last().html().replace(/<[^>]*>/g,"").replace("&amp;","&"));
      var $eLast = new Number($("#theater_elist_j td[data-event-id]").last()[0].getAttribute("data-event-id"));
 
-     if($eLast < 0){$("#theater_elist_j td[data-event-id!='-1']").last()[0].setAttribute("data-event-id",eid);}
+     if($eLast < 0){$("#theater_elist_j td[data-event-id][data-event-id!='-1']").last()[0].setAttribute("data-event-id",eid);}
 
      if($eLast > 0){
       var eInfoLink = document.createElement("a");
