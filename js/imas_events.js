@@ -267,16 +267,15 @@ showGachaRemainingSL : function(){
 
      if($eLast < 0){$("#theater_elist_j td[data-event-id]").last()[0].setAttribute("data-event-id",eid);}
 
-     if($eLast > 0){
-      var eInfoLink = document.createElement("a");
-      eInfoLink.href = "https://mltd.matsurihi.me/events/"+eid;
-      eInfoLink.target = "_blank";
-      eInfoLink.appendChild($eTitle);
-      document.getElementById("theater_event_name_j").innerHTML = "";
-      document.getElementById("theater_event_name_j").appendChild(eInfoLink);
-      document.getElementById("theater_ename_orig_j").innerHTML = "("+s[0].name+")";
-      document.getElementById("theater_ename_orig_j").style.display = "inline-block";
-     }
+     var eInfoLink = document.createElement("a");
+     eInfoLink.href = "https://mltd.matsurihi.me/events/"+eid;
+     eInfoLink.target = "_blank";
+     eInfoLink.appendChild($eTitle);
+     document.getElementById("theater_event_name_j").innerHTML = "";
+     document.getElementById("theater_event_name_j").appendChild(eInfoLink);
+     document.getElementById("theater_ename_orig_j").innerHTML = "("+s[0].name+")";
+     document.getElementById("theater_ename_orig_j").style.display = "inline-block";
+     
      console.log("["+(new Date()).toLocaleString()+"] [현지(일본어)판] 현재 개최 중인 이벤트 종류 : "+theaterEventType[s[0].type]);
 
      var eDateTime0 = new Number(new Date(s[0].schedule.endDate));
