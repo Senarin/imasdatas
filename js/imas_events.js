@@ -586,12 +586,12 @@ var showSLEventCategory = {
    var numCols = $(".starlight_events").eq(y).find("tr:nth-child(1)").children().length;
    if($(".starlight_events").eq(y).find("td[class^='cg_starlight_']:visible").length == 0){
     var blankResRow = document.createElement("tr");
+    blankResRow.setAttribute("class","blank_results_text");
     var blankResCol = document.createElement("td");
     blankResCol.setAttribute("colspan",numCols);
     blankResCol.appendChild(document.createTextNode("조건에 해당하는 이벤트가 없습니다."));
     blankResRow.appendChild(blankResCol);
-    $(".starlight_events").eq(y).append(blankResRow);
-
+    $(".starlight_events").eq(y).find("td[class^='cg_starlight_']").parent().parent().append(blankResRow);
    }
   }
  }
