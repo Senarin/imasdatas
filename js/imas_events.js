@@ -579,6 +579,7 @@ var showSLEventCategory = {
   else if(eTypeToShow == 3){$(".starlight_events td[class^='cg_starlight_'][class!='cg_starlight_burst']").parent().css("display","none");}
   else if(eTypeToShow == 0){$(".starlight_events td[class^='cg_starlight_']").parent().css("display","initial");}
   else{$(".starlight_events td.cg_starlight_nonrank[data-event-type!='"+eTypeToShow+"']").parent().css("display","none");}
+  
  }
 };
 
