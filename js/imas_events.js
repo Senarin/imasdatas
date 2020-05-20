@@ -582,6 +582,10 @@ var showSLEventCategory = {
 
   var numEventYears = $(".starlight_events").length;
 
+  var p = document.getElementsByClassName("blank_results_text").length;
+
+  if(p > 0){$(".blank_results_text").remove();}
+
   for(y=0;y<numEventYears;y++){
    var numCols = $(".starlight_events").eq(y).find("tr:nth-child(1)").children().length;
    if($(".starlight_events").eq(y).find("td[class^='cg_starlight_']:visible").length == 0){
