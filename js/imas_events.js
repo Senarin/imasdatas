@@ -574,11 +574,26 @@ var showSLEventCategory = {
  choice : function(){
   var eTypeToShow = new Number(document.getElementById("slevents_category").value);
   $(".starlight_events td[class^='cg_starlight_']").parent().css("display","table-row");
-  
+
   if(eTypeToShow == 1){$(".starlight_events td[class^='cg_starlight_'][class!='cg_starlight_atapon']").parent().css("display","none");}
   else if(eTypeToShow == 3){$(".starlight_events td[class^='cg_starlight_'][class!='cg_starlight_burst']").parent().css("display","none");}
   else if(eTypeToShow == 0){$(".starlight_events td[class^='cg_starlight_']").parent().css("display","table-row");}
   else{$(".starlight_events td[class^='cg_starlight_'][data-event-type!='"+eTypeToShow+"']").parent().css("display","none");}
+
+  var numEventYears = $(".starlight_events").length;
+
+  for(y=0;y<numEventYears;y++){
+   var numCols = $(".starlight_events").eq(y).find("tr:nth-child(1)").children().length;
+   if($(".starlight_events").eq(y).find("td[class^='cg_starlight_']:visible").length == 0){
+    var blankResRow = document.createElement("tr");
+    var blankResCol = document.createElement("td");
+    blankResCol.setAttribute("colspan",numCols);
+    blankResCol.appendChild(document.createTextNode("조건에 해당하는 이벤트가 없습니다."));
+    blankResRow.appendChild(blankResCol);
+    $(".starlight_events").eq(y).append(blankResRow);
+
+   }
+  }
  }
 };
 
