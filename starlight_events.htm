@@ -90,6 +90,19 @@ $(document).ready(function(){
  <li>2020년 4월 이후의 이벤트 일정은 <abbr title="신종코로나바이러스감염증-19">코로나19(COVID-19)</abbr>의 현지 확산추세에 따라 <b>사전 통보 없이 변동될 수 있습니다.</b></li>
 </ul>
 
+<div id="starlight_events_category">
+ <select id="slevents_category" onselect="showSLEventCategory.choice();" onchange="showSLEventCategory.choice();">
+  <option value="0">모두</option>
+  <option value="1">재화수집</option>
+  <option value="2">캐러밴</option>
+  <option value="3">그루브(버스트)</option>
+  <option value="4">협력(파티)</option>
+  <option value="5">퍼레이드(투어)</option>
+ </select>
+</div>
+
+
+
 <h3>2015년도</h3>
 
 <div class="starlight_events">
@@ -109,7 +122,7 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>2</td>
- <td class="cg_starlight_nonrank">캐러밴</td>
+ <td class="cg_starlight_nonrank" data-event-type="2">캐러밴</td>
  <td>신데렐라 캐러밴 1차</td>
  <td>-</td>
  <td>10월 9일 15시 ~ 16일 21시 (7박 8일)</td>
@@ -142,7 +155,7 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>5</td>
- <td class="cg_starlight_nonrank">캐러밴</td>
+ <td class="cg_starlight_nonrank" data-event-type="2">캐러밴</td>
  <td>신데렐라 캐러밴 2차</td>
  <td>-</td>
  <td>11월 12일 15시 ~ 18일 21시 (6박 7일)</td>
@@ -206,7 +219,7 @@ $(document).ready(function(){
 <tr><td width="2%">순번</td><td width="5%">형식</td><td width="17%">이벤트 및 대상곡명</td><td width="7%">대상곡 분류</td><td width="14%">개최기간</td><td width="8%">대상곡 레벨</td><td width="8%">보상 #1(상위) 아이돌명</td><td width="8%">보상 #2(하위) 아이돌명</td><td width="35%">비고</td></tr>
 <tr>
  <td>10</td>
- <td class="cg_starlight_nonrank">캐러밴</td>
+ <td class="cg_starlight_nonrank" data-event-type="2">캐러밴</td>
  <td>신데렐라 캐러밴 3차</td>
  <td>-</td>
  <td>1월 12일 15시 ~ 18일 21시 (6박 7일)</td>
@@ -239,7 +252,7 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>13</td>
- <td class="cg_starlight_nonrank">캐러밴</td>
+ <td class="cg_starlight_nonrank" data-event-type="2">캐러밴</td>
  <td>신데렐라 캐러밴 4차</td>
  <td>-</td>
  <td>2월 10일 15시 ~ 16일 21시 (6박 7일)</td>
@@ -272,7 +285,7 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>16</td>
- <td class="cg_starlight_nonrank">캐러밴</td>
+ <td class="cg_starlight_nonrank" data-event-type="2">캐러밴</td>
  <td>신데렐라 캐러밴 5차</td>
  <td>-</td>
  <td>3월 11일 15시 ~ 18일 21시 (7박 8일)</td>
@@ -305,7 +318,7 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>19</td>
- <td class="cg_starlight_nonrank">캐러밴</td>
+ <td class="cg_starlight_nonrank" data-event-type="2">캐러밴</td>
  <td>신데렐라 캐러밴 6차</td>
  <td>-</td>
  <td>4월 11일 15시 ~ 17일 21시 (6박 7일)</td>
@@ -338,7 +351,7 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>22</td>
- <td class="cg_starlight_nonrank">캐러밴</td>
+ <td class="cg_starlight_nonrank" data-event-type="2">캐러밴</td>
  <td>신데렐라 캐러밴 7차</td>
  <td>-</td>
  <td>5월 11일 15시 ~ 17일 21시 (6박 7일)</td>
@@ -371,7 +384,7 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>25</td>
- <td class="cg_starlight_nonrank">협력(파티)</td>
+ <td class="cg_starlight_nonrank" data-event-type="4">협력(파티)</td>
  <td>라이브 파티 1차</td>
  <td>-</td>
  <td>6월 10일 15시 ~ 17일 21시 (7박 8일)</td>
@@ -404,7 +417,7 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>28</td>
- <td class="cg_starlight_nonrank">캐러밴</td>
+ <td class="cg_starlight_nonrank" data-event-type="2">캐러밴</td>
  <td>신데렐라 캐러밴 8차</td>
  <td>-</td>
  <td>7월 11일 15시 ~ 17일 21시 (6박 7일)</td>
@@ -437,7 +450,7 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>31</td>
- <td class="cg_starlight_nonrank">협력(파티)</td>
+ <td class="cg_starlight_nonrank" data-event-type="4">협력(파티)</td>
  <td>라이브 파티 2차</td>
  <td>-</td>
  <td>8월 12일 15시 ~ 17일 21시 (<b>5박 6일</b>)</td>
@@ -470,7 +483,7 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>34</td>
- <td class="cg_starlight_nonrank">캐러밴</td>
+ <td class="cg_starlight_nonrank" data-event-type="2">캐러밴</td>
  <td>신데렐라 캐러밴 9차</td>
  <td>-</td>
  <td>9월 12일 15시 ~ 18일 21시 (6박 7일)</td>
@@ -492,7 +505,7 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>36</td>
- <td class="cg_starlight_nonrank">퍼레이드(투어)</td>
+ <td class="cg_starlight_nonrank" data-event-type="5">퍼레이드(투어)</td>
  <td class="cgevents_all">(라이브 퍼레이드 1차) STORY</td>
  <td>TVA 앨범곡</td>
  <td>9월 30일 15시 ~ 10월 8일 21시 (8박 9일)</td>
@@ -503,7 +516,7 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>37</td>
- <td class="cg_starlight_nonrank">협력(파티)</td>
+ <td class="cg_starlight_nonrank" data-event-type="4">협력(파티)</td>
  <td>라이브 파티 3차</td>
  <td>-</td>
  <td>10월 12일 15시 ~ 18일 21시 (6박 7일)</td>
@@ -536,7 +549,7 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>40</td>
- <td class="cg_starlight_nonrank">캐러밴</td>
+ <td class="cg_starlight_nonrank" data-event-type="2">캐러밴</td>
  <td>신데렐라 캐러밴 10차</td>
  <td>-</td>
  <td>11월 11일 15시 ~ 17일 21시 (6박 7일)</td>
@@ -558,7 +571,7 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>42</td>
- <td class="cg_starlight_nonrank">퍼레이드(투어)</td>
+ <td class="cg_starlight_nonrank" data-event-type="5">퍼레이드(투어)</td>
  <td class="cgevents_all">(라이브 퍼레이드 2차) EVERMORE</td>
  <td>기타</td>
  <td>11월 30일 15시 ~ 12월 8일 21시 (8박 9일)</td>
@@ -569,7 +582,7 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>43</td>
- <td class="cg_starlight_nonrank">협력(파티)</td>
+ <td class="cg_starlight_nonrank" data-event-type="4">협력(파티)</td>
  <td>라이브 파티 4차</td>
  <td>-</td>
  <td>12월 12일 15시 ~ 19일 21시 (7박 8일)</td>
@@ -612,7 +625,7 @@ $(document).ready(function(){
 <tr><td width="2%">순번</td><td width="5%">형식</td><td width="17%">이벤트 및 대상곡명</td><td width="7%">대상곡 분류</td><td width="14%">개최기간</td><td width="8%">대상곡 레벨</td><td width="8%">보상 #1(상위) 아이돌명</td><td width="8%">보상 #2(하위) 아이돌명</td><td width="35%">비고</td></tr>
 <tr>
  <td>46</td>
- <td class="cg_starlight_nonrank">캐러밴</td>
+ <td class="cg_starlight_nonrank" data-event-type="2">캐러밴</td>
  <td>신데렐라 캐러밴 11차</td>
  <td>-</td>
  <td>1월 12일 15시 ~ 18일 21시 (6박 7일)</td>
@@ -634,7 +647,7 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>48</td>
- <td class="cg_starlight_nonrank">퍼레이드(투어)</td>
+ <td class="cg_starlight_nonrank" data-event-type="5">퍼레이드(투어)</td>
  <td class="cgevents_all">(라이브 퍼레이드 3차) Sweet Witches&#39; Night</td>
  <td>오리지널</td>
  <td>1월 31일 15시 ~ 2월 7일 21시 (7박 8일)</td>
@@ -645,7 +658,7 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>49</td>
- <td class="cg_starlight_nonrank">협력(파티)</td>
+ <td class="cg_starlight_nonrank" data-event-type="4">협력(파티)</td>
  <td>라이브 파티 5차</td>
  <td>-</td>
  <td>2월 10일 15시 ~ 15일 21시 (<b>5박 6일</b>)</td>
@@ -678,7 +691,7 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>52</td>
- <td class="cg_starlight_nonrank">캐러밴</td>
+ <td class="cg_starlight_nonrank" data-event-type="2">캐러밴</td>
  <td>신데렐라 캐러밴 12차</td>
  <td>-</td>
  <td>3월 13일 15시 ~ 19일 21시 (6박 7일)</td>
@@ -700,7 +713,7 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>54</td>
- <td class="cg_starlight_nonrank">퍼레이드(투어)</td>
+ <td class="cg_starlight_nonrank" data-event-type="5">퍼레이드(투어)</td>
  <td class="cgevents_cute">(라이브 퍼레이드 4차) shabon song</td>
  <td>셀렉션</td>
  <td><del datetime="2017-03-31T15:00:00+09:00">3월 31일</del> 4월 1일 15시 ~ 8일 21시 (7박 8일)</td>
@@ -711,7 +724,7 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>55</td>
- <td class="cg_starlight_nonrank">협력(파티)</td>
+ <td class="cg_starlight_nonrank" data-event-type="4">협력(파티)</td>
  <td>라이브 파티 6차</td>
  <td>-</td>
  <td>4월 11일 15시 ~ 17일 21시 (6박 7일)</td>
@@ -744,7 +757,7 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>58</td>
- <td class="cg_starlight_nonrank">캐러밴</td>
+ <td class="cg_starlight_nonrank" data-event-type="2">캐러밴</td>
  <td>신데렐라 캐러밴 13차</td>
  <td>-</td>
  <td>5월 11일 15시 ~ 17일 21시 (6박 7일)</td>
@@ -766,7 +779,7 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>60</td>
- <td class="cg_starlight_nonrank">퍼레이드(투어)</td>
+ <td class="cg_starlight_nonrank" data-event-type="5">퍼레이드(투어)</td>
  <td class="cgevents_all">(라이브 퍼레이드 5차) With Love</td>
  <td>오리지널</td>
  <td>5월 31일 15시 ~ 6월 8일 21시 (8박 9일)</td>
@@ -777,7 +790,7 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>61</td>
- <td class="cg_starlight_nonrank">협력(파티)</td>
+ <td class="cg_starlight_nonrank" data-event-type="4">협력(파티)</td>
  <td>라이브 파티 7차</td>
  <td>-</td>
  <td>6월 12일 15시 ~ 17일 21시 (<b>5박 6일</b>)</td>
@@ -810,7 +823,7 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>64</td>
- <td class="cg_starlight_nonrank">캐러밴</td>
+ <td class="cg_starlight_nonrank" data-event-type="2">캐러밴</td>
  <td>신데렐라 캐러밴 14차</td>
  <td>-</td>
  <td>7월 12일 15시 ~ 18일 21시 (6박 7일)</td>
@@ -832,7 +845,7 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>66</td>
- <td class="cg_starlight_nonrank">퍼레이드(투어)</td>
+ <td class="cg_starlight_nonrank" data-event-type="5">퍼레이드(투어)</td>
  <td class="cgevents_all">(라이브 퍼레이드 6차) Take me☆Take you</td>
  <td>총선</td>
  <td>7월 31일 15시 ~ 8월 8일 21시 (8박 9일)</td>
@@ -843,7 +856,7 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>67</td>
- <td class="cg_starlight_nonrank">협력(파티)</td>
+ <td class="cg_starlight_nonrank" data-event-type="4">협력(파티)</td>
  <td>라이브 파티 8차</td>
  <td>-</td>
  <td>8월 12일 15시 ~ 19일 21시 (7박 8일)</td>
@@ -876,7 +889,7 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>70</td>
- <td class="cg_starlight_nonrank">캐러밴</td>
+ <td class="cg_starlight_nonrank" data-event-type="2">캐러밴</td>
  <td>신데렐라 캐러밴 15차</td>
  <td>-</td>
  <td>9월 11일 15시 ~ 18일 21시 (7박 8일)</td>
@@ -898,7 +911,7 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>72</td>
- <td class="cg_starlight_nonrank">퍼레이드(투어)</td>
+ <td class="cg_starlight_nonrank" data-event-type="5">퍼레이드(투어)</td>
  <td class="cgevents_all">(라이브 퍼레이드 7차) 너의 곁에서 계속</td>
  <td>총선</td>
  <td>9월 30일 15시 ~ 10월 9일 21시 (<b>9박 10일</b>)</td>
@@ -909,7 +922,7 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>73</td>
- <td class="cg_starlight_nonrank">캐러밴</td>
+ <td class="cg_starlight_nonrank" data-event-type="2">캐러밴</td>
  <td>신데렐라 캐러밴 16차</td>
  <td>-</td>
  <td>10월 12일 15시 ~ 18일 21시 (6박 7일)</td>
@@ -942,7 +955,7 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>76</td>
- <td class="cg_starlight_nonrank">캐러밴</td>
+ <td class="cg_starlight_nonrank" data-event-type="2">캐러밴</td>
  <td>신데렐라 캐러밴 17차</td>
  <td>-</td>
  <td>11월 10일 15시 ~ 16일 21시 (6박 7일)</td>
@@ -964,7 +977,7 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>78</td>
- <td class="cg_starlight_nonrank">퍼레이드(투어)</td>
+ <td class="cg_starlight_nonrank" data-event-type="5">퍼레이드(투어)</td>
  <td class="cgevents_all">(라이브 퍼레이드 8차) 사랑이 꽃피는 계절</td>
  <td>총선</td>
  <td>11월 30일 15시 ~ 12월 9일 21시 (<b>9박 10일</b>)</td>
@@ -975,7 +988,7 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>79</td>
- <td class="cg_starlight_nonrank">캐러밴</td>
+ <td class="cg_starlight_nonrank" data-event-type="2">캐러밴</td>
  <td>신데렐라 캐러밴 18차</td>
  <td>-</td>
  <td>12월 13일 15시 ~ 18일 21시 (<b>5박 6일</b>)</td>
@@ -1040,7 +1053,7 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>84</td>
- <td class="cg_starlight_nonrank">퍼레이드(투어)</td>
+ <td class="cg_starlight_nonrank" data-event-type="5">퍼레이드(투어)</td>
  <td class="cgevents_all">(라이브 퍼레이드 9차) always</td>
  <td>총선</td>
  <td>1월 31일 15시 ~ 2월 8일 21시 (8박 9일)</td>
@@ -1051,7 +1064,7 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>85</td>
- <td class="cg_starlight_nonrank">캐러밴</td>
+ <td class="cg_starlight_nonrank" data-event-type="2">캐러밴</td>
  <td>신데렐라 캐러밴 19차</td>
  <td>-</td>
  <td>2월 12일 15시 ~ 17일 21시 (5박 6일)</td>
@@ -1106,7 +1119,7 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>90</td>
- <td class="cg_starlight_nonrank">퍼레이드(투어)</td>
+ <td class="cg_starlight_nonrank" data-event-type="5">퍼레이드(투어)</td>
  <td class="cgevents_all">(라이브 퍼레이드 10차) Vast World</td>
  <td>기타</td>
  <td>4월 2일 15시 ~ 9일 21시 (7박 8일)</td>
@@ -1117,7 +1130,7 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>91</td>
- <td class="cg_starlight_nonrank">캐러밴</td>
+ <td class="cg_starlight_nonrank" data-event-type="2">캐러밴</td>
  <td>신데렐라 캐러밴 20차</td>
  <td>-</td>
  <td>4월 12일 15시 ~ 17일 21시 (5박 6일)</td>
@@ -1172,7 +1185,7 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>96</td>
- <td class="cg_starlight_nonrank">퍼레이드(투어)</td>
+ <td class="cg_starlight_nonrank" data-event-type="5">퍼레이드(투어)</td>
  <td class="cgevents_passion">(라이브 퍼레이드 11차) Virgin Love</td>
  <td>기타</td>
  <td>5월 31일 15시 ~ 6월 7일 21시 (7박 8일)</td>
@@ -1183,7 +1196,7 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>97</td>
- <td class="cg_starlight_nonrank">캐러밴</td>
+ <td class="cg_starlight_nonrank" data-event-type="2">캐러밴</td>
  <td>신데렐라 캐러밴 21차</td>
  <td>-</td>
  <td>6월 11일 15시 ~ 16일 21시 (5박 6일)</td>
@@ -1238,7 +1251,7 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>102</td>
- <td class="cg_starlight_nonrank">퍼레이드(투어)</td>
+ <td class="cg_starlight_nonrank" data-event-type="5">퍼레이드(투어)</td>
  <td class="cgevents_cute">(라이브 퍼레이드 12차) 데코보코 스피드스타</td>
  <td>오리지널</td>
  <td>7월 31일 15시 ~ 8월 7일 21시 (7박 8일)</td>
@@ -1249,7 +1262,7 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>103</td>
- <td class="cg_starlight_nonrank">캐러밴</td>
+ <td class="cg_starlight_nonrank" data-event-type="2">캐러밴</td>
  <td>신데렐라 캐러밴 22차</td>
  <td>-</td>
  <td>8월 11일 15시 ~ 16일 21시 (5박 6일)</td>
@@ -1304,7 +1317,7 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>108</td>
- <td class="cg_starlight_nonrank">퍼레이드(투어)</td>
+ <td class="cg_starlight_nonrank" data-event-type="5">퍼레이드(투어)</td>
  <td class="cgevents_all">(라이브 퍼레이드 13차) 도레미 팩토리!</td>
  <td>기타</td>
  <td>9월 30일 15시 ~ 10월 8일 21시 (8박 9일)</td>
@@ -1315,7 +1328,7 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>109</td>
- <td class="cg_starlight_nonrank">캐러밴</td>
+ <td class="cg_starlight_nonrank" data-event-type="2">캐러밴</td>
  <td>신데렐라 캐러밴 23차</td>
  <td>-</td>
  <td>10월 11일 15시 ~ 16일 21시 (5박 6일)</td>
@@ -1370,7 +1383,7 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>114</td>
- <td class="cg_starlight_nonrank">퍼레이드(투어)</td>
+ <td class="cg_starlight_nonrank" data-event-type="5">퍼레이드(투어)</td>
  <td class="cgevents_all">(라이브 퍼레이드 14차) 너에게로의 시</td>
  <td>총선</td>
  <td>11월 30일 15시 ~ 12월 8일 21시 (8박 9일)</td>
@@ -1381,7 +1394,7 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>115</td>
- <td class="cg_starlight_nonrank">캐러밴</td>
+ <td class="cg_starlight_nonrank" data-event-type="2">캐러밴</td>
  <td>신데렐라 캐러밴 24차</td>
  <td>-</td>
  <td>12월 11일 15시 ~ 16일 21시 (5박 6일)</td>
@@ -1446,7 +1459,7 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>120</td>
- <td class="cg_starlight_nonrank">퍼레이드(투어)</td>
+ <td class="cg_starlight_nonrank" data-event-type="5">퍼레이드(투어)</td>
  <td class="cgevents_all">(라이브 퍼레이드 15차) 의용인협 하나후부키</td>
  <td>오리지널</td>
  <td>1월 31일 15시 ~ 2월 8일 21시 (8박 9일)</td>
@@ -1457,7 +1470,7 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>121</td>
- <td class="cg_starlight_nonrank">캐러밴</td>
+ <td class="cg_starlight_nonrank" data-event-type="2">캐러밴</td>
  <td>신데렐라 캐러밴 25차</td>
  <td>-</td>
  <td>2월 12일 15시 ~ 17일 21시 (5박 6일)</td>
@@ -1512,7 +1525,7 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>126</td>
- <td class="cg_starlight_nonrank">퍼레이드(투어)</td>
+ <td class="cg_starlight_nonrank" data-event-type="5">퍼레이드(투어)</td>
  <td class="cgevents_passion">(라이브 퍼레이드 16차) O-Ku-Ri-Mo-No Sunday!</td>
  <td>오리지널</td>
  <td>4월 2일 15시 ~ 9일 21시 (7박 8일)</td>
@@ -1523,7 +1536,7 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>127</td>
- <td class="cg_starlight_nonrank">캐러밴</td>
+ <td class="cg_starlight_nonrank" data-event-type="2">캐러밴</td>
  <td>신데렐라 캐러밴 26차</td>
  <td>-</td>
  <td>4월 12일 15시 ~ 17일 21시 (5박 6일)</td>
@@ -1578,7 +1591,7 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>132</td>
- <td class="cg_starlight_nonrank">퍼레이드(투어)</td>
+ <td class="cg_starlight_nonrank" data-event-type="5">퍼레이드(투어)</td>
  <td class="cgevents_all">(라이브 퍼레이드 17차) 푸른 하늘 엘</td>
  <td>기타</td>
  <td>5월 31일 15시 ~ 6월 7일 21시 (7박 8일)</td>
@@ -1589,7 +1602,7 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>133</td>
- <td class="cg_starlight_nonrank">캐러밴</td>
+ <td class="cg_starlight_nonrank" data-event-type="2">캐러밴</td>
  <td>신데렐라 캐러밴 27차</td>
  <td>-</td>
  <td>6월 11일 15시 ~ 18일 21시 (7박 8일)</td>
@@ -1655,7 +1668,7 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>139</td>
- <td class="cg_starlight_nonrank">캐러밴</td>
+ <td class="cg_starlight_nonrank" data-event-type="2">캐러밴</td>
  <td>신데렐라 캐러밴 28차</td>
  <td>-</td>
  <td>8월 11일 15시 ~ 17일 21시 (6박 7일)</td>
@@ -1710,7 +1723,7 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>144</td>
- <td class="cg_starlight_nonrank">퍼레이드(투어)</td>
+ <td class="cg_starlight_nonrank" data-event-type="5">퍼레이드(투어)</td>
  <td class="cgevents_passion">(라이브 퍼레이드 18차) Gossip Club</td>
  <td>기타</td>
  <td>9월 30일 15시 ~ 10월 8일 21시 (8박 9일)</td>
@@ -1721,7 +1734,7 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>145</td>
- <td class="cg_starlight_nonrank">캐러밴</td>
+ <td class="cg_starlight_nonrank" data-event-type="2">캐러밴</td>
  <td>신데렐라 캐러밴 29차</td>
  <td>-</td>
  <td>10월 11일 15시 ~ 17일 21시 (6박 7일)</td>
@@ -1776,7 +1789,7 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>150</td>
- <td class="cg_starlight_nonrank">퍼레이드(투어)</td>
+ <td class="cg_starlight_nonrank" data-event-type="5">퍼레이드(투어)</td>
  <td class="cgevents_all">(라이브 퍼레이드 19차) Sun! High! Gold!</td>
  <td>총선</td>
  <td>11월 30일 15시 ~ 12월 8일 21시 (8박 9일)</td>
@@ -1787,7 +1800,7 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>151</td>
- <td class="cg_starlight_nonrank">캐러밴</td>
+ <td class="cg_starlight_nonrank" data-event-type="2">캐러밴</td>
  <td>신데렐라 캐러밴 30차</td>
  <td>-</td>
  <td>12월 12일 15시 ~ 17일 21시 (5박 6일)</td>
@@ -1862,7 +1875,7 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>157</td>
- <td class="cg_starlight_nonrank">캐러밴</td>
+ <td class="cg_starlight_nonrank" data-event-type="2">캐러밴</td>
  <td>신데렐라 캐러밴 31차</td>
  <td>-</td>
  <td>2월 10일 15시 ~ 15일 21시 (5박 6일)</td>
@@ -1884,7 +1897,7 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>159</td>
- <td class="cg_starlight_nonrank">퍼레이드(투어)</td>
+ <td class="cg_starlight_nonrank" data-event-type="5">퍼레이드(투어)</td>
  <td class="cgevents_cool">(라이브 퍼레이드 20차) Gaze and Gaze</td>
  <td>오리지널</td>
  <td>2월 29일 12시 ~ 3월 8일 21시 (8박 9일)</td>
@@ -1929,7 +1942,7 @@ $(document).ready(function(){
 <tr><td class="cgevents_passion" colspan="2">혼다 미오</td></tr>
 <tr>
  <td>163</td>
- <td class="cg_starlight_nonrank">캐러밴</td>
+ <td class="cg_starlight_nonrank" data-event-type="2">캐러밴</td>
  <td>신데렐라 캐러밴 32차</td>
  <td>-</td>
  <td>4월 13일 15시 ~ 18일 21시 (5박 6일)</td>
@@ -1951,7 +1964,7 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>165</td>
- <td class="cg_starlight_nonrank">퍼레이드(투어)</td>
+ <td class="cg_starlight_nonrank" data-event-type="5">퍼레이드(투어)</td>
  <td class="cgevents_cool">(라이브 퍼레이드 21차) 오덕후 is LOVE!</td>
  <td>오리지널</td>
  <td>4월 30일 12시 ~ 5월 7일 21시 (7박 8일)</td>
