@@ -88,21 +88,17 @@ $(document).ready(function(){
  <li>연도 표기는 해당 이벤트의 시작 일자를 기준으로 합니다.</li>
  <li>2017년 9월 3일부터 라이브 파티가 <b>과거 이벤트 보상 복각용</b>의 <b>상시개최 모드</b>로 전환됨으로서 이벤트로서의 라이브 파티(협력 이벤트)는 폐지되었습니다.</li>
  <li>2020년 4월 이후의 이벤트 일정은 <abbr title="신종코로나바이러스감염증-19">코로나19(COVID-19)</abbr>의 현지 확산추세에 따라 <b>사전 통보 없이 변동될 수 있습니다.</b></li>
+ <li>다음 이벤트 형식만 보기: 
+  <select id="slevents_category" onselect="showSLEventCategory.choice();" onchange="showSLEventCategory.choice();">
+   <option value="0">모두</option>
+   <option value="1">재화수집</option>
+   <option value="2">캐러밴</option>
+   <option value="3">그루브(버스트)</option>
+   <option value="4">협력(파티)</option>
+   <option value="5">퍼레이드(투어)</option>
+  </select>
+ </li>
 </ul>
-
-<div id="starlight_events_category">
-다음 이벤트 형식만 보기: 
- <select id="slevents_category" onselect="showSLEventCategory.choice();" onchange="showSLEventCategory.choice();">
-  <option value="0">모두</option>
-  <option value="1">재화수집</option>
-  <option value="2">캐러밴</option>
-  <option value="3">그루브(버스트)</option>
-  <option value="4">협력(파티)</option>
-  <option value="5">퍼레이드(투어)</option>
- </select>
-</div>
-
-
 
 <h3>2015년도</h3>
 
