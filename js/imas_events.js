@@ -263,9 +263,6 @@ showGachaRemainingSL : function(){
      var eid = new Number(s[0].id);
      document.getElementById("theater_eid_j").value = eid;
      var $eTitle = document.createTextNode($("#theater_elist_j td[data-event-id][data-event-id!='-1']").last().html().replace(/<[^>]*>/g,"").replace("&amp;","&"));
-     var $eLast = new Number($("#theater_elist_j td[data-event-id]").last()[0].getAttribute("data-event-id"));
-
-     if($eLast < 0){$("#theater_elist_j td[data-event-id]").last()[0].setAttribute("data-event-id",eid);}
 
      var eInfoLink = document.createElement("a");
      eInfoLink.href = "https://mltd.matsurihi.me/events/"+eid;
