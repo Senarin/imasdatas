@@ -18,7 +18,8 @@ var starlightEventType = {
  3 : "그루브(버스트)",
  4 : "라이브 파티",
  5 : "퍼레이드(투어)",
- 6 : "로드"
+ 6 : "로드",
+ 7 : "카니발"
 };
 
 var requestPage = {
