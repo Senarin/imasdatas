@@ -714,7 +714,12 @@ var getTDEventRanksInfo = {
           var countTimestamp = g[0].data[numEntries1-1].summaryTime;
 
           if(eid == eidNow){alert("'"+$("#theater_elist_j td[data-event-id="+eid+"]").text()+"'의 "+countTimestamp+" 현재의 개인 이벤트 포인트 랭킹 정보\n\n"+infoText);}
-          else{alert("'"+$("#theater_elist_j td[data-event-id="+eid+"]").text()+"'의 최종 개인 이벤트 포인트 랭킹 정보\n\n"+infoText);}
+          else{
+           var resultNow = new Number(new Date());
+           var resultEnd = new Number(new Date(s.schedule.pageEndDate));
+           if(resultNow >= resultEnd-(97200 * 1000)){alert("'"+$("#theater_elist_j td[data-event-id="+eid+"]").text()+"'의 최종 개인 이벤트 포인트 랭킹 정보\n\n"+infoText);}
+           else{alert("'"+$("#theater_elist_j td[data-event-id="+eid+"]").text()+"'의 집계 기간 직전("+countTimestamp+")의 개인 이벤트 포인트 랭킹 정보\n\n"+infoText);}
+          }
          }else{
           alert("오류가 발생하였습니다. ["+r.status+"] 잠시 후 다시 시도해주세요.");
           console.log("오류가 발생하였습니다. ["+r.status+"] 잠시 후 다시 시도해주세요.");
