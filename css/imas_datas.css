@@ -22,14 +22,14 @@ font-size: 0.85em;
 
 #page_imasbirthday{
 background-image: url('/assets/imas15thanniv_logo.png');
-background-size: 96.1%;
+background-size: 28.3%;
 background-repeat: no-repeat;
 background-position: center;
 background-attachment: fixed;
 }
 
 #page_imasbirthday_bg_trans{
-z-index: 3;
+z-index: -3;
 width: 100%;
 height: 100%;
 position: fixed;
