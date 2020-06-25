@@ -38,7 +38,7 @@ left: 0;
 top: 0;
 background-color: rgba(255,255,255,0.5);
 }
-*/
+
 
 #page_starlightevents,#page_starlightsongs,#page_starlightgachas,#page_cgidolsmisc,#page_cgelectiondatas,#page_cgelection7th,#page_cgelection8th,#page_cgelection9th,#page_imascg_idolnumbers{
 background-image: url('/assets/imas_cg_emblem_trans.png');
@@ -55,6 +55,7 @@ background-repeat: no-repeat;
 background-position: center;
 background-attachment: fixed;
 }
+*/
 
 #scrollbutton{
 bottom: 0;
