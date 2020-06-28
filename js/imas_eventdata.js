@@ -111,12 +111,14 @@ var showTDAnniversaryEventData = {
     if(r.status == 200){
      if(idolId >= 1 && idolId <= 52){
       var g = JSON.parse(r.responseText);
+      if(typeof g[0] == "undefined"){alert("이벤트가 시작되지 않았거나 집계된 데이터가 없습니다.");return;}
       var numEntries1 = g[0].data.length;
       var numEntries2 = g[1].data.length;
       var numEntries3 = g[2].data.length;
       var numEntries10 = g[3].data.length;
       var numEntries100 = g[4].data.length;
       var numEntries1000 = g[5].data.length;
+
       document.getElementById("show_idolname_ml").innerHTML = MLIdolNames[idolId];
       
       var entryTimestamp = new Date(g[0].data[numEntries1-1].summaryTime);
@@ -125,15 +127,25 @@ var showTDAnniversaryEventData = {
 
       document.getElementById("idolrank_desc").style.display = "block";
       document.getElementById("please_select").style.display = "none";
-      
       document.getElementById("rank_timestamp").innerHTML = entryDate+" "+entryTime;
 
-      document.getElementById("idol_eventrank_1").innerHTML = g[0].data[numEntries1-1].score+"pts"; // 1위
-      document.getElementById("idol_eventrank_2").innerHTML = g[1].data[numEntries2-1].score+"pts"; // 2위
-      document.getElementById("idol_eventrank_3").innerHTML = g[2].data[numEntries3-1].score+"pts"; // 3위
-      document.getElementById("idol_eventrank_10").innerHTML = g[3].data[numEntries10-1].score+"pts"; // 10위 컷
-      document.getElementById("idol_eventrank_100").innerHTML = g[4].data[numEntries100-1].score+"pts"; // 100위 컷
-      document.getElementById("idol_eventrank_1000").innerHTML = g[5].data[numEntries1000-1].score+"pts"; // 입상(1000위) 컷
+      if(typeof g[0] != "undefined"){document.getElementById("idol_eventrank_1").innerHTML = g[0].data[numEntries1-1].score+"pts";} // 1위
+
+      if(typeof g[1] != "undefined"){document.getElementById("idol_eventrank_2").innerHTML = g[1].data[numEntries2-1].score+"pts";} // 2위
+      else{document.getElementById("idol_eventrank_2").innerHTML = "--";}
+
+      if(typeof g[2] != "undefined"){document.getElementById("idol_eventrank_3").innerHTML = g[2].data[numEntries3-1].score+"pts";} // 3위
+      else{document.getElementById("idol_eventrank_3").innerHTML = "--";}
+
+      if(typeof g[3] != "undefined"){document.getElementById("idol_eventrank_10").innerHTML = g[3].data[numEntries10-1].score+"pts";} // 10위 컷
+      else{document.getElementById("idol_eventrank_10").innerHTML = "--";}
+
+      if(typeof g[4] != "undefined"){document.getElementById("idol_eventrank_100").innerHTML = g[4].data[numEntries100-1].score+"pts";} // 100위 컷
+      else{document.getElementById("idol_eventrank_100").innerHTML = "--";}
+
+      if(typeof g[5] != "undefined"){document.getElementById("idol_eventrank_1000").innerHTML = g[5].data[numEntries1000-1].score+"pts";} // 입상(1000위) 컷
+      else{document.getElementById("idol_eventrank_1000").innerHTML = "--";}
+
      }else{
       document.getElementById("idolrank_desc").style.display = "none";
       document.getElementById("please_select").style.display = "block";
@@ -174,6 +186,7 @@ var showTDAnniversaryEventData = {
    if(r.readyState == 4){
     if(r.status == 200){
      var g = JSON.parse(r.responseText);
+     if(typeof g[0] == "undefined"){alert("이벤트가 시작되지 않았거나 집계된 데이터가 없습니다.");return;}
      var numEntries1 = g[0].data.length;
      var numEntries100 = g[1].data.length;
      var numEntries2500 = g[2].data.length;
@@ -188,13 +201,26 @@ var showTDAnniversaryEventData = {
       
      document.getElementById("rank_timestamp_overall").innerHTML = entryDate+" "+entryTime;
 
-     document.getElementById("idol_totalrank_1").innerHTML = g[0].data[numEntries1-1].score+"pts"; // 1위
-     document.getElementById("idol_totalrank_100").innerHTML = g[1].data[numEntries100-1].score+"pts"; // 100위 컷
-     document.getElementById("idol_totalrank_2500").innerHTML = g[2].data[numEntries2500-1].score+"pts"; // 2500위 컷
-     document.getElementById("idol_totalrank_5000").innerHTML = g[3].data[numEntries5000-1].score+"pts"; // 5000위 컷
-     document.getElementById("idol_totalrank_10000").innerHTML = g[4].data[numEntries10000-1].score+"pts"; // 10000위 컷
-     document.getElementById("idol_totalrank_25000").innerHTML = g[5].data[numEntries25000-1].score+"pts"; // 25000위 컷
-     document.getElementById("idol_totalrank_50000").innerHTML = g[6].data[numEntries50000-1].score+"pts"; // 50000위(입상) 컷
+     if(typeof g[0] != "undefined"){document.getElementById("idol_totalrank_1").innerHTML = g[0].data[numEntries1-1].score+"pts";} // 1위
+
+     if(typeof g[1] != "undefined"){document.getElementById("idol_totalrank_100").innerHTML = g[1].data[numEntries100-1].score+"pts";} // 100위 컷
+     else{document.getElementById("idol_totalrank_100").innerHTML = "--";}
+
+     if(typeof g[2] != "undefined"){document.getElementById("idol_totalrank_2500").innerHTML = g[2].data[numEntries2500-1].score+"pts";} // 2500위 컷
+     else{document.getElementById("idol_totalrank_2500").innerHTML = "--";}
+
+     if(typeof g[3] != "undefined"){document.getElementById("idol_totalrank_5000").innerHTML = g[3].data[numEntries5000-1].score+"pts";} // 5000위 컷
+     else{document.getElementById("idol_totalrank_5000").innerHTML = "--";}
+
+     if(typeof g[4] != "undefined"){document.getElementById("idol_totalrank_10000").innerHTML = g[4].data[numEntries10000-1].score+"pts";} // 10000위 컷
+     else{document.getElementById("idol_totalrank_10000").innerHTML = "--";}
+
+     if(typeof g[5] != "undefined"){document.getElementById("idol_totalrank_25000").innerHTML = g[5].data[numEntries25000-1].score+"pts";} // 25000위 컷
+     else{document.getElementById("idol_totalrank_25000").innerHTML = "--";}
+
+     if(typeof g[6] != "undefined"){document.getElementById("idol_totalrank_50000").innerHTML = g[6].data[numEntries50000-1].score+"pts";} // 50000위(입상) 컷
+     else{document.getElementById("idol_totalrank_50000").innerHTML = "--";}
+
     }else{
      alert("오류가 발생하였습니다. ["+r.status+"] 잠시 후 다시 시도해주세요.");
      console.log("오류가 발생하였습니다. ["+r.status+"] 잠시 후 다시 시도해주세요.");
