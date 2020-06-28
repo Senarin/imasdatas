@@ -263,18 +263,19 @@ showGachaRemainingSL : function(){
      }
      var eid = new Number(s[0].id);
      document.getElementById("theater_eid_j").value = eid;
-     
-     var $eTitle = document.createTextNode($("#theater_elist_j td[data-event-id][data-event-id!='-1']").last().html().replace(/<[^>]*>/g,"").replace("&amp;","&"));
-     var numEvents = $("#theater_elist_j td[data-event-id][data-event-id!='-1']").length;
 
      var startingTimestamp = new Number(new Date($("#theater_elist_j td[data-event-id][data-event-id!='-1']").last().data("eventStart")));
      var nowTimestamp = new Number(new Date());
 
-     
+     var numEvents = $("#theater_elist_j td[data-event-id][data-event-id!='-1']").length;
+
+     if(startingTimestamp > nowTimestamp){var $eTitle = document.createTextNode($("#theater_elist_j td[data-event-id][data-event-id!='-1']").eq(numEvents-1).html().replace(/<[^>]*>/g,"").replace("&amp;","&"));}
+     else{var $eTitle = document.createTextNode($("#theater_elist_j td[data-event-id][data-event-id!='-1']").last().html().replace(/<[^>]*>/g,"").replace("&amp;","&"));}
+
      var eInfoLink = document.createElement("a");
      eInfoLink.href = "https://mltd.matsurihi.me/events/"+eid;
      eInfoLink.target = "_blank";
-     if(startingTimestamp > nowTimestamp){$eTitle = document.createTextNode($("#theater_elist_j td[data-event-id][data-event-id!='-1']").eq(numEvents-1).html().replace(/<[^>]*>/g,"").replace("&amp;","&"));}
+
      eInfoLink.appendChild($eTitle);
      document.getElementById("theater_event_name_j").innerHTML = "";
      document.getElementById("theater_event_name_j").appendChild(eInfoLink);
