@@ -269,8 +269,8 @@ showGachaRemainingSL : function(){
 
      var numEvents = $("#theater_elist_j td[data-event-id][data-event-id!='-1']").length;
 
-     if(startingTimestamp > nowTimestamp){var $eTitle = document.createTextNode($("#theater_elist_j td[data-event-id][data-event-id!='-1']").eq(numEvents-1).html().replace(/<[^>]*>/g,"").replace("&amp;","&"));}
-     else{var $eTitle = document.createTextNode($("#theater_elist_j td[data-event-id][data-event-id!='-1']").last().html().replace(/<[^>]*>/g,"").replace("&amp;","&"));}
+     if(startingTimestamp <= nowTimestamp){var $eTitle = document.createTextNode($("#theater_elist_j td[data-event-id][data-event-id!='-1']").last().html().replace(/<[^>]*>/g,"").replace("&amp;","&"));}
+     else{var $eTitle = document.createTextNode($("#theater_elist_j td[data-event-id][data-event-id!='-1']").eq(numEvents-2).html().replace(/<[^>]*>/g,"").replace("&amp;","&"));}
 
      var eInfoLink = document.createElement("a");
      eInfoLink.href = "https://mltd.matsurihi.me/events/"+eid;
