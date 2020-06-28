@@ -1,5 +1,5 @@
 
-var annivEventIDs = new Array(44,92);
+var annivEventIDs = new Array(44,92,142);
 
 var MLIdolNames = {
  // 올스타즈
@@ -101,6 +101,7 @@ var showTDAnniversaryEventData = {
   var idolId = new Number(document.getElementById("idol_select").value);
   if(numAnniv == 1){var eid = 44;} // 1주년
   else if(numAnniv == 2){var eid = 92;} // 2주년
+  else if(numAnniv == 3){var eid = 142;} // 2주년
   else{return false;}
 
   var r = this.makeReq();
@@ -164,6 +165,7 @@ var showTDAnniversaryEventData = {
   var numAnniv = new Number(document.getElementById("anniv_select").value);
   if(numAnniv == 1){var eid = 44;} // 1주년
   else if(numAnniv == 2){var eid = 92;} // 2주년
+  else if(numAnniv == 3){var eid = 142;} // 2주년
   else{return false;}
 
   var r = this.makeReq();
