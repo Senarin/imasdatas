@@ -137,7 +137,7 @@ var showTDAnniversaryEventData = {
 
       document.getElementById("idolrank_desc").style.display = "block";
       document.getElementById("please_select").style.display = "none";
-      document.getElementById("rank_timestamp").innerHTML = entryDate+" "+entryTime;
+      document.getElementById("rank_timestamp").innerHTML = entryDate+" "+entryTime+" 현재";
 
       if(typeof g[0] != "undefined"){document.getElementById("idol_eventrank_1").innerHTML = g[0].data[numEntries1-1].score+"pts";} // 1위
 
@@ -220,7 +220,7 @@ var showTDAnniversaryEventData = {
      var entryDate = (entryTimestamp.getFullYear())+"년 "+(entryTimestamp.getMonth()+1)+"월 "+(entryTimestamp.getDate())+"일";
      var entryTime = (entryTimestamp.getHours())+"시 "+(entryTimestamp.getMinutes())+"분";
       
-     document.getElementById("rank_timestamp_overall").innerHTML = entryDate+" "+entryTime;
+     document.getElementById("rank_timestamp_overall").innerHTML = entryDate+" "+entryTime+" 현재";
 
      if(typeof g[0] != "undefined"){document.getElementById("idol_totalrank_1").innerHTML = g[0].data[numEntries1-1].score+"pts";} // 1위
 
