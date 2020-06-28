@@ -85,6 +85,7 @@ var showTDAnniversaryEventData = {
   if(boardType == 0){window.open("https://mltd.matsurihi.me/election/board/"+selectedIdol,"_blank");} // 배역 투표
   else if(boardType == 1){ // 2주년 이벤트
    if(dateChecksum >= 20190701 && dateChecksum < 20190714){window.open("https://mltd.matsurihi.me/events/92/boards/"+selectedIdol,"_blank");}
+   else if(dateChecksum >= 20200629 && dateChecksum < 20200712){window.open("https://mltd.matsurihi.me/events/142/boards/"+selectedIdol,"_blank");}
    else{alert("이벤트 기간 중에만 열람 가능합니다.");return;}
   }
   else{alert("올바르지 않은 컨벤션 센터 종류입니다.");return;}
