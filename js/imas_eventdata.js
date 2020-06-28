@@ -111,7 +111,17 @@ var showTDAnniversaryEventData = {
     if(r.status == 200){
      if(idolId >= 1 && idolId <= 52){
       var g = JSON.parse(r.responseText);
-      if(typeof g[0] == "undefined"){alert("이벤트가 시작되지 않았거나 집계된 데이터가 없습니다.");return;}
+      if(typeof g[0] == "undefined"){
+       alert("이벤트가 시작되지 않았거나 집계된 데이터가 없습니다.");
+       document.getElementById("rank_timestamp").innerHTML = "데이터 없음";
+       document.getElementById("idol_eventrank_1").innerHTML = "--";
+       document.getElementById("idol_eventrank_2").innerHTML = "--";
+       document.getElementById("idol_eventrank_3").innerHTML = "--";
+       document.getElementById("idol_eventrank_10").innerHTML = "--";
+       document.getElementById("idol_eventrank_100").innerHTML = "--";
+       document.getElementById("idol_eventrank_1000").innerHTML = "--";
+       return;
+      }
       var numEntries1 = g[0].data.length;
       var numEntries2 = g[1].data.length;
       var numEntries3 = g[2].data.length;
@@ -186,7 +196,18 @@ var showTDAnniversaryEventData = {
    if(r.readyState == 4){
     if(r.status == 200){
      var g = JSON.parse(r.responseText);
-     if(typeof g[0] == "undefined"){alert("이벤트가 시작되지 않았거나 집계된 데이터가 없습니다.");return;}
+     if(typeof g[0] == "undefined"){
+      alert("이벤트가 시작되지 않았거나 집계된 데이터가 없습니다.");
+      document.getElementById("rank_timestamp_overall").innerHTML = "데이터 없음";
+      document.getElementById("idol_totalrank_1").innerHTML = "--";
+      document.getElementById("idol_totalrank_100").innerHTML = "--";
+      document.getElementById("idol_totalrank_2500").innerHTML = "--";
+      document.getElementById("idol_totalrank_5000").innerHTML = "--";
+      document.getElementById("idol_totalrank_10000").innerHTML = "--";
+      document.getElementById("idol_totalrank_25000").innerHTML = "--";
+      document.getElementById("idol_totalrank_50000").innerHTML = "--";
+      return;
+     }
      var numEntries1 = g[0].data.length;
      var numEntries100 = g[1].data.length;
      var numEntries2500 = g[2].data.length;
