@@ -270,6 +270,7 @@ showGachaRemainingSL : function(){
      var startingTimestamp = new Number(new Date($("#theater_elist_j td[data-event-id][data-event-id!='-1']").last().data("eventStart")));
      var nowTimestamp = new Number(new Date());
 
+     
      var eInfoLink = document.createElement("a");
      eInfoLink.href = "https://mltd.matsurihi.me/events/"+eid;
      eInfoLink.target = "_blank";
