@@ -63,12 +63,20 @@ var showTDAnniversaryEventData = {
  makeReq : function(){return new XMLHttpRequest();},
 
  pageInit : function(){
+  var groupA = document.createElement("optgroup");
+  groupA.label = "올스타즈";
+  var groupT = document.createElement("optgroup");
+  groupT.label = "시어터조/39 프로젝트";
+
   for(i=1;i<=52;i++){
    var idolEntry = document.createElement("option");
    idolEntry.value = i;
    idolEntry.text = MLIdolNames[i];
-   document.getElementById("idol_select").add(idolEntry);
+   if(i <= 13){groupA.appendChild(idolEntry);}
+   else if(i >= 14){groupT.appendChild(idolEntry);}
   }
+  document.getElementById("idol_select").appendChild(groupA);
+  document.getElementById("idol_select").appendChild(groupT);
   var entryTimestamp = new Date();
   var entryDate = (entryTimestamp.getFullYear())+"년 "+(entryTimestamp.getMonth()+1)+"월 "+(entryTimestamp.getDate())+"일";
   var entryTime = (entryTimestamp.getHours())+"시 "+(entryTimestamp.getMinutes())+"분";
