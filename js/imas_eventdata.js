@@ -108,11 +108,11 @@ var showTDAnniversaryEventData = {
        return;
       }
       var numEntries1 = g[0].data.length;
-      var numEntries2 = g[1].data.length;
-      var numEntries3 = g[2].data.length;
-      var numEntries10 = g[3].data.length;
-      var numEntries100 = g[4].data.length;
-      var numEntries1000 = g[5].data.length;
+      if(typeof g[1] != "undefined"){var numEntries2 = g[1].data.length;}
+      if(typeof g[2] != "undefined"){var numEntries3 = g[2].data.length;}
+      if(typeof g[3] != "undefined"){var numEntries10 = g[3].data.length;}
+      if(typeof g[4] != "undefined"){var numEntries100 = g[4].data.length;}
+      if(typeof g[5] != "undefined"){var numEntries1000 = g[5].data.length;}
 
       document.getElementById("show_idolname_ml").innerHTML = MLIdolNames[idolId];
       
@@ -194,12 +194,12 @@ var showTDAnniversaryEventData = {
       return;
      }
      var numEntries1 = g[0].data.length;
-     var numEntries100 = g[1].data.length;
-     var numEntries2500 = g[2].data.length;
-     var numEntries5000 = g[3].data.length;
-     var numEntries10000 = g[4].data.length;
-     var numEntries25000 = g[5].data.length;
-     var numEntries50000 = g[6].data.length;
+     if(typeof g[1] != "undefined"){var numEntries100 = g[1].data.length;}
+     if(typeof g[2] != "undefined"){var numEntries2500 = g[2].data.length;}
+     if(typeof g[3] != "undefined"){var numEntries5000 = g[3].data.length;}
+     if(typeof g[4] != "undefined"){var numEntries10000 = g[4].data.length;}
+     if(typeof g[5] != "undefined"){var numEntries25000 = g[5].data.length;}
+     if(typeof g[6] != "undefined"){var numEntries50000 = g[6].data.length;}
      
      var entryTimestamp = new Date(g[0].data[numEntries1-1].summaryTime);
      var entryDate = (entryTimestamp.getFullYear())+"년 "+(entryTimestamp.getMonth()+1)+"월 "+(entryTimestamp.getDate())+"일";
