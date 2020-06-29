@@ -64,7 +64,7 @@ var showTDAnniversaryEventData = {
 
  pageInit : function(){
   var groupA = document.createElement("optgroup");
-  groupA.label = "올스타즈";
+  groupA.label = "765 올스타즈";
   var groupT = document.createElement("optgroup");
   groupT.label = "시어터조/39 프로젝트";
 
