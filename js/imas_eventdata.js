@@ -263,6 +263,8 @@ var showTDAnniversaryEventData = {
         alert("이벤트가 시작되지 않았거나 집계된 데이터가 없습니다.");
         document.getElementById("rank_timestamp_guild").innerHTML = "데이터 없음";
         document.getElementById("idol_guildrank_1").innerHTML = "--";
+        document.getElementById("idol_guildrank_2").innerHTML = "--";
+        document.getElementById("idol_guildrank_3").innerHTML = "--";
         document.getElementById("idol_guildrank_10").innerHTML = "--";
         document.getElementById("idol_guildrank_50").innerHTML = "--";
         document.getElementById("idol_guildrank_100").innerHTML = "--";
@@ -271,11 +273,13 @@ var showTDAnniversaryEventData = {
         return;
        }
        var numEntries1 = g[0].data.length;
-       if(typeof g[1] != "undefined"){var numEntries10 = g[1].data.length;}
-       if(typeof g[2] != "undefined"){var numEntries50 = g[2].data.length;}
-       if(typeof g[3] != "undefined"){var numEntries100 = g[3].data.length;}
-       if(typeof g[4] != "undefined"){var numEntries250 = g[4].data.length;}
-       if(typeof g[5] != "undefined"){var numEntries500 = g[5].data.length;}
+       if(typeof g[1] != "undefined"){var numEntries2 = g[1].data.length;}
+       if(typeof g[2] != "undefined"){var numEntries3 = g[2].data.length;}
+       if(typeof g[3] != "undefined"){var numEntries10 = g[3].data.length;}
+       if(typeof g[4] != "undefined"){var numEntries50 = g[4].data.length;}
+       if(typeof g[5] != "undefined"){var numEntries100 = g[5].data.length;}
+       if(typeof g[6] != "undefined"){var numEntries250 = g[6].data.length;}
+       if(typeof g[7] != "undefined"){var numEntries500 = g[7].data.length;}
        
        var entryTimestamp = new Date(g[0].data[numEntries1-1].summaryTime);
        var entryDate = (entryTimestamp.getFullYear())+"년 "+(entryTimestamp.getMonth()+1)+"월 "+(entryTimestamp.getDate())+"일";
@@ -285,19 +289,25 @@ var showTDAnniversaryEventData = {
   
        if(typeof g[0] != "undefined"){document.getElementById("idol_guildrank_1").innerHTML = g[0].data[numEntries1-1].score+"pts";} // 라운지 1위
   
-       if(typeof g[1] != "undefined"){document.getElementById("idol_guildrank_10").innerHTML = g[1].data[numEntries10-1].score+"pts";} // 라운지: 10위 컷
+       if(typeof g[1] != "undefined"){document.getElementById("idol_guildrank_2").innerHTML = g[1].data[numEntries2-1].score+"pts";} // 라운지 2위
+       else{document.getElementById("idol_guildrank_2").innerHTML = "--";}
+
+       if(typeof g[2] != "undefined"){document.getElementById("idol_guildrank_3").innerHTML = g[2].data[numEntries3-1].score+"pts";} // 라운지 3위
+       else{document.getElementById("idol_guildrank_3").innerHTML = "--";}
+
+       if(typeof g[3] != "undefined"){document.getElementById("idol_guildrank_10").innerHTML = g[3].data[numEntries10-1].score+"pts";} // 라운지: 10위 컷
        else{document.getElementById("idol_guildrank_10").innerHTML = "--";}
   
-       if(typeof g[2] != "undefined"){document.getElementById("idol_guildrank_50").innerHTML = g[2].data[numEntries50-1].score+"pts";} // 라운지: 50위 컷
+       if(typeof g[4] != "undefined"){document.getElementById("idol_guildrank_50").innerHTML = g[4].data[numEntries50-1].score+"pts";} // 라운지: 50위 컷
        else{document.getElementById("idol_guildrank_50").innerHTML = "--";}
   
-       if(typeof g[3] != "undefined"){document.getElementById("idol_guildrank_100").innerHTML = g[3].data[numEntries100-1].score+"pts";} // 라운지: 100위 컷
+       if(typeof g[5] != "undefined"){document.getElementById("idol_guildrank_100").innerHTML = g[5].data[numEntries100-1].score+"pts";} // 라운지: 100위 컷
        else{document.getElementById("idol_guildrank_100").innerHTML = "--";}
   
-       if(typeof g[4] != "undefined"){document.getElementById("idol_guildrank_250").innerHTML = g[4].data[numEntries250-1].score+"pts";} // 라운지: 250위 컷
+       if(typeof g[6] != "undefined"){document.getElementById("idol_guildrank_250").innerHTML = g[6].data[numEntries250-1].score+"pts";} // 라운지: 250위 컷
        else{document.getElementById("idol_guildrank_250").innerHTML = "--";}
   
-       if(typeof g[5] != "undefined"){document.getElementById("idol_guildrank_500").innerHTML = g[5].data[numEntries500-1].score+"pts";} // 라운지: 500위 컷
+       if(typeof g[7] != "undefined"){document.getElementById("idol_guildrank_500").innerHTML = g[7].data[numEntries500-1].score+"pts";} // 라운지: 500위 컷
        else{document.getElementById("idol_guildrank_500").innerHTML = "--";}
   
   
