@@ -316,7 +316,7 @@ var showTDAnniversaryEventData = {
      }
     };
   
-    r.open("GET","https://api.matsurihi.me/mltd/v1/events/"+eid+"/rankings/logs/loungePoint/1,10,50,100,250,500?prettyPrint=false");
+    r.open("GET","https://api.matsurihi.me/mltd/v1/events/"+eid+"/rankings/logs/loungePoint/1,2,3,10,50,100,250,500?prettyPrint=false");
     r.send();
    },
 
