@@ -261,7 +261,7 @@ background-color: #FFBF50;
 }
 
 
-#idolrank_desc,#please_select,#totalrank_desc{text-align: center;}
+#idolrank_desc,#please_select,#totalrank_desc,#guildrank_desc{text-align: center;}
 
 .cgsongs_periodic,.cggachas_pickups,.mlgachas_pickups{text-align: left;}
 

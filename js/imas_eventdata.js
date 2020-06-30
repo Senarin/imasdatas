@@ -246,8 +246,75 @@ var showTDAnniversaryEventData = {
   r.send();
  },
 
+ retrieveGuild : function(){
+    var numAnniv = new Number(document.getElementById("anniv_select").value);
+    if(numAnniv == 1){var eid = 44;} // 1주년
+    else if(numAnniv == 2){var eid = 92;} // 2주년
+    else if(numAnniv == 3){var eid = 142;} // 2주년
+    else{return false;}
+  
+    var r = this.makeReq();
+  
+    r.onreadystatechange = function(){
+     if(r.readyState == 4){
+      if(r.status == 200){
+       var g = JSON.parse(r.responseText);
+       if(typeof g[0] == "undefined"){
+        alert("이벤트가 시작되지 않았거나 집계된 데이터가 없습니다.");
+        document.getElementById("rank_timestamp_guild").innerHTML = "데이터 없음";
+        document.getElementById("idol_guildrank_1").innerHTML = "--";
+        document.getElementById("idol_guildrank_10").innerHTML = "--";
+        document.getElementById("idol_guildrank_50").innerHTML = "--";
+        document.getElementById("idol_guildrank_100").innerHTML = "--";
+        document.getElementById("idol_guildrank_250").innerHTML = "--";
+        document.getElementById("idol_guildrank_500").innerHTML = "--";
+        return;
+       }
+       var numEntries1 = g[0].data.length;
+       if(typeof g[1] != "undefined"){var numEntries10 = g[1].data.length;}
+       if(typeof g[2] != "undefined"){var numEntries50 = g[2].data.length;}
+       if(typeof g[3] != "undefined"){var numEntries100 = g[3].data.length;}
+       if(typeof g[4] != "undefined"){var numEntries250 = g[4].data.length;}
+       if(typeof g[5] != "undefined"){var numEntries500 = g[5].data.length;}
+       
+       var entryTimestamp = new Date(g[0].data[numEntries1-1].summaryTime);
+       var entryDate = (entryTimestamp.getFullYear())+"년 "+(entryTimestamp.getMonth()+1)+"월 "+(entryTimestamp.getDate())+"일";
+       var entryTime = (entryTimestamp.getHours())+"시 "+(entryTimestamp.getMinutes())+"분";
+        
+       document.getElementById("rank_timestamp_guild").innerHTML = entryDate+" "+entryTime+" 현재";
+  
+       if(typeof g[0] != "undefined"){document.getElementById("idol_guildrank_1").innerHTML = g[0].data[numEntries1-1].score+"pts";} // 라운지 1위
+  
+       if(typeof g[1] != "undefined"){document.getElementById("idol_guildrank_10").innerHTML = g[1].data[numEntries10-1].score+"pts";} // 라운지: 10위 컷
+       else{document.getElementById("idol_guildrank_10").innerHTML = "--";}
+  
+       if(typeof g[2] != "undefined"){document.getElementById("idol_guildrank_50").innerHTML = g[2].data[numEntries50-1].score+"pts";} // 라운지: 50위 컷
+       else{document.getElementById("idol_guildrank_50").innerHTML = "--";}
+  
+       if(typeof g[3] != "undefined"){document.getElementById("idol_guildrank_100").innerHTML = g[3].data[numEntries100-1].score+"pts";} // 라운지: 100위 컷
+       else{document.getElementById("idol_guildrank_100").innerHTML = "--";}
+  
+       if(typeof g[4] != "undefined"){document.getElementById("idol_guildrank_250").innerHTML = g[4].data[numEntries250-1].score+"pts";} // 라운지: 250위 컷
+       else{document.getElementById("idol_guildrank_250").innerHTML = "--";}
+  
+       if(typeof g[5] != "undefined"){document.getElementById("idol_guildrank_500").innerHTML = g[5].data[numEntries500-1].score+"pts";} // 라운지: 500위 컷
+       else{document.getElementById("idol_guildrank_500").innerHTML = "--";}
+  
+  
+      }else{
+       alert("오류가 발생하였습니다. ["+r.status+"] 잠시 후 다시 시도해주세요.");
+       console.log("오류가 발생하였습니다. ["+r.status+"] 잠시 후 다시 시도해주세요.");
+      }
+     }
+    };
+  
+    r.open("GET","https://api.matsurihi.me/mltd/v1/events/"+eid+"/rankings/logs/loungePoint/1,10,50,100,250,500?prettyPrint=false");
+    r.send();
+   },
+
  retrieveAll : function(){
   this.retrieveData();
   this.retrieveTotal();
+  this.retrieveGuild();
  }
 };
