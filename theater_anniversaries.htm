@@ -63,12 +63,16 @@ $(document).ready(function(){
  <select id="idol_select" onchange="showTDAnniversaryEventData.retrieveAll();" onselect="showTDAnniversaryEventData.retrieveAll();">
   <option value="0">(아이돌 선택)</option>
  </select>
+ <input type="hidden" id="recent_manual_reload" value="0" />
  <br />
  <div style="text-align: center; font-size: 0.85em; margin-top: 2em;">
   [<a href="javascript:;" onclick="showTDAnniversaryEventData.goIdolInfo();">선택한 아이돌의 정보 페이지 바로가기</a>]
  </div>
- <div style="text-align: center; font-size: 0.85em; ">
+ <div style="text-align: center; font-size: 0.85em;">
  (각 아이돌별 컨벤션 센터는 게임 내에서 열람, 작성이 가능합니다)
+ </div>
+ <div style="text-align: center; font-size: 0.85em;">
+  [<a href="javascript:;" onclick="showTDAnniversaryEventData.manualReload();"><img id="reload_button" src="/assets/reload.png" style="width: 16px; height: auto;" /> 수동 새로고침</a>]
  </div>
 </div>
 
