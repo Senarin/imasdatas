@@ -309,8 +309,6 @@ var showTDAnniversaryEventData = {
   
        if(typeof g[7] != "undefined"){document.getElementById("idol_guildrank_500").innerHTML = g[7].data[numEntries500-1].score+"pts";} // 라운지: 500위 컷
        else{document.getElementById("idol_guildrank_500").innerHTML = "--";}
-  
-  
       }else{
        alert("오류가 발생하였습니다. ["+r.status+"] 잠시 후 다시 시도해주세요.");
        console.log("오류가 발생하였습니다. ["+r.status+"] 잠시 후 다시 시도해주세요.");
