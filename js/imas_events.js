@@ -357,6 +357,123 @@ showGachaRemainingSL : function(){
   r.send();
  },
 
+ showRemainingTDKorean : function(){
+  var r = requestPage.makeRequest();
+
+  r.onreadystatechange = function(){
+   if(r.readyState == 4){
+    if(r.status == 200){
+     var s = JSON.parse(r.responseText);
+     if(s.length == 0){
+      document.getElementById("countdown_time_k").innerHTML = "개최 중인 이벤트가 없습니다.";
+      document.getElementById("theater_event_name_k").innerHTML = "(개최 중인 이벤트가 없습니다)";
+      document.getElementById("theater_ename_orig_k").style.display = "none";
+      document.getElementById("boost_time_k").innerHTML = "";
+      document.getElementById("boost_countdown_k").style.display = "none";
+      document.getElementById("nearend_event_k").style.display = "none";
+      console.log("["+(new Date()).toLocaleString()+"] [한국어판] 현재 개최 중인 이벤트가 없습니다.");
+      return;
+     }
+     var eid = new Number(s[0].id);
+     document.getElementById("theater_eid_k").value = eid;
+
+     var startingTimestamp = new Number(new Date($("#theater_elist_k td[data-event-id][data-event-id!='-1']").last().data("eventStart")));
+     var nowTimestamp = new Number(new Date());
+
+     var numEvents = $("#theater_elist_k td[data-event-id][data-event-id!='-1']").length;
+
+     if(startingTimestamp <= nowTimestamp){var $eTitle = document.createTextNode($("#theater_elist_k td[data-event-id][data-event-id!='-1']").last().html().replace(/<[^>]*>/g,"").replace("&amp;","&"));}
+     else{var $eTitle = document.createTextNode($("#theater_elist_k td[data-event-id][data-event-id!='-1']").eq(numEvents-2).html().replace(/<[^>]*>/g,"").replace("&amp;","&"));}
+
+     var eInfoLink = document.createElement("a");
+     eInfoLink.href = "https://unionlive.kr/events";
+     eInfoLink.target = "_blank";
+
+     eInfoLink.appendChild($eTitle);
+     document.getElementById("theater_event_name_k").innerHTML = "";
+     document.getElementById("theater_event_name_k").appendChild(eInfoLink);
+     document.getElementById("theater_ename_orig_k").innerHTML = "("+s[0].name+")";
+     document.getElementById("theater_ename_orig_k").style.display = "inline-block";
+     
+     console.log("["+(new Date()).toLocaleString()+"] [한국어판] 현재 개최 중인 이벤트 종류 : "+theaterEventType[s[0].type]);
+
+     var eDateTime0 = new Number(new Date(s[0].schedule.endDate));
+     var eDateTime = new Date(eDateTime0+1000);
+     var eYear = eDateTime.getFullYear();
+     var eMonth = eDateTime.getMonth()+1;
+     var eDay = eDateTime.getDate();
+     var eHours = eDateTime.getHours();
+     var eMins = eDateTime.getMinutes();
+     var eSecs = eDateTime.getSeconds();
+
+     setInterval(function(){tickEvent.remain(eYear,eMonth,eDay,eHours,eMins,eSecs);},50);
+
+     var dateTimeNow = new Number(new Date());
+     var nearEndThreshold = 0;
+     var underdayRemain = 86400;
+
+     if(s[0].type == 3 || s[0].type == 4){nearEndThreshold = 43200;} // PST 이벤트 (3 = 시어터, 4 = 투어)
+     else if(s[0].type == 2 || s[0].type == 9){nearEndThreshold = 21600;} // 밀리코레
+     else if(s[0].type == 5){nearEndThreshold = 43200;} // n주년 이벤트
+     else if(s[0].type == 6){nearEndThreshold = 10800;} // 워킹
+     else if(s[0].type == 7){nearEndThreshold = 3600;} // 만우절 특별 이벤트
+     else{nearEndThreshold = 21600;} // 그 외
+
+     if((eDateTime - dateTimeNow) <= (underdayRemain * 1000) && (eDateTime - dateTimeNow) > (nearEndThreshold * 1000)){document.getElementById("underday_event_k").style.display = "block";}
+     else if((eDateTime - dateTimeNow) <= (nearEndThreshold * 1000)){document.getElementById("underday_event_k").style.display = "none";}
+
+     if((eDateTime - dateTimeNow) <= (nearEndThreshold * 1000)){document.getElementById("nearend_event_k").style.display = "block";}
+     else if((eDateTime - dateTimeNow) <= 0){document.getElementById("nearend_event_k").style.display = "none";}
+
+     if((eDateTime - dateTimeNow) <= 0){document.getElementById("theater_ename_orig_k").style.display = "none";}
+     
+     if("boostBeginDate" in s[0].schedule){ // 후반전이 존재할 경우
+      var bDateTime = new Date(s[0].schedule.boostBeginDate);
+      var bYear = bDateTime.getFullYear();
+      var bMonth = bDateTime.getMonth()+1;
+      var bDay = bDateTime.getDate();
+      var bHours = bDateTime.getHours();
+      var bMins = bDateTime.getMinutes();
+      var bSecs = bDateTime.getSeconds();
+ 
+      setInterval(function(){tickEvent.boost(bYear,bMonth,bDay,bHours,bMins,bSecs);},50);
+     }else{
+      document.getElementById("boost_time_k").innerHTML = "";
+      document.getElementById("boost_countdown_k").style.display = "none";
+      console.log("["+(new Date()).toLocaleString()+"] [한국어판] 현재 개최 중인 이벤트는 후반전이 없는 이벤트 형식입니다.");
+     }
+
+     if(s[0].type == 3){ // 시어터 이벤트인 경우에만 어필치 보너스 적용
+      var aTypeText = "";
+      if("appealType" in s[0]){
+       if(s[0].appealType == 1){aTypeText = "보컬(Vo)";}
+       else if(s[0].appealType == 2){aTypeText = "댄스(Da)";}
+       else if(s[0].appealType == 3){aTypeText = "비쥬얼(Vi)";}
+       else{aTypeText = "보너스 없음";}
+      }else{aTypeText = "보너스 없음";}
+      console.log("["+(new Date()).toLocaleString()+"] [한국어판] 이벤트 보너스 적용 어필치 : "+aTypeText);
+     }
+    }else{
+     alert("오류가 발생했습니다. ["+r.status+"]");
+     document.getElementById("countdown_time_k").innerHTML = "서버가 점검 중이거나 오류가 발생했습니다. 잠시 후 다시 시도해주세요.";
+     return false;
+    }
+   }
+  };
+
+  var nowDate = new Date();
+  var tzAdjust = ((540 - ((-1) * nowDate.getTimezoneOffset())) * 60000); // 한일 시간대(UTC+9) 에 맞춰서 조정
+  var adjustedDate = new Date(new Number(nowDate)+(((-1) * nowDate.getTimezoneOffset() * 60000)+tzAdjust));
+  var dt = adjustedDate.toISOString().replace("Z","");
+
+  r.open("GET","https://api.matsurihi.me/mltd/v1/ko/events?at="+dt);
+  r.send();
+ },
+
+
+
+
+
  showResultRemainingTD : function(){
   var r = requestPage.makeRequest();
 

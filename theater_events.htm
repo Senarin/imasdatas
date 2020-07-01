@@ -12,10 +12,15 @@
 <script type="text/javascript" src="./js/imas_events.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
+ // 일본어판
  showRemainingTime.showRemainingTD();
  showRemainingTime.showResultRemainingTD();
  setInterval("showRemainingTime.showRemainingTD();",600 * 1000);
  setInterval("showRemainingTime.showResultRemainingTD();",3600 * 1000);
+
+ // 한국어판
+ showRemainingTime.showRemainingTDKorean();
+ setInterval("showRemainingTime.showRemainingTDKorean();",600 * 1000);
 
  $("#theater_elist_j td[data-event-id][class^='mlsongs_']").each(function(index,item){
   $(item).click(function(){getTDEventRanksInfo.retrieveData($(item).data("eventId"));});
@@ -28,7 +33,7 @@ $(document).ready(function(){
 <div id="headtext">
 <h1><img src="./assets/theaterdays_logo_kr.png" id="theaterdayslogo" alt="Theater Days" title="Theater Days" />&nbsp;시어터 데이즈 역대 정규 이벤트 일람</h1>
 <div id="author_info">제작자 : <a href="https://about.yukina.kr/">유키나</a> (<a href="http://yukina.kr/">블로그</a>)</div>
-<div id="recent_edit">최근 수정 2020.6.28</div>
+<div id="recent_edit">최근 수정 2020.7.1</div>
 </div>
 <p>(<a href="./">첫 페이지로 가기</a>)</p>
 <ul>
@@ -100,6 +105,25 @@ $(document).ready(function(){
  <sub>정보제공: <a href="https://matsurihi.me">matsurihi.me</a> (日)</sub>
 </div>
 
+
+<div id="event_countdown_k">
+ <h3>현재 개최중인 이벤트 제목 (한국어판 기준)</h3>
+ <div id="theater_event_name_k"><img src="./assets/loading.gif" style="width: 24px; height: auto;" alt="Loading" /> 가져오는 중...</div>
+ <sub id="theater_ename_orig_k" style="display: none;"></sub>
+ <input type="hidden" id="theater_eid_k" value="0" />
+ <h3>이벤트 종료까지 남은 시간 (한국어판 기준)</h3>
+ <div id="countdown_time_k"><img src="./assets/loading.gif" style="width: 24px; height: auto;" alt="Loading" /> 가져오는 중...</div>
+ <sub id="nearend_event_k" style="display: none;">종료 임박!!</sub>
+ <sub id="underday_event_k" style="display: none;">얼마 남지 않았습니다. 서두르세요.</sub>
+   
+ <sub>정보제공: <a href="https://matsurihi.me">matsurihi.me</a> (日)</sub>
+</div>
+
+<div id="boost_countdown_k">
+ <h3>후반전 시작까지 남은 시간 (한국어판 기준)</h3>
+ <div id="boost_time_k"><img src="./assets/loading.gif" style="width: 24px; height: auto;" alt="Loading" /> 가져오는 중...</div>
+ <sub>정보제공: <a href="https://matsurihi.me">matsurihi.me</a> (日)</sub>
+</div>
 
 <div id="theater_elist">
 
@@ -1613,7 +1637,7 @@ $(document).ready(function(){
 <tr>
  <td>A-1</td>
  <td class="ml_platinum_theater"><b>재화(PSTheater)</b></td>
- <td class="mlsongs_fairy">플래티넘 스타 시어터 ~Shooting Stars~</td>
+ <td class="mlsongs_fairy" data-event-id="4">플래티넘 스타 시어터 ~Shooting Stars~</td>
  <td><abbr title="Live The@ter Harmony">LTH</abbr> (3탄)</td>
  <td>9월 4일 15시 ~ 12일 21시 (198시간)</td>
  <td class="mlevents_fairy">키타자와 시호</td>
@@ -1623,7 +1647,7 @@ $(document).ready(function(){
 <tr>
  <td rowspan="3">A-2</td>
  <td rowspan="3" class="ml_theater_nonrank">컬렉션</td>
- <td rowspan="3">밀리언 라이브 콜렉션 (A-1차)</td>
+ <td rowspan="3" data-event-id="5">밀리언 라이브 콜렉션 (A-1차)</td>
  <td rowspan="3">-</td>
  <td rowspan="3">9월 13일 15시 ~ 19일 21시 (6박 7일)</td>
  <td class="mlevents_princess">사타케 미나코</td>
@@ -1641,7 +1665,7 @@ $(document).ready(function(){
 <tr>
  <td>A-3</td>
  <td class="ml_platinum_theater">재화(PSTheater)</td>
- <td class="mlsongs_angel">플래티넘 스타 시어터 ~Good-Sleep, Baby♡~</td>
+ <td class="mlsongs_angel" data-event-id="7">플래티넘 스타 시어터 ~Good-Sleep, Baby♡~</td>
  <td><abbr title="Live The@ter Performance">LTP</abbr> (8탄)</td>
  <td>9월 20일 15시 ~ 27일 21시 (174시간)</td>
  <td class="mlevents_angel">타카츠키 야요이</td>
@@ -1651,7 +1675,7 @@ $(document).ready(function(){
 <tr>
  <td>A-4</td>
  <td class="ml_theater_nonrank">추가보상형</td>
- <td>THEATER SHOW TIME☆ (A-1차)</td>
+ <td data-event-id="6">THEATER SHOW TIME☆ (A-1차)</td>
  <td>-</td>
  <td>9월 28일 15시 ~ 29일 21시 (1박 2일)</td>
  <td>-</td>
@@ -1661,7 +1685,7 @@ $(document).ready(function(){
 <tr>
  <td>A-5</td>
  <td class="ml_platinum_theater">재화(PSTheater)</td>
- <td class="mlsongs_princess">플래티넘 스타 시어터 ~Growing Storm!~</td>
+ <td class="mlsongs_princess" data-event-id="9">플래티넘 스타 시어터 ~Growing Storm!~</td>
  <td><abbr title="Live The@ter Harmony">LTH</abbr> (2탄)</td>
  <td>9월 30일 15시 ~ 10월 10일 21시 (<b>246시간</b>)</td>
  <td class="mlevents_princess">나나오 유리코</td>
@@ -1671,7 +1695,7 @@ $(document).ready(function(){
 <tr>
  <td>A-6</td>
  <td class="ml_theater_nonrank">컬렉션</td>
- <td>밀리언 라이브 콜렉션 (A-2차)</td>
+ <td data-event-id="10">밀리언 라이브 콜렉션 (A-2차)</td>
  <td>-</td>
  <td>10월 12일 15시 ~ 18일 21시 (6박 7일)</td>
  <td class="mlevents_angel">하코자키 세리카</td>
@@ -1681,7 +1705,7 @@ $(document).ready(function(){
 <tr>
  <td>A-7</td>
  <td class="ml_platinum_tour"><b>투어(PSTour)</b></td>
- <td class="mlsongs_fairy">플래티넘 스타 투어 ~FairyTale로는 있을 수 없어~</td>
+ <td class="mlsongs_fairy" data-event-id="11">플래티넘 스타 투어 ~FairyTale로는 있을 수 없어~</td>
  <td><b>오리지널 <abbr title="Million The@ter Generation">(MTG)</abbr></b></td>
  <td>10월 20일 15시 ~ 30일 21시 (246시간)</td>
  <td class="mlevents_fairy">모가미 시즈카</td>
@@ -1691,7 +1715,7 @@ $(document).ready(function(){
 <tr>
  <td>A-8</td>
  <td class="ml_platinum_theater">재화(PSTheater)</td>
- <td class="mlsongs_angel">플래티넘 스타 시어터 ~STANDING ALIVE~</td>
+ <td class="mlsongs_angel" data-event-id="12">플래티넘 스타 시어터 ~STANDING ALIVE~</td>
  <td><abbr title="Live The@ter Harmony">LTH</abbr> (10탄)</td>
  <td>11월 1일 15시 ~ 9일 21시 (199시간)</td>
  <td class="mlevents_fairy">모모세 리오</td>
@@ -1701,7 +1725,7 @@ $(document).ready(function(){
 <tr>
  <td>A-9</td>
  <td class="ml_theater_nonrank">컬렉션</td>
- <td>밀리언 라이브 콜렉션 (A-3차)</td>
+ <td data-event-id="13">밀리언 라이브 콜렉션 (A-3차)</td>
  <td>-</td>
  <td>11월 11일 15시 ~ 19일 21시 (8박 9일)</td>
  <td class="mlevents_princess">코사카 우미</td>
@@ -1711,7 +1735,7 @@ $(document).ready(function(){
 <tr>
  <td>A-10</td>
  <td class="ml_platinum_tour">투어(PSTour)</td>
- <td class="mlsongs_angel">플래티넘 스타 투어 ~Angelic Parade♪~</td>
+ <td class="mlsongs_angel" data-event-id="14">플래티넘 스타 투어 ~Angelic Parade♪~</td>
  <td>오리지널 (MTG)</td>
  <td>11월 21일 15시 ~ 28일 21시 (174시간)</td>
  <td class="mlevents_angel">이부키 츠바사</td>
@@ -1721,7 +1745,7 @@ $(document).ready(function(){
 <tr>
  <td>A-11</td>
  <td class="ml_theater_nonrank">추가보상형</td>
- <td>THEATER SHOW TIME☆ (A-1차)</td>
+ <td data-event-id="36">THEATER SHOW TIME☆ (A-1차)</td>
  <td>-</td>
  <td>11월 30일 15시 ~ 12월 2일 21시 (2박 3일)</td>
  <td>-</td>
@@ -1731,7 +1755,7 @@ $(document).ready(function(){
 <tr>
  <td>A-12</td>
  <td class="ml_platinum_theater">재화(PSTheater)</td>
- <td class="mlsongs_angel">플래티넘 스타 시어터 ~드림 트래블러~</td>
+ <td class="mlsongs_angel" data-event-id="15">플래티넘 스타 시어터 ~드림 트래블러~</td>
  <td><abbr title="Live The@ter Harmony">LTH</abbr> (8탄)</td>
  <td>12월 4일 15시 ~ 11일 21시 (174시간)</td>
  <td class="mlevents_angel">후타미 마미</td>
@@ -1741,7 +1765,7 @@ $(document).ready(function(){
 <tr>
  <td>A-13</td>
  <td class="ml_theater_nonrank">컬렉션</td>
- <td>밀리언 라이브 콜렉션 (A-4차)</td>
+ <td data-event-id="16">밀리언 라이브 콜렉션 (A-4차)</td>
  <td>-</td>
  <td>12월 13일 15시 ~ 19일 21시 (6박 7일)</td>
  <td class="mlevents_fairy">한다 로코</td>
@@ -1751,7 +1775,7 @@ $(document).ready(function(){
 <tr>
  <td>A-14</td>
  <td class="ml_platinum_tour">투어(PSTour)</td>
- <td class="mlsongs_princess">플래티넘 스타 투어 ~Princess Be Ambitious!!~</td>
+ <td class="mlsongs_princess" data-event-id="17">플래티넘 스타 투어 ~Princess Be Ambitious!!~</td>
  <td>오리지널 (MTG)</td>
  <td>12월 21일 15시 ~ 29일 21시 (198시간)</td>
  <td class="mlevents_princess">카스가 미라이</td>
@@ -1761,7 +1785,7 @@ $(document).ready(function(){
 <tr>
  <td>A-15</td>
  <td class="ml_theater_nonrank">추가보상형</td>
- <td>THEATER SHOW TIME☆ (5차)</td>
+ <td data-event-id="37">THEATER SHOW TIME☆ (5차)</td>
  <td>-</td>
  <td>12월 31일 15시 ~ 20년 1월 2일 21시 (2박 3일)</td>
  <td>-</td>
@@ -1779,7 +1803,7 @@ $(document).ready(function(){
 <tr>
  <td>A-16</td>
  <td class="ml_platinum_theater">재화(PSTheater)</td>
- <td class="mlsongs_princess">플래티넘 스타 시어터 ~HOME, SWEET FRIENDSHIP~</td>
+ <td class="mlsongs_princess" data-event-id="18">플래티넘 스타 시어터 ~HOME, SWEET FRIENDSHIP~</td>
  <td><abbr title="Live The@ter Harmony">LTH</abbr> (5탄)</td>
  <td>1월 4일 15시 ~ 10일 21시 (150시간)</td>
  <td class="mlevents_princess">마츠다 아리사</td>
@@ -1789,7 +1813,7 @@ $(document).ready(function(){
 <tr>
  <td>A-17</td>
  <td class="ml_theater_nonrank">컬렉션</td>
- <td>밀리언 라이브 콜렉션 (7차)</td>
+ <td data-event-id="19">밀리언 라이브 콜렉션 (7차)</td>
  <td>-</td>
  <td>1월 12일 15시 ~ 17일 21시 (5박 6일)</td>
  <td class="mlevents_angel">바바 코노미</td>
@@ -1799,7 +1823,7 @@ $(document).ready(function(){
 <tr>
  <td>A-18</td>
  <td class="ml_platinum_tour">투어(PSTour)</td>
- <td class="mlsongs_fairy">플래티넘 스타 투어 ~어둑한 별, 머나먼 달~</td>
+ <td class="mlsongs_fairy" data-event-id="20">플래티넘 스타 투어 ~어둑한 별, 머나먼 달~</td>
  <td>오리지널 (MTG)</td>
  <td>1월 19일 15시 ~ 25일 21시 (150시간)</td>
  <td class="mlevents_fairy">니카이도 치즈루</td>
@@ -1809,7 +1833,7 @@ $(document).ready(function(){
 <tr>
  <td>A-19</td>
  <td class="ml_theater_nonrank">추가보상형</td>
- <td>THEATER SHOW TIME☆ (6차)</td>
+ <td data-event-id="38">THEATER SHOW TIME☆ (6차)</td>
  <td>-</td>
  <td>1월 27일 15시 ~ 1월 29일 21시 (2박 3일)</td>
  <td>-</td>
@@ -1819,7 +1843,7 @@ $(document).ready(function(){
 <tr>
  <td>A-20</td>
  <td class="ml_platinum_theater">재화(PSTheater)</td>
- <td class="mlsongs_princess">플래티넘 스타 시어터 ~암호는 스타트 업!~</td>
+ <td class="mlsongs_princess" data-event-id="21">플래티넘 스타 시어터 ~암호는 스타트 업!~</td>
  <td><abbr title="Live The@ter Harmony">LTH</abbr> (1탄)</td>
  <td>1월 31일 15시 ~ 2월 7일 21시 (174시간)</td>
  <td class="mlevents_fairy">미나세 이오리</td>
@@ -1829,7 +1853,7 @@ $(document).ready(function(){
 <tr>
  <td>A-21</td>
  <td class="ml_theater_nonrank">컬렉션</td>
- <td>밀리언 라이브 콜렉션 (8차)</td>
+ <td data-event-id="22">밀리언 라이브 콜렉션 (8차)</td>
  <td>-</td>
  <td>2월 9일 15시 ~ 14일 21시 (4박 5일)</td>
  <td class="mlevents_princess">하기와라 유키호</td>
@@ -1839,7 +1863,7 @@ $(document).ready(function(){
 <tr>
  <td>A-22</td>
  <td class="ml_platinum_tour">투어(PSTour)</td>
- <td class="mlsongs_angel">플래티넘 스타 투어 ~무지개색 letters~</td>
+ <td class="mlsongs_angel" data-event-id="23">플래티넘 스타 투어 ~무지개색 letters~</td>
  <td>오리지널 (MTG)</td>
  <td>2월 16일 15시 ~ 24일 21시 (198시간)</td>
  <td class="mlevents_angel">시마바라 엘레나</td>
@@ -1849,7 +1873,7 @@ $(document).ready(function(){
 <tr>
  <td>A-23</td>
  <td class="ml_theater_nonrank">추가보상형</td>
- <td>THEATER SHOW TIME☆ (7차)</td>
+ <td data-event-id="39">THEATER SHOW TIME☆ (7차)</td>
  <td>-</td>
  <td>2월 26일 15시 ~ 3월 1일 21시 (3박 4일)</td>
  <td>-</td>
@@ -1859,7 +1883,7 @@ $(document).ready(function(){
 <tr>
  <td>A-24</td>
  <td class="ml_platinum_theater">재화(PSTheater)</td>
- <td class="mlsongs_angel">플래티넘 스타 시어터 ~별무리의 심포니아~</td>
+ <td class="mlsongs_angel" data-event-id="24">플래티넘 스타 시어터 ~별무리의 심포니아~</td>
  <td><abbr title="Live The@ter Harmony">LTH</abbr> (9탄)</td>
  <td>3월 3일 15시 ~ 11일 21시 (198시간)</td>
  <td class="mlevents_angel">호시이 미키</td>
@@ -1879,7 +1903,7 @@ $(document).ready(function(){
 <tr>
  <td>A-26</td>
  <td class="ml_platinum_tour">투어(PSTour)</td>
- <td class="mlsongs_princess">플래티넘 스타 투어 ~ZETTAI×BREAK!! 트윙클 리듬~</td>
+ <td class="mlsongs_princess" data-event-id="26">플래티넘 스타 투어 ~ZETTAI×BREAK!! 트윙클 리듬~</td>
  <td>오리지널 (MTG)</td>
  <td>3월 20일 15시 ~ 27일 21시 (174시간)</td>
  <td class="mlevents_princess">나카타니 이쿠</td>
@@ -1889,7 +1913,7 @@ $(document).ready(function(){
 <tr>
  <td>A-27</td>
  <td class="ml_theater_nonrank">추가보상형</td>
- <td>THEATER SHOW TIME☆ (8차)</td>
+ <td data-event-id="40">THEATER SHOW TIME☆ (8차)</td>
  <td>-</td>
  <td>3월 29일 15시 ~ 31일 21시 (2박 3일)</td>
  <td>-</td>

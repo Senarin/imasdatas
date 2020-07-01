@@ -375,7 +375,7 @@ overflow: auto;
  100% {opacity: 1;}
 }
 
-#nearend_event{
+#nearend_event,#nearend_event_k{
  -webkit-animation: fadeInOut 2s infinite;
  -moz-animation: fadeInOut 2s infinite;
  -o-animation: fadeInOut 2s infinite;
@@ -420,7 +420,7 @@ border-radius: 1.4em;
 #birthday_display_02{display: none;}
 
 
-#event_countdown,#boost_countdown,#resannounce_countdown,#gacha_countdown,#masterrank_countdown,#slsong_countdown,
+#event_countdown,#boost_countdown,#event_countdown_k,#boost_countdown_k,#resannounce_countdown,#gacha_countdown,#masterrank_countdown,#slsong_countdown,
 #starlight_daily,#starlight_client_info,#theater_client_info,#theater_select_idol,.anniv_countdown{
 text-align: center;
 justify-content: center;
