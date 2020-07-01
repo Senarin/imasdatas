@@ -430,7 +430,6 @@ background-size: 87px;
 background-position: right bottom;
 font-size: 13px;
 width: 28.5em;
-margin-top: 1em;
 margin-left: auto;
 margin-right: auto;
 padding-top: 0.5em;
@@ -460,7 +459,7 @@ border-radius: 1.4em;
  #theaterdays_events_status_boost tr,
  #theaterdays_events_status_boost th,
  #theaterdays_events_status_boost td{display: block;}
- 
+
  #theaterdays_events_status_announce tr,
  #theaterdays_events_status_announce th,
  #theaterdays_events_status_announce td{display: block;}

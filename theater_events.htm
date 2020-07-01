@@ -80,15 +80,17 @@ $(document).ready(function(){
 <h2 class="sectionhead"><a name="e_periodic" href="#section_01">1.</a> <time datetime="2017-06-29T12:00:00+09:00">일반 정규 이벤트</time></h2>
 <hr style="width: 100%; margin-top: -0.5em;" />
 
+<h3 style="text-align: center;">현재 진행중인 이벤트 정보</h3>
+
 <table id="theaterdays_events_status" style="border: none; text-align: center; margin: auto;">
 <tr>
  <td>
  <div id="event_countdown">
-  <h3>현재 개최중인 이벤트 제목 (현지판 기준)</h3>
+  <h3>현지판 기준</h3>
   <div id="theater_event_name_j"><img src="./assets/loading.gif" style="width: 24px; height: auto;" alt="Loading" /> 가져오는 중...</div>
   <sub id="theater_ename_orig_j" style="display: none;"></sub>
   <input type="hidden" id="theater_eid_j" value="0" />
-  <h3>이벤트 종료까지 남은 시간 (현지판 기준)</h3>
+  <h3>이벤트 종료까지 남은 시간</h3>
   <div id="countdown_time"><img src="./assets/loading.gif" style="width: 24px; height: auto;" alt="Loading" /> 가져오는 중...</div>
   <sub id="nearend_event" style="display: none;">종료 임박!!</sub>
   <sub id="underday_event" style="display: none;">얼마 남지 않았습니다. 서두르세요.</sub>
@@ -97,11 +99,11 @@ $(document).ready(function(){
 </td>
 <td>
  <div id="event_countdown_k">
-  <h3>현재 개최중인 이벤트 제목 (한국어판 기준)</h3>
+  <h3>한국어판 기준</h3>
   <div id="theater_event_name_k"><img src="./assets/loading.gif" style="width: 24px; height: auto;" alt="Loading" /> 가져오는 중...</div>
   <sub id="theater_ename_orig_k" style="display: none;"></sub>
   <input type="hidden" id="theater_eid_k" value="0" />
-  <h3>이벤트 종료까지 남은 시간 (한국어판 기준)</h3>
+  <h3>이벤트 종료까지 남은 시간</h3>
   <div id="countdown_time_k"><img src="./assets/loading.gif" style="width: 24px; height: auto;" alt="Loading" /> 가져오는 중...</div>
   <sub id="nearend_event_k" style="display: none;">종료 임박!!</sub>
   <sub id="underday_event_k" style="display: none;">얼마 남지 않았습니다. 서두르세요.</sub>
@@ -112,19 +114,20 @@ $(document).ready(function(){
 </tr>
 </table>
 
+<h3 style="text-align: center;">후반전 시작까지 남은 시간</h3>
 
 <table id="theaterdays_events_status_boost" style="border: none; text-align: center; margin: auto;">
 <tr>
  <td>
  <div id="boost_countdown">
-  <h3>후반전 시작까지 남은 시간 (현지판 기준)</h3>
+  <h3>현지판 기준</h3>
   <div id="boost_time"><img src="./assets/loading.gif" style="width: 24px; height: auto;" alt="Loading" /> 가져오는 중...</div>
   <sub>정보제공: <a href="https://matsurihi.me">matsurihi.me</a> (日)</sub>
  </div>
  </td>
  <td>
  <div id="boost_countdown_k">
-  <h3>후반전 시작까지 남은 시간 (한국어판 기준)</h3>
+  <h3>한국어판 기준</h3>
   <div id="boost_time_k"><img src="./assets/loading.gif" style="width: 24px; height: auto;" alt="Loading" /> 가져오는 중...</div>
   <sub>정보제공: <a href="https://matsurihi.me">matsurihi.me</a> (日)</sub>
  </div>
@@ -132,11 +135,13 @@ $(document).ready(function(){
 </tr>
 </table>
 
+<h3 style="text-align: center;">이벤트 결과발표까지 남은 시간</h3>
+
 <table id="theaterdays_events_status_announce" style="border: none; text-align: center; margin: auto;">
 <tr>
  <td>
  <div id="resannounce_countdown">
-  <h3>이벤트 결과발표까지 남은 시간 (현지판 기준)</h3>
+  <h3>현지판 기준</h3>
   <div id="resannounce_time"><img src="./assets/loading.gif" style="width: 24px; height: auto;" alt="Loading" /> 가져오는 중...</div>
   <sub>정보제공: <a href="https://matsurihi.me">matsurihi.me</a> (日)</sub>
  </div>
