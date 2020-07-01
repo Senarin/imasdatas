@@ -172,11 +172,32 @@ showRemainingSL : function(){
      var s = JSON.parse(r.responseText);
      var eInfo = s.events;
      if(eInfo.length == 0){
+      document.getElementById("starlight_event_name").innerHTML = "개최 중인 이벤트가 없습니다.";
+      document.getElementById("starlight_ename_orig").style.display = "none";
       document.getElementById("countdown_time").innerHTML = "개최 중인 이벤트가 없습니다.";
       document.getElementById("nearend_event").style.display = "none";
       console.log("["+(new Date()).toLocaleString()+"] 현재 개최 중인 이벤트가 없습니다.");
       return;
      }
+
+     var startingTimestamp = new Number(new Date($(".starlight_events td[data-event-id][data-event-id!='-1']").last().data("eventStart")));
+     var nowTimestamp = new Number(new Date());
+
+     var numEvents = $(".starlight_events td[data-event-id][data-event-id!='-1']").length;
+
+     if(startingTimestamp <= nowTimestamp){var $eTitle = document.createTextNode($(".starlight_events td[data-event-id][data-event-id!='-1']").last().html().replace(/<[^>]*>/g,"").replace("&amp;","&"));}
+     else{var $eTitle = document.createTextNode($(".starlight_events td[data-event-id][data-event-id!='-1']").eq(numEvents-2).html().replace(/<[^>]*>/g,"").replace("&amp;","&"));}
+
+     var eInfoLink = document.createElement("a");
+     eInfoLink.href = "https://starlight.kirara.ca/history";
+     eInfoLink.target = "_blank";
+
+     eInfoLink.appendChild($eTitle);
+     document.getElementById("starlight_event_name").innerHTML = "";
+     document.getElementById("starlight_event_name").appendChild(eInfoLink);
+     document.getElementById("starlight_ename_orig").innerHTML = "("+eInfo.name+")";
+     document.getElementById("starlight_ename_orig").style.display = "inline-block";
+
      var eDateTime0 = new Number(new Date(eInfo[0].end_date));
      var eDateTime = new Date(eDateTime0+1000);
      var eYear = eDateTime.getFullYear();
