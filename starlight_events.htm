@@ -22,7 +22,7 @@ $(document).ready(function(){
 <div id="headtext">
 <h1><img src="./assets/starlightstage_logo.png" id="starlightlogo" alt="Starlight Stage" title="Starlight Stage" />&nbsp;스타라이트 스테이지 역대 정규 이벤트 일람</h1>
 <div id="author_info">제작자 : <a href="https://about.yukina.kr/">유키나</a> (<a href="http://yukina.kr/">블로그</a>)</div>
-<div id="recent_edit">최근 수정 2020.6.30</div>
+<div id="recent_edit">최근 수정 2020.7.1</div>
 </div>
 <p>(<a href="./">첫 페이지로 가기</a>)</p>
 
@@ -113,7 +113,7 @@ $(document).ready(function(){
 <tr>
  <td>1</td>
  <td class="cg_starlight_atapon">재화수집</td>
- <td class="cgevents_cute">나는야 고철 안드로이드</td>
+ <td class="cgevents_cute" data-event-id="1001">나는야 고철 안드로이드</td>
  <td><b>쥬얼리즈 (1탄)</b></td>
  <td>9월 25일 12시 ~ 10월 5일 21시 (<b>249시간</b>)</td>
  <td>25&#8594;26(마스터)</td>
@@ -124,7 +124,7 @@ $(document).ready(function(){
 <tr>
  <td>2</td>
  <td class="cg_starlight_nonrank" data-event-type="2">캐러밴</td>
- <td>신데렐라 캐러밴 1차</td>
+ <td data-event-id="2001">신데렐라 캐러밴 1차</td>
  <td>-</td>
  <td>10월 9일 15시 ~ 16일 21시 (7박 8일)</td>
  <td>-</td>
@@ -135,7 +135,7 @@ $(document).ready(function(){
 <tr>
  <td>3</td>
  <td class="cg_starlight_atapon">재화수집</td>
- <td class="cgevents_cool">Nation Blue</td>
+ <td class="cgevents_cool" data-event-id="1002">Nation Blue</td>
  <td>쥬얼리즈 (1탄)</td>
  <td>10월 19일 15시 ~ 27일 21시 (198시간)</td>
  <td>26(마스터)</td>
@@ -146,7 +146,7 @@ $(document).ready(function(){
 <tr>
  <td>4</td>
  <td class="cg_starlight_burst">그루브(버스트)</td>
- <td>(보컬 1차) 꿈빛 하모니</td>
+ <td data-event-id="3001">(보컬 1차) 꿈빛 하모니</td>
  <td><b>TVA 앨범곡</b></td>
  <td>10월 31일 15시 ~ 11월 8일 21시 (198시간)</td>
  <td>26(마스터)/29(마스터+)</td>
@@ -157,7 +157,7 @@ $(document).ready(function(){
 <tr>
  <td>5</td>
  <td class="cg_starlight_nonrank" data-event-type="2">캐러밴</td>
- <td>신데렐라 캐러밴 2차</td>
+ <td data-event-id="2002">신데렐라 캐러밴 2차</td>
  <td>-</td>
  <td>11월 12일 15시 ~ 18일 21시 (6박 7일)</td>
  <td>-</td>
@@ -168,7 +168,7 @@ $(document).ready(function(){
 <tr>
  <td>6</td>
  <td class="cg_starlight_atapon">재화수집</td>
- <td class="cgevents_passion">Orange Sapphire</td>
+ <td class="cgevents_passion" data-event-id="1003">Orange Sapphire</td>
  <td>쥬얼리즈 (1탄)</td>
  <td>11월 20일 15시 ~ 26일 21시 (<b>150시간</b>)</td>
  <td>26(마스터)</td>
@@ -179,7 +179,7 @@ $(document).ready(function(){
 <tr>
  <td>7</td>
  <td class="cg_starlight_burst">그루브(버스트)</td>
- <td>(보컬 2차) 별똥별 기적</td>
+ <td data-event-id="3002">(보컬 2차) 별똥별 기적</td>
  <td>TVA 앨범곡</td>
  <td>12월 4일 15시 ~ 13일 21시 (222시간)</td>
  <td>26(마스터)/29(마스터+)</td>
@@ -189,7 +189,7 @@ $(document).ready(function(){
 <tr>
  <td>8</td>
  <td class="cg_starlight_atapon">재화수집</td>
- <td class="cgevents_all">Snow Wings</td>
+ <td class="cgevents_all" data-event-id="1004">Snow Wings</td>
  <td><b>오리지널</b></td>
  <td>12월 18일 15시 ~ 27일 21시 (222시간)</td>
  <td>26(마스터)</td>
@@ -200,7 +200,7 @@ $(document).ready(function(){
 <tr>
  <td>9</td>
  <td class="cg_starlight_burst">그루브(버스트)</td>
- <td>(댄스 1차) 즐거운 Party Night</td>
+ <td data-event-id="3003">(댄스 1차) 즐거운 Party Night</td>
  <td><b>쥬얼리즈 (2탄)</b></td>
  <td>12월 30일 15시 ~ 16년 1월 8일 21시 (222시간)</td>
  <td>26(마스터)/29(마스터+)</td>
@@ -221,7 +221,7 @@ $(document).ready(function(){
 <tr>
  <td>10</td>
  <td class="cg_starlight_nonrank" data-event-type="2">캐러밴</td>
- <td>신데렐라 캐러밴 3차</td>
+ <td data-event-id="2003">신데렐라 캐러밴 3차</td>
  <td>-</td>
  <td>1월 12일 15시 ~ 18일 21시 (6박 7일)</td>
  <td>-</td>
@@ -232,7 +232,7 @@ $(document).ready(function(){
 <tr>
  <td>11</td>
  <td class="cg_starlight_atapon">재화수집</td>
- <td class="cgevents_cute">파스텔 핑크 사랑</td>
+ <td class="cgevents_cute" data-event-id="1005">파스텔 핑크 사랑</td>
  <td>쥬얼리즈 (2탄)</td>
  <td>1월 20일 15시 ~ 27일 21시 (174시간)</td>
  <td>26(마스터)</td>
@@ -243,7 +243,7 @@ $(document).ready(function(){
 <tr>
  <td>12</td>
  <td class="cg_starlight_burst">그루브(버스트)</td>
- <td>(비주얼 1차) Tulip</td>
+ <td data-event-id="3004">(비주얼 1차) Tulip</td>
  <td>오리지널</td>
  <td>1월 31일 15시 ~ 2월 7일 21시 (174시간)</td>
  <td>26(마스터)/<b>30</b>(마스터+)</td>
@@ -254,7 +254,7 @@ $(document).ready(function(){
 <tr>
  <td>13</td>
  <td class="cg_starlight_nonrank" data-event-type="2">캐러밴</td>
- <td>신데렐라 캐러밴 4차</td>
+ <td data-event-id="2004">신데렐라 캐러밴 4차</td>
  <td>-</td>
  <td>2월 10일 15시 ~ 16일 21시 (6박 7일)</td>
  <td>-</td>
@@ -265,7 +265,7 @@ $(document).ready(function(){
 <tr>
  <td>14</td>
  <td class="cg_starlight_atapon">재화수집</td>
- <td class="cgevents_cool">작은 오르골 상자</td>
+ <td class="cgevents_cool" data-event-id="1006">작은 오르골 상자</td>
  <td>쥬얼리즈 (2탄)</td>
  <td>2월 18일 15시 ~ 25일 21시 (174시간)</td>
  <td>25(마스터)</td>
@@ -276,7 +276,7 @@ $(document).ready(function(){
 <tr>
  <td>15</td>
  <td class="cg_starlight_burst">그루브(버스트)</td>
- <td>(보컬 3차) Absolute NIne</td>
+ <td data-event-id="3005">(보컬 3차) Absolute NIne</td>
  <td><b>총선</b></td>
  <td>2월 29일 15시 ~ 3월 8일 21시 (198시간)</td>
  <td>26(마스터)/<b>30</b>(마스터+)</td>
@@ -287,7 +287,7 @@ $(document).ready(function(){
 <tr>
  <td>16</td>
  <td class="cg_starlight_nonrank" data-event-type="2">캐러밴</td>
- <td>신데렐라 캐러밴 5차</td>
+ <td data-event-id="2005">신데렐라 캐러밴 5차</td>
  <td>-</td>
  <td>3월 11일 15시 ~ 18일 21시 (7박 8일)</td>
  <td>-</td>
@@ -298,7 +298,7 @@ $(document).ready(function(){
 <tr>
  <td>17</td>
  <td class="cg_starlight_atapon">재화수집</td>
- <td class="cgevents_passion">절대 특권 주장합니닷!!</td>
+ <td class="cgevents_passion" data-event-id="1007">절대 특권 주장합니닷!!</td>
  <td>쥬얼리즈 (2탄)</td>
  <td>3월 20일 15시 ~ 27일 21시 (174시간)</td>
  <td><b>27</b>(마스터)</td>
@@ -309,7 +309,7 @@ $(document).ready(function(){
 <tr>
  <td>18</td>
  <td class="cg_starlight_burst">그루브(버스트)</td>
- <td>(댄스 2차) 하이파이 데이즈</td>
+ <td data-event-id="3006">(댄스 2차) 하이파이 데이즈</td>
  <td>오리지널</td>
  <td>3월 31일 15시 ~ 4월 7일 21시 (174시간)</td>
  <td><b>24</b>(마스터)/28(마스터+)</td>
@@ -320,7 +320,7 @@ $(document).ready(function(){
 <tr>
  <td>19</td>
  <td class="cg_starlight_nonrank" data-event-type="2">캐러밴</td>
- <td>신데렐라 캐러밴 6차</td>
+ <td data-event-id="2006">신데렐라 캐러밴 6차</td>
  <td>-</td>
  <td>4월 11일 15시 ~ 17일 21시 (6박 7일)</td>
  <td>-</td>
@@ -331,7 +331,7 @@ $(document).ready(function(){
 <tr>
  <td>20</td>
  <td class="cg_starlight_atapon">재화수집</td>
- <td class="cgevents_all">꽃봉오리</td>
+ <td class="cgevents_all" data-event-id="1008">꽃봉오리</td>
  <td>총선</td>
  <td>4월 19일 15시 ~ 26일 21시 (174시간)</td>
  <td>25&#8594;26(마스터)</td>
@@ -342,7 +342,7 @@ $(document).ready(function(){
 <tr>
  <td>21</td>
  <td class="cg_starlight_burst">그루브(버스트)</td>
- <td>(비주얼 2차) 생존본능 발큐리아</td>
+ <td data-event-id="3007">(비주얼 2차) 생존본능 발큐리아</td>
  <td>오리지널</td>
  <td>4월 30일 15시 ~ 5월 8일 21시 (198시간)</td>
  <td>26(마스터)/<b>30</b>(마스터+)</td>
@@ -353,7 +353,7 @@ $(document).ready(function(){
 <tr>
  <td>22</td>
  <td class="cg_starlight_nonrank" data-event-type="2">캐러밴</td>
- <td>신데렐라 캐러밴 7차</td>
+ <td data-event-id="2007">신데렐라 캐러밴 7차</td>
  <td>-</td>
  <td>5월 11일 15시 ~ 17일 21시 (6박 7일)</td>
  <td>-</td>
@@ -364,7 +364,7 @@ $(document).ready(function(){
 <tr>
  <td>23</td>
  <td class="cg_starlight_atapon">재화수집</td>
- <td class="cgevents_cute">내일 또 만날 수 있겠지</td>
+ <td class="cgevents_cute" data-event-id="1009">내일 또 만날 수 있겠지</td>
  <td><b>쥬얼리즈 (3탄)</b></td>
  <td>5월 19일 15시 ~ 27일 21시 (198시간)</td>
  <td>25(마스터)</td>
@@ -375,7 +375,7 @@ $(document).ready(function(){
 <tr>
  <td>24</td>
  <td class="cg_starlight_burst">그루브(버스트)</td>
- <td>(보컬 4차) 순정 미드나잇 전설</td>
+ <td data-event-id="3008">(보컬 4차) 순정 미드나잇 전설</td>
  <td>오리지널</td>
  <td>5월 31일 15시 ~ 6월 7일 21시 (174시간)</td>
  <td>25(마스터)/29(마스터+)</td>
@@ -386,7 +386,7 @@ $(document).ready(function(){
 <tr>
  <td>25</td>
  <td class="cg_starlight_nonrank" data-event-type="4">협력(파티)</td>
- <td>라이브 파티 1차</td>
+ <td data-event-id="4001">라이브 파티 1차</td>
  <td>-</td>
  <td>6월 10일 15시 ~ 17일 21시 (7박 8일)</td>
  <td>-</td>
@@ -397,7 +397,7 @@ $(document).ready(function(){
 <tr>
  <td>26</td>
  <td class="cg_starlight_atapon">재화수집</td>
- <td class="cgevents_cool">피어라 Jewel</td>
+ <td class="cgevents_cool" data-event-id="1010">피어라 Jewel</td>
  <td>쥬얼리즈 (3탄)</td>
  <td>6월 20일 15시 ~ 27일 21시 (174시간)</td>
  <td>25(마스터)/<span style="text-decoration: underline;">28(마스터+)</span></td>
@@ -408,7 +408,7 @@ $(document).ready(function(){
 <tr>
  <td>27</td>
  <td class="cg_starlight_burst">그루브(버스트)</td>
- <td>(댄스 3차) Love&#8734;Destiny</td>
+ <td data-event-id="3009">(댄스 3차) Love&#8734;Destiny</td>
  <td>오리지널</td>
  <td>6월 30일 15시 ~ 7월 7일 21시 (174시간)</td>
  <td>26(마스터)/29(마스터+)</td>
@@ -419,7 +419,7 @@ $(document).ready(function(){
 <tr>
  <td>28</td>
  <td class="cg_starlight_nonrank" data-event-type="2">캐러밴</td>
- <td>신데렐라 캐러밴 8차</td>
+ <td data-event-id="2008">신데렐라 캐러밴 8차</td>
  <td>-</td>
  <td>7월 11일 15시 ~ 17일 21시 (6박 7일)</td>
  <td>-</td>
@@ -430,7 +430,7 @@ $(document).ready(function(){
 <tr>
  <td>29</td>
  <td class="cg_starlight_atapon">재화수집</td>
- <td class="cgevents_passion">너에게 잔뜩&#9734;</td>
+ <td class="cgevents_passion" data-event-id="1011">너에게 잔뜩&#9734;</td>
  <td>쥬얼리즈 (3탄)</td>
  <td>7월 19일 15시 ~ 27일 21시 (198시간)</td>
  <td>25(마스터)/28(마스터+)</td>
@@ -441,7 +441,7 @@ $(document).ready(function(){
 <tr>
  <td>30</td>
  <td class="cg_starlight_burst">그루브(버스트)</td>
- <td>(비주얼 3차) 서머카니!!</td>
+ <td data-event-id="3010">(비주얼 3차) 서머카니!!</td>
  <td>오리지널</td>
  <td>7월 31일 15시 ~ 8월 8일 21시 (198시간)</td>
  <td>26(마스터)/<b>30</b>(마스터+)</td>
@@ -452,7 +452,7 @@ $(document).ready(function(){
 <tr>
  <td>31</td>
  <td class="cg_starlight_nonrank" data-event-type="4">협력(파티)</td>
- <td>라이브 파티 2차</td>
+ <td data-event-id="4002">라이브 파티 2차</td>
  <td>-</td>
  <td>8월 12일 15시 ~ 17일 21시 (<b>5박 6일</b>)</td>
  <td>-</td>
@@ -463,7 +463,7 @@ $(document).ready(function(){
 <tr>
  <td>32</td>
  <td class="cg_starlight_atapon">재화수집</td>
- <td class="cgevents_all">Near to You</td>
+ <td class="cgevents_all" data-event-id="1012">Near to You</td>
  <td>쥬얼리즈 (3탄)</td>
  <td>8월 19일 15시 ~ 27일 21시 (198시간)</td>
  <td>26(마스터)/29(마스터+)</td>
@@ -474,7 +474,7 @@ $(document).ready(function(){
 <tr>
  <td>33</td>
  <td class="cg_starlight_burst">그루브(버스트)</td>
- <td>(보컬 5차) BEYOND THE STARLIGHT</td>
+ <td data-event-id="3011">(보컬 5차) BEYOND THE STARLIGHT</td>
  <td>오리지널</td>
  <td>8월 31일 15시 ~ 9월 8일 21시 (198시간)
  <td>26(마스터)/29(마스터+)</td>
@@ -485,7 +485,7 @@ $(document).ready(function(){
 <tr>
  <td>34</td>
  <td class="cg_starlight_nonrank" data-event-type="2">캐러밴</td>
- <td>신데렐라 캐러밴 9차</td>
+ <td data-event-id="2009">신데렐라 캐러밴 9차</td>
  <td>-</td>
  <td>9월 12일 15시 ~ 18일 21시 (6박 7일)</td>
  <td>-</td>
@@ -496,7 +496,7 @@ $(document).ready(function(){
 <tr>
  <td>35</td>
  <td class="cg_starlight_atapon">재화수집</td>
- <td class="cgevents_cute">러브레터</td>
+ <td class="cgevents_cute" data-event-id="1013">러브레터</td>
  <td>오리지널</td>
  <td>9월 20일 15시 ~ 26일 21시 (150시간)</td>
  <td>26(마스터)/29(마스터+)</td>
@@ -507,7 +507,7 @@ $(document).ready(function(){
 <tr>
  <td>36</td>
  <td class="cg_starlight_nonrank" data-event-type="5">퍼레이드(투어)</td>
- <td class="cgevents_all">(라이브 퍼레이드 1차) STORY</td>
+ <td class="cgevents_all" data-event-id="5001">(라이브 퍼레이드 1차) STORY</td>
  <td>TVA 앨범곡</td>
  <td>9월 30일 15시 ~ 10월 8일 21시 (8박 9일)</td>
  <td>25(마스터)/28(마스터+)</td>
@@ -518,7 +518,7 @@ $(document).ready(function(){
 <tr>
  <td>37</td>
  <td class="cg_starlight_nonrank" data-event-type="4">협력(파티)</td>
- <td>라이브 파티 3차</td>
+ <td data-event-id="4003">라이브 파티 3차</td>
  <td>-</td>
  <td>10월 12일 15시 ~ 18일 21시 (6박 7일)</td>
  <td>-</td>
@@ -529,7 +529,7 @@ $(document).ready(function(){
 <tr>
  <td>38</td>
  <td class="cg_starlight_atapon">재화수집</td>
- <td class="cgevents_cool">Jet to the Future</td>
+ <td class="cgevents_cool" data-event-id="1014">Jet to the Future</td>
  <td>오리지널</td>
  <td>10월 20일 15시 ~ 27일 21시 (174시간)</td>
  <td>26(마스터)/29(마스터+)</td>
@@ -540,7 +540,7 @@ $(document).ready(function(){
 <tr>
  <td>39</td>
  <td class="cg_starlight_burst">그루브(버스트)</td>
- <td>(댄스 4차) 아이쿠루시이</td>
+ <td data-event-id="3012">(댄스 4차) 아이쿠루시이</td>
  <td><b>셀렉션</b></td>
  <td>10월 31일 15시 ~ 11월 8일 21시 (198시간)</td>
  <td>25(마스터)/28(마스터+)</td>
@@ -551,7 +551,7 @@ $(document).ready(function(){
 <tr>
  <td>40</td>
  <td class="cg_starlight_nonrank" data-event-type="2">캐러밴</td>
- <td>신데렐라 캐러밴 10차</td>
+ <td data-event-id="2010">신데렐라 캐러밴 10차</td>
  <td>-</td>
  <td>11월 11일 15시 ~ 17일 21시 (6박 7일)</td>
  <td>-</td>
@@ -562,7 +562,7 @@ $(document).ready(function(){
 <tr>
  <td>41</td>
  <td class="cg_starlight_atapon">재화수집</td>
- <td class="cgevents_passion">Flip Flop</td>
+ <td class="cgevents_passion" data-event-id="1015">Flip Flop</td>
  <td>셀렉션</td>
  <td>11월 19일 15시 ~ 27일 21시 (198시간)</td>
  <td>25(마스터)/29(마스터+)</td>
@@ -573,7 +573,7 @@ $(document).ready(function(){
 <tr>
  <td>42</td>
  <td class="cg_starlight_nonrank" data-event-type="5">퍼레이드(투어)</td>
- <td class="cgevents_all">(라이브 퍼레이드 2차) EVERMORE</td>
+ <td class="cgevents_all" data-event-id="5002">(라이브 퍼레이드 2차) EVERMORE</td>
  <td>기타</td>
  <td>11월 30일 15시 ~ 12월 8일 21시 (8박 9일)</td>
  <td><b>27</b>(마스터)/29(마스터+)</td>
@@ -584,7 +584,7 @@ $(document).ready(function(){
 <tr>
  <td>43</td>
  <td class="cg_starlight_nonrank" data-event-type="4">협력(파티)</td>
- <td>라이브 파티 4차</td>
+ <td data-event-id="4004">라이브 파티 4차</td>
  <td>-</td>
  <td>12월 12일 15시 ~ 19일 21시 (7박 8일)</td>
  <td>-</td>
@@ -595,7 +595,7 @@ $(document).ready(function(){
 <tr>
  <td>44</td>
  <td class="cg_starlight_atapon">재화수집</td>
- <td class="cgevents_cute">안키라!? 광소곡</td>
+ <td class="cgevents_cute" data-event-id="1016">안키라!? 광소곡</td>
  <td>오리지널</td>
  <td>12월 21일 15시 ~ 27일 21시 (150시간)</td>
  <td>26(마스터)/<b>30</b>(마스터+)</td>
@@ -606,7 +606,7 @@ $(document).ready(function(){
 <tr>
  <td>45</td>
  <td class="cg_starlight_burst">그루브(버스트)</td>
- <td>(비주얼 4차) 목숨을 불태워라 사랑하는 소녀여</td>
+ <td data-event-id="3013">(비주얼 4차) 목숨을 불태워라 사랑하는 소녀여</td>
  <td>오리지널</td>
  <td>12월 31일 15시 ~ 17년 1월 9일 21시 (222시간)</td>
  <td>25(마스터)/29(마스터+)</td>
@@ -627,7 +627,7 @@ $(document).ready(function(){
 <tr>
  <td>46</td>
  <td class="cg_starlight_nonrank" data-event-type="2">캐러밴</td>
- <td>신데렐라 캐러밴 11차</td>
+ <td data-event-id="2011">신데렐라 캐러밴 11차</td>
  <td>-</td>
  <td>1월 12일 15시 ~ 18일 21시 (6박 7일)</td>
  <td>-</td>
@@ -638,7 +638,7 @@ $(document).ready(function(){
 <tr>
  <td>47</td>
  <td class="cg_starlight_atapon">재화수집</td>
- <td class="cgevents_cool">Lunatic Show</td>
+ <td class="cgevents_cool" data-event-id="1017">Lunatic Show</td>
  <td>셀렉션</td>
  <td>1월 20일 15시 ~ 27일 21시 (174시간)</td>
  <td>26(마스터)/29(마스터+)</td>
@@ -649,7 +649,7 @@ $(document).ready(function(){
 <tr>
  <td>48</td>
  <td class="cg_starlight_nonrank" data-event-type="5">퍼레이드(투어)</td>
- <td class="cgevents_all">(라이브 퍼레이드 3차) Sweet Witches&#39; Night</td>
+ <td class="cgevents_all" data-event-id="5003">(라이브 퍼레이드 3차) Sweet Witches&#39; Night</td>
  <td>오리지널</td>
  <td>1월 31일 15시 ~ 2월 7일 21시 (7박 8일)</td>
  <td>26(마스터)/29(마스터+)</td>
@@ -660,7 +660,7 @@ $(document).ready(function(){
 <tr>
  <td>49</td>
  <td class="cg_starlight_nonrank" data-event-type="4">협력(파티)</td>
- <td>라이브 파티 5차</td>
+ <td data-event-id="4005">라이브 파티 5차</td>
  <td>-</td>
  <td>2월 10일 15시 ~ 15일 21시 (<b>5박 6일</b>)</td>
  <td>-</td>
@@ -671,7 +671,7 @@ $(document).ready(function(){
 <tr>
  <td>50</td>
  <td class="cg_starlight_atapon">재화수집</td>
- <td class="cgevents_passion">정열 팡팡파레</td>
+ <td class="cgevents_passion" data-event-id="1018">정열 팡팡파레</td>
  <td>오리지널</td>
  <td>2월 17일 15시 ~ 25일 21시 (198시간)</td>
  <td>26(마스터)/29(마스터+)</td>
@@ -682,7 +682,7 @@ $(document).ready(function(){
 <tr>
  <td>51</td>
  <td class="cg_starlight_burst">그루브(버스트)</td>
- <td>(보컬 6차) 벛꽃이 피는 때</td>
+ <td data-event-id="3014">(보컬 6차) 벛꽃이 피는 때</td>
  <td>오리지널</td>
  <td>2월 28일 15시 ~ 3월 9일 21시 (222시간)</td>
  <td>26(마스터)/29(마스터+)</td>
@@ -693,7 +693,7 @@ $(document).ready(function(){
 <tr>
  <td>52</td>
  <td class="cg_starlight_nonrank" data-event-type="2">캐러밴</td>
- <td>신데렐라 캐러밴 12차</td>
+ <td data-event-id="2012">신데렐라 캐러밴 12차</td>
  <td>-</td>
  <td>3월 13일 15시 ~ 19일 21시 (6박 7일)</td>
  <td>-</td>
@@ -704,7 +704,7 @@ $(document).ready(function(){
 <tr>
  <td>53</td>
  <td class="cg_starlight_atapon">재화수집</td>
- <td class="cgevents_all">&forall;NSWER</td>
+ <td class="cgevents_all" data-event-id="1019">&forall;NSWER</td>
  <td>오리지널</td>
  <td>3월 21일 15시 ~ 28일 21시 (174시간)</td>
  <td>26(마스터)/<b>30</b>(마스터+)</td>
@@ -715,7 +715,7 @@ $(document).ready(function(){
 <tr>
  <td>54</td>
  <td class="cg_starlight_nonrank" data-event-type="5">퍼레이드(투어)</td>
- <td class="cgevents_cute">(라이브 퍼레이드 4차) shabon song</td>
+ <td class="cgevents_cute" data-event-id="5004">(라이브 퍼레이드 4차) shabon song</td>
  <td>셀렉션</td>
  <td><del datetime="2017-03-31T15:00:00+09:00">3월 31일</del> 4월 1일 15시 ~ 8일 21시 (7박 8일)</td>
  <td>25(마스터)/28(마스터+)</td>
@@ -726,7 +726,7 @@ $(document).ready(function(){
 <tr>
  <td>55</td>
  <td class="cg_starlight_nonrank" data-event-type="4">협력(파티)</td>
- <td>라이브 파티 6차</td>
+ <td data-event-id="4006">라이브 파티 6차</td>
  <td>-</td>
  <td>4월 11일 15시 ~ 17일 21시 (6박 7일)</td>
  <td>-</td>
@@ -737,7 +737,7 @@ $(document).ready(function(){
 <tr>
  <td>56</td>
  <td class="cg_starlight_atapon">재화수집</td>
- <td class="cgevents_cool">Nocturne</td>
+ <td class="cgevents_cool" data-event-id="1020">Nocturne</td>
  <td><b>셀렉션</b></td>
  <td>4월 19일 15시 ~ 26일 21시 (174시간)</td>
  <td>26(마스터)/29(마스터+)</td>
@@ -748,7 +748,7 @@ $(document).ready(function(){
 <tr>
  <td>57</td>
  <td class="cg_starlight_burst">그루브(버스트)</td>
- <td>(댄스 5차) Nothing but You</td>
+ <td data-event-id="3015">(댄스 5차) Nothing but You</td>
  <td>오리지널</td>
  <td>4월 30일 15시 ~ 5월 8일 21시 (198시간)</td>
  <td>26(마스터)/29(마스터+)</td>
@@ -759,7 +759,7 @@ $(document).ready(function(){
 <tr>
  <td>58</td>
  <td class="cg_starlight_nonrank" data-event-type="2">캐러밴</td>
- <td>신데렐라 캐러밴 13차</td>
+ <td data-event-id="2013">신데렐라 캐러밴 13차</td>
  <td>-</td>
  <td>5월 11일 15시 ~ 17일 21시 (6박 7일)</td>
  <td>-</td>
@@ -770,7 +770,7 @@ $(document).ready(function(){
 <tr>
  <td>59</td>
  <td class="cg_starlight_atapon">재화수집</td>
- <td class="cgevents_passion">맹렬☆세상개혁 섹시길티!</td>
+ <td class="cgevents_passion" data-event-id="1021">맹렬☆세상개혁 섹시길티!</td>
  <td>오리지널</td>
  <td>5월 19일 15시 ~ 28일 21시 (222시간)</td>
  <td>26(마스터)/29(마스터+)</td>
@@ -781,7 +781,7 @@ $(document).ready(function(){
 <tr>
  <td>60</td>
  <td class="cg_starlight_nonrank" data-event-type="5">퍼레이드(투어)</td>
- <td class="cgevents_all">(라이브 퍼레이드 5차) With Love</td>
+ <td class="cgevents_all" data-event-id="5005">(라이브 퍼레이드 5차) With Love</td>
  <td>오리지널</td>
  <td>5월 31일 15시 ~ 6월 8일 21시 (8박 9일)</td>
  <td>25(마스터)/28(마스터+)</td>
@@ -792,7 +792,7 @@ $(document).ready(function(){
 <tr>
  <td>61</td>
  <td class="cg_starlight_nonrank" data-event-type="4">협력(파티)</td>
- <td>라이브 파티 7차</td>
+ <td data-event-id="4007">라이브 파티 7차</td>
  <td>-</td>
  <td>6월 12일 15시 ~ 17일 21시 (<b>5박 6일</b>)</td>
  <td>-</td>
@@ -803,7 +803,7 @@ $(document).ready(function(){
 <tr>
  <td>62</td>
  <td class="cg_starlight_atapon">재화수집</td>
- <td class="cgevents_all">Yes! Party Time!!</td>
+ <td class="cgevents_all" data-event-id="1022">Yes! Party Time!!</td>
  <td><b>VR 수록곡</b></td>
  <td>6월 19일 15시 ~ 26일 21시 (174시간)</td>
  <td>25(마스터)/29(마스터+)</td>
@@ -814,7 +814,7 @@ $(document).ready(function(){
 <tr>
  <td>63</td>
  <td class="cg_starlight_burst">그루브(버스트)</td>
- <td>(비주얼 5차) 리틀 리들</td>
+ <td data-event-id="3016">(비주얼 5차) 리틀 리들</td>
  <td>오리지널</td>
  <td>6월 30일 15시 ~ 7월 9일 21시 (222시간)</td>
  <td>26(마스터)/29(마스터+)</td>
@@ -825,7 +825,7 @@ $(document).ready(function(){
 <tr>
  <td>64</td>
  <td class="cg_starlight_nonrank" data-event-type="2">캐러밴</td>
- <td>신데렐라 캐러밴 14차</td>
+ <td data-event-id="2014">신데렐라 캐러밴 14차</td>
  <td>-</td>
  <td>7월 12일 15시 ~ 18일 21시 (6박 7일)</td>
  <td>-</td>
@@ -836,7 +836,7 @@ $(document).ready(function(){
 <tr>
  <td>65</td>
  <td class="cg_starlight_atapon">재화수집</td>
- <td class="cgevents_cute">Kawaii make MY day!</td>
+ <td class="cgevents_cute" data-event-id="1023">Kawaii make MY day!</td>
  <td>오리지널</td>
  <td>7월 20일 15시 ~ 27일 21시 (174시간)</td>
  <td>26(마스터)/29(마스터+)</td>
@@ -847,7 +847,7 @@ $(document).ready(function(){
 <tr>
  <td>66</td>
  <td class="cg_starlight_nonrank" data-event-type="5">퍼레이드(투어)</td>
- <td class="cgevents_all">(라이브 퍼레이드 6차) Take me☆Take you</td>
+ <td class="cgevents_all" data-event-id="5006">(라이브 퍼레이드 6차) Take me☆Take you</td>
  <td>총선</td>
  <td>7월 31일 15시 ~ 8월 8일 21시 (8박 9일)</td>
  <td>24(마스터)/<b>27</b>(마스터+)</td>
@@ -858,7 +858,7 @@ $(document).ready(function(){
 <tr>
  <td>67</td>
  <td class="cg_starlight_nonrank" data-event-type="4">협력(파티)</td>
- <td>라이브 파티 8차</td>
+ <td data-event-id="4008">라이브 파티 8차</td>
  <td>-</td>
  <td>8월 12일 15시 ~ 19일 21시 (7박 8일)</td>
  <td>-</td>
@@ -869,7 +869,7 @@ $(document).ready(function(){
 <tr>
  <td>68</td>
  <td class="cg_starlight_atapon">재화수집</td>
- <td class="cgevents_cool">쌍익의 아리아</td>
+ <td class="cgevents_cool" data-event-id="1024">쌍익의 아리아</td>
  <td>오리지널</td>
  <td>8월 21일 15시 ~ 27일 21시 (<b>150시간</b>)</td>
  <td><b>27</b>(마스터)/<b>30</b>(마스터+)</td>
@@ -880,7 +880,7 @@ $(document).ready(function(){
 <tr>
  <td>69</td>
  <td class="cg_starlight_burst">그루브(버스트)</td>
- <td>(보컬 7차) 일루져니스타!</td>
+ <td data-event-id="3017">(보컬 7차) 일루져니스타!</td>
  <td>오리지널</td>
  <td>8월 31일 15시 ~ 9월 7일 21시 (174시간)
  <td>26(마스터)/29(마스터+)</td>
@@ -891,7 +891,7 @@ $(document).ready(function(){
 <tr>
  <td>70</td>
  <td class="cg_starlight_nonrank" data-event-type="2">캐러밴</td>
- <td>신데렐라 캐러밴 15차</td>
+ <td data-event-id="2015">신데렐라 캐러밴 15차</td>
  <td>-</td>
  <td>9월 11일 15시 ~ 18일 21시 (7박 8일)</td>
  <td>-</td>
@@ -902,7 +902,7 @@ $(document).ready(function(){
 <tr>
  <td>71</td>
  <td class="cg_starlight_atapon">재화수집</td>
- <td class="cgevents_passion">Twin☆빙글★테일</td>
+ <td class="cgevents_passion" data-event-id="1025">Twin☆빙글★테일</td>
  <td>오리지널</td>
  <td>9월 20일 15시 ~ 27일 21시 (174시간)</td>
  <td>26(마스터)/<b>30</b>(마스터+)</td>
@@ -913,7 +913,7 @@ $(document).ready(function(){
 <tr>
  <td>72</td>
  <td class="cg_starlight_nonrank" data-event-type="5">퍼레이드(투어)</td>
- <td class="cgevents_all">(라이브 퍼레이드 7차) 너의 곁에서 계속</td>
+ <td class="cgevents_all" data-event-id="5007">(라이브 퍼레이드 7차) 너의 곁에서 계속</td>
  <td>총선</td>
  <td>9월 30일 15시 ~ 10월 9일 21시 (<b>9박 10일</b>)</td>
  <td>24(마스터)/<b>27</b>(마스터+)</td>
@@ -924,7 +924,7 @@ $(document).ready(function(){
 <tr>
  <td>73</td>
  <td class="cg_starlight_nonrank" data-event-type="2">캐러밴</td>
- <td>신데렐라 캐러밴 16차</td>
+ <td data-event-id="2016">신데렐라 캐러밴 16차</td>
  <td>-</td>
  <td>10월 12일 15시 ~ 18일 21시 (6박 7일)</td>
  <td>-</td>
@@ -935,7 +935,7 @@ $(document).ready(function(){
 <tr>
  <td>74</td>
  <td class="cg_starlight_atapon">재화수집</td>
- <td class="cgevents_cute">Halloween♥Code</td>
+ <td class="cgevents_cute" data-event-id="1026">Halloween♥Code</td>
  <td><b>시즌 앨범곡</b></td>
  <td>10월 20일 15시 ~ 27일 21시 (174시간)</td>
  <td>26(마스터)/29(마스터+)</td>
@@ -946,7 +946,7 @@ $(document).ready(function(){
 <tr>
  <td>75</td>
  <td class="cg_starlight_burst">그루브(버스트)</td>
- <td>(댄스 6차) 가을바람에 손을 흔들며</td>
+ <td data-event-id="3018">(댄스 6차) 가을바람에 손을 흔들며</td>
  <td>시즌 앨범곡</td>
  <td>10월 31일 15시 ~ 11월 7일 21시 (174시간)
  <td>26(마스터)/29(마스터+)</td>
@@ -957,7 +957,7 @@ $(document).ready(function(){
 <tr>
  <td>76</td>
  <td class="cg_starlight_nonrank" data-event-type="2">캐러밴</td>
- <td>신데렐라 캐러밴 17차</td>
+ <td data-event-id="2017">신데렐라 캐러밴 17차</td>
  <td>-</td>
  <td>11월 10일 15시 ~ 16일 21시 (6박 7일)</td>
  <td>-</td>
@@ -968,7 +968,7 @@ $(document).ready(function(){
 <tr>
  <td>77</td>
  <td class="cg_starlight_atapon">재화수집</td>
- <td class="cgevents_cool">Trinity Field</td>
+ <td class="cgevents_cool" data-event-id="1027">Trinity Field</td>
  <td>오리지널</td>
  <td>11월 19일 15시 ~ 26일 21시 (174시간)</td>
  <td>26(마스터)/<b>30</b>(마스터+)</td>
@@ -979,7 +979,7 @@ $(document).ready(function(){
 <tr>
  <td>78</td>
  <td class="cg_starlight_nonrank" data-event-type="5">퍼레이드(투어)</td>
- <td class="cgevents_all">(라이브 퍼레이드 8차) 사랑이 꽃피는 계절</td>
+ <td class="cgevents_all" data-event-id="5008">(라이브 퍼레이드 8차) 사랑이 꽃피는 계절</td>
  <td>총선</td>
  <td>11월 30일 15시 ~ 12월 9일 21시 (<b>9박 10일</b>)</td>
  <td>25(마스터)/28(마스터+)</td>
@@ -990,7 +990,7 @@ $(document).ready(function(){
 <tr>
  <td>79</td>
  <td class="cg_starlight_nonrank" data-event-type="2">캐러밴</td>
- <td>신데렐라 캐러밴 18차</td>
+ <td data-event-id="2018">신데렐라 캐러밴 18차</td>
  <td>-</td>
  <td>12월 13일 15시 ~ 18일 21시 (<b>5박 6일</b>)</td>
  <td>-</td>
@@ -1001,7 +1001,7 @@ $(document).ready(function(){
 <tr>
  <td>80</td>
  <td class="cg_starlight_atapon">재화수집</td>
- <td class="cgevents_passion">겨울 하늘 프레셔스</td>
+ <td class="cgevents_passion" data-event-id="1028">겨울 하늘 프레셔스</td>
  <td>시즌 앨범곡</td>
  <td>12월 20일 15시 ~ 27일 21시 (174시간)</td>
  <td>26(마스터)/29(마스터+)</td>
@@ -1022,7 +1022,7 @@ $(document).ready(function(){
 <tr>
  <td>81</td>
  <td class="cg_starlight_burst">그루브(버스트)</td>
- <td>(비주얼 6차) Happy New Yeah!</td>
+ <td data-event-id="3019">(비주얼 6차) Happy New Yeah!</td>
  <td>오리지널</td>
  <td>1월 1일 15시 ~ 9일 21시 (198시간)
  <td>26(마스터)/29(마스터+)</td>
@@ -1033,7 +1033,7 @@ $(document).ready(function(){
 <tr>
  <td>82</td>
  <td class="cg_starlight_atapon">재화수집</td>
- <td class="cgevents_all">아름다움의 색채를 입고</td>
+ <td class="cgevents_all" data-event-id="1029">아름다움의 색채를 입고</td>
  <td>오리지널</td>
  <td>1월 12일 15시 ~ 18일 21시 (150시간)</td>
  <td>27(마스터)/<b>30</b>(마스터+)</td>
@@ -1043,8 +1043,8 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>83</td>
-<td class="cg_starlight_nonrank" data-event-type="6">로드</td>
- <td>전진하라! 신데렐라 로드 (1차)</td>
+ <td class="cg_starlight_nonrank" data-event-type="6">로드</td>
+ <td data-event-id="6001">전진하라! 신데렐라 로드 (1차)</td>
  <td>-</td>
  <td>1월 22일 15시 ~ 29일 21시 (7박 8일)</td>
  <td>-</td>
@@ -1055,7 +1055,7 @@ $(document).ready(function(){
 <tr>
  <td>84</td>
  <td class="cg_starlight_nonrank" data-event-type="5">퍼레이드(투어)</td>
- <td class="cgevents_all">(라이브 퍼레이드 9차) always</td>
+ <td class="cgevents_all" data-event-id="5009">(라이브 퍼레이드 9차) always</td>
  <td>총선</td>
  <td>1월 31일 15시 ~ 2월 8일 21시 (8박 9일)</td>
  <td>25(마스터)/28(마스터+)</td>
@@ -1066,7 +1066,7 @@ $(document).ready(function(){
 <tr>
  <td>85</td>
  <td class="cg_starlight_nonrank" data-event-type="2">캐러밴</td>
- <td>신데렐라 캐러밴 19차</td>
+ <td data-event-id="2019">신데렐라 캐러밴 19차</td>
  <td>-</td>
  <td>2월 12일 15시 ~ 17일 21시 (5박 6일)</td>
  <td>-</td>
@@ -1077,7 +1077,7 @@ $(document).ready(function(){
 <tr>
  <td>86</td>
  <td class="cg_starlight_atapon">재화수집</td>
- <td class="cgevents_cool">Frost</td>
+ <td class="cgevents_cool" data-event-id="1030">Frost</td>
  <td>시즌 앨범곡</td>
  <td>2월 19일 15시 ~ 25일 21시 (150시간)</td>
  <td>25(마스터)/29(마스터+)</td>
@@ -1088,7 +1088,7 @@ $(document).ready(function(){
 <tr>
  <td>87</td>
  <td class="cg_starlight_burst">그루브(버스트)</td>
- <td>(보컬 8차) 트윈테일의 바람</td>
+ <td data-event-id="3020">(보컬 8차) 트윈테일의 바람</td>
  <td>시즌 앨범곡</td>
  <td>2월 28일 15시 ~ 3월 8일 21시 (198시간)
  <td>26(마스터)/29(마스터+)</td>
@@ -1098,8 +1098,8 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>88</td>
-<td class="cg_starlight_nonrank" data-event-type="6">로드</td>
- <td>전진하라! 신데렐라 로드 (2차)</td>
+ <td class="cg_starlight_nonrank" data-event-type="6">로드</td>
+ <td data-event-id="6002">전진하라! 신데렐라 로드 (2차)</td>
  <td>-</td>
  <td>3월 12일 15시 ~ 18일 21시 (6박 7일)</td>
  <td>-</td>
@@ -1110,7 +1110,7 @@ $(document).ready(function(){
 <tr>
  <td>89</td>
  <td class="cg_starlight_atapon">재화수집</td>
- <td class="cgevents_cute">반짝! 만개 스마일</td>
+ <td class="cgevents_cute" data-event-id="1031">반짝! 만개 스마일</td>
  <td><b>극장 앨범곡</b></td>
  <td>3월 20일 15시 ~ 28일 21시 (198시간)</td>
  <td>26(마스터)/29(마스터+)</td>
@@ -1121,8 +1121,8 @@ $(document).ready(function(){
 <tr>
  <td>90</td>
  <td class="cg_starlight_nonrank" data-event-type="5">퍼레이드(투어)</td>
- <td class="cgevents_all">(라이브 퍼레이드 10차) Vast World</td>
- <td>기타</td>
+ <td class="cgevents_all" data-event-id="5010">(라이브 퍼레이드 10차) Vast World</td>
+ <td>오리지널</td>
  <td>4월 2일 15시 ~ 9일 21시 (7박 8일)</td>
  <td>25(마스터)/28(마스터+)</td>
  <td class="cgevents_cool">시라사카 코우메</td>
@@ -1132,7 +1132,7 @@ $(document).ready(function(){
 <tr>
  <td>91</td>
  <td class="cg_starlight_nonrank" data-event-type="2">캐러밴</td>
- <td>신데렐라 캐러밴 20차</td>
+ <td data-event-id="2020">신데렐라 캐러밴 20차</td>
  <td>-</td>
  <td>4월 12일 15시 ~ 17일 21시 (5박 6일)</td>
  <td>-</td>
@@ -1143,7 +1143,7 @@ $(document).ready(function(){
 <tr>
  <td>92</td>
  <td class="cg_starlight_atapon">재화수집</td>
- <td class="cgevents_passion">Spring Screaming</td>
+ <td class="cgevents_passion" data-event-id="1032">Spring Screaming</td>
  <td>시즌 앨범곡</td>
  <td>4월 19일 15시 ~ 26일 21시 (174시간)</td>
  <td>26(마스터)/29(마스터+)</td>
@@ -1154,7 +1154,7 @@ $(document).ready(function(){
 <tr>
  <td>93</td>
  <td class="cg_starlight_burst">그루브(버스트)</td>
- <td>(댄스 7차) 벛꽃의 바람</td>
+ <td data-event-id="3021">(댄스 7차) 벛꽃의 바람</td>
  <td>시즌 앨범곡</td>
  <td>4월 30일 15시 ~ 5월 7일 21시 (174시간)
  <td>26(마스터)/29(마스터+)</td>
@@ -1164,8 +1164,8 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>94</td>
-<td class="cg_starlight_nonrank" data-event-type="6">로드</td>
- <td>전진하라! 신데렐라 로드 (3차)</td>
+ <td class="cg_starlight_nonrank" data-event-type="6">로드</td>
+ <td data-event-id="6003">전진하라! 신데렐라 로드 (3차)</td>
  <td>-</td>
  <td>5월 10일 15시 ~ 17일 21시 (7박 8일)</td>
  <td>-</td>
@@ -1176,7 +1176,7 @@ $(document).ready(function(){
 <tr>
  <td>95</td>
  <td class="cg_starlight_atapon">재화수집</td>
- <td class="cgevents_cute">HARURUNRUN</td>
+ <td class="cgevents_cute" data-event-id="1033">HARURUNRUN</td>
  <td>시즌 앨범곡</td>
  <td>5월 21일 15시 ~ 28일 21시 (174시간)</td>
  <td>26(마스터)/29(마스터+)</td>
@@ -1187,7 +1187,7 @@ $(document).ready(function(){
 <tr>
  <td>96</td>
  <td class="cg_starlight_nonrank" data-event-type="5">퍼레이드(투어)</td>
- <td class="cgevents_passion">(라이브 퍼레이드 11차) Virgin Love</td>
+ <td class="cgevents_passion" data-event-id="5011">(라이브 퍼레이드 11차) Virgin Love</td>
  <td>기타</td>
  <td>5월 31일 15시 ~ 6월 7일 21시 (7박 8일)</td>
  <td>25(마스터)/28(마스터+)</td>
@@ -1198,7 +1198,7 @@ $(document).ready(function(){
 <tr>
  <td>97</td>
  <td class="cg_starlight_nonrank" data-event-type="2">캐러밴</td>
- <td>신데렐라 캐러밴 21차</td>
+ <td data-event-id="2021">신데렐라 캐러밴 21차</td>
  <td>-</td>
  <td>6월 11일 15시 ~ 16일 21시 (5박 6일)</td>
  <td>-</td>
@@ -1209,7 +1209,7 @@ $(document).ready(function(){
 <tr>
  <td>98</td>
  <td class="cg_starlight_atapon">재화수집</td>
- <td class="cgevents_cool">에튀드는 1곡만</td>
+ <td class="cgevents_cool" data-event-id="1034">에튀드는 1곡만</td>
  <td>극장 앨범곡</td>
  <td>6월 19일 15시 ~ 26일 21시 (174시간)</td>
  <td>26(마스터)/28(마스터+)</td>
@@ -1220,7 +1220,7 @@ $(document).ready(function(){
 <tr>
  <td>99</td>
  <td class="cg_starlight_burst">그루브(버스트)</td>
- <td>(비주얼 7차) 은빛 돌고래와 뜨거운 바람</td>
+ <td data-event-id="3022">(비주얼 7차) 은빛 돌고래와 뜨거운 바람</td>
  <td>시즌 앨범곡</td>
  <td>6월 30일 12시 ~ 7월 7일 21시 (177시간)
  <td>26(마스터)/29(마스터+)</td>
@@ -1230,8 +1230,8 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>100</td>
-<td class="cg_starlight_nonrank" data-event-type="6">로드</td>
- <td>전진하라! 신데렐라 로드 (4차)</td>
+ <td class="cg_starlight_nonrank" data-event-type="6">로드</td>
+ <td data-event-id="6004">전진하라! 신데렐라 로드 (4차)</td>
  <td>-</td>
  <td>7월 10일 15시 ~ 17일 21시 (7박 8일)</td>
  <td>-</td>
@@ -1242,7 +1242,7 @@ $(document).ready(function(){
 <tr>
  <td>101</td>
  <td class="cg_starlight_atapon">재화수집</td>
- <td class="cgevents_passion">SUN♡FLOWER</td>
+ <td class="cgevents_passion" data-event-id="1035">SUN♡FLOWER</td>
  <td>극장 앨범곡</td>
  <td>7월 19일 15시 ~ 27일 21시 (198시간)</td>
  <td>26(마스터)/29(마스터+)</td>
@@ -1253,7 +1253,7 @@ $(document).ready(function(){
 <tr>
  <td>102</td>
  <td class="cg_starlight_nonrank" data-event-type="5">퍼레이드(투어)</td>
- <td class="cgevents_cute">(라이브 퍼레이드 12차) 데코보코 스피드스타</td>
+ <td class="cgevents_cute" data-event-id="5012">(라이브 퍼레이드 12차) 데코보코 스피드스타</td>
  <td>오리지널</td>
  <td>7월 31일 15시 ~ 8월 7일 21시 (7박 8일)</td>
  <td><b>27</b>(마스터)/<b>31</b>(마스터+)</td>
@@ -1264,7 +1264,7 @@ $(document).ready(function(){
 <tr>
  <td>103</td>
  <td class="cg_starlight_nonrank" data-event-type="2">캐러밴</td>
- <td>신데렐라 캐러밴 22차</td>
+ <td data-event-id="2022">신데렐라 캐러밴 22차</td>
  <td>-</td>
  <td>8월 11일 15시 ~ 16일 21시 (5박 6일)</td>
  <td>-</td>
@@ -1275,7 +1275,7 @@ $(document).ready(function(){
 <tr>
  <td>104</td>
  <td class="cg_starlight_atapon">재화수집</td>
- <td class="cgevents_cute">크레이지 크레이지</td>
+ <td class="cgevents_cute" data-event-id="1036">크레이지 크레이지</td>
  <td>오리지널</td>
  <td>8월 19일 15시 ~ 27일 21시 (198시간)</td>
  <td>26(마스터)/29(마스터+)</td>
@@ -1286,7 +1286,7 @@ $(document).ready(function(){
 <tr>
  <td>105</td>
  <td class="cg_starlight_burst">그루브(버스트)</td>
- <td>(보컬 9차) 걸즈 인 더 프론티어</td>
+ <td data-event-id="3023">(보컬 9차) 걸즈 인 더 프론티어</td>
  <td>오리지널</td>
  <td>8월 31일 15시 ~ 9월 7일 21시 (174시간)</td>
  <td>26(마스터)/30(마스터+)</td>
@@ -1296,8 +1296,8 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>106</td>
-<td class="cg_starlight_nonrank" data-event-type="6">로드</td>
- <td>전진하라! 신데렐라 로드 (5차)</td>
+ <td class="cg_starlight_nonrank" data-event-type="6">로드</td>
+ <td data-event-id="6005">전진하라! 신데렐라 로드 (5차)</td>
  <td>-</td>
  <td>9월 11일 15시 ~ 17일 21시 (6박 7일)</td>
  <td>-</td>
@@ -1308,7 +1308,7 @@ $(document).ready(function(){
 <tr>
  <td>107</td>
  <td class="cg_starlight_atapon">재화수집</td>
- <td class="cgevents_cool">Pretty Liar</td>
+ <td class="cgevents_cool" data-event-id="1037">Pretty Liar</td>
  <td>오리지널</td>
  <td>9월 19일 15시 ~ 27일 21시 (198시간)</td>
  <td>26(마스터)/29(마스터+)</td>
@@ -1319,7 +1319,7 @@ $(document).ready(function(){
 <tr>
  <td>108</td>
  <td class="cg_starlight_nonrank" data-event-type="5">퍼레이드(투어)</td>
- <td class="cgevents_all">(라이브 퍼레이드 13차) 도레미 팩토리!</td>
+ <td class="cgevents_all" data-event-id="5013">(라이브 퍼레이드 13차) 도레미 팩토리!</td>
  <td>기타</td>
  <td>9월 30일 15시 ~ 10월 8일 21시 (8박 9일)</td>
  <td>24(마스터)/28(마스터+)</td>
@@ -1330,7 +1330,7 @@ $(document).ready(function(){
 <tr>
  <td>109</td>
  <td class="cg_starlight_nonrank" data-event-type="2">캐러밴</td>
- <td>신데렐라 캐러밴 23차</td>
+ <td data-event-id="2023">신데렐라 캐러밴 23차</td>
  <td>-</td>
  <td>10월 11일 15시 ~ 16일 21시 (5박 6일)</td>
  <td>-</td>
@@ -1341,7 +1341,7 @@ $(document).ready(function(){
 <tr>
  <td>110</td>
  <td class="cg_starlight_atapon">재화수집</td>
- <td class="cgevents_cool">언데드 댄스록</td>
+ <td class="cgevents_cool" data-event-id="1038">언데드 댄스록</td>
  <td>오리지널</td>
  <td>10월 19일 15시 ~ 27일 21시 (198시간)</td>
  <td>26(마스터)/29(마스터+)</td>
@@ -1352,7 +1352,7 @@ $(document).ready(function(){
 <tr>
  <td>111</td>
  <td class="cg_starlight_burst">그루브(버스트)</td>
- <td>(댄스 8차) Starry-Go-Round</td>
+ <td data-event-id="3024">(댄스 8차) Starry-Go-Round</td>
  <td>오리지널</td>
  <td>10월 31일 15시 ~ 11월 7일 21시 (177시간)</td>
  <td><b>27</b>(마스터)/<b>30</b>(마스터+)</td>
@@ -1362,8 +1362,8 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>112</td>
-<td class="cg_starlight_nonrank" data-event-type="6">로드</td>
- <td>전진하라! 신데렐라 로드 (6차)</td>
+ <td class="cg_starlight_nonrank" data-event-type="6">로드</td>
+ <td data-event-id="6006">전진하라! 신데렐라 로드 (6차)</td>
  <td>-</td>
  <td>11월 10일 15시 ~ 16일 21시 (6박 7일)</td>
  <td>-</td>
@@ -1374,7 +1374,7 @@ $(document).ready(function(){
 <tr>
  <td>113</td>
  <td class="cg_starlight_atapon">재화수집</td>
- <td class="cgevents_passion">Sunshine See May</td>
+ <td class="cgevents_passion" data-event-id="1039">Sunshine See May</td>
  <td>오리지널</td>
  <td>11월 19일 15시 ~ 27일 21시 (198시간)</td>
  <td>26(마스터)/29(마스터+)</td>
@@ -1385,7 +1385,7 @@ $(document).ready(function(){
 <tr>
  <td>114</td>
  <td class="cg_starlight_nonrank" data-event-type="5">퍼레이드(투어)</td>
- <td class="cgevents_all">(라이브 퍼레이드 14차) 너에게로의 시</td>
+ <td class="cgevents_all" data-event-id="5014">(라이브 퍼레이드 14차) 너에게로의 시</td>
  <td>총선</td>
  <td>11월 30일 15시 ~ 12월 8일 21시 (8박 9일)</td>
  <td>25(마스터)/28(마스터+)</td>
@@ -1396,7 +1396,7 @@ $(document).ready(function(){
 <tr>
  <td>115</td>
  <td class="cg_starlight_nonrank" data-event-type="2">캐러밴</td>
- <td>신데렐라 캐러밴 24차</td>
+ <td data-event-id="2024">신데렐라 캐러밴 24차</td>
  <td>-</td>
  <td>12월 11일 15시 ~ 16일 21시 (5박 6일)</td>
  <td>-</td>
@@ -1407,7 +1407,7 @@ $(document).ready(function(){
 <tr>
  <td>116</td>
  <td class="cg_starlight_atapon">재화수집</td>
- <td class="cgevents_all">Trust me</td>
+ <td class="cgevents_all" data-event-id="1040">Trust me</td>
  <td>총선</td>
  <td>12월 19일 15시 ~ 27일 21시 (198시간)</td>
  <td>27(마스터)/<b>30</b>(마스터+)</td>
@@ -1428,7 +1428,7 @@ $(document).ready(function(){
 <tr>
  <td>117</td>
  <td class="cg_starlight_burst">그루브(버스트)</td>
- <td>(비주얼 8차) Palette</td>
+ <td data-event-id="3025">(비주얼 8차) Palette</td>
  <td>오리지널</td>
  <td>1월 1일 15시 ~ 8일 21시 (174시간)</td>
  <td>26(마스터)/29(마스터+)</td>
@@ -1438,8 +1438,8 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>118</td>
-<td class="cg_starlight_nonrank" data-event-type="6">로드</td>
- <td>전진하라! 신데렐라 로드 (7차)</td>
+ <td class="cg_starlight_nonrank" data-event-type="6">로드</td>
+ <td data-event-id="6007">전진하라! 신데렐라 로드 (7차)</td>
  <td>-</td>
  <td>1월 12일 15시 ~ 18일 21시 (6박 7일)</td>
  <td>-</td>
@@ -1450,7 +1450,7 @@ $(document).ready(function(){
 <tr>
  <td>119</td>
  <td class="cg_starlight_atapon">재화수집</td>
- <td class="cgevents_passion">스파이스 파라다이스</td>
+ <td class="cgevents_passion" data-event-id="1041">스파이스 파라다이스</td>
  <td>기타</td>
  <td>1월 21일 15시 ~ 28일 21시 (174시간)</td>
  <td>25(마스터)/28(마스터+)</td>
@@ -1461,7 +1461,7 @@ $(document).ready(function(){
 <tr>
  <td>120</td>
  <td class="cg_starlight_nonrank" data-event-type="5">퍼레이드(투어)</td>
- <td class="cgevents_all">(라이브 퍼레이드 15차) 의용인협 하나후부키</td>
+ <td class="cgevents_all" data-event-id="5015">(라이브 퍼레이드 15차) 의용인협 하나후부키</td>
  <td>오리지널</td>
  <td>1월 31일 15시 ~ 2월 8일 21시 (8박 9일)</td>
  <td>26(마스터)/29(마스터+)</td>
@@ -1472,7 +1472,7 @@ $(document).ready(function(){
 <tr>
  <td>121</td>
  <td class="cg_starlight_nonrank" data-event-type="2">캐러밴</td>
- <td>신데렐라 캐러밴 25차</td>
+ <td data-event-id="2025">신데렐라 캐러밴 25차</td>
  <td>-</td>
  <td>2월 12일 15시 ~ 17일 21시 (5박 6일)</td>
  <td>-</td>
@@ -1483,7 +1483,7 @@ $(document).ready(function(){
 <tr>
  <td>122</td>
  <td class="cg_starlight_atapon">재화수집</td>
- <td class="cgevents_cool">Needle Light</td>
+ <td class="cgevents_cool" data-event-id="1042">Needle Light</td>
  <td>오리지널</td>
  <td>2월 19일 15시 ~ 25일 21시 (150시간)</td>
  <td>26(마스터)/29(마스터+)</td>
@@ -1494,7 +1494,7 @@ $(document).ready(function(){
 <tr>
  <td>123</td>
  <td class="cg_starlight_burst">그루브(버스트)</td>
- <td>(비주얼 9차) Fascinate</td>
+ <td data-event-id="3026">(비주얼 9차) Fascinate</td>
  <td>오리지널</td>
  <td>2월 28일 15시 ~ 3월 7일 21시 (174시간)</td>
  <td>26(마스터)/30(마스터+)</td>
@@ -1504,8 +1504,8 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>124</td>
-<td class="cg_starlight_nonrank" data-event-type="6">로드</td>
- <td>전진하라! 신데렐라 로드 (8차)</td>
+ <td class="cg_starlight_nonrank" data-event-type="6">로드</td>
+ <td data-event-id="6008">전진하라! 신데렐라 로드 (8차)</td>
  <td>-</td>
  <td>3월 11일 15시 ~ 17일 21시 (6박 7일)</td>
  <td>-</td>
@@ -1516,7 +1516,7 @@ $(document).ready(function(){
 <tr>
  <td>125</td>
  <td class="cg_starlight_atapon">재화수집</td>
- <td class="cgevents_cool">미완성의 역사</td>
+ <td class="cgevents_cool" data-event-id="1043">미완성의 역사</td>
  <td>시즌 앨범곡</td>
  <td>3월 20일 15시 ~ 27일 21시 (174시간)</td>
  <td>25(마스터)/28(마스터+)</td>
@@ -1527,7 +1527,7 @@ $(document).ready(function(){
 <tr>
  <td>126</td>
  <td class="cg_starlight_nonrank" data-event-type="5">퍼레이드(투어)</td>
- <td class="cgevents_passion">(라이브 퍼레이드 16차) O-Ku-Ri-Mo-No Sunday!</td>
+ <td class="cgevents_passion" data-event-id="5016">(라이브 퍼레이드 16차) O-Ku-Ri-Mo-No Sunday!</td>
  <td>오리지널</td>
  <td>4월 2일 15시 ~ 9일 21시 (7박 8일)</td>
  <td>26(마스터)/29(마스터+)</td>
@@ -1538,7 +1538,7 @@ $(document).ready(function(){
 <tr>
  <td>127</td>
  <td class="cg_starlight_nonrank" data-event-type="2">캐러밴</td>
- <td>신데렐라 캐러밴 26차</td>
+ <td data-event-id="2026">신데렐라 캐러밴 26차</td>
  <td>-</td>
  <td>4월 12일 15시 ~ 17일 21시 (5박 6일)</td>
  <td>-</td>
@@ -1549,7 +1549,7 @@ $(document).ready(function(){
 <tr>
  <td>128</td>
  <td class="cg_starlight_atapon">재화수집</td>
- <td class="cgevents_cute">큥 큥 맥스</td>
+ <td class="cgevents_cute" data-event-id="1044">큥 큥 맥스</td>
  <td>극장 앨범곡</td>
  <td>4월 19일 15시 ~ 26일 21시 (174시간)</td>
  <td>25(마스터)/28(마스터+)</td>
@@ -1560,7 +1560,7 @@ $(document).ready(function(){
 <tr>
  <td>129</td>
  <td class="cg_starlight_burst">그루브(버스트)</td>
- <td>(댄스 9차) 무중력 셔틀</td>
+ <td data-event-id="3027">(댄스 9차) 무중력 셔틀</td>
  <td>기타</td>
  <td>4월 30일 15시 ~ 5월 7일 21시 (174시간)</td>
  <td>26(마스터)/29(마스터+)</td>
@@ -1571,7 +1571,7 @@ $(document).ready(function(){
 <tr>
  <td>130</td>
  <td class="cg_starlight_nonrank" data-event-type="6">로드</td>
- <td>전진하라! 신데렐라 로드 (9차)</td>
+ <td data-event-id="6009">전진하라! 신데렐라 로드 (9차)</td>
  <td>-</td>
  <td>5월 10일 15시 ~ 17일 21시 (7박 8일)</td>
  <td>-</td>
@@ -1582,7 +1582,7 @@ $(document).ready(function(){
 <tr>
  <td>131</td>
  <td class="cg_starlight_atapon">재화수집</td>
- <td class="cgevents_cool">Max Beat</td>
+ <td class="cgevents_cool" data-event-id="1045">Max Beat</td>
  <td>극장 앨범곡</td>
  <td>5월 21일 15시 ~ 28일 21시 (174시간)</td>
  <td>26(마스터)/29(마스터+)</td>
@@ -1593,7 +1593,7 @@ $(document).ready(function(){
 <tr>
  <td>132</td>
  <td class="cg_starlight_nonrank" data-event-type="5">퍼레이드(투어)</td>
- <td class="cgevents_all">(라이브 퍼레이드 17차) 푸른 하늘 엘</td>
+ <td class="cgevents_all" data-event-id="5017">(라이브 퍼레이드 17차) 푸른 하늘 엘</td>
  <td>기타</td>
  <td>5월 31일 15시 ~ 6월 7일 21시 (7박 8일)</td>
  <td>25(마스터)/28(마스터+)</td>
@@ -1604,7 +1604,7 @@ $(document).ready(function(){
 <tr>
  <td>133</td>
  <td class="cg_starlight_nonrank" data-event-type="2">캐러밴</td>
- <td>신데렐라 캐러밴 27차</td>
+ <td data-event-id="2027">신데렐라 캐러밴 27차</td>
  <td>-</td>
  <td>6월 11일 15시 ~ 18일 21시 (7박 8일)</td>
  <td>-</td>
@@ -1615,7 +1615,7 @@ $(document).ready(function(){
 <tr>
  <td>134</td>
  <td class="cg_starlight_atapon">재화수집</td>
- <td class="cgevents_passion">TAKAMARI☆CLIMAXXX!!!!!</td>
+ <td class="cgevents_passion" data-event-id="1046">TAKAMARI☆CLIMAXXX!!!!!</td>
  <td>극장 앨범곡</td>
  <td>6월 21일 15시 ~ 29일 21시 (198시간)</td>
  <td>27(마스터)/<b>30</b>(마스터+)</td>
@@ -1626,7 +1626,7 @@ $(document).ready(function(){
 <tr>
  <td>135</td>
  <td class="cg_starlight_nonrank" data-event-type="7">카니발</td>
- <td class="cgevents_all">(라이브 카니발 1차) Stage Bye Stage</td>
+ <td class="cgevents_all" data-event-id="7001">(라이브 카니발 1차) Stage Bye Stage</td>
  <td>기타</td>
  <td>7월 2일 15시 ~ 9일 21시 (7박 8일)</td>
  <td>25(마스터)/28(마스터+)</td>
@@ -1636,8 +1636,8 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>136</td>
-<td class="cg_starlight_nonrank" data-event-type="6">로드</td>
- <td>전진하라! 신데렐라 로드 (10차)</td>
+ <td class="cg_starlight_nonrank" data-event-type="6">로드</td>
+ <td data-event-id="6010">전진하라! 신데렐라 로드 (10차)</td>
  <td>-</td>
  <td>7월 12일 15시 ~ 19일 21시 (7박 8일)</td>
  <td>-</td>
@@ -1648,7 +1648,7 @@ $(document).ready(function(){
 <tr>
  <td>137</td>
  <td class="cg_starlight_atapon">재화수집</td>
- <td class="cgevents_cool">바벨</td>
+ <td class="cgevents_cool" data-event-id="1047">바벨</td>
  <td>오리지널</td>
  <td>7월 22일 15시 ~ <del datetime="2019-07-26T15:00:00+09:00">28일</del> 29일 21시 (198시간)</td>
  <td><b>27</b>(마스터)/<b>31</b>(마스터+)</td>
@@ -1659,7 +1659,7 @@ $(document).ready(function(){
 <tr>
  <td>138</td>
  <td class="cg_starlight_burst">그루브(버스트)</td>
- <td>(보컬 10차) 여름 사랑 -NATSU KOI-</td>
+ <td data-event-id="3028">(보컬 10차) 여름 사랑 -NATSU KOI-</td>
  <td>시즌 앨범곡</td>
  <td>8월 1일 15시 ~ 8일 21시 (174시간)</td>
  <td>25(마스터)/28(마스터+)</td>
@@ -1670,7 +1670,7 @@ $(document).ready(function(){
 <tr>
  <td>139</td>
  <td class="cg_starlight_nonrank" data-event-type="2">캐러밴</td>
- <td>신데렐라 캐러밴 28차</td>
+ <td data-event-id="2028">신데렐라 캐러밴 28차</td>
  <td>-</td>
  <td>8월 11일 15시 ~ 17일 21시 (6박 7일)</td>
  <td>-</td>
@@ -1681,7 +1681,7 @@ $(document).ready(function(){
 <tr>
  <td>140</td>
  <td class="cg_starlight_atapon">재화수집</td>
- <td class="cgevents_all">comic cosmic</td>
+ <td class="cgevents_all" data-event-id="1048">comic cosmic</td>
  <td>기타</td>
  <td>8월 20일 15시 ~ 27일 21시 (174시간)</td>
  <td>26(마스터)/29(마스터+)</td>
@@ -1692,7 +1692,7 @@ $(document).ready(function(){
 <tr>
  <td>141</td>
  <td class="cg_starlight_nonrank" data-event-type="7">카니발</td>
- <td class="cgevents_all">(라이브 카니발 2차) TRUE COLORS</td>
+ <td class="cgevents_all" data-event-id="7002">(라이브 카니발 2차) TRUE COLORS</td>
  <td>오리지널</td>
  <td>8월 31일 15시 ~ 9월 8일 21시 (8박 9일)</td>
  <td>26(마스터)/29(마스터+)</td>
@@ -1702,8 +1702,8 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>142</td>
-<td class="cg_starlight_nonrank" data-event-type="6">로드</td>
- <td>전진하라! 신데렐라 로드 (11차)</td>
+ <td class="cg_starlight_nonrank" data-event-type="6">로드</td>
+ <td data-event-id="6011">전진하라! 신데렐라 로드 (11차)</td>
  <td>-</td>
  <td>9월 11일 15시 ~ 17일 21시 (6박 7일)</td>
  <td>-</td>
@@ -1714,7 +1714,7 @@ $(document).ready(function(){
 <tr>
  <td>143</td>
  <td class="cg_starlight_atapon">재화수집</td>
- <td class="cgevents_cute">스텝 &amp; 스킵</td>
+ <td class="cgevents_cute" data-event-id="1049">스텝 &amp; 스킵</td>
  <td>오리지널</td>
  <td>9월 20일 15시 ~ 27일 21시 (174시간)</td>
  <td>26(마스터)/29(마스터+)</td>
@@ -1725,7 +1725,7 @@ $(document).ready(function(){
 <tr>
  <td>144</td>
  <td class="cg_starlight_nonrank" data-event-type="5">퍼레이드(투어)</td>
- <td class="cgevents_passion">(라이브 퍼레이드 18차) Gossip Club</td>
+ <td class="cgevents_passion" data-event-id="5018">(라이브 퍼레이드 18차) Gossip Club</td>
  <td>기타</td>
  <td>9월 30일 15시 ~ 10월 8일 21시 (8박 9일)</td>
  <td>27(마스터)/<b>31</b>(마스터+)</td>
@@ -1736,7 +1736,7 @@ $(document).ready(function(){
 <tr>
  <td>145</td>
  <td class="cg_starlight_nonrank" data-event-type="2">캐러밴</td>
- <td>신데렐라 캐러밴 29차</td>
+ <td data-event-id="2029">신데렐라 캐러밴 29차</td>
  <td>-</td>
  <td>10월 11일 15시 ~ 17일 21시 (6박 7일)</td>
  <td>-</td>
@@ -1747,7 +1747,7 @@ $(document).ready(function(){
 <tr>
  <td>146</td>
  <td class="cg_starlight_atapon">재화수집</td>
- <td class="cgevents_passion">공상탐사계획</td>
+ <td class="cgevents_passion" data-event-id="1050">공상탐사계획</td>
  <td>시즌 앨범곡</td>
  <td>10월 21일 15시 ~ 28일 21시 (174시간)</td>
  <td>25(마스터)/28(마스터+)</td>
@@ -1758,7 +1758,7 @@ $(document).ready(function(){
 <tr>
  <td>147</td>
  <td class="cg_starlight_burst">그루브(버스트)</td>
- <td>(비주얼 10차) 미러볼 러브</td>
+ <td data-event-id="3029">(비주얼 10차) 미러볼 러브</td>
  <td>기타</td>
  <td>10월 31일 15시 ~ 11월 7일 21시 (174시간)</td>
  <td>26(마스터)/29(마스터+)</td>
@@ -1768,8 +1768,8 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>148</td>
-<td class="cg_starlight_nonrank" data-event-type="6">로드</td>
- <td>전진하라! 신데렐라 로드 (12차)</td>
+ <td class="cg_starlight_nonrank" data-event-type="6">로드</td>
+ <td data-event-id="6012">전진하라! 신데렐라 로드 (12차)</td>
  <td>-</td>
  <td>11월 11일 15시 ~ 17일 21시 (6박 7일)</td>
  <td>-</td>
@@ -1780,7 +1780,7 @@ $(document).ready(function(){
 <tr>
  <td>149</td>
  <td class="cg_starlight_atapon">재화수집</td>
- <td class="cgevents_cool">Secret Daybreak</td>
+ <td class="cgevents_cool" data-event-id="1051">Secret Daybreak</td>
  <td>오리지널</td>
  <td>11월 20일 15시 ~ <del datetime="2019-11-26T15:00:00+09:00">27일</del> 28일 21시 (198시간)</td>
  <td>26(마스터)/29(마스터+)</td>
@@ -1791,7 +1791,7 @@ $(document).ready(function(){
 <tr>
  <td>150</td>
  <td class="cg_starlight_nonrank" data-event-type="5">퍼레이드(투어)</td>
- <td class="cgevents_all">(라이브 퍼레이드 19차) Sun! High! Gold!</td>
+ <td class="cgevents_all" data-event-id="5019">(라이브 퍼레이드 19차) Sun! High! Gold!</td>
  <td>총선</td>
  <td>11월 30일 15시 ~ 12월 8일 21시 (8박 9일)</td>
  <td><b>27</b>(마스터)/<b>30</b>(마스터+)</td>
@@ -1802,7 +1802,7 @@ $(document).ready(function(){
 <tr>
  <td>151</td>
  <td class="cg_starlight_nonrank" data-event-type="2">캐러밴</td>
- <td>신데렐라 캐러밴 30차</td>
+ <td data-event-id="2030">신데렐라 캐러밴 30차</td>
  <td>-</td>
  <td>12월 12일 15시 ~ 17일 21시 (5박 6일)</td>
  <td>-</td>
@@ -1813,7 +1813,7 @@ $(document).ready(function(){
 <tr>
  <td>152</td>
  <td class="cg_starlight_atapon">재화수집</td>
- <td class="cgevents_cute">꼬옥 Milky Way</td>
+ <td class="cgevents_cute" data-event-id="1052">꼬옥 Milky Way</td>
  <td>오리지널</td>
  <td>12월 20일 15시 ~ 27일 21시 (174시간)</td>
  <td>26(마스터)/28(마스터+)</td>
@@ -1833,7 +1833,7 @@ $(document).ready(function(){
 <tr>
  <td>153</td>
  <td class="cg_starlight_nonrank" data-event-type="7">카니발</td>
- <td class="cgevents_all">(라이브 카니발 3차) 꿈을 들여다보면</td>
+ <td class="cgevents_all" data-event-id="7003">(라이브 카니발 3차) 꿈을 들여다보면</td>
  <td>총선</td>
  <td>1월 1일 15시 ~ 8일 21시 (7박 8일)</td>
  <td>26(마스터)/29(마스터+)</td>
@@ -1844,8 +1844,8 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>154</td>
-<td class="cg_starlight_nonrank" data-event-type="6">로드</td>
- <td>전진하라! 신데렐라 로드 (13차)</td>
+ <td class="cg_starlight_nonrank" data-event-type="6">로드</td>
+ <td data-event-id="6013">전진하라! 신데렐라 로드 (13차)</td>
  <td>-</td>
  <td>1월 11일 15시 ~ 17일 21시 (6박 7일)</td>
  <td>-</td>
@@ -1857,7 +1857,7 @@ $(document).ready(function(){
 <tr>
  <td>155</td>
  <td class="cg_starlight_atapon">재화수집</td>
- <td class="cgevents_cute">행복의 법칙 ~룰~</td>
+ <td class="cgevents_cute" data-event-id="1053">행복의 법칙 ~룰~</td>
  <td>오리지널</td>
  <td>1월 20일 15시 ~ 28일 21시 (198시간)</td>
  <td>25(마스터)/28(마스터+)</td>
@@ -1869,7 +1869,7 @@ $(document).ready(function(){
 <tr>
  <td>156</td>
  <td class="cg_starlight_burst">그루브(버스트)</td>
- <td>(댄스 10차) Unlock Starbeat</td>
+ <td data-event-id="3030">(댄스 10차) Unlock Starbeat</td>
  <td>기타</td>
  <td>1월 31일 12시 ~ 2월 7일 21시 (177시간)</td>
  <td>26(마스터)/29(마스터+)</td>
@@ -1881,7 +1881,7 @@ $(document).ready(function(){
 <tr>
  <td>157</td>
  <td class="cg_starlight_nonrank" data-event-type="2">캐러밴</td>
- <td>신데렐라 캐러밴 31차</td>
+ <td data-event-id="2031">신데렐라 캐러밴 31차</td>
  <td>-</td>
  <td>2월 10일 15시 ~ 15일 21시 (5박 6일)</td>
  <td>-</td>
@@ -1893,7 +1893,7 @@ $(document).ready(function(){
 <tr>
  <td>158</td>
  <td class="cg_starlight_atapon">재화수집</td>
- <td class="cgevents_all">인상(印象)</td>
+ <td class="cgevents_all" data-event-id="1054">인상(印象)</td>
  <td>기타</td>
  <td>2월 18일 15시 ~ 26일 21시 (198시간)</td>
  <td>24(마스터)/<b>27</b>(마스터+)</td>
@@ -1905,7 +1905,7 @@ $(document).ready(function(){
 <tr>
  <td>159</td>
  <td class="cg_starlight_nonrank" data-event-type="5">퍼레이드(투어)</td>
- <td class="cgevents_cool">(라이브 퍼레이드 20차) Gaze and Gaze</td>
+ <td class="cgevents_cool" data-event-id="5020">(라이브 퍼레이드 20차) Gaze and Gaze</td>
  <td>오리지널</td>
  <td>2월 29일 12시 ~ 3월 8일 21시 (8박 9일)</td>
  <td>26(마스터)/<b>30</b>(마스터+)</td>
@@ -1916,8 +1916,8 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>160</td>
-<td class="cg_starlight_nonrank" data-event-type="6">로드</td>
- <td>전진하라! 신데렐라 로드 (14차)</td>
+ <td class="cg_starlight_nonrank" data-event-type="6">로드</td>
+ <td data-event-id="6014">전진하라! 신데렐라 로드 (14차)</td>
  <td>-</td>
  <td>3월 12일 15시 ~ 18일 21시 (6박 7일)</td>
  <td>-</td>
@@ -1929,7 +1929,7 @@ $(document).ready(function(){
 <tr>
  <td>161</td>
  <td class="cg_starlight_atapon">재화수집</td>
- <td class="cgevents_passion">빛나라! 비트 슈터</td>
+ <td class="cgevents_passion" data-event-id="1055">빛나라! 비트 슈터</td>
  <td>오리지널</td>
  <td>3월 21일 15시 ~ 29일 21시 (198시간)</td>
  <td>25(마스터)/29(마스터+)</td>
@@ -1941,7 +1941,7 @@ $(document).ready(function(){
 <tr>
  <td>162</td>
  <td class="cg_starlight_burst">그루브(버스트)</td>
- <td>(비주얼 11차) Great Journey</td>
+ <td data-event-id="3031">(비주얼 11차) Great Journey</td>
  <td>콜라보레이션</td>
  <td>4월 2일 15시 ~ 9일 21시 (174시간)</td>
  <td>27(마스터)/<b>31</b>(마스터+)</td>
@@ -1953,7 +1953,7 @@ $(document).ready(function(){
 <tr>
  <td>163</td>
  <td class="cg_starlight_nonrank" data-event-type="2">캐러밴</td>
- <td>신데렐라 캐러밴 32차</td>
+ <td data-event-id="2032">신데렐라 캐러밴 32차</td>
  <td>-</td>
  <td>4월 13일 15시 ~ 18일 21시 (5박 6일)</td>
  <td>-</td>
@@ -1965,7 +1965,7 @@ $(document).ready(function(){
 <tr>
  <td>164</td>
  <td class="cg_starlight_atapon">재화수집</td>
- <td class="cgevents_all">Athanasia</td>
+ <td class="cgevents_all" data-event-id="1056">Athanasia</td>
  <td>기타</td>
  <td>4월 20일 15시 ~ 27일 21시 (198시간)</td>
  <td>26(마스터)/29(마스터+)</td>
@@ -1977,7 +1977,7 @@ $(document).ready(function(){
 <tr>
  <td>165</td>
  <td class="cg_starlight_nonrank" data-event-type="5">퍼레이드(투어)</td>
- <td class="cgevents_cool">(라이브 퍼레이드 21차) 오덕후 is LOVE!</td>
+ <td class="cgevents_cool" data-event-id="5021">(라이브 퍼레이드 21차) 오덕후 is LOVE!</td>
  <td>오리지널</td>
  <td>4월 30일 12시 ~ 5월 7일 21시 (7박 8일)</td>
  <td>25(마스터)/29(마스터+)</td>
@@ -1988,8 +1988,8 @@ $(document).ready(function(){
 </tr>
 <tr>
  <td>166</td>
-<td class="cg_starlight_nonrank" data-event-type="6">로드</td>
- <td>전진하라! 신데렐라 로드 (15차)</td>
+ <td class="cg_starlight_nonrank" data-event-type="6">로드</td>
+ <td data-event-id="6015">전진하라! 신데렐라 로드 (15차)</td>
  <td>-</td>
  <td>5월 9일 15시 ~ 16일 21시 (7박 8일)</td>
  <td>-</td>
@@ -2001,7 +2001,7 @@ $(document).ready(function(){
 <tr>
  <td>167</td>
  <td class="cg_starlight_atapon">재화수집</td>
- <td class="cgevents_all">발칙한 CANVAS</td>
+ <td class="cgevents_all" data-event-id="1057">발칙한 CANVAS</td>
  <td>기타</td>
  <td>5월 19일 15시 ~ 27일 21시 (198시간)</td>
  <td>26(마스터)/29(마스터+)</td>
@@ -2013,7 +2013,7 @@ $(document).ready(function(){
 <tr>
  <td>168</td>
  <td class="cg_starlight_burst">그루브(버스트)</td>
- <td>(보컬 11차) 미소 Diary</td>
+ <td data-event-id="3032">(보컬 11차) 미소 Diary</td>
  <td>오리지널</td>
  <td>5월 31일 12시 ~ 6월 7일 21시 (177시간)</td>
  <td>26(마스터)/28(마스터+)</td>
@@ -2025,7 +2025,7 @@ $(document).ready(function(){
 <tr>
  <td>169</td>
  <td class="cg_starlight_nonrank" data-event-type="2">캐러밴</td>
- <td>신데렐라 캐러밴 33차</td>
+ <td data-event-id="2033">신데렐라 캐러밴 33차</td>
  <td>-</td>
  <td>6월 10일 15시 ~ 16일 21시 (6박 7일)</td>
  <td>-</td>
@@ -2037,7 +2037,7 @@ $(document).ready(function(){
 <tr>
  <td>170</td>
  <td class="cg_starlight_atapon">재화수집</td>
- <td class="cgevents_cute">Sing the prologue♪</td>
+ <td class="cgevents_cute" data-event-id="1058">Sing the prologue♪</td>
  <td>극장 앨범곡</td>
  <td>6월 19일 15시 ~ 26일 21시 (198시간)</td>
  <td>25(마스터)/28(마스터+)</td>
@@ -2049,7 +2049,7 @@ $(document).ready(function(){
 <tr>
  <td>171</td>
  <td class="cg_starlight_nonrank" data-event-type="7">카니발</td>
- <td class="cgevents_cool">(라이브 카니발 4차) 오우무아무아에게 행운을</td>
+ <td class="cgevents_cool" data-event-id="7004">(라이브 카니발 4차) 오우무아무아에게 행운을</td>
  <td>기타</td>
  <td>6월 30일 12시 ~ 7월 8일 21시 (8박 9일)</td>
  <td>26(마스터)/29(마스터+)</td>
