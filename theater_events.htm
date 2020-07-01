@@ -80,50 +80,65 @@ $(document).ready(function(){
 <h2 class="sectionhead"><a name="e_periodic" href="#section_01">1.</a> <time datetime="2017-06-29T12:00:00+09:00">일반 정규 이벤트</time></h2>
 <hr style="width: 100%; margin-top: -0.5em;" />
 
-<div id="event_countdown">
- <h3>현재 개최중인 이벤트 제목 (현지판 기준)</h3>
- <div id="theater_event_name_j"><img src="./assets/loading.gif" style="width: 24px; height: auto;" alt="Loading" /> 가져오는 중...</div>
- <sub id="theater_ename_orig_j" style="display: none;"></sub>
- <input type="hidden" id="theater_eid_j" value="0" />
- <h3>이벤트 종료까지 남은 시간 (현지판 기준)</h3>
- <div id="countdown_time"><img src="./assets/loading.gif" style="width: 24px; height: auto;" alt="Loading" /> 가져오는 중...</div>
- <sub id="nearend_event" style="display: none;">종료 임박!!</sub>
- <sub id="underday_event" style="display: none;">얼마 남지 않았습니다. 서두르세요.</sub>
+<table id="theaterdays_events_status">
+<tr>
+ <th>현지(일본어)판</th>
+ <th>한국어판</th>
+</tr>
+<tr>
+ <td>
 
- <sub>정보제공: <a href="https://matsurihi.me">matsurihi.me</a> (日)</sub>
-</div>
+ <div id="event_countdown">
+  <h3>현재 개최중인 이벤트 제목 (현지판 기준)</h3>
+  <div id="theater_event_name_j"><img src="./assets/loading.gif" style="width: 24px; height: auto;" alt="Loading" /> 가져오는 중...</div>
+  <sub id="theater_ename_orig_j" style="display: none;"></sub>
+  <input type="hidden" id="theater_eid_j" value="0" />
+  <h3>이벤트 종료까지 남은 시간 (현지판 기준)</h3>
+  <div id="countdown_time"><img src="./assets/loading.gif" style="width: 24px; height: auto;" alt="Loading" /> 가져오는 중...</div>
+  <sub id="nearend_event" style="display: none;">종료 임박!!</sub>
+  <sub id="underday_event" style="display: none;">얼마 남지 않았습니다. 서두르세요.</sub>
 
-<div id="boost_countdown">
- <h3>후반전 시작까지 남은 시간 (현지판 기준)</h3>
- <div id="boost_time"><img src="./assets/loading.gif" style="width: 24px; height: auto;" alt="Loading" /> 가져오는 중...</div>
- <sub>정보제공: <a href="https://matsurihi.me">matsurihi.me</a> (日)</sub>
-</div>
+  <sub>정보제공: <a href="https://matsurihi.me">matsurihi.me</a> (日)</sub>
+ </div>
 
-<div id="resannounce_countdown">
- <h3>이벤트 결과발표까지 남은 시간 (현지판 기준)</h3>
- <div id="resannounce_time"><img src="./assets/loading.gif" style="width: 24px; height: auto;" alt="Loading" /> 가져오는 중...</div>
- <sub>정보제공: <a href="https://matsurihi.me">matsurihi.me</a> (日)</sub>
-</div>
+ <div id="boost_countdown">
+  <h3>후반전 시작까지 남은 시간 (현지판 기준)</h3>
+  <div id="boost_time"><img src="./assets/loading.gif" style="width: 24px; height: auto;" alt="Loading" /> 가져오는 중...</div>
+  <sub>정보제공: <a href="https://matsurihi.me">matsurihi.me</a> (日)</sub>
+ </div>
 
+ <div id="resannounce_countdown">
+  <h3>이벤트 결과발표까지 남은 시간 (현지판 기준)</h3>
+  <div id="resannounce_time"><img src="./assets/loading.gif" style="width: 24px; height: auto;" alt="Loading" /> 가져오는 중...</div>
+  <sub>정보제공: <a href="https://matsurihi.me">matsurihi.me</a> (日)</sub>
+ </div>
 
-<div id="event_countdown_k">
- <h3>현재 개최중인 이벤트 제목 (한국어판 기준)</h3>
- <div id="theater_event_name_k"><img src="./assets/loading.gif" style="width: 24px; height: auto;" alt="Loading" /> 가져오는 중...</div>
- <sub id="theater_ename_orig_k" style="display: none;"></sub>
- <input type="hidden" id="theater_eid_k" value="0" />
- <h3>이벤트 종료까지 남은 시간 (한국어판 기준)</h3>
- <div id="countdown_time_k"><img src="./assets/loading.gif" style="width: 24px; height: auto;" alt="Loading" /> 가져오는 중...</div>
- <sub id="nearend_event_k" style="display: none;">종료 임박!!</sub>
- <sub id="underday_event_k" style="display: none;">얼마 남지 않았습니다. 서두르세요.</sub>
+</td>
+<td>
+
+ <div id="event_countdown_k">
+  <h3>현재 개최중인 이벤트 제목 (한국어판 기준)</h3>
+  <div id="theater_event_name_k"><img src="./assets/loading.gif" style="width: 24px; height: auto;" alt="Loading" /> 가져오는 중...</div>
+  <sub id="theater_ename_orig_k" style="display: none;"></sub>
+  <input type="hidden" id="theater_eid_k" value="0" />
+  <h3>이벤트 종료까지 남은 시간 (한국어판 기준)</h3>
+  <div id="countdown_time_k"><img src="./assets/loading.gif" style="width: 24px; height: auto;" alt="Loading" /> 가져오는 중...</div>
+  <sub id="nearend_event_k" style="display: none;">종료 임박!!</sub>
+  <sub id="underday_event_k" style="display: none;">얼마 남지 않았습니다. 서두르세요.</sub>
    
- <sub>정보제공: <a href="https://matsurihi.me">matsurihi.me</a> (日)</sub>
-</div>
+  <sub>정보제공: <a href="https://matsurihi.me">matsurihi.me</a> (日)</sub>
+ </div>
 
-<div id="boost_countdown_k">
- <h3>후반전 시작까지 남은 시간 (한국어판 기준)</h3>
- <div id="boost_time_k"><img src="./assets/loading.gif" style="width: 24px; height: auto;" alt="Loading" /> 가져오는 중...</div>
- <sub>정보제공: <a href="https://matsurihi.me">matsurihi.me</a> (日)</sub>
-</div>
+ <div id="boost_countdown_k">
+  <h3>후반전 시작까지 남은 시간 (한국어판 기준)</h3>
+  <div id="boost_time_k"><img src="./assets/loading.gif" style="width: 24px; height: auto;" alt="Loading" /> 가져오는 중...</div>
+  <sub>정보제공: <a href="https://matsurihi.me">matsurihi.me</a> (日)</sub>
+ </div>
+
+</td>
+</tr>
+</table>
+
 
 <div id="theater_elist">
 

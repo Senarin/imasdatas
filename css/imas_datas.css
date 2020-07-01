@@ -440,6 +440,16 @@ padding-right: 0.375em;
 border-radius: 1.4em;
 }
 
+
+@media ( max-width: 720px ){
+ #theaterdays_events_status thead,
+ #theaterdays_events_status tbody,
+ #theaterdays_events_status tr,
+ #theaterdays_events_status th,
+ #theaterdays_events_status td{display: block;}
+}
+
+
 #nearest_by_series{
 font-size: 0.9em;
 margin: 0 auto 0 auto;
