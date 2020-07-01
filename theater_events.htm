@@ -7,6 +7,7 @@
 <link rel="stylesheet" type="text/css" href="./css/imas_datas.css" />
 <link rel="stylesheet" type="text/css" href="./css/pageload.css" />
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" integrity="sha384-xyZLiqnBEFn1hDkS8VeG/YHoqOjS/ucimT8TI6GDr9+ZP1UNbZr6d/q0ldMi/xvL" crossorigin="anonymous" />
+<link rel="stylesheet" type="text/css" href="/css/flag-icon.min.css" />
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="./js/exts/pace.min.js"></script>
 <script type="text/javascript" src="./js/imas_events.js"></script>
@@ -84,7 +85,7 @@ $(document).ready(function(){
 <tr>
  <td>
  <div id="event_countdown">
-  <h3>현지판 기준</h3>
+  <h3><span class="flag-icon flag-icon-jp"></span> 현지판 기준</h3>
   <div id="theater_event_name_j"><img src="./assets/loading.gif" style="width: 24px; height: auto;" alt="Loading" /> 가져오는 중...</div>
   <sub id="theater_ename_orig_j" style="display: none;"></sub>
   <input type="hidden" id="theater_eid_j" value="0" />
@@ -97,7 +98,7 @@ $(document).ready(function(){
 </td>
 <td>
  <div id="event_countdown_k">
-  <h3>한국어판 기준</h3>
+  <h3><span class="flag-icon flag-icon-kr"></span> 한국어판 기준</h3>
   <div id="theater_event_name_k"><img src="./assets/loading.gif" style="width: 24px; height: auto;" alt="Loading" /> 가져오는 중...</div>
   <sub id="theater_ename_orig_k" style="display: none;"></sub>
   <input type="hidden" id="theater_eid_k" value="0" />
@@ -118,14 +119,14 @@ $(document).ready(function(){
 <tr>
  <td>
  <div id="boost_countdown">
-  <h3>현지판 기준</h3>
+  <h3><span class="flag-icon flag-icon-jp"></span> 현지판 기준</h3>
   <div id="boost_time"><img src="./assets/loading.gif" style="width: 24px; height: auto;" alt="Loading" /> 가져오는 중...</div>
   <sub>정보제공: <a href="https://matsurihi.me">matsurihi.me</a> (日)</sub>
  </div>
  </td>
  <td>
  <div id="boost_countdown_k">
-  <h3>한국어판 기준</h3>
+  <h3><span class="flag-icon flag-icon-kr"></span> 한국어판 기준</h3>
   <div id="boost_time_k"><img src="./assets/loading.gif" style="width: 24px; height: auto;" alt="Loading" /> 가져오는 중...</div>
   <sub>정보제공: <a href="https://matsurihi.me">matsurihi.me</a> (日)</sub>
  </div>
