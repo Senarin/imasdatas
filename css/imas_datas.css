@@ -440,6 +440,10 @@ padding-right: 0.375em;
 border-radius: 1.4em;
 }
 
+#theaterdays_events_status{
+ border: 0;
+}
+
 
 @media ( max-width: 720px ){
  #theaterdays_events_status thead,
