@@ -469,44 +469,6 @@ showGachaRemainingSL : function(){
   r.send();
  },
 
-
-
-
-
- showResultRemainingTD : function(){
-  var r = requestPage.makeRequest();
-
-  r.onreadystatechange = function(){
-   if(r.readyState == 4){
-    if(r.status == 200){
-     var s = JSON.parse(r.responseText);
-     var countPST = s.length;
-     var latestPST = s[countPST-1];
-     var dateTimeNow = new Number(new Date());
-     var eDateTime = new Number(new Date(latestPST.schedule.endDate))+1000;
-     var pDateTime = new Number(new Date(latestPST.schedule.pageEndDate))+1000;
-
-     if((eDateTime - dateTimeNow) <= 0 && (pDateTime - dateTimeNow) > 0){
-      var rDateTime = new Date(pDateTime-(97200 * 1000));
-      var rYear = rDateTime.getFullYear();
-      var rMonth = rDateTime.getMonth()+1;
-      var rDay = rDateTime.getDate();
-      var rHours = rDateTime.getHours();
-      var rMins = rDateTime.getMinutes();
-      var rSecs = rDateTime.getSeconds();
-
-      setInterval(function(){tickEvent.announce(rYear,rMonth,rDay,rHours,rMins,rSecs);},50);
-     }else{
-      document.getElementById("resannounce_time").innerHTML = "";
-      document.getElementById("resannounce_countdown").style.display = "none";
-     }
-    }
-   }
-  };
-  r.open("GET","https://api.matsurihi.me/mltd/v1/events?type=pst&prettyPrint=false");
-  r.send();
- },
-
  showSLSongSpecial : function(){
   var startingDate0 = new Date(2017,1,13,0,0,0,0);
   var dateNow = new Date();

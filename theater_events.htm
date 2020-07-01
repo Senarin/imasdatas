@@ -14,9 +14,7 @@
 $(document).ready(function(){
  // 일본어판
  showRemainingTime.showRemainingTD();
- showRemainingTime.showResultRemainingTD();
  setInterval("showRemainingTime.showRemainingTD();",600 * 1000);
- setInterval("showRemainingTime.showResultRemainingTD();",3600 * 1000);
 
  // 한국어판
  showRemainingTime.showRemainingTDKorean();
@@ -129,20 +127,6 @@ $(document).ready(function(){
  <div id="boost_countdown_k">
   <h3>한국어판 기준</h3>
   <div id="boost_time_k"><img src="./assets/loading.gif" style="width: 24px; height: auto;" alt="Loading" /> 가져오는 중...</div>
-  <sub>정보제공: <a href="https://matsurihi.me">matsurihi.me</a> (日)</sub>
- </div>
- </td>
-</tr>
-</table>
-
-<h3 style="text-align: center;">이벤트 결과발표까지 남은 시간</h3>
-
-<table id="theaterdays_events_status_announce" style="border: none; text-align: center; margin: auto;">
-<tr>
- <td>
- <div id="resannounce_countdown">
-  <h3>현지판 기준</h3>
-  <div id="resannounce_time"><img src="./assets/loading.gif" style="width: 24px; height: auto;" alt="Loading" /> 가져오는 중...</div>
   <sub>정보제공: <a href="https://matsurihi.me">matsurihi.me</a> (日)</sub>
  </div>
  </td>
