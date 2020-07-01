@@ -125,7 +125,7 @@ font-size : 1.1em;
 
 abbr{cursor: help;}
 
-table,tr,td,th{
+thead,tbody,tr,td,th{
 border: 1px solid #000000;
 border-collapse: collapse;
 }
@@ -440,7 +440,6 @@ padding-right: 0.375em;
 border-radius: 1.4em;
 }
 
-#theaterdays_events_status,
 #theaterdays_events_status thead,
 #theaterdays_events_status tbody,
 #theaterdays_events_status tr,
