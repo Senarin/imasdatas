@@ -27,7 +27,7 @@ var requestPage = {
 };
 
 var tickEvent = {
- remain : function(Y,m,d,H,i,s){
+ remain : function(Y,m,d,H,i,s,eDisplay){
   var stampNow = new Number(new Date()) / 1000;
   var dateFinish = new Date(Y,m-1,d,H,i,s,0);
   var stampFinish = new Number(dateFinish) / 1000;
@@ -55,11 +55,11 @@ var tickEvent = {
   else if(remainingTime0 < 86400){var remainingTimeFormat = remainingHours+"시간 "+remainingMins+"분 "+remainingSecs+"초";}
   else{var remainingTimeFormat = remainingDays+"일 "+remainingHours+"시간 "+remainingMins+"분 "+remainingSecs+"초";}
 
-  if(remainingTime0 >= 0){document.getElementById("countdown_time").innerHTML = remainingTimeFormat;}
-  else{document.getElementById("countdown_time").innerHTML = "개최 중인 이벤트가 없습니다.";}
+  if(remainingTime0 >= 0){document.getElementById(eDisplay).innerHTML = remainingTimeFormat;}
+  else{document.getElementById(eDisplay).innerHTML = "개최 중인 이벤트가 없습니다.";}
  },
 
- boost : function(Y,m,d,H,i,s){
+ boost : function(Y,m,d,H,i,s,eDisplay){
   var stampNow = new Number(new Date()) / 1000;
   var dateFinish = new Date(Y,m-1,d,H,i,s,0);
   var stampFinish = new Number(dateFinish) / 1000;
@@ -86,8 +86,8 @@ var tickEvent = {
   else if(remainingTime0 < 86400){var remainingTimeFormat = remainingHours+"시간 "+remainingMins+"분 "+remainingSecs+"초";}
   else{var remainingTimeFormat = remainingDays+"일 "+remainingHours+"시간 "+remainingMins+"분 "+remainingSecs+"초";}
 
-  if(remainingTime0 >= 0){document.getElementById("boost_time").innerHTML = remainingTimeFormat;}
-  else{document.getElementById("boost_time").innerHTML = "후반전이 시작되었습니다.";}
+  if(remainingTime0 >= 0){document.getElementById(eDisplay).innerHTML = remainingTimeFormat;}
+  else{document.getElementById(eDisplay).innerHTML = "후반전이 시작되었습니다.";}
  },
 
 
@@ -189,7 +189,7 @@ showRemainingSL : function(){
      var eType = parseInt(Math.floor(new Number(eInfo[0].id) / 1000));
      console.log("["+(new Date()).toLocaleString()+"] 현재 개최 중인 이벤트 종류 : "+starlightEventType[eType]);
 
-     setInterval(function(){tickEvent.remain(eYear,eMonth,eDay,eHours,eMins,eSecs);},50);
+     setInterval(function(){tickEvent.remain(eYear,eMonth,eDay,eHours,eMins,eSecs,"countdown_time");},50);
 
      var dateTimeNow = new Number(new Date());
      var nearEndThreshold = 43200;
@@ -293,7 +293,7 @@ showGachaRemainingSL : function(){
      var eMins = eDateTime.getMinutes();
      var eSecs = eDateTime.getSeconds();
 
-     setInterval(function(){tickEvent.remain(eYear,eMonth,eDay,eHours,eMins,eSecs);},50);
+     setInterval(function(){tickEvent.remain(eYear,eMonth,eDay,eHours,eMins,eSecs,"countdown_time");},50);
 
      var dateTimeNow = new Number(new Date());
      var nearEndThreshold = 0;
@@ -323,7 +323,7 @@ showGachaRemainingSL : function(){
       var bMins = bDateTime.getMinutes();
       var bSecs = bDateTime.getSeconds();
  
-      setInterval(function(){tickEvent.boost(bYear,bMonth,bDay,bHours,bMins,bSecs);},50);
+      setInterval(function(){tickEvent.boost(bYear,bMonth,bDay,bHours,bMins,bSecs,"boost_time");},50);
      }else{
       document.getElementById("boost_time").innerHTML = "";
       document.getElementById("boost_countdown").style.display = "none";
@@ -406,7 +406,7 @@ showGachaRemainingSL : function(){
      var eMins = eDateTime.getMinutes();
      var eSecs = eDateTime.getSeconds();
 
-     setInterval(function(){tickEvent.remain(eYear,eMonth,eDay,eHours,eMins,eSecs);},50);
+     setInterval(function(){tickEvent.remain(eYear,eMonth,eDay,eHours,eMins,eSecs,"countdown_time_k");},50);
 
      var dateTimeNow = new Number(new Date());
      var nearEndThreshold = 0;
@@ -436,7 +436,7 @@ showGachaRemainingSL : function(){
       var bMins = bDateTime.getMinutes();
       var bSecs = bDateTime.getSeconds();
  
-      setInterval(function(){tickEvent.boost(bYear,bMonth,bDay,bHours,bMins,bSecs);},50);
+      setInterval(function(){tickEvent.boost(bYear,bMonth,bDay,bHours,bMins,bSecs,"boost_time_k");},50);
      }else{
       document.getElementById("boost_time_k").innerHTML = "";
       document.getElementById("boost_countdown_k").style.display = "none";
