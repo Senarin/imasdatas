@@ -440,33 +440,27 @@ padding-right: 0.375em;
 border-radius: 1.4em;
 }
 
-#theaterdays_events_status table,
 #theaterdays_events_status tr,
 #theaterdays_events_status th,
 #theaterdays_events_status td{border: none !important;}
 
-#theaterdays_events_status_boost table,
 #theaterdays_events_status_boost tr,
 #theaterdays_events_status_boost th,
 #theaterdays_events_status_boost td{border: none !important;}
 
-#theaterdays_events_status_announce table,
 #theaterdays_events_status_announce tr,
 #theaterdays_events_status_announce th,
 #theaterdays_events_status_announce td{border: none !important;}
 
 @media ( max-width: 720px ){
- #theaterdays_events_status table,
  #theaterdays_events_status tr,
  #theaterdays_events_status th,
  #theaterdays_events_status td{display: block;}
 
- #theaterdays_events_status_boost table,
  #theaterdays_events_status_boost tr,
  #theaterdays_events_status_boost th,
  #theaterdays_events_status_boost td{display: block;}
-
- #theaterdays_events_status_announce table,
+ 
  #theaterdays_events_status_announce tr,
  #theaterdays_events_status_announce th,
  #theaterdays_events_status_announce td{display: block;}
