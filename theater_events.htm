@@ -83,7 +83,6 @@ $(document).ready(function(){
 <table id="theaterdays_events_status" style="text-align: center; margin: auto;">
 <tr>
  <td>
-
  <div id="event_countdown">
   <h3>현재 개최중인 이벤트 제목 (현지판 기준)</h3>
   <div id="theater_event_name_j"><img src="./assets/loading.gif" style="width: 24px; height: auto;" alt="Loading" /> 가져오는 중...</div>
@@ -93,25 +92,10 @@ $(document).ready(function(){
   <div id="countdown_time"><img src="./assets/loading.gif" style="width: 24px; height: auto;" alt="Loading" /> 가져오는 중...</div>
   <sub id="nearend_event" style="display: none;">종료 임박!!</sub>
   <sub id="underday_event" style="display: none;">얼마 남지 않았습니다. 서두르세요.</sub>
-
   <sub>정보제공: <a href="https://matsurihi.me">matsurihi.me</a> (日)</sub>
  </div>
-
- <div id="boost_countdown">
-  <h3>후반전 시작까지 남은 시간 (현지판 기준)</h3>
-  <div id="boost_time"><img src="./assets/loading.gif" style="width: 24px; height: auto;" alt="Loading" /> 가져오는 중...</div>
-  <sub>정보제공: <a href="https://matsurihi.me">matsurihi.me</a> (日)</sub>
- </div>
-
- <div id="resannounce_countdown">
-  <h3>이벤트 결과발표까지 남은 시간 (현지판 기준)</h3>
-  <div id="resannounce_time"><img src="./assets/loading.gif" style="width: 24px; height: auto;" alt="Loading" /> 가져오는 중...</div>
-  <sub>정보제공: <a href="https://matsurihi.me">matsurihi.me</a> (日)</sub>
- </div>
-
 </td>
 <td>
-
  <div id="event_countdown_k">
   <h3>현재 개최중인 이벤트 제목 (한국어판 기준)</h3>
   <div id="theater_event_name_k"><img src="./assets/loading.gif" style="width: 24px; height: auto;" alt="Loading" /> 가져오는 중...</div>
@@ -121,13 +105,6 @@ $(document).ready(function(){
   <div id="countdown_time_k"><img src="./assets/loading.gif" style="width: 24px; height: auto;" alt="Loading" /> 가져오는 중...</div>
   <sub id="nearend_event_k" style="display: none;">종료 임박!!</sub>
   <sub id="underday_event_k" style="display: none;">얼마 남지 않았습니다. 서두르세요.</sub>
-   
-  <sub>정보제공: <a href="https://matsurihi.me">matsurihi.me</a> (日)</sub>
- </div>
-
- <div id="boost_countdown_k">
-  <h3>후반전 시작까지 남은 시간 (한국어판 기준)</h3>
-  <div id="boost_time_k"><img src="./assets/loading.gif" style="width: 24px; height: auto;" alt="Loading" /> 가져오는 중...</div>
   <sub>정보제공: <a href="https://matsurihi.me">matsurihi.me</a> (日)</sub>
  </div>
 
@@ -135,6 +112,37 @@ $(document).ready(function(){
 </tr>
 </table>
 
+
+<table id="theaterdays_events_status_boost" style="text-align: center; margin: auto;">
+<tr>
+ <td>
+ <div id="boost_countdown">
+  <h3>후반전 시작까지 남은 시간 (현지판 기준)</h3>
+  <div id="boost_time"><img src="./assets/loading.gif" style="width: 24px; height: auto;" alt="Loading" /> 가져오는 중...</div>
+  <sub>정보제공: <a href="https://matsurihi.me">matsurihi.me</a> (日)</sub>
+ </div>
+ </td>
+ <td>
+ <div id="boost_countdown_k">
+  <h3>후반전 시작까지 남은 시간 (한국어판 기준)</h3>
+  <div id="boost_time_k"><img src="./assets/loading.gif" style="width: 24px; height: auto;" alt="Loading" /> 가져오는 중...</div>
+  <sub>정보제공: <a href="https://matsurihi.me">matsurihi.me</a> (日)</sub>
+ </div>
+ </td>
+</tr>
+</table>
+
+<table id="theaterdays_events_status_announce" style="text-align: center; margin: auto;">
+<tr>
+ <td>
+ <div id="resannounce_countdown">
+  <h3>이벤트 결과발표까지 남은 시간 (현지판 기준)</h3>
+  <div id="resannounce_time"><img src="./assets/loading.gif" style="width: 24px; height: auto;" alt="Loading" /> 가져오는 중...</div>
+  <sub>정보제공: <a href="https://matsurihi.me">matsurihi.me</a> (日)</sub>
+ </div>
+ </td>
+</tr>
+</table>
 
 <div id="theater_elist">
 
