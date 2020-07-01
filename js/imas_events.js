@@ -195,7 +195,7 @@ showRemainingSL : function(){
      eInfoLink.appendChild($eTitle);
      document.getElementById("starlight_event_name").innerHTML = "";
      document.getElementById("starlight_event_name").appendChild(eInfoLink);
-     document.getElementById("starlight_ename_orig").innerHTML = "("+eInfo.name+")";
+     document.getElementById("starlight_ename_orig").innerHTML = "("+eInfo[0].name+")";
      document.getElementById("starlight_ename_orig").style.display = "inline-block";
 
      var eDateTime0 = new Number(new Date(eInfo[0].end_date));
