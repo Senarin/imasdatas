@@ -325,8 +325,8 @@ showGachaRemainingSL : function(){
  
       setInterval(function(){tickEvent.boost(bYear,bMonth,bDay,bHours,bMins,bSecs,"boost_time");},50);
      }else{
-      document.getElementById("boost_time").innerHTML = "";
-      document.getElementById("boost_countdown").style.display = "none";
+      document.getElementById("boost_time").innerHTML = "후반전 없음";
+      document.getElementById("resannounce_time").innerHTML = "결과발표 없음";
       console.log("["+(new Date()).toLocaleString()+"] [현지(일본어)판] 현재 개최 중인 이벤트는 후반전이 없는 이벤트 형식입니다.");
      }
 
@@ -438,8 +438,7 @@ showGachaRemainingSL : function(){
  
       setInterval(function(){tickEvent.boost(bYear,bMonth,bDay,bHours,bMins,bSecs,"boost_time_k");},50);
      }else{
-      document.getElementById("boost_time_k").innerHTML = "";
-      document.getElementById("boost_countdown_k").style.display = "none";
+      document.getElementById("boost_time_k").innerHTML = "후반전 없음";
       console.log("["+(new Date()).toLocaleString()+"] [한국어판] 현재 개최 중인 이벤트는 후반전이 없는 이벤트 형식입니다.");
      }
 
