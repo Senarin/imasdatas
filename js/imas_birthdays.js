@@ -706,5 +706,5 @@ console.log("밀리언 라이브의 애니메이션화를 축하드립니다!!")
 }else{
 console.log("%c 이야기(STORY)는 끝나지 않습니다. 감동은 끝나지 않습니다. 노랫소리 또한 멈추지 않습니다.","color:#0000FF;font-weight:bold;");
 console.log("%c 꿈은 다른 사람에게 맡기지 마십시오. 그것은 무엇과도 못바꿀 권리입니다.\n틀에 박힌 환상을 버리고 새 지평을 향해 달려나갑시다. 지켜야 할 것은 과거가 아닙니다.","color:#008FFF;font-weight:bold;");
-console.log("%c 밀리언 라이브의 애니메이션화를 축하드립니다!!","color:#48276F;font-weight:bold;");
+console.log("%c 밀리언 라이브의 애니메이션화를 축하드립니다!!","color:#EA5B76;font-weight:bold;");
 }
