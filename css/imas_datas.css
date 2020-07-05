@@ -15,7 +15,7 @@ white-space: -o-pre-wrap;
 word-wrap: break-word;
 }
 
-#notice_i{
+#notice_i,#notice_p{
 text-align: center;
 font-size: 0.85em;
 }
