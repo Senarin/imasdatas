@@ -9,7 +9,8 @@ var cg_portraitid_orig = {
  5 : "0dabb79ff64691111a0abae2ffed01ce",
  6 : "1f62eb063030ed5083b0e7826245d3af",
  7 : "edd3438bd612a333a76edaea0ff73fe7",
- 8 : "3a15a87af190354ae89fca368b35b69e"
+ 8 : "3a15a87af190354ae89fca368b35b69e",
+ 9 : "d3e95e1ca3c7b346535ad23e8619ec7e"
 };
 
 
@@ -21,7 +22,8 @@ var cg_portraitid_dere = {
  5 : "2e4a0459415d8d8b8600bb80a777d85b",
  6 : "1ca766129358cfadaa734d780b7c2da4",
  7 : "8569f522a0287b4b1f4032225795aaf7",
- 8 : "c0dc8d84eeca3eca56e127f92ac84ac1"
+ 8 : "c0dc8d84eeca3eca56e127f92ac84ac1",
+ 9 : "3cea4fa7b1da7808909460fb620f97c6"
 };
 
 function switch_portait_cg(numdere){
