@@ -320,6 +320,12 @@ showGachaRemainingSL : function(){
      var nearEndThreshold = 0;
      var underdayRemain = 86400;
 
+     var sDateTime0 = new Number(new Date(s[0].schedule.beginDate));
+     var sDateTime = new Date(sDateTime0+1000);
+
+     var eventProgressRatio = ((dateTimeNow - sDateTime) / (eDateTime - sDateTime));
+     var progressRatioPercentage = new Number((100 * eventProgressRatio).toFixed(2));
+
      if(s[0].type == 3 || s[0].type == 4){nearEndThreshold = 43200;} // PST 이벤트 (3 = 시어터, 4 = 투어)
      else if(s[0].type == 2 || s[0].type == 9){nearEndThreshold = 21600;} // 밀리코레
      else if(s[0].type == 5){nearEndThreshold = 43200;} // n주년 이벤트
@@ -334,6 +340,11 @@ showGachaRemainingSL : function(){
      else if((eDateTime - dateTimeNow) <= 0){document.getElementById("nearend_event").style.display = "none";}
 
      if((eDateTime - dateTimeNow) <= 0){document.getElementById("theater_ename_orig_j").style.display = "none";}
+
+     if((eDateTime - dateTimeNow) > 0){document.getElementById("event_progress").style.display = "block";}
+     else if((eDateTime - dateTimeNow) <= 0){document.getElementById("event_progress").style.display = "none";}
+
+     document.getElementById("event_progress").innerHTML = "(진행률 "+progressRatioPercentage+"%)";
      
      if("boostBeginDate" in s[0].schedule){ // 후반전이 존재할 경우
       var bDateTime = new Date(s[0].schedule.boostBeginDate);
@@ -433,6 +444,12 @@ showGachaRemainingSL : function(){
      var nearEndThreshold = 0;
      var underdayRemain = 86400;
 
+     var sDateTime0 = new Number(new Date(s[0].schedule.beginDate));
+     var sDateTime = new Date(sDateTime0+1000);
+
+     var eventProgressRatio = ((dateTimeNow - sDateTime) / (eDateTime - sDateTime));
+     var progressRatioPercentage = new Number((100 * eventProgressRatio).toFixed(2));
+
      if(s[0].type == 3 || s[0].type == 4){nearEndThreshold = 43200;} // PST 이벤트 (3 = 시어터, 4 = 투어)
      else if(s[0].type == 2 || s[0].type == 9){nearEndThreshold = 21600;} // 밀리코레
      else if(s[0].type == 5){nearEndThreshold = 43200;} // n주년 이벤트
@@ -447,6 +464,11 @@ showGachaRemainingSL : function(){
      else if((eDateTime - dateTimeNow) <= 0){document.getElementById("nearend_event_k").style.display = "none";}
 
      if((eDateTime - dateTimeNow) <= 0){document.getElementById("theater_ename_orig_k").style.display = "none";}
+
+     if((eDateTime - dateTimeNow) > 0){document.getElementById("event_progress_k").style.display = "block";}
+     else if((eDateTime - dateTimeNow) <= 0){document.getElementById("event_progress_k").style.display = "none";}
+
+     document.getElementById("event_progress_k").innerHTML = "(진행률 "+progressRatioPercentage+"%)";
      
      if("boostBeginDate" in s[0].schedule){ // 후반전이 존재할 경우
       var bDateTime = new Date(s[0].schedule.boostBeginDate);
