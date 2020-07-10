@@ -90,36 +90,19 @@ var tickEvent = {
   else{document.getElementById(eDisplay).innerHTML = "후반전이 시작되었습니다.";}
  },
 
+ percentage : function(sTimestamp,eTimestamp,eDisplay){
+  var dateTimeNow = new Number(new Date());
 
- announce : function(Y,m,d,H,i,s){
-  var stampNow = new Number(new Date()) / 1000;
-  var dateFinish = new Date(Y,m-1,d,H,i,s,0);
-  var stampFinish = new Number(dateFinish) / 1000;
+  var sDateTime = new Number(new Date(sTimestamp));
+  var eDateTime = new Number(new Date(eTimestamp));
 
-  var remainingTime0 = (stampFinish - stampNow);
-  var remainingDays = Math.floor(remainingTime0 / 86400);
-  var remainingHours = Math.floor((remainingTime0 % 86400) / 3600);
-  var remainingMins = Math.floor((remainingTime0 % 3600) / 60);
-  var remainingSecs = Math.ceil(remainingTime0 % 60);
-  if(remainingHours == 24){
-   remainingDays++;
-   remainingHours = 0;
-  }
-  if(remainingMins == 60){
-   remainingHours++;
-   remainingMins = 0;
-  }
-  if(remainingSecs == 60){
-   remainingMins++;
-   remainingSecs = 0;
-  }
+  var eventProgressRatio = ((dateTimeNow - sDateTime) / (eDateTime - sDateTime));
+  var progressRatioPercentage = new Number((100 * eventProgressRatio).toFixed(2));
 
-  if(remainingTime0 < 3600){var remainingTimeFormat = remainingMins+"분 "+remainingSecs+"초";}
-  else if(remainingTime0 < 86400){var remainingTimeFormat = remainingHours+"시간 "+remainingMins+"분 "+remainingSecs+"초";}
-  else{var remainingTimeFormat = remainingDays+"일 "+remainingHours+"시간 "+remainingMins+"분 "+remainingSecs+"초";}
+  if((eDateTime - dateTimeNow) > 0){document.getElementById(eDisplay).style.display = "block";}
+  else if((eDateTime - dateTimeNow) <= 0){document.getElementById(eDisplay).style.display = "none";}
 
-  if(remainingTime0 >= 0){document.getElementById("resannounce_time").innerHTML = remainingTimeFormat;}
-  else{document.getElementById("resannounce_time").innerHTML = "결과발표 시간이 되었습니다. 게임에 접속하여 확인해주세요.";}
+  document.getElementById(eDisplay).innerHTML = "(진행률 "+progressRatioPercentage+"%)";
  }
 
 
@@ -323,9 +306,6 @@ showGachaRemainingSL : function(){
      var sDateTime0 = new Number(new Date(s[0].schedule.beginDate));
      var sDateTime = new Date(sDateTime0+1000);
 
-     var eventProgressRatio = ((dateTimeNow - sDateTime) / (eDateTime - sDateTime));
-     var progressRatioPercentage = new Number((100 * eventProgressRatio).toFixed(2));
-
      if(s[0].type == 3 || s[0].type == 4){nearEndThreshold = 43200;} // PST 이벤트 (3 = 시어터, 4 = 투어)
      else if(s[0].type == 2 || s[0].type == 9){nearEndThreshold = 21600;} // 밀리코레
      else if(s[0].type == 5){nearEndThreshold = 43200;} // n주년 이벤트
@@ -341,10 +321,7 @@ showGachaRemainingSL : function(){
 
      if((eDateTime - dateTimeNow) <= 0){document.getElementById("theater_ename_orig_j").style.display = "none";}
 
-     if((eDateTime - dateTimeNow) > 0){document.getElementById("event_progress").style.display = "block";}
-     else if((eDateTime - dateTimeNow) <= 0){document.getElementById("event_progress").style.display = "none";}
-
-     document.getElementById("event_progress").innerHTML = "(진행률 "+progressRatioPercentage+"%)";
+     setInterval(function(){tickEvent.percentage(sDateTime,eDateTime,"event_progress");},50);
      
      if("boostBeginDate" in s[0].schedule){ // 후반전이 존재할 경우
       var bDateTime = new Date(s[0].schedule.boostBeginDate);
@@ -447,9 +424,6 @@ showGachaRemainingSL : function(){
      var sDateTime0 = new Number(new Date(s[0].schedule.beginDate));
      var sDateTime = new Date(sDateTime0+1000);
 
-     var eventProgressRatio = ((dateTimeNow - sDateTime) / (eDateTime - sDateTime));
-     var progressRatioPercentage = new Number((100 * eventProgressRatio).toFixed(2));
-
      if(s[0].type == 3 || s[0].type == 4){nearEndThreshold = 43200;} // PST 이벤트 (3 = 시어터, 4 = 투어)
      else if(s[0].type == 2 || s[0].type == 9){nearEndThreshold = 21600;} // 밀리코레
      else if(s[0].type == 5){nearEndThreshold = 43200;} // n주년 이벤트
@@ -465,10 +439,7 @@ showGachaRemainingSL : function(){
 
      if((eDateTime - dateTimeNow) <= 0){document.getElementById("theater_ename_orig_k").style.display = "none";}
 
-     if((eDateTime - dateTimeNow) > 0){document.getElementById("event_progress_k").style.display = "block";}
-     else if((eDateTime - dateTimeNow) <= 0){document.getElementById("event_progress_k").style.display = "none";}
-
-     document.getElementById("event_progress_k").innerHTML = "(진행률 "+progressRatioPercentage+"%)";
+     setInterval(function(){tickEvent.percentage(sDateTime,eDateTime,"event_progress_k");},50);
      
      if("boostBeginDate" in s[0].schedule){ // 후반전이 존재할 경우
       var bDateTime = new Date(s[0].schedule.boostBeginDate);
