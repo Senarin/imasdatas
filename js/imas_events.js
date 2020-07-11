@@ -306,12 +306,13 @@ showGachaRemainingSL : function(){
      var sDateTime0 = new Number(new Date(s[0].schedule.beginDate));
      var sDateTime = new Date(sDateTime0+1000);
 
-     if(s[0].type == 3 || s[0].type == 4){nearEndThreshold = 43200;} // PST 이벤트 (3 = 시어터, 4 = 투어)
-     else if(s[0].type == 2 || s[0].type == 9){nearEndThreshold = 21600;} // 밀리코레
-     else if(s[0].type == 5){nearEndThreshold = 43200;} // n주년 이벤트
-     else if(s[0].type == 6){nearEndThreshold = 10800;} // 워킹
-     else if(s[0].type == 7){nearEndThreshold = 3600;} // 만우절 특별 이벤트
-     else{nearEndThreshold = 21600;} // 그 외
+     // 종료까지 남은 시간에 따른 안내 표시
+     if(s[0].type == 3 || s[0].type == 4 || s[0].type == 10){nearEndThreshold = 43200;} // PST 이벤트 (3 = 시어터, 4 = 투어, 10 = 트윈) : 12시간
+     else if(s[0].type == 2 || s[0].type == 9){nearEndThreshold = 21600;} // 밀리코레 (2 = 구유형, 9 = 신유형) : 6시간
+     else if(s[0].type == 5){nearEndThreshold = 43200;} // n주년 이벤트 : 12시간
+     else if(s[0].type == 6){nearEndThreshold = 10800;} // 워킹 : 3시간
+     else if(s[0].type == 7){nearEndThreshold = 3600;} // 만우절 특별 이벤트 : 1시간
+     else{nearEndThreshold = 21600;} // 그 외 : 6시간
 
      if((eDateTime - dateTimeNow) <= (underdayRemain * 1000) && (eDateTime - dateTimeNow) > (nearEndThreshold * 1000)){document.getElementById("underday_event").style.display = "block";}
      else if((eDateTime - dateTimeNow) <= (nearEndThreshold * 1000)){document.getElementById("underday_event").style.display = "none";}
