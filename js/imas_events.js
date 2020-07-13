@@ -520,7 +520,6 @@ showGachaRemainingSL : function(){
 
   if(remainingTime0 >= 0){document.getElementById("s_countdown_time").innerHTML = remainingTimeFormat;}
   else{document.getElementById("s_countdown_time").innerHTML = "기간이 종료되었습니다.";}
-
  },
 
  showCountdownAnniversary : function(arrFinishTimestamp,dispOut){
@@ -574,7 +573,6 @@ showGachaRemainingSL : function(){
 
   if(remainingTime0 >= 0){document.getElementById(dispOut).innerHTML = remainingTimeFormat;}
   else{document.getElementById(dispOut).innerHTML = "카운트다운 종료!!";}
-
  },
 
  showCountdownMonthlyNow : function(){
@@ -613,7 +611,6 @@ showGachaRemainingSL : function(){
   else{var remainingTimeFormat = remainingDays+"일 "+remainingHours+"시간 "+remainingMins+"분 "+remainingSecs+"초";}
 
   if(remainingTime0 >= 0){document.getElementById("countdown_time_monthly").innerHTML = remainingTimeFormat;}
-
  }
 };
 
