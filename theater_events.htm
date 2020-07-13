@@ -21,6 +21,7 @@ $(document).ready(function(){
  showRemainingTime.showRemainingTDKorean();
  setInterval("showRemainingTime.showRemainingTDKorean();",600 * 1000);
 
+ // 역대 PST 이벤트 랭킹 정보 확인 버튼 생성
  $("#theater_elist_j td[data-event-id][class^='mlsongs_']").each(function(index,item){
   $(item).click(function(){getTDEventRanksInfo.retrieveData($(item).data("eventId"));});
   $(item).css("cursor","pointer");
