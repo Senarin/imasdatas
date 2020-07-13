@@ -104,9 +104,6 @@ var tickEvent = {
 
   document.getElementById(eDisplay).innerHTML = "(진행률 "+progressRatioPercentage+"%)";
  }
-
-
-
 };
 
 
@@ -752,7 +749,6 @@ var getTDGameClientInfo = {
   r.send();
  }
 };
-
 
 var getTDEventRanksInfo = {
  
