@@ -653,7 +653,6 @@ var showSLDailyType = {
  }
 };
 
-
 var showSLEventCategory = {
  choice : function(){
   var eTypeToShow = new Number(document.getElementById("slevents_category").value);
@@ -684,8 +683,6 @@ var showSLEventCategory = {
   }
  }
 };
-
-
 
 var getSLGameClientInfo = {
 
