@@ -827,5 +827,3 @@ var getTDEventRanksInfo = {
   }
  }
 };
-
-
