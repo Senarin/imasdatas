@@ -20,7 +20,7 @@ text-align: center;
 font-size: 0.85em;
 }
 
-/*
+
 #page_imasbirthday{
 background-image: url('/assets/imas15thanniv_logo.png');
 background-size: 28.3%;
@@ -39,7 +39,7 @@ top: 0;
 background-color: rgba(255,255,255,0.5);
 }
 
-
+/*
 #page_starlightevents,#page_starlightsongs,#page_starlightgachas,#page_cgidolsmisc,#page_cgelectiondatas,#page_cgelection7th,#page_cgelection8th,#page_cgelection9th,#page_imascg_idolnumbers{
 background-image: url('/assets/imas_cg_emblem_trans.png');
 background-size: 17.3%;
@@ -513,7 +513,7 @@ padding-bottom: 1em;
 border-radius: 1.4em;
 }
 
-#imaslogo,#imas15thanniv_logo{
+#imaslogo{
 width: 121px;
 height: auto;
 display: inline-block;
