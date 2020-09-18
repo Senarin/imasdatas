@@ -7,6 +7,7 @@
 <link rel="stylesheet" type="text/css" href="./css/imas_datas.css" />
 <link rel="stylesheet" type="text/css" href="./css/pageload.css" />
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" integrity="sha384-xyZLiqnBEFn1hDkS8VeG/YHoqOjS/ucimT8TI6GDr9+ZP1UNbZr6d/q0ldMi/xvL" crossorigin="anonymous" />
+<link rel="stylesheet" type="text/css" href="/css/flag-icon.min.css" />
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="./js/exts/pace.min.js"></script>
 <script type="text/javascript" src="./js/imas_events.js"></script>
@@ -25,7 +26,7 @@ $(document).ready(function(){
 <div id="headtext">
 <h1><img src="./assets/theaterdays_logo_kr.png" id="theaterdayslogo" alt="Theater Days" title="Theater Days" />&nbsp;시어터 데이즈 n주년 이벤트 데이터 (Beta)</h1>
 <div id="author_info">제작자 : <a href="https://about.yukina.kr/">유키나</a> (<a href="https://senarin.kr/">홈페이지</a> / <a href="https://yukina.kr/">블로그</a>)</div>
-<div id="recent_edit">최근 수정 2020.6.30</div>
+<div id="recent_edit">최근 수정 2020.9.18</div>
 </div>
 <p>(<a href="./">첫 페이지로 가기</a>)</p>
 <!-- ... -->
@@ -41,7 +42,7 @@ $(document).ready(function(){
 </ul>
 
 <div id="theater_client_info">
- <h3>게임 버전 관련 정보 (현지판 기준)</h3>
+ <h3>게임 버전 관련 정보 (<span class="flag-icon flag-icon-jp"></span> 현지판 기준)</h3>
  <div id="tdclient_info_detail"><img src="./assets/loading.gif" style="width: 24px; height: auto;" alt="Loading" /> 가져오는 중...</div>
  <script>setInterval(function(){getTDGameClientInfo.getContent();},(900 * 1000));</script>
  <span style="font-size: 0.85em;"><span id="lastupdate_clientinfo"></span> / 정보제공: <a href="https://matsurihi.me">matsurihi.me</a> (日)</span>
