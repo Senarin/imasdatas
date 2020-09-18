@@ -421,7 +421,7 @@ border-radius: 1.4em;
 
 
 #event_countdown,#boost_countdown,#event_countdown_k,#boost_countdown_k,#resannounce_countdown,#gacha_countdown,#masterrank_countdown,#slsong_countdown,
-#starlight_daily,#starlight_client_info,#theater_client_info,#theater_select_idol,.anniv_countdown{
+#starlight_daily,#starlight_client_info,#theater_client_info,#theater_client_info_k,#theater_select_idol,.anniv_countdown{
 text-align: center;
 justify-content: center;
 background-color: #F5F8FA;
@@ -444,6 +444,10 @@ border-radius: 1.4em;
 #theaterdays_events_status th,
 #theaterdays_events_status td{border: none !important;}
 
+#theaterdays_clients_status tr,
+#theaterdays_clients_status th,
+#theaterdays_clients_status td{border: none !important;}
+
 #theaterdays_events_status_boost tr,
 #theaterdays_events_status_boost th,
 #theaterdays_events_status_boost td{border: none !important;}
@@ -456,6 +460,10 @@ border-radius: 1.4em;
  #theaterdays_events_status tr,
  #theaterdays_events_status th,
  #theaterdays_events_status td{display: block;}
+
+ #theaterdays_clients_status tr,
+ #theaterdays_clients_status th,
+ #theaterdays_clients_status td{display: block;}
 
  #theaterdays_events_status_boost tr,
  #theaterdays_events_status_boost th,

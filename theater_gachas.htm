@@ -10,7 +10,7 @@
 <script type="text/javascript" src="./js/exts/pace.min.js"></script>
 <script type="text/javascript" src="./js/imas_events.js"></script>
 </head>
-<body id="page_theatergachas" onload="getTDGameClientInfo.getContent();">
+<body id="page_theatergachas" onload="getTDClientInfoIntegrated.getContent();">
 
 <div id="scrollbutton">
 <a href="javascript:;" onclick="toPageTop();">&#9650;</a>&nbsp;&nbsp;<a href="javascript:;" onclick="toPageBottom();">&#9660;</a>
@@ -27,12 +27,27 @@
  <li>같이 보기 : <a href="./theater_events.htm">역대 이벤트 일람</a>, <a href="./starlight_gachas.htm">데레스테 가챠 갱신 일람</a>, <a href="./theater_anniversaries.htm">n주년 이벤트 관련 데이터</a></li>
 </ul>
 
-<div id="theater_client_info">
- <h3>게임 버전 관련 정보 (현지판 기준)</h3>
- <div id="tdclient_info_detail"><img src="./assets/loading.gif" style="width: 24px; height: auto;" alt="Loading" /> 가져오는 중...</div>
- <script>setInterval(function(){getTDGameClientInfo.getContent();},(900 * 1000));</script>
- <span style="font-size: 0.85em;"><span id="lastupdate_clientinfo"></span> / 정보제공: <a href="https://matsurihi.me">matsurihi.me</a> (日)</span>
-</div>
+<table id="theaterdays_clients_status" style="border: none; text-align: center; margin: auto;">
+<tr>
+ <td>
+  <div id="theater_client_info">
+   <h3>게임 버전 관련 정보 (현지판 기준)</h3>
+   <div id="tdclient_info_detail"><img src="./assets/loading.gif" style="width: 24px; height: auto;" alt="Loading" /> 가져오는 중...</div>
+   <script>setInterval(function(){getTDGameClientInfo.getContent();},(900 * 1000));</script>
+   <span style="font-size: 0.85em;"><span id="lastupdate_clientinfo"></span> / 정보제공: <a href="https://matsurihi.me">matsurihi.me</a> (日)</span>
+  </div>
+ </td>
+ <td>
+  <div id="theater_client_info_k">
+  <h3>게임 버전 관련 정보 (한국어판 기준)</h3>
+  <div id="tdclient_info_detail_k"><img src="./assets/loading.gif" style="width: 24px; height: auto;" alt="Loading" /> 가져오는 중...</div>
+   <script>setInterval(function(){getTDGameClientInfoKorean.getContent();},(900 * 1000));</script>
+   <span style="font-size: 0.85em;"><span id="lastupdate_clientinfo_k"></span> / 정보제공: <a href="https://matsurihi.me">matsurihi.me</a> (日)</span>
+  </div>
+ </td>
+</tr>
+</table>
+
 <br />
 <br />
 <div class="pageindex">

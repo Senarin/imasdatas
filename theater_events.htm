@@ -29,7 +29,7 @@ $(document).ready(function(){
 });
 </script>
 </head>
-<body id="page_theaterevents" onload="getTDGameClientInfo.getContent();">
+<body id="page_theaterevents" onload="getTDClientInfoIntegrated.getContent();">
 <div id="headtext">
 <h1><img src="./assets/theaterdays_logo_kr.png" id="theaterdayslogo" alt="Theater Days" title="Theater Days" />&nbsp;시어터 데이즈 역대 정규 이벤트 일람</h1>
 <div id="author_info">제작자 : <a href="https://about.yukina.kr/">유키나</a> (<a href="https://senarin.kr/">홈페이지</a> / <a href="https://yukina.kr/">블로그</a>)</div>
@@ -40,12 +40,26 @@ $(document).ready(function(){
  <li>같이 보기 : <a href="./theater_gachas.htm">가챠 갱신 일람</a>, <a href="./starlight_events.htm">데레스테 이벤트 일람</a>, <a href="./theater_anniversaries.htm">n주년 이벤트 관련 데이터</a></li>
 </ul>
 
-<div id="theater_client_info">
- <h3>게임 버전 관련 정보 (현지판 기준)</h3>
- <div id="tdclient_info_detail"><img src="./assets/loading.gif" style="width: 24px; height: auto;" alt="Loading" /> 가져오는 중...</div>
- <script>setInterval(function(){getTDGameClientInfo.getContent();},(900 * 1000));</script>
- <span style="font-size: 0.85em;"><span id="lastupdate_clientinfo"></span> / 정보제공: <a href="https://matsurihi.me">matsurihi.me</a> (日)</span>
-</div>
+<table id="theaterdays_clients_status" style="border: none; text-align: center; margin: auto;">
+<tr>
+ <td>
+  <div id="theater_client_info">
+   <h3>게임 버전 관련 정보 (현지판 기준)</h3>
+   <div id="tdclient_info_detail"><img src="./assets/loading.gif" style="width: 24px; height: auto;" alt="Loading" /> 가져오는 중...</div>
+   <script>setInterval(function(){getTDGameClientInfo.getContent();},(900 * 1000));</script>
+   <span style="font-size: 0.85em;"><span id="lastupdate_clientinfo"></span> / 정보제공: <a href="https://matsurihi.me">matsurihi.me</a> (日)</span>
+  </div>
+ </td>
+ <td>
+  <div id="theater_client_info_k">
+  <h3>게임 버전 관련 정보 (한국어판 기준)</h3>
+  <div id="tdclient_info_detail_k"><img src="./assets/loading.gif" style="width: 24px; height: auto;" alt="Loading" /> 가져오는 중...</div>
+   <script>setInterval(function(){getTDGameClientInfoKorean.getContent();},(900 * 1000));</script>
+   <span style="font-size: 0.85em;"><span id="lastupdate_clientinfo_k"></span> / 정보제공: <a href="https://matsurihi.me">matsurihi.me</a> (日)</span>
+  </div>
+ </td>
+</tr>
+</table>
 
 <div class="anniv_countdown">
  <h3>다음 n주년(6월 29일)까지 남은 시간</h3>

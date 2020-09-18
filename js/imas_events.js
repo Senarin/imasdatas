@@ -747,6 +747,47 @@ var getTDGameClientInfo = {
  }
 };
 
+
+
+var getTDGameClientInfoKorean = {
+
+  getContent : function(){
+   var r = requestPage.makeRequest();
+ 
+   r.onreadystatechange = function(){
+    if(r.readyState == 4){
+     if(r.status == 200){
+      var parsingContent = JSON.parse(r.responseText);
+      var cVersion = parsingContent.app.version;
+      var cTime0 = new Date(parsingContent.app.updateTime);
+      var cTimeDisp = cTime0.getFullYear() +"년 "+ (cTime0.getMonth()+1) +"월 "+ cTime0.getDate() +"일 "+ cTime0.getHours() +"시 "+ cTime0.getMinutes() +"분";
+      var aTime0 = new Date(parsingContent.res.updateTime);
+      var aTimeDisp = aTime0.getFullYear() +"년 "+ (aTime0.getMonth()+1) +"월 "+ aTime0.getDate() +"일 "+ aTime0.getHours() +"시 "+ aTime0.getMinutes() +"분";
+      var dispContent = "사용 가능한 버전: "+ cVersion +"<br />최근 강제 업데이트: "+ cTimeDisp +"경<br />";
+      dispContent += "최근 게임 데이터 갱신: "+ aTimeDisp +"경";
+      document.getElementById("tdclient_info_detail_k").innerHTML = dispContent;
+      var uTime = new Date();
+      var uTimeDisp = uTime.getFullYear() +"년 "+ (uTime.getMonth()+1) +"월 "+ uTime.getDate() +"일 "+ uTime.getHours() +"시 "+ uTime.getMinutes() +"분 기준";
+      document.getElementById("lastupdate_clientinfo_k").innerHTML = uTimeDisp;
+     }else{
+      alert("오류가 발생하였습니다. [코드 "+r.status+"]");
+      document.getElementById("tdclient_info_detail_k").innerHTML = "오류가 발생하였습니다. 잠시후 다시 새로고침해주세요.";
+     }
+    }
+   };
+   r.open("GET","https://api.matsurihi.me/mltd/v1/ko/version/latest");
+   r.send();
+  }
+ };
+
+
+ var getTDClientInfoIntegrated = {
+  getContent : function(){
+   getTDGameClientInfo.getContent();
+   getTDGameClientInfoKorean.getContent();
+  }
+ };
+
 var getTDEventRanksInfo = {
  
  makeReq : function(){return new XMLHttpRequest();},
