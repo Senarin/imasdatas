@@ -448,6 +448,10 @@ border-radius: 1.4em;
 #theaterdays_clients_status th,
 #theaterdays_clients_status td{border: none !important;}
 
+#theaterdays_anniversary_table tr,
+#theaterdays_anniversary_table th,
+#theaterdays_anniversary_table td{border: none !important;}
+
 #theaterdays_events_status_boost tr,
 #theaterdays_events_status_boost th,
 #theaterdays_events_status_boost td{border: none !important;}
@@ -464,6 +468,10 @@ border-radius: 1.4em;
  #theaterdays_clients_status tr,
  #theaterdays_clients_status th,
  #theaterdays_clients_status td{display: block;}
+
+ #theaterdays_anniversary_table tr,
+ #theaterdays_anniversary_table th,
+ #theaterdays_anniversary_table td{display: block;}
 
  #theaterdays_events_status_boost tr,
  #theaterdays_events_status_boost th,

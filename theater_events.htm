@@ -61,17 +61,24 @@ $(document).ready(function(){
 </tr>
 </table>
 
-<div class="anniv_countdown">
- <h3>다음 n주년(6월 29일)까지 남은 시간</h3>
- <div id="countdown_time_anniv"></div>
- <script>var eAnnivTimestamp = new Array(6,29,0,0,0);setInterval(function(){showRemainingTime.showCountdownAnniversary(eAnnivTimestamp,"countdown_time_anniv");},50);</script>
-</div>
-
-<div class="anniv_countdown">
- <h3>다음 한국어판 n주년(8월 30일)까지 남은 시간</h3>
- <div id="countdown_time_anniv_k"></div>
- <script>var eOrigTimestamp = new Array(8,30,0,0,0);setInterval(function(){showRemainingTime.showCountdownAnniversary(eOrigTimestamp,"countdown_time_anniv_k");},50);</script>
-</div>
+<table id="theaterdays_anniversary_table" style="border: none; text-align: center; margin: auto;">
+<tr>
+ <td>
+  <div class="anniv_countdown">
+   <h3>다음 n주년(6월 29일)까지 남은 시간</h3>
+   <div id="countdown_time_anniv"></div>
+   <script>var eAnnivTimestamp = new Array(6,29,0,0,0);setInterval(function(){showRemainingTime.showCountdownAnniversary(eAnnivTimestamp,"countdown_time_anniv");},50);</script>
+  </div>
+ </td>
+ <td>
+  <div class="anniv_countdown">
+   <h3>다음 한국어판 n주년(8월 30일)까지 남은 시간</h3>
+   <div id="countdown_time_anniv_k"></div>
+   <script>var eOrigTimestamp = new Array(8,30,0,0,0);setInterval(function(){showRemainingTime.showCountdownAnniversary(eOrigTimestamp,"countdown_time_anniv_k");},50);</script>
+  </div>
+ </td>
+</tr>
+</table>
 
 <div id="imas_theaterdays_official" style="text-align: center; font-size: 1.25em; margin-top: 1.25em;">[<a href="https://twitter.com/imasml_theater">게임 공식 트위터(日) 바로가기</a>]</div>
 <div id="imas_theaterdays_ko_official" style="text-align: center; font-size: 1.25em; margin-top: 1.25em;">[<a href="https://twitter.com/imasmltd_kr">한국어판 공식 트위터 바로가기</a>]</div>
