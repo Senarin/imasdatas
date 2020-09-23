@@ -187,6 +187,7 @@ border-bottom: 1px solid #000000;
 li.sectionlist:last-child{border-bottom: none;}
 
 .sectionheading{
+font-weight: bold;
 margin-top: 2.5em;
 margin-left: 0.5em;
 }
