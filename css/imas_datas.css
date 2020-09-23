@@ -186,13 +186,11 @@ border-bottom: 1px solid #000000;
 
 li.sectionlist:last-child{border-bottom: none;}
 
-.sectionheading{
+.sectionheading,.seriesheading{
 font-weight: bold;
 margin-top: 2.5em;
 margin-left: 0.5em;
 }
-
-.seriesheading{margin-left: 0.5em;}
 
 #s_765876{background-color:#E34D68;}
 #s_765876 a{color: #FFFFFF !important;}
