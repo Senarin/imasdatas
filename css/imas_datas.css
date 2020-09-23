@@ -503,6 +503,8 @@ margin: 0 auto 0 auto;
 text-align: center;
 font-size: 14px;
 text-decoration: underline;
+padding-top: 1em;
+padding-bottom: 1em;
 }
 
 #current_browser{font-size: 11px;}
