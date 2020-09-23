@@ -3,8 +3,8 @@
 
 body,h1,h2,h3,h4,h5,h6{
 font-family: 'Noto Sans KR', 'Noto Sans JP', sans-serif !important;
-font-size: 1em;
-line-height: 144%;
+font-size: 1em !important;
+line-height: 144% !important;
 }
 
 pre{
