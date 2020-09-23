@@ -300,7 +300,7 @@ showGachaRemainingSL : function(){
      var sDateTime = new Date(sDateTime0+1000);
 
      // 종료까지 남은 시간에 따른 안내 표시
-     if(s[0].type == 3 || s[0].type == 4 || s[0].type == 10){nearEndThreshold = 43200;} // PST 이벤트 (3 = 시어터, 4 = 투어, 10 = 트윈) : 12시간
+     if(s[0].type == 3 || s[0].type == 4 || s[0].type == 10 || s[0].type == 11){nearEndThreshold = 43200;} // PST 이벤트 (3 = 시어터, 4 = 투어, 10 = 트윈, 11 = 튠) : 12시간
      else if(s[0].type == 2 || s[0].type == 9){nearEndThreshold = 21600;} // 밀리코레 (2 = 구유형, 9 = 신유형) : 6시간
      else if(s[0].type == 5){nearEndThreshold = 43200;} // n주년 이벤트 : 12시간
      else if(s[0].type == 6){nearEndThreshold = 10800;} // 워킹 : 3시간
@@ -332,7 +332,7 @@ showGachaRemainingSL : function(){
       console.log("["+(new Date()).toLocaleString()+"] [현지(일본어)판] 현재 개최 중인 이벤트는 후반전이 없는 이벤트 형식입니다.");
      }
 
-     if(s[0].type == 3){ // 시어터 이벤트인 경우에만 어필치 보너스 적용
+     if(s[0].type == 3 || s[0].type == 11){ // 시어터 및 튠 이벤트인 경우에만 어필치 보너스 적용
       var aTypeText = "";
       if("appealType" in s[0]){
        if(s[0].appealType == 1){aTypeText = "보컬(Vo)";}
@@ -384,7 +384,8 @@ showGachaRemainingSL : function(){
 
 
      var eInfoLink = document.createElement("a");
-     eInfoLink.href = "https://unionlive.kr/events";
+     if(s[0].type == 3 || s[0].type == 4 || s[0].type == 5){eInfoLink.href = "https://unionlive.kr/chart/"+eid;}
+     else{eInfoLink.href = "https://unionlive.kr/events";}
      eInfoLink.target = "_blank";
 
      eInfoLink.appendChild($eTitle);
