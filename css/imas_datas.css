@@ -351,6 +351,7 @@ input[name='list_tabs']:checked + label.tabs{
 #cgidols_election8th_types,#cgidols_election8th_mid_overall,#cgidols_election8th_mid_types,#cgidols_elections_top1,#cgidols_election9th_overall,#cgidols_election9th_types,#cgidols_voice2nd_overall{
 width: 100%;
 overflow: auto;
+margin-left: 1.5em;
 }
 
 #imasprojects_timeline,#games_765876,#followups_timeline{
