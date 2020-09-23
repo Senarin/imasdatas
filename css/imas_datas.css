@@ -499,6 +499,7 @@ margin: 0 auto 0 auto;
 #page_disclaimer{font-size: 13px;}
 
 #date_now{
+text-align: center;
 font-size: 14px;
 text-decoration: underline;
 }
