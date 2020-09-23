@@ -5,6 +5,7 @@
 <title>아이마스 시리즈 아이돌 및 기타 캐릭터 생일 일람</title>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="./css/w3.css" />
 <link rel="stylesheet" type="text/css" href="./css/imas_datas.css" />
 <link rel="stylesheet" type="text/css" href="./css/pageload.css" />
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
@@ -20,18 +21,37 @@
 <div id="scrollbutton">
 <a href="javascript:;" onclick="toPageTop();">&#9650;</a>&nbsp;&nbsp;<a href="javascript:;" onclick="toPageBottom();">&#9660;</a>
 </div>
-<div id="page_imasbirthday_bg_trans"></div>
+<!-- <div id="page_imasbirthday_bg_trans"></div> -->
+<div class="w3-top">
+ <div class="w3-sidebar w3-bar-block w3-white w3-mobile w3-animate-left" style="display: none;" id="sidebar">
+ <button onclick="closeSidebar();" class="w3-bar-item w3-large">닫기 &times;</button>
+ <a href="/" class="w3-bar-item w3-button">메인 페이지로</a>
+ <a href="./imas_birthdays.htm" class="w3-bar-item w3-button">시리즈별 캐릭터 생일 일람</a>
+ <a href="./starlight_events.htm" class="w3-bar-item w3-button">데레스테 역대 이벤트 목록</a>
+ <a href="./starlight_gachas.htm" class="w3-bar-item w3-button">데레스테 역대 가챠 갱신 목록</a>
+ <a href="./cgidols_misc.htm" class="w3-bar-item w3-button">신데렐라 걸즈 아이돌 관련 목록</a>
+ <a href="./cg_election7th.htm" class="w3-bar-item w3-button">신데렐라 걸즈 7차 총선거 최종결과 일람</a>
+ <a href="./cg_election8th.htm" class="w3-bar-item w3-button">신데렐라 걸즈 8차 총선거 관련정보</a>
+ <a href="./cg_election9th.htm" class="w3-bar-item w3-button">신데렐라 걸즈 9차 총선거+보이스 아이돌 오디션 관련정보</a>
+ <a href="./cg_idolnumbers.htm" class="w3-bar-item w3-button">신데렐라 걸즈 아이돌 넘버 일람</a>
+ <a href="./theater_events.htm" class="w3-bar-item w3-button">밀리시타 역대 이벤트 목록</a>
+ <a href="./theater_anniversaries.htm" class="w3-bar-item w3-button">밀리시타 역대 n주년 이벤트 데이터</a>
+ <a href="./theater_gachas.htm" class="w3-bar-item w3-button">밀리시타 역대 가챠 갱신 목록</a>
+ <a href="./imas_anniversaries.htm" class="w3-bar-item w3-button">아이돌마스터 시리즈 관련 생일/기념일 일람</a>
+ <a href="./imas_voices.htm" class="w3-bar-item w3-button">아이마스 시리즈 캐릭터 캐스팅 일람</a>
+ <a href="./imas_areas.htm" class="w3-bar-item w3-button">아이마스 시리즈 출신지별 캐릭터 일람</a>
+ </div>
+ <div class="w3-blue"><button onclick="openSidebar();" class="w3-button w3-bar-item w3-large">&#9776;</button> M@STER Catalogue</div>
+</div>
 
 <div id="headtext">
 <h1><img src="./assets/imasproject_logo_trans.png" id="imaslogo" alt="PROJECT IM@S" title="PROJECT IM@S" />&nbsp;아이돌마스터 시리즈 캐릭터 생일 일람</h1>
 <div id="author_info">제작자 : <a href="https://about.yukina.kr/">유키나</a> (<a href="https://senarin.kr/">홈페이지</a> / <a href="https://yukina.kr/">블로그</a>)</div>
-<div id="recent_edit">최근 수정 2020.9.19</div>
+<div id="recent_edit">최근 수정 2020.9.23</div>
 <div id="date_now"></div>
 <div id="series_birthday"></div>
 <div id="current_browser"></div>
 </div>
-
-<p>(<a href="./">첫 페이지로 가기</a>)</p>
 
 <div id="notice_i">
  <div style="color: #FF0000; font-weight: bold;">(2020.5.10 재공지) [프로듀서 여러분들께 알림] 최근 유행/확산 중인 코로나19(COVID-19/코로나바이러스감염증-19)에 대한 예방수칙(사회적 거리두기 등)을 준수하시기 바랍니다. 만일 의심 증상이 있을 경우, 보건소 및 콜센터(1339)에 우선 연락하신 뒤 지침에 따라 행동하세요.</div>

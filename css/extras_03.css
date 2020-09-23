@@ -1,0 +1,54 @@
+#SL_levelCalcForm01 ul{
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: inherit;
+border: 1px solid #000000;
+}
+
+#SL_levelCalcForm01 li{
+display: block;
+text-align: center;
+padding: 0.5em 1em;
+text-decoration: none;
+border-bottom: 1px solid #000000;
+}
+
+#SL_levelCalcForm02 ul{
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: inherit;
+border: 1px solid #000000;
+}
+
+#SL_levelCalcForm02 li{
+display: block;
+text-align: center;
+padding: 0.5em 1em;
+text-decoration: none;
+border-bottom: 1px solid #000000;
+}
+
+select{
+height: 1.5em;
+padding-left: 0.25em;
+padding-right: 0.25em;
+width: 10em;
+appearance: none;
+-webkit-appearance: none;
+-moz-appearance: none;
+background: url('/res/dropdown.jpg') no-repeat 95% 50%;
+}
+
+select::-ms-expand{display: none;}
+
+#SL_levelCalcForm01 li:last-child{border-bottom: none;}
+#SL_levelCalcForm02 li:last-child{border-bottom: none;}
+
+#SL_levelCalcForm01 select,input{font-size: 1.25em;}
+#SL_levelCalcForm01 input[type="number"]{width: 4em;}
+#SL_levelCalcForm02 select,input{font-size: 1.25em;}
+#SL_levelCalcForm02 input[type="number"]{width: 4em;}

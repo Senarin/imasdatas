@@ -1,0 +1,141 @@
+#date_list,#container_filter{
+ padding: 0.5em;
+ margin: auto;
+ border: 1px solid #aaaaaa;
+}
+
+#view_month,#date_now{
+ text-align: center;
+ padding: 0.5em;
+ margin: auto;
+}
+
+#date_list{
+ text-shadow: 1px 1px #dddddd;
+ list-style-type: none;
+}
+
+.date_today{background-color: #ffffdd;}
+
+mark{
+ background-color: #a6efff;
+ color: #000000;
+ font-weight: bold;
+ text-shadow: none;
+}
+
+.idol_cgcute{color: #db4f6a;}
+.idol_physical315{color: #ed1c24;}
+
+.idol_cgcool{color: #2692d2;}
+.idol_intelli315{color: #3887ff;}
+
+.idol_cgpassion{color: #e68a25;}
+.idol_mental315{color: #faac37;}
+
+/* 디어리 스타즈 */
+#idol_ai_hidaka{color:#e85786;}
+#idol_eri_mizutani{color: #00adb9;}
+#idol_ryo_akizuki{color: #b2d468;}
+
+/* 본가 아이돌 이미지 컬러 */
+#allstars_01{color: #e22b30;}
+#allstars_02{color: #2743d2;}
+#allstars_03{color: #b4e04b;}
+#allstars_04{color: #d3dde9;}
+#allstars_05{color: #f39939;}
+#allstars_06{color: #515558;}
+#allstars_07{color: #fd99e1;}
+#allstars_08{color: #a6126a;}
+#allstars_09{color: #01a860;}
+#allstars_10{color: #9238be;}
+#allstars_11_12{color: #ffe43f;}
+#allstars_13{color: #01adb9;}
+
+#allstars_ex{color: #f4bd6b;} /* 오토나시 코토리 */
+
+/* 밀리언 스타즈 아이돌 이미지 컬러 */
+#millionstars_14{color: #ea5b76;}
+#millionstars_15{color: #6495cf;}
+#millionstars_16{color: #fed552;}
+#millionstars_17{color: #92cfbb;}
+#millionstars_18{color: #9bce92;}
+#millionstars_19{color: #58a6dc;}
+#millionstars_20{color: #454341;}
+#millionstars_21{color: #5abfb7;}
+#millionstars_22{color: #ed90ba;}
+#millionstars_23{color: #eb613f;}
+#millionstars_24{color: #7e6ca8;}
+#millionstars_25{color: #fff03c;}
+#millionstars_26{color: #c7b83c;}
+#millionstars_27{color: #7f6575;}
+#millionstars_28{color: #b54461;}
+#millionstars_29{color: #e9739b;}
+#millionstars_30{color: #f7e78e;}
+#millionstars_31{color: #bee3e3;}
+#millionstars_32{color: #554171;}
+#millionstars_33{color: #afa690;}
+#millionstars_34{color: #e25a9b;}
+#millionstars_35{color: #d1342c;}
+#millionstars_36{color: #f5ad3b;}
+#millionstars_37{color: #788bc5;}
+#millionstars_38{color: #f19257;}
+#millionstars_39{color: #f1becb;}
+#millionstars_40{color: #ee762e;}
+#millionstars_41{color: #7278a8;}
+#millionstars_42{color: #d7a96b;}
+#millionstars_43{color: #eceb70;}
+#millionstars_44{color: #99b7dc;}
+#millionstars_45{color: #b63b40;}
+#millionstars_46{color: #f19591;}
+#millionstars_47{color: #aeb49c;}
+#millionstars_48{color: #6bb6b0;}
+#millionstars_49{color: #efb864;}
+#millionstars_50{color: #d7385f;}
+#millionstars_51{color: #b5b1e1;}
+#millionstars_52{color: #152b65;}
+
+#millionstars_officer{color:#5fd0cc;} /* 아오바 미사키 */
+
+
+/* 샤이니 컬러즈 */
+
+/* 일루미네이션 스타즈 */
+#idol_sc_sakuragi{color:#ffbad6;}
+#idol_sc_kazano{color:#144384;}
+#idol_sc_hachimiya{color:#ffe012;}
+
+/* 안티카 */
+#idol_sc_tsukioka{color:#f84cad;}
+#idol_sc_tanaka{color:#a846fb;}
+#idol_sc_shirase{color:#006047;}
+#idol_sc_mitsumine{color:#3b91c4;}
+#idol_sc_yuko{color:#d9f2ff;}
+
+/* 알스트로메리아 */
+#idol_sc_osaki01{color:#f54174;} /* 아마나 */
+#idol_sc_osaki02{color:#e75aec;} /* 텐카 */
+#idol_sc_kuwayama{color:#fbfbfb;}
+
+/* 방과후 클라이맥스 걸즈 */
+#idol_sc_komiya{color:#cb492d;}
+#idol_sc_sonoda{color:#f93a90;}
+#idol_sc_saijo{color:#ffc601;}
+#idol_sc_morino{color:#89c3eb;}
+#idol_sc_arisugawa{color:#90e666;}
+
+/* Straylight */
+#idol_sc_mayuzumi{color: #5ce626;}
+#idol_sc_serizawa{color: #f30100;}
+#idol_sc_izumi{color: #ff00ff;}
+
+/* noctchill */
+#idol_sc_ichikawa{color: #ffc639;}
+#idol_sc_asakura{color: #50d0d0;}
+#idol_sc_higuchi{color: #be1e3e;}
+#idol_sc_fukumaru{color: #7967c3;}
+
+#idol_sc_nanakusa{color:#8adfff;} /* 나나쿠사 하즈키 */
+
+
+#idol_sc_kuwayama,#idol_sc_yuko{text-shadow: 0px -1px #888888, 1px 0px #888888, 0px 1px #888888, -1px 0px #888888 !important;}

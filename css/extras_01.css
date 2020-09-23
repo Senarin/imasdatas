@@ -1,0 +1,201 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url(//fonts.googleapis.com/earlyaccess/notosansjp.css);
+@import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+body{
+font-family: "Noto Sans KR", "Noto Sans JP", "Nanum Gothic", "Malgun Gothic", sans-serif;
+font-size: 0.9em;
+line-height: 173%;
+}
+
+h1,h2,h3,h4,h5,h6{
+font-family: "Noto Sans KR", "Noto Sans JP", "Nanum Gothic", "Malgun Gothic", sans-serif;
+line-height: 173%;
+}
+
+#imas_voices_page,#imas_areas_page,#imas_anniversaries_page,#imas_ages_page{background-color: rgb(255,255,255) !important;}
+
+
+
+#layer_today{
+display: none;
+position: fixed;
+right: 0;
+top: 0;
+width: 100%;
+height: 100%;
+z-index: 1;
+background-color: rgba(0,0,0,0.5);
+}
+
+#anniversaries_today{
+display: none;
+text-align: center;
+position: absolute;
+background-color: rgba(255,255,255,1) !important;
+width: 28em;
+top: 30%;
+left: 50%;
+border-radius: 1em;
+margin-top: auto;
+margin-left: -14em;
+padding: 1em;
+height: auto;
+z-index: 2;
+}
+
+a:link{
+color: #BB0011;
+text-decoration: none;
+}
+a:active{
+color: #CCCCCC;
+text-decoration: none;
+}
+a:visited{
+color: #777777;
+text-decoration: none;
+}
+a:hover{
+color: #AAAAAA;
+text-decoration: none;
+}
+
+blockquote{
+font-family: "Courier New"
+}
+
+abbr{cursor: help;}
+
+table,tr,td{
+line-height: 173%;
+height: 3.25em;
+border: 1px solid #000000;
+border-collapse: collapse;
+}
+
+.tablehead,.ldates{text-align: center;}
+
+.nonanniversaries{background-color: #AFAFAF;}
+
+#headtext{
+text-align: center;
+background-color: #AF8F5F;
+padding-top: 1em;
+padding-bottom: 1em;
+border-radius: 1em;
+}
+
+label{font-size: 80%;}
+
+#author_info,#recent_edit{
+text-align: right;
+padding-left: 0.5em;
+padding-right: 0.5em;
+font-size: 80%;
+}
+
+.list_voices,#list_ages,#list_anniversaries,#a_cinderella_girls,#a_million_stars,#a_315pro,#a_283pro{
+width: 100%;
+padding: 1.5em;
+overflow: auto;
+}
+
+.idol_list{
+margin: auto;
+padding: 1.5em;
+overflow: auto;
+}
+
+.table_anniversaries{margin: auto;}
+
+.idol_category{
+text-align: center;
+font-weight: bold;
+background-color: #F1F1F1;
+}
+
+.idol_list table,tr,td{
+text-align: center;
+height: 2.25em !important;
+}
+
+.cg_cute{color: #FF00FF;}
+.cg_cool{color: #0000FF;}
+.cg_passion{color: #FFC000;}
+
+
+#list_anniversaries ul{
+list-style-type: none;
+margin: 0;
+padding: 0.25em 0 0.25em 0;
+overflow: hidden;
+}
+
+#stats_body,#idol_menu{
+padding: 1.5em 0.75em;
+margin: auto;
+border: 1px solid #aaaaaa;
+text-align: center;
+}
+
+#status_display,#page_guide_theater_elections,#data_source,#additional_notes{
+padding: 1.5em 0.75em;
+margin: auto;
+text-align: center;
+}
+
+#stats_body{
+background-color: #99b7dc;
+width: 100%;
+height: 76.5vh;
+overflow: auto;
+}
+
+#dt_now{font-size: 1.25em;}
+#additional_notes{font-size: 0.85em;}
+
+input,select{font-family: "Nanum Gothic";}
+
+#scrollbutton_body{
+bottom: 0;
+right: 0;
+width: 3.75em;
+height: 2.125em;
+line-height: 1.75em;
+font-size: 1.75em;
+text-align: center;
+background-color: #E8E8FF;
+border: 2px solid #5F5F5F;
+border-radius: 0.25em 0em 0em 0em;
+position: fixed;
+opacity: 0.72;
+}
+
+.scrbtn_left{
+width: 50%;
+float: left;
+text-align: center;
+border-right: dashed 1px #5F5F5F;
+}
+.scrbtn_right{
+width: 50%;
+float: right;
+text-align: center;
+border-left: dashed 1px #5F5F5F;
+}
+
+.scrbtn_inframe{
+bottom: 0;
+right: 0;
+width: 3.75em;
+height: 2.125em;
+line-height: 1.75em;
+font-size: 1.75em;
+text-align: center;
+background-color: #E8E8FF;
+border: 2px solid #5F5F5F;
+border-radius: 0.25em 0em 0em 0em;
+opacity: 0.72;
+}
+

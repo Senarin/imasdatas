@@ -1,5 +1,3 @@
-
-
 function inCookie(n,v,d){
  var expireTimestamp = new Date();
  expireTimestamp.setDate(expireTimestamp.getDate() + d);
@@ -26,3 +24,6 @@ function padzero(n,l){return (Array(l).join("0")+n).slice(-l);}
 
 function toPageTop(){window.scrollTo(0,0);}
 function toPageBottom(){window.scrollTo(0,document.body.scrollHeight);}
+
+function openSidebar(){document.getElementById("sidebar").style.display = "block";}
+function closeSidebar(){document.getElementById("sidebar").style.display = "none";}
