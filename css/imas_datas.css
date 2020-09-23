@@ -2,7 +2,7 @@
 @import url(//fonts.googleapis.com/earlyaccess/notosansjp.css);
 
 body{
-font-family: 'Noto Sans KR', 'Noto Sans JP', sans-serif;
+font-family: 'Noto Sans KR', 'Noto Sans JP', sans-serif !important;
 font-size: 1em;
 line-height: 144%;
 }
