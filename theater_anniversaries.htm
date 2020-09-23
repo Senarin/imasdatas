@@ -67,14 +67,14 @@ $(document).ready(function(){
 </ul>
 
 <div id="theater_client_info">
- <h3>게임 버전 관련 정보 (<span class="flag-icon flag-icon-jp"></span> 현지판 기준)</h3>
+ <p>게임 버전 관련 정보 (<span class="flag-icon flag-icon-jp"></span> 현지판 기준)</p>
  <div id="tdclient_info_detail"><img src="./assets/loading.gif" style="width: 24px; height: auto;" alt="Loading" /> 가져오는 중...</div>
  <script>setInterval(function(){getTDGameClientInfo.getContent();},(900 * 1000));</script>
  <span style="font-size: 0.85em;"><span id="lastupdate_clientinfo"></span> / 정보제공: <a href="https://matsurihi.me">matsurihi.me</a> (日)</span>
 </div>
 
 <div class="anniv_countdown">
- <h3>다음 n주년(6월 29일)까지 남은 시간</h3>
+ <p>다음 n주년(6월 29일)까지 남은 시간</p>
  <div id="countdown_time_anniv"></div>
  <script>var eAnnivTimestamp = new Array(6,29,0,0,0);setInterval(function(){showRemainingTime.showCountdownAnniversary(eAnnivTimestamp,"countdown_time_anniv");},50);</script>
 </div>

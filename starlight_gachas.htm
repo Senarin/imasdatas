@@ -60,13 +60,13 @@ $(document).ready(function(){
 </ul>
 
 <div id="gacha_countdown">
- <h3>다음 가챠 갱신까지 남은 시간</h3>
+ <p>다음 가챠 갱신까지 남은 시간</p>
  <div id="countdown_time"><img src="./assets/loading.gif" style="width: 24px; height: auto;" alt="Loading" /> 가져오는 중...</div>
  <sub>(정보제공: <a href="https://starlight.kirara.ca/">Starlight Database</a>)</sub>
 </div>
 
 <div id="starlight_client_info">
- <h3>게임 버전 관련 정보</h3>
+ <p>게임 버전 관련 정보</p>
  <div id="slclient_info_detail"><img src="./assets/loading.gif" style="width: 24px; height: auto;" alt="Loading" /> 가져오는 중...</div>
  <script>setInterval(function(){getSLGameClientInfo.getContent();},(900 * 1000));</script>
  <div style="font-size: 0.85em;"><span id="lastupdate_clientinfo"></span> / 정보제공: <a href="https://matsurihi.me">matsurihi.me</a> (日)</div>
