@@ -91,14 +91,14 @@ $(document).ready(function(){
 <tr>
  <td>
   <div class="anniv_countdown">
-   <h3>다음 n주년(6월 29일)까지 남은 시간</h3>
+   <p><b>다음 n주년(6월 29일)까지 남은 시간</b></p>
    <div id="countdown_time_anniv"></div>
    <script>var eAnnivTimestamp = new Array(6,29,0,0,0);setInterval(function(){showRemainingTime.showCountdownAnniversary(eAnnivTimestamp,"countdown_time_anniv");},50);</script>
   </div>
  </td>
  <td>
   <div class="anniv_countdown">
-   <h3>다음 한국어판 n주년(8월 30일)까지 남은 시간</h3>
+   <p><b>다음 한국어판 n주년(8월 30일)까지 남은 시간</b></p>
    <div id="countdown_time_anniv_k"></div>
    <script>var eOrigTimestamp = new Array(8,30,0,0,0);setInterval(function(){showRemainingTime.showCountdownAnniversary(eOrigTimestamp,"countdown_time_anniv_k");},50);</script>
   </div>
@@ -131,7 +131,7 @@ $(document).ready(function(){
 <tr>
  <td>
  <div id="event_countdown">
-  <h3><span class="flag-icon flag-icon-jp"></span> 현지판 기준</h3>
+  <p><b><span class="flag-icon flag-icon-jp"></span> 현지판 기준</b></p>
   <div id="theater_event_name_j"><img src="./assets/loading.gif" style="width: 24px; height: auto;" alt="Loading" /> 가져오는 중...</div>
   <sub id="theater_ename_orig_j" style="display: none;"></sub>
   <input type="hidden" id="theater_eid_j" value="0" />
@@ -145,7 +145,7 @@ $(document).ready(function(){
 </td>
 <td>
  <div id="event_countdown_k">
-  <h3><span class="flag-icon flag-icon-kr"></span> 한국어판 기준</h3>
+  <p><b><span class="flag-icon flag-icon-kr"></span> 한국어판 기준</b></p>
   <div id="theater_event_name_k"><img src="./assets/loading.gif" style="width: 24px; height: auto;" alt="Loading" /> 가져오는 중...</div>
   <sub id="theater_ename_orig_k" style="display: none;"></sub>
   <input type="hidden" id="theater_eid_k" value="0" />
