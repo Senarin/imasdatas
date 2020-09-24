@@ -1,21 +1,4 @@
-@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
-@import url(//fonts.googleapis.com/earlyaccess/notosansjp.css);
-@import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
-
-body{
-font-family: "Noto Sans KR", "Noto Sans JP", "Nanum Gothic", "Malgun Gothic", sans-serif;
-font-size: 0.9em;
-line-height: 173%;
-}
-
-h1,h2,h3,h4,h5,h6{
-font-family: "Noto Sans KR", "Noto Sans JP", "Nanum Gothic", "Malgun Gothic", sans-serif;
-line-height: 173%;
-}
-
 #imas_voices_page,#imas_areas_page,#imas_anniversaries_page,#imas_ages_page{background-color: rgb(255,255,255) !important;}
-
-
 
 #layer_today{
 display: none;
