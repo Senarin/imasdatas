@@ -4,7 +4,7 @@
 
 body,h1,h2,h3,h4,h5,h6{
 font-family: 'Noto Sans KR', 'Noto Sans JP', "Nanum Gothic", "Malgun Gothic", sans-serif !important;
-font-size: 14px;
+font-size: 13px;
 line-height: 173% !important;
 }
 
@@ -217,7 +217,7 @@ display: none;
 
 .scriptlinks{cursor: pointer;}
 
-.idolnames,.cgevent_lists,.cgelection_lists{font-size: 0.9em;}
+.idolnames,.cgevent_lists,.cgelection_lists{font-size: 0.95em;}
 
 .cgcute,.mlvocal,.princess765,.physical315{color: #FF00FF;}
 
