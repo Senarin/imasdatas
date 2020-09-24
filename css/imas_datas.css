@@ -182,9 +182,15 @@ border-bottom: 1px solid #000000;
 
 li.sectionlist:last-child{border-bottom: none;}
 
-.sectionheading,.seriesheading{
+.sectionheading{
 font-weight: bold;
 margin-top: 2.5em;
+margin-left: 0.5em;
+}
+
+.seriesheading{
+font-weight: bold;
+margin-top: 1.25em;
 margin-left: 0.5em;
 }
 
