@@ -217,7 +217,7 @@ display: none;
 
 .scriptlinks{cursor: pointer;}
 
-.idolnames,.cgevent_lists,.cgelection_lists{font-size: 13px;}
+.idolnames,.cgevent_lists,.cgelection_lists{font-size: 0.9em;}
 
 .cgcute,.mlvocal,.princess765,.physical315{color: #FF00FF;}
 
@@ -236,7 +236,7 @@ filter: Alpha(opacity=50);
 
 .cgevents_list,.cgsongs_list,.cggachas_list,.mlevents_list,.mlsongs_list,.mlgachas_list{
 margin: auto;
-font-size: 13px;
+font-size: 0.9em;
 }
 
 .cg_starlight_atapon,.ml_platinum_theater,.ml_platinum_tune{
@@ -401,7 +401,7 @@ background-image: url('/assets/birthday_icon_trans.png');
 background-repeat: no-repeat;
 background-size: 87px;
 background-position: right bottom;
-font-size: 13px;
+font-size: 0.9em;
 width: 28.5em;
 margin-top: 1em;
 margin-left: auto;
