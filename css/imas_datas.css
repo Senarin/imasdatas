@@ -503,10 +503,7 @@ margin: 0 auto 0 auto;
 #idol_legend_description,#as_legend_description,#cg_legend_description,#ml_legend_description,
 #sm_legend_description,#sc_legend_description,#etc_legend_description,#series_birthday{font-size: 13px;}
 
-#page_disclaimer{
-font-size: 13px;
-margin-left: 0.5em;
-}
+#page_disclaimer{font-size: 13px;}
 
 #date_now{
 text-align: center;
