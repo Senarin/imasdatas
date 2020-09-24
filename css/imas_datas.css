@@ -132,16 +132,7 @@ border: 1px solid #000000;
 border-collapse: collapse;
 }
 
-ul{
-margin-left: -1.25em;
-margin-right: 1em;
-font-size: 13px;
-}
-
-ol{
-margin-right: 1em;
-font-size: 13px;
-}
+ul,ol{margin-right: 1em;}
 
 #mainpage{
 display: block;
