@@ -539,8 +539,6 @@ display: inline-block;
 vertical-align: middle;
 }
 
-label{font-size: 80%;}
-
 #author_info,#recent_edit{
 text-align: right;
 padding-left: 0.5em;
