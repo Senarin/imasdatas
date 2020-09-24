@@ -4,7 +4,7 @@
 
 body,h1,h2,h3,h4,h5,h6{
 font-family: 'Noto Sans KR', 'Noto Sans JP', "Nanum Gothic", "Malgun Gothic", sans-serif !important;
-font-size: 1em;
+font-size: 13px;
 line-height: 173% !important;
 }
 
@@ -107,7 +107,7 @@ input[type="number"]{width: 55px;}
 input.inNum{
 height: 2em;
 width: 7em;
-font-size: 1em;
+font-size: 13px;
 }
 
 input.generalBtns{
@@ -217,7 +217,7 @@ display: none;
 
 .scriptlinks{cursor: pointer;}
 
-.idolnames,.cgevent_lists,.cgelection_lists{font-size: 12.5px;}
+.idolnames,.cgevent_lists,.cgelection_lists{font-size: 13px;}
 
 .cgcute,.mlvocal,.princess765,.physical315{color: #FF00FF;}
 
@@ -236,7 +236,7 @@ filter: Alpha(opacity=50);
 
 .cgevents_list,.cgsongs_list,.cggachas_list,.mlevents_list,.mlsongs_list,.mlgachas_list{
 margin: auto;
-font-size: 12px;
+font-size: 13px;
 }
 
 .cg_starlight_atapon,.ml_platinum_theater,.ml_platinum_tune{
@@ -401,7 +401,7 @@ background-image: url('/assets/birthday_icon_trans.png');
 background-repeat: no-repeat;
 background-size: 87px;
 background-position: right bottom;
-font-size: 1em;
+font-size: 13px;
 width: 28.5em;
 margin-top: 1em;
 margin-left: auto;
@@ -425,7 +425,7 @@ background-color: #F5F8FA;
 background-repeat: no-repeat;
 background-size: 87px;
 background-position: right bottom;
-font-size: 1em;
+font-size: 13px;
 width: 28.5em;
 margin-bottom: 1.25em;
 margin-left: auto;
@@ -493,9 +493,9 @@ margin: 0 auto 0 auto;
 #birthtoday_765,#birthtoday_876,#birthtoday_346,#birthtoday_million,#birthtoday_315,#birthtoday_283,#birthtoday_etc{display: none;}
 
 #idol_legend_description,#as_legend_description,#cg_legend_description,#ml_legend_description,
-#sm_legend_description,#sc_legend_description,#etc_legend_description,#series_birthday{font-size: 1em;}
+#sm_legend_description,#sc_legend_description,#etc_legend_description,#series_birthday{font-size: 0.9em;}
 
-#page_disclaimer{font-size: 1em;}
+#page_disclaimer{font-size: 13px;}
 
 #date_now{
 text-align: center;
