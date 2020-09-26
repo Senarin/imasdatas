@@ -207,7 +207,7 @@ margin-left: 0.5rem;
 #s_million{background-color:#F4BC1F;}
 #s_million a{color: #FFFFFF !important;}
 
-#s_315{background: linear-gradient(to bottom, #00D8FF, #16B28B);}
+#s_315{background: linear-gradient(to bottom, #00D8FF 70%, #16B28B);}
 #s_315 a{color: #FFFFFF !important;}
 
 #s_283{background-color:#8DB2DF;}
