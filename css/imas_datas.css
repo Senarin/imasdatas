@@ -189,13 +189,13 @@ li.sectionlist:last-child{border-bottom: none;}
 .sectionheading{
 font-weight: bold;
 margin-top: 2.5em;
-margin-left: 0.5em;
+margin-left: 0.5rem;
 }
 
 .seriesheading{
 font-weight: bold;
 margin-top: 1.25em;
-margin-left: 0.5em;
+margin-left: 0.5rem;
 }
 
 #s_765876{background-color:#E34D68;}
