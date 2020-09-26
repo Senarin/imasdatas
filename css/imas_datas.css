@@ -420,8 +420,8 @@ width: 28.5em;
 margin-top: 1em;
 margin-left: auto;
 margin-right: auto;
-padding-top: 1em;
-padding-bottom: 1em;
+padding-top: 0.5em;
+padding-bottom: 1.5em;
 padding-left: 0.375em;
 padding-right: 0.375em;
 border-radius: 1.4em;
@@ -431,7 +431,7 @@ border-radius: 1.4em;
 #birthday_display_02{display: none;}
 
 
-#event_countdown,#boost_countdown,#event_countdown_k,#boost_countdown_k,#resannounce_countdown,#gacha_countdown,#masterrank_countdown,#slsong_countdown,
+#event_countdown,#event_countdown_k,#boost_countdown,#boost_countdown_k,#resannounce_countdown,#gacha_countdown,#masterrank_countdown,#slsong_countdown,
 #starlight_daily,#starlight_client_info,#theater_client_info,#theater_client_info_k,#theater_select_idol,.anniv_countdown{
 text-align: center;
 justify-content: center;
@@ -449,8 +449,9 @@ padding-bottom: 1em;
 padding-left: 0.375em;
 padding-right: 0.375em;
 border-radius: 1.4em;
-height: 250px;
 }
+
+#event_countdown,#event_countdown_k{height: 250px;}
 
 #countdown_time,#event_progress,#nearend_event,#underday_event,#countdown_time_k,#event_progress_k,#nearend_event_k,#underday_event_k{line-height: 144% !important;}
 
