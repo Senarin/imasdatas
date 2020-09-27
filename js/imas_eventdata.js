@@ -89,7 +89,7 @@ var showTDAnniversaryEventData = {
   window.open("http://imas.gamedbs.jp/mlth/chara/show/"+selectedIdol,"_blank");
  },
 
- retrieveData : function(){
+ retrieveData : function(){ // 아이돌별 개인 랭킹
   var numAnniv = new Number(document.getElementById("anniv_select").value);
   var idolId = new Number(document.getElementById("idol_select").value);
   if(numAnniv == 1){var eid = 44;} // 1주년
@@ -176,7 +176,7 @@ var showTDAnniversaryEventData = {
   r.send();
  },
 
- retrieveTotal : function(){
+ retrieveTotal : function(){ // 개인 총합 랭킹
   var numAnniv = new Number(document.getElementById("anniv_select").value);
   if(numAnniv == 1){var eid = 44;} // 1주년
   else if(numAnniv == 2){var eid = 92;} // 2주년
@@ -246,7 +246,7 @@ var showTDAnniversaryEventData = {
   r.send();
  },
 
- retrieveGuild : function(){
+ retrieveGuild : function(){ // 라운지 랭킹
   var numAnniv = new Number(document.getElementById("anniv_select").value);
   if(numAnniv == 1){var eid = 44;} // 1주년
   else if(numAnniv == 2){var eid = 92;} // 2주년
