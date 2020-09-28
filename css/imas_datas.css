@@ -451,6 +451,8 @@ padding-right: 0.375em;
 border-radius: 1.4em;
 }
 
+#theater_event_name_j,#theater_event_name_k,#starlight_event_name{white-space: pre;}
+
 #event_countdown,#event_countdown_k{
 display: table-cell;
 vertical-align: middle;
