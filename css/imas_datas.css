@@ -453,6 +453,8 @@ border-radius: 1.4em;
 
 #event_countdown,#event_countdown_k{height: 250px;}
 
+.countdown_box{margin: auto 0px;}
+
 #countdown_time,#event_progress,#nearend_event,#underday_event,#countdown_time_k,#event_progress_k,#nearend_event_k,#underday_event_k{line-height: 144% !important;}
 
 #theaterdays_events_status tr,
