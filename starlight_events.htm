@@ -92,20 +92,24 @@ $(document).ready(function(){
 <h2 class="w3-xlarge sectionheading"><a name="e_periodic" href="#section_01">1.</a> <time datetime="2015-09-03T15:00:00+09:00">일반 정규 이벤트 목록</time></h2>
 <hr style="width: 100%; margin-top: -0.5em;" />
 
-<div id="event_countdown">
- <div class="countdown_box">
-  <p><b>현재 개최중인 이벤트</b></p>
-  <div id="starlight_event_name"><img src="./assets/loading.gif" style="width: 24px; height: auto;" alt="Loading" /> 가져오는 중...</div>
-  <sub id="starlight_ename_orig" style="display: none;"></sub>
-
-  <p><b>종료까지 남은 시간</b></p>
-  <div id="countdown_time"><img src="./assets/loading.gif" style="width: 24px; height: auto;" alt="Loading" /> 가져오는 중...</div>
-  <sub id="nearend_event" style="display: none;">종료 임박!!</sub>
-  <sub id="underday_event" style="display: none;">얼마 남지 않았습니다. 서두르세요.</sub>
- 
-  <sub>(정보제공: <a href="https://starlight.kirara.ca/">Starlight Database</a>)</sub>
+<table id="starlightstage_events_status" style="border: none; text-align: center; margin: auto;">
+<tr>
+ <td>
+ <div id="event_countdown">
+  <div class="countdown_box">
+   <p><b>현재 개최중인 이벤트</b></p>
+   <div id="starlight_event_name"><img src="./assets/loading.gif" style="width: 24px; height: auto;" alt="Loading" /> 가져오는 중...</div>
+   <sub id="starlight_ename_orig" style="display: none;"></sub>
+   <p><b>종료까지 남은 시간</b></p>
+   <div id="countdown_time"><img src="./assets/loading.gif" style="width: 24px; height: auto;" alt="Loading" /> 가져오는 중...</div>
+   <sub id="nearend_event" style="display: none;">종료 임박!!</sub>
+   <sub id="underday_event" style="display: none;">얼마 남지 않았습니다. 서두르세요.</sub>
+   <sub>(정보제공: <a href="https://starlight.kirara.ca/">Starlight Database</a>)</sub>
+  </div>
  </div>
-</div>
+ </td>
+</tr>
+</table>
 
 <ul>
  <li>특별한 조건이 없이 모든 프로듀서가 참여 가능한 이벤트입니다.</li>

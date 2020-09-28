@@ -479,6 +479,10 @@ height: 250px;
 #theaterdays_events_status_announce th,
 #theaterdays_events_status_announce td{border: none !important;}
 
+#starlightstage_events_status tr,
+#starlightstage_events_status th,
+#starlightstage_events_status td{border: none !important;}
+
 @media ( max-width: 720px ){
  #theaterdays_events_status tr,
  #theaterdays_events_status th,
@@ -499,6 +503,10 @@ height: 250px;
  #theaterdays_events_status_announce tr,
  #theaterdays_events_status_announce th,
  #theaterdays_events_status_announce td{display: block;}
+
+ #starlightstage_events_status tr,
+ #starlightstage_events_status th,
+ #starlightstage_events_status td{display: block;}
 }
 
 
