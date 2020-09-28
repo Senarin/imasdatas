@@ -379,7 +379,7 @@ showGachaRemainingSL : function(){
      var eid = new Number(s[0].id);
      document.getElementById("theater_eid_k").value = eid;
 
-     if($("#theater_elist_k td[data-event-id='"+eid+"'][data-event-id!='-1']").length != 0){var $eTitle = document.createTextNode($("#theater_elist_k td[data-event-id='"+eid+"'][data-event-id!='-1']").last().html().replace(/<[^>]*>/g,"").replace("&amp;","&"));}
+     if($("#theater_elist_k td[data-event-id='"+eid+"'][data-event-id!='-1']").length != 0){var $eTitle = document.createTextNode($("#theater_elist_k td[data-event-id='"+eid+"'][data-event-id!='-1']").last().html().replace(/<br\W*?\/>/g,"\n").replace(/<[^>]*>/g,"").replace("&amp;","&"));}
      else{var $eTitle = document.createTextNode("개최 중인 이벤트가 없습니다.");}
 
 
