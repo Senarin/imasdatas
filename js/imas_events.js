@@ -169,10 +169,14 @@ showRemainingSL : function(){
 
      var numEvents = $(".starlight_events td[data-event-id][data-event-id!='-1']").length;
 
-     if(startingTimestamp <= nowTimestamp){var $eTitle = document.createTextNode($(".starlight_events td[data-event-id][data-event-id!='-1']").last().html().replace(/<[^>]*>/g,"").replace("&amp;","&"));}
-     else{var $eTitle = document.createTextNode($(".starlight_events td[data-event-id][data-event-id!='-1']").eq(numEvents-2).html().replace(/<[^>]*>/g,"").replace("&amp;","&"));}
-
-     if(eType == 1){$eTitle = "(재화) "+$eTitle;}
+     if(startingTimestamp <= nowTimestamp){
+      var nameOngoingEvent = $(".starlight_events td[data-event-id][data-event-id!='-1']").last().html().replace(/<[^>]*>/g,"").replace("&amp;","&");
+      if(eType == 1){nameOngoingEvent = "(재화) "+nameOngoingEvent;}
+      var $eTitle = document.createTextNode(nameOngoingEvent);
+     }else{
+      var nameOngoingEvent = $(".starlight_events td[data-event-id][data-event-id!='-1']").eq(numEvents-2).html().replace(/<[^>]*>/g,"").replace("&amp;","&");
+      var $eTitle = document.createTextNode(nameOngoingEvent2);
+     }
 
      var eInfoLink = document.createElement("a");
      eInfoLink.href = "https://starlight.kirara.ca/history";
