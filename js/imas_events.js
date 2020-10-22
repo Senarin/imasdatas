@@ -164,10 +164,15 @@ showRemainingSL : function(){
      var startingTimestamp = new Number(new Date($(".starlight_events td[data-event-id][data-event-id!='-1']").last().data("eventStart")));
      var nowTimestamp = new Number(new Date());
 
+     var eType = parseInt(Math.floor(new Number(eInfo[0].id) / 1000));
+     console.log("["+(new Date()).toLocaleString()+"] 현재 개최 중인 이벤트 종류 : "+starlightEventType[eType]);
+
      var numEvents = $(".starlight_events td[data-event-id][data-event-id!='-1']").length;
 
      if(startingTimestamp <= nowTimestamp){var $eTitle = document.createTextNode($(".starlight_events td[data-event-id][data-event-id!='-1']").last().html().replace(/<[^>]*>/g,"").replace("&amp;","&"));}
      else{var $eTitle = document.createTextNode($(".starlight_events td[data-event-id][data-event-id!='-1']").eq(numEvents-2).html().replace(/<[^>]*>/g,"").replace("&amp;","&"));}
+
+     if(eType == 1){$eTitle = "(재화) "+$eTitle;}
 
      var eInfoLink = document.createElement("a");
      eInfoLink.href = "https://starlight.kirara.ca/history";
@@ -187,9 +192,6 @@ showRemainingSL : function(){
      var eHours = eDateTime.getHours();
      var eMins = eDateTime.getMinutes();
      var eSecs = eDateTime.getSeconds();
-	 
-     var eType = parseInt(Math.floor(new Number(eInfo[0].id) / 1000));
-     console.log("["+(new Date()).toLocaleString()+"] 현재 개최 중인 이벤트 종류 : "+starlightEventType[eType]);
 
      setInterval(function(){tickEvent.remain(eYear,eMonth,eDay,eHours,eMins,eSecs,"countdown_time");},50);
 
