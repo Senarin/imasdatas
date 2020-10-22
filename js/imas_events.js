@@ -171,7 +171,7 @@ showRemainingSL : function(){
 
      if(startingTimestamp <= nowTimestamp){
       var nameOngoingEvent = $(".starlight_events td[data-event-id][data-event-id!='-1']").last().html().replace(/<[^>]*>/g,"").replace("&amp;","&");
-      if(eType == 1){nameOngoingEvent = "(재화) "+nameOngoingEvent;}
+      if(eType == 1){nameOngoingEvent = "[재화수집] "+nameOngoingEvent;}
       var $eTitle = document.createTextNode(nameOngoingEvent);
      }else{
       var nameOngoingEvent = $(".starlight_events td[data-event-id][data-event-id!='-1']").eq(numEvents-2).html().replace(/<[^>]*>/g,"").replace("&amp;","&");
