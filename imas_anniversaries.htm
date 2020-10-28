@@ -99,6 +99,7 @@ $(document).ready(function(){
  <div id="filter_series" style="padding-left: 1em;">
   <input type="radio" name="filter_mode" id="filter_cboxes" checked="checked" onchange="toggleFilterMode();" />&nbsp;<label for="filter_cboxes">시리즈 및 범주 선택:</label>
   <br />
+  <b>시리즈:</b>&nbsp;
   <input type="checkbox" name="output_filter" id="display_as" value="as" checked="checked" onchange="refreshFilter();" />&nbsp;<label for="display_as">765 올스타즈 (961 오리지널 포함)</label>&nbsp;
   <input type="checkbox" name="output_filter" id="display_cg" value="cg" checked="checked" onchange="refreshFilter();" />&nbsp;<label for="display_cg">신데렐라 걸즈</label>&nbsp;
   <input type="checkbox" name="output_filter" id="display_ml" value="ml" checked="checked" onchange="refreshFilter();" />&nbsp;<label for="display_ml">밀리언 라이브</label>&nbsp;
@@ -110,6 +111,7 @@ $(document).ready(function(){
   <input type="checkbox" name="output_filter" id="display_etc" value="etc" checked="checked" onchange="refreshFilter();" />&nbsp;<label for="display_etc">그 외</label>
  </div>
  <div id="filter_types" style="padding-left: 1em;">
+  <b>범주:</b>&nbsp;
   <input type="checkbox" name="output_filter" id="display_charas" value="chara" checked="checked" onchange="refreshFilter();" />&nbsp;<label for="display_charas">캐릭터(아이돌) 생일</label>&nbsp;
   <input type="checkbox" name="output_filter" id="display_voices" value="voices" checked="checked" onchange="refreshFilter();" />&nbsp;<label for="display_voices">성우 생일</label>&nbsp;
   <input type="checkbox" name="output_filter" id="display_celebrations" value="anniv" checked="checked" onchange="refreshFilter();" />&nbsp;<label for="display_celebrations">각종 기념일</label>
