@@ -162,11 +162,9 @@ function moveToToday(){
   var $charaList = $todayList.find("[class^='chara']");
   var $otherList = $todayList.find("[class^='voices'],[class^='anniv']");
   
-  listText += "[캐릭터 생일]<br />";
   if($charaList.length > 0){$charaList.each(function(){listText += "- "+$(this).text()+"<br />";});}
   else{listText += "(해당하는 캐릭터가 없습니다)<br />";}
 
-  listText += "<br />[기타 기념일]<br />";
   if($otherList.length > 0){$otherList.each(function(){listText += "- "+$(this).text()+"<br />";});}
   else{listText += "(해당하는 사항이 없습니다)<br />";}
 
