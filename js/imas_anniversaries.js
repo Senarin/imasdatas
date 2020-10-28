@@ -163,10 +163,9 @@ function moveToToday(){
   var $otherList = $todayList.find("[class^='voices'],[class^='anniv']");
   
   if($charaList.length > 0){$charaList.each(function(){listText += "- "+$(this).text()+"<br />";});}
-  else{listText += "(해당하는 캐릭터가 없습니다)<br />";}
-
   if($otherList.length > 0){$otherList.each(function(){listText += "- "+$(this).text()+"<br />";});}
-  else{listText += "(해당하는 사항이 없습니다)<br />";}
+
+  if($charaList.length == 0 && $otherList.length == 0){listText += "(해당하는 생일이나 기념일이 없습니다)<br />";}
 
   listText += "<br />";
 
