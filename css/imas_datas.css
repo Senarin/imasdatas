@@ -271,7 +271,10 @@ color: #FFFFFF;
 background-color: #FFBF50;
 }
 
-.tblsection{font-size: 1.25em;}
+.tblsection{
+font-size: 1.25em;
+padding: 0.25em 0;
+}
 
 #idolrank_desc,#please_select,#totalrank_desc,#guildrank_desc{text-align: center;}
 
