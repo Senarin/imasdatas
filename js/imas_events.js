@@ -175,7 +175,7 @@ showRemainingSL : function(){
       var $eTitle = document.createTextNode(nameOngoingEvent);
      }else{
       var nameOngoingEvent = $(".starlight_events td[data-event-id][data-event-id!='-1']").eq(numEvents-2).html().replace(/<[^>]*>/g,"").replace("&amp;","&");
-      var $eTitle = document.createTextNode(nameOngoingEvent2);
+      var $eTitle = document.createTextNode(nameOngoingEvent);
      }
 
      var eInfoLink = document.createElement("a");
