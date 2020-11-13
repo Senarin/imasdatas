@@ -321,6 +321,7 @@ margin: auto;
 overflow: auto;
 }
 
+.link_idolinfo{color: inherit;}
 
 input[name='list_tabs']{display: none;}
 
