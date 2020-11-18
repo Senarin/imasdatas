@@ -13,6 +13,9 @@ var theaterEventType = {
  12 : "트윈(스페셜)"
 };
 
+// 밀리시타 경쟁형 이벤트
+var theaterPSTEvents = [3,4,10,11,12];
+
 // 데레스테 이벤트 형식
 var starlightEventType = {
  1 : "재화수집",
@@ -819,9 +822,9 @@ var getTDEventRanksInfo = {
       var s = JSON.parse(t.responseText);
       if(s.length == 0){etype = 0;}
       else{etype = s.type;}
-
+      
       if(etype == 0){alert("존재하지 않는 이벤트입니다.");return;}
-      else if(etype == 3 || etype == 4 || etype == 10 || etype == 11 || etype == 12){
+      else if(theaterPSTEvents.indexOf(etype) != -1){
        var r = new XMLHttpRequest();
 
        r.onreadystatechange = function(){
