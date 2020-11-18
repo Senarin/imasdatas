@@ -9,7 +9,8 @@ var theaterEventType = {
  7 : "만우절 특별 이벤트",
  9 : "밀리코레",
  10 : "트윈",
- 11 : "튠"
+ 11 : "튠",
+ 12 : "트윈(스페셜)"
 };
 
 // 데레스테 이벤트 형식
@@ -820,7 +821,7 @@ var getTDEventRanksInfo = {
       else{etype = s.type;}
 
       if(etype == 0){alert("존재하지 않는 이벤트입니다.");return;}
-      else if(etype == 3 || etype == 4 || etype == 10 || etype == 11){
+      else if(etype == 3 || etype == 4 || etype == 10 || etype == 11 || etype == 12){
        var r = new XMLHttpRequest();
 
        r.onreadystatechange = function(){
