@@ -168,6 +168,8 @@ showRemainingSL : function(){
      var startingTimestamp = new Number(new Date($(".starlight_events td[data-event-id][data-event-id!='-1']").last().data("eventStart")));
      var nowTimestamp = new Number(new Date());
 
+     var sDateTime = new Number(new Date(eInfo[0].start_date));
+
      var eType = parseInt(Math.floor(new Number(eInfo[0].id) / 1000));
      console.log("["+(new Date()).toLocaleString()+"] 현재 개최 중인 이벤트 종류 : "+starlightEventType[eType]);
 
@@ -202,6 +204,8 @@ showRemainingSL : function(){
      var eSecs = eDateTime.getSeconds();
 
      setInterval(function(){tickEvent.remain(eYear,eMonth,eDay,eHours,eMins,eSecs,"countdown_time");},50);
+
+     setInterval(function(){tickEvent.percentage(sDateTime,eDateTime,"event_progress");},50);
 
      var dateTimeNow = new Number(new Date());
      var nearEndThreshold = 43200;
