@@ -171,6 +171,7 @@ showRemainingSL : function(){
      var sDateTime = new Number(new Date(eInfo[0].start_date));
 
      var eType = parseInt(Math.floor(new Number(eInfo[0].id) / 1000));
+     
      console.log("["+(new Date()).toLocaleString()+"] 현재 개최 중인 이벤트 종류 : "+starlightEventType[eType]);
 
      var numEvents = $(".starlight_events td[data-event-id][data-event-id!='-1']").length;
