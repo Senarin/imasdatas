@@ -23,7 +23,7 @@ font-size: 1em;
 
 label{font-size: 0.9em;}
 
-sub,sup{line-height: 100% !important;}
+sub,sup{line-height: normal !important;}
 
 
 /*
