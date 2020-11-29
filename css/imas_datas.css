@@ -580,3 +580,9 @@ padding-left: 0.5em;
 padding-right: 0.5em;
 font-size: 90%;
 }
+
+#author_footer{
+text-align: center;
+padding: 1em;
+font-size: 0.875em;
+}
