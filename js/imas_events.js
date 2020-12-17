@@ -174,14 +174,8 @@ showRemainingSL : function(){
      
      console.log("["+(new Date()).toLocaleString()+"] 현재 개최 중인 이벤트 종류 : "+starlightEventType[eType]);
 
-     var numEvents = $(".starlight_events td[data-event-id][data-event-id!='-1']").length;
-
      if(startingTimestamp <= nowTimestamp){
-      var nameOngoingEvent = $(".starlight_events td[data-event-id][data-event-id!='-1']").last().html().replace(/<[^>]*>/g,"").replace("&amp;","&");
-      if(eType == 1){nameOngoingEvent = "[재화수집] "+nameOngoingEvent;}
-      var $eTitle = document.createTextNode(nameOngoingEvent);
-     }else{
-      var nameOngoingEvent = $(".starlight_events td[data-event-id][data-event-id!='-1']").eq(numEvents-2).html().replace(/<[^>]*>/g,"").replace("&amp;","&");
+      var nameOngoingEvent = $(".starlight_events td[data-event-id][data-event-id!='-1']").filter("[data-event-id='"+eInfo[0].id+"']").html().replace(/<[^>]*>/g,"").replace("&amp;","&");
       if(eType == 1){nameOngoingEvent = "[재화수집] "+nameOngoingEvent;}
       var $eTitle = document.createTextNode(nameOngoingEvent);
      }
