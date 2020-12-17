@@ -165,9 +165,6 @@ showRemainingSL : function(){
       return;
      }
 
-     var startingTimestamp = new Number(new Date($(".starlight_events td[data-event-id][data-event-id!='-1']").last().data("eventStart")));
-     var nowTimestamp = new Number(new Date());
-
      var sDateTime = new Number(new Date(eInfo[0].start_date));
 
      var eType = parseInt(Math.floor(new Number(eInfo[0].id) / 1000));
