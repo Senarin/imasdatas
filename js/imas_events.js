@@ -15,7 +15,7 @@ var theaterEventType = {
 };
 
 // 밀리시타 악곡 이벤트 형식 (n주년 제외)
-var theaterPSTEvents = [3,4,10,11,12];
+var theaterPSTEvents = [3,4,10,11,12,13];
 
 // 데레스테 이벤트 형식
 var starlightEventType = {
