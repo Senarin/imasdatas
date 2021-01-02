@@ -303,12 +303,9 @@ function closestbirthdays_765(){
   var prevBirthday = new Array(idolDates[nearest],idolList[idolDates[nearest]][0].getElementsByTagName("span")[0]);
  }
 
- if(dateChecksum >= idolDates[numIdols]){var n = 0;}
+ if(dateChecksum >= idolDates[numIdols] || dateChecksum < idolDates[0]){var n = 0;}
  else if(dateChecksum == idolDates[0] || idolDates.indexOf(dateChecksum) == -1){var n = nearest+1;}
  else{var n = nearest+2;}
-
- console.log(nearest+" // "+n);
- console.log(idolDates);
  
  var birthdayGroupNext = idolList[idolDates[n]][1];
  var nextBirthday = new Array(idolDates[n],idolList[idolDates[n]][0].getElementsByTagName("span")[0]);
@@ -438,7 +435,7 @@ function closestbirthdays_315(){
  else{var prevBirthday = new Array(idolDates[nearest],matchingIdols_prev.slice(0,-2));}
 
 
- if(dateChecksum >= idolDates[numIdols]){var n = 0;}
+ if(dateChecksum >= idolDates[numIdols] || dateChecksum < idolDates[0]){var n = 0;}
  else if(dateChecksum == idolDates[0] || idolDates.indexOf(dateChecksum) == -1){var n = nearest+1;}
  else{var n = nearest+2;}
 
@@ -528,7 +525,7 @@ function closestbirthdays_sc(){
  if(dateChecksum <= idolDates[0]){var prevBirthday = new Array(idolDates[numIdols],matchingIdols_prev.slice(0,-2));}
  else{var prevBirthday = new Array(idolDates[nearest],matchingIdols_prev.slice(0,-2));}
 
- if(dateChecksum >= idolDates[numIdols]){var n = 0;}
+ if(dateChecksum >= idolDates[numIdols] || dateChecksum < idolDates[0]){var n = 0;}
  else if(dateChecksum == idolDates[0] || idolDates.indexOf(dateChecksum) == -1){var n = nearest+1;}
  else{var n = nearest+2;}
 
