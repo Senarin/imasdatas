@@ -295,6 +295,7 @@ function closestbirthdays_765(){
  var nearest = --i;
  var numIdols = idolDates.length-1;
 
+ console.log(dateChecksum);
  console.log(idolDates);
  
  if(dateChecksum <= idolDates[0]){
