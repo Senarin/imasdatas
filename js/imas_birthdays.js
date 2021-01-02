@@ -303,12 +303,12 @@ function closestbirthdays_765(){
   var prevBirthday = new Array(idolDates[nearest],idolList[idolDates[nearest]][0].getElementsByTagName("span")[0]);
  }
 
- console.log(dateChecksum+"//"+n);
- console.log(idolDates);
-
  if(dateChecksum >= idolDates[numIdols]){var n = 0;}
  else if(dateChecksum == idolDates[0] || idolDates.indexOf(dateChecksum) == -1){var n = nearest+1;}
  else{var n = nearest+2;}
+
+ console.log(dateChecksum+"//"+n);
+ console.log(idolDates);
  
  var birthdayGroupNext = idolList[idolDates[n]][1];
  var nextBirthday = new Array(idolDates[n],idolList[idolDates[n]][0].getElementsByTagName("span")[0]);
