@@ -294,6 +294,8 @@ function closestbirthdays_765(){
 
  var nearest = --i;
  var numIdols = idolDates.length-1;
+
+ console.log(idolDates);
  
  if(dateChecksum <= idolDates[0]){
   var birthdayGroupPrev = idolList[idolDates[numIdols]][1];
