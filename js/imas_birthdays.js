@@ -307,7 +307,7 @@ function closestbirthdays_765(){
  else if(dateChecksum == idolDates[0] || idolDates.indexOf(dateChecksum) == -1){var n = nearest+1;}
  else{var n = nearest+2;}
 
- console.log(dateChecksum+" // "+n);
+ console.log(nearest+" // "+n);
  console.log(idolDates);
  
  var birthdayGroupNext = idolList[idolDates[n]][1];
