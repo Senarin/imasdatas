@@ -282,7 +282,8 @@ showGachaRemainingSL : function(){
      eInfoLink.appendChild($eTitle);
      document.getElementById("theater_event_name_j").innerHTML = "";
      document.getElementById("theater_event_name_j").appendChild(eInfoLink);
-     document.getElementById("theater_ename_orig_j").innerHTML = "("+s[0].name+")";
+     if(typeof s[0].name != "undefined"){document.getElementById("theater_ename_orig_j").innerHTML = "("+s[0].name+")";}
+     else{document.getElementById("theater_ename_orig_j").innerHTML = "(???)";}
      document.getElementById("theater_ename_orig_j").style.display = "inline-block";
      
      console.log("["+(new Date()).toLocaleString()+"] [현지(일본어)판] 현재 개최 중인 이벤트 종류 : "+theaterEventType[s[0].type]);
@@ -397,7 +398,8 @@ showGachaRemainingSL : function(){
      eInfoLink.appendChild($eTitle);
      document.getElementById("theater_event_name_k").innerHTML = "";
      document.getElementById("theater_event_name_k").appendChild(eInfoLink);
-     document.getElementById("theater_ename_orig_k").innerHTML = "("+s[0].name+")";
+     if(typeof s[0].name != "undefined"){document.getElementById("theater_ename_orig_k").innerHTML = "("+s[0].name+")";}
+     else{document.getElementById("theater_ename_orig_k").innerHTML = "(???)";}
      document.getElementById("theater_ename_orig_k").style.display = "inline-block";
      
      console.log("["+(new Date()).toLocaleString()+"] [한국어판] 현재 개최 중인 이벤트 종류 : "+theaterEventType[s[0].type]);
