@@ -853,10 +853,12 @@ var getTDEventRanksInfo = {
 
           if(eid == eidNow){alert("'"+$("#theater_elist_j td[data-event-id="+eid+"]").text()+"'의 "+countTimestamp+" 현재의 개인 이벤트 포인트 랭킹 정보\n\n"+infoText);}
           else{
+           var resultWinSize = "width=400,height=365";
            var resultNow = new Number(new Date());
            var resultEnd = new Number(new Date(s.schedule.pageEndDate));
-           if(resultNow >= resultEnd-(97200 * 1000)){alert("'"+$("#theater_elist_j td[data-event-id="+eid+"]").text()+"'의 최종 개인 이벤트 포인트 랭킹 정보\n\n"+infoText);}
-           else{alert("'"+$("#theater_elist_j td[data-event-id="+eid+"]").text()+"'의 결과는 현재 집계 중입니다. 발표를 기다려주세요.\n아래는 이벤트 종료 직전("+countTimestamp+")의 개인 이벤트 포인트 랭킹 정보입니다.\n\n"+infoText);}
+           if(resultNow >= resultEnd-(97200 * 1000)){var resultWindow = window.open("data:text/html,"+encodeURIComponent("<pre>'"+$("#theater_elist_j td[data-event-id="+eid+"]").text()+"'의 최종 개인 이벤트 포인트 랭킹 정보\n\n"+infoText+"</pre>"),"_blank",resultWinSize);}
+           else{var resultWindow = window.open("data:text/html,"+encodeURIComponent("<pre>'"+$("#theater_elist_j td[data-event-id="+eid+"]").text()+"'의 결과는 현재 집계 중입니다. 발표를 기다려주세요.\n아래는 이벤트 종료 직전("+countTimestamp+")의 개인 이벤트 포인트 랭킹 정보입니다.\n\n"+infoText+"</pre>"),"_blank",resultWinSize);}
+           resultWindow.focus();
           }
          }else{
           alert("오류가 발생하였습니다. ["+r.status+"] 잠시 후 다시 시도해주세요.");
