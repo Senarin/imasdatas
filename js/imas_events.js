@@ -850,25 +850,13 @@ var getTDEventRanksInfo = {
           var eidNow = new Number(document.getElementById("theater_eid_j").value);
 
           var countTimestamp = g[0].data[numEntries1-1].summaryTime;
-          var resultWinSize = "width=765,height=346";
 
-          if(eid == eidNow){
-           var resultDisplay = "<pre>이벤트 '"+$("#theater_elist_j td[data-event-id="+eid+"]").text()+"'의 "+countTimestamp+" 현재의 개인 이벤트 포인트 랭킹 정보\n\n"+infoText+"</pre>";
-           var resultWindow = window.open("","_blank",resultWinSize);
-           resultWindow.document.write(resultDisplay);
-          }else{
+          if(eid == eidNow){alert("'"+$("#theater_elist_j td[data-event-id="+eid+"]").text()+"'의 "+countTimestamp+" 현재의 개인 이벤트 포인트 랭킹 정보\n\n"+infoText);}
+          else{
            var resultNow = new Number(new Date());
            var resultEnd = new Number(new Date(s.schedule.pageEndDate));
-           if(resultNow >= resultEnd-(97200 * 1000)){
-            var resultDisplay = "<pre>이벤트 '"+$("#theater_elist_j td[data-event-id="+eid+"]").text()+"'의 최종 개인 이벤트 포인트 랭킹 정보\n\n"+infoText+"</pre>";
-            var resultWindow = window.open("","_blank",resultWinSize);
-            resultWindow.document.write(resultDisplay);
-           }else{
-            var resultDisplay = "<pre>이벤트 '"+$("#theater_elist_j td[data-event-id="+eid+"]").text()+"'의 결과는 현재 집계 중입니다. 발표를 기다려주세요.\n아래는 이벤트 종료 직전("+countTimestamp+")의 개인 이벤트 포인트 랭킹 정보입니다.\n\n"+infoText+"</pre>";
-            var resultWindow = window.open("","_blank",resultWinSize);
-            resultWindow.document.write(resultDisplay);
-           }
-           resultWindow.focus();
+           if(resultNow >= resultEnd-(97200 * 1000)){alert("'"+$("#theater_elist_j td[data-event-id="+eid+"]").text()+"'의 최종 개인 이벤트 포인트 랭킹 정보\n\n"+infoText);}
+           else{alert("'"+$("#theater_elist_j td[data-event-id="+eid+"]").text()+"'의 결과는 현재 집계 중입니다. 발표를 기다려주세요.\n아래는 이벤트 종료 직전("+countTimestamp+")의 개인 이벤트 포인트 랭킹 정보입니다.\n\n"+infoText);}
           }
          }else{
           alert("오류가 발생하였습니다. ["+r.status+"] 잠시 후 다시 시도해주세요.");
