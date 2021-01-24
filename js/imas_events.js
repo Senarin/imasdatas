@@ -850,14 +850,24 @@ var getTDEventRanksInfo = {
           var eidNow = new Number(document.getElementById("theater_eid_j").value);
 
           var countTimestamp = g[0].data[numEntries1-1].summaryTime;
+          var resultWinSize = "width=400,height=365";
 
-          if(eid == eidNow){alert("'"+$("#theater_elist_j td[data-event-id="+eid+"]").text()+"'의 "+countTimestamp+" 현재의 개인 이벤트 포인트 랭킹 정보\n\n"+infoText);}
-          else{
-           var resultWinSize = "width=400,height=365";
+          if(eid == eidNow){
+           var resultDisplay = "data:text/html,"+encodeURIComponent("<pre>'"+$("#theater_elist_j td[data-event-id="+eid+"]").text()+"'의 "+countTimestamp+" 현재의 개인 이벤트 포인트 랭킹 정보\n\n"+infoText+"</pre>");
+           var resultWindow = window.open("","_blank",resultWinSize);
+           resultWindow.document.write("<iframe src='"+resultDisplay+"' style='width:100%;height:100%;'></iframe>");
+          }else{
            var resultNow = new Number(new Date());
            var resultEnd = new Number(new Date(s.schedule.pageEndDate));
-           if(resultNow >= resultEnd-(97200 * 1000)){var resultWindow = window.open("data:text/html,"+encodeURIComponent("<pre>'"+$("#theater_elist_j td[data-event-id="+eid+"]").text()+"'의 최종 개인 이벤트 포인트 랭킹 정보\n\n"+infoText+"</pre>"),"_blank",resultWinSize);}
-           else{var resultWindow = window.open("data:text/html,"+encodeURIComponent("<pre>'"+$("#theater_elist_j td[data-event-id="+eid+"]").text()+"'의 결과는 현재 집계 중입니다. 발표를 기다려주세요.\n아래는 이벤트 종료 직전("+countTimestamp+")의 개인 이벤트 포인트 랭킹 정보입니다.\n\n"+infoText+"</pre>"),"_blank",resultWinSize);}
+           if(resultNow >= resultEnd-(97200 * 1000)){
+            var resultDisplay = "data:text/html,"+encodeURIComponent("<pre>'"+$("#theater_elist_j td[data-event-id="+eid+"]").text()+"'의 최종 개인 이벤트 포인트 랭킹 정보\n\n"+infoText+"</pre>");
+            var resultWindow = window.open("","_blank",resultWinSize);
+            resultWindow.document.write("<iframe src='"+resultDisplay+"' style='width:100%;height:100%;'></iframe>");
+           }else{
+            var resultDisplay = "data:text/html,"+encodeURIComponent("<pre>'"+$("#theater_elist_j td[data-event-id="+eid+"]").text()+"'의 결과는 현재 집계 중입니다. 발표를 기다려주세요.\n아래는 이벤트 종료 직전("+countTimestamp+")의 개인 이벤트 포인트 랭킹 정보입니다.\n\n"+infoText+"</pre>");
+            var resultWindow = window.open("","_blank",resultWinSize);
+            resultWindow.document.write("<iframe src='"+resultDisplay+"' style='width:100%;height:100%;'></iframe>");
+           }
            resultWindow.focus();
           }
          }else{
