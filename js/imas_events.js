@@ -808,7 +808,7 @@ var getTDEventRanksInfo = {
  makeReq : function(){return new XMLHttpRequest();},
 
  retrieveData : function(eid){
-  if(eid <= 0){alert("아직 개최되지 않았거나 개최된 적이 없는 이벤트입니다.");return;}  
+  if(eid <= 0){alert("아직 개최된 적이 없는 이벤트입니다.");return;}  
   if(eid < 33){alert("이벤트 포인트 랭킹 정보는 2018년 6월 개최된 시어터(PSTheater) 이벤트부터 확인 가능합니다.\n그 이전의 정보는 다음 웹사이트를 참고하시기 바랍니다:\n - https://si.ster.li/events/");}
   else{
    var t = this.makeReq();
