@@ -28,6 +28,8 @@ var starlightEventType = {
  7 : "카니발"
 };
 
+var weekdayNames = new Array("일","월","화","수","목","금","토");
+
 var dispDateNow = function(){
  var dateNow = new Date();
  var yearNow = dateNow.getFullYear();
