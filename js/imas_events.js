@@ -28,6 +28,28 @@ var starlightEventType = {
  7 : "카니발"
 };
 
+var dispDateNow = function(){
+ var dateNow = new Date();
+ var yearNow = dateNow.getFullYear();
+ var monthNow = dateNow.getMonth()+1;
+ var dayNow = dateNow.getDate();
+ var weekdayNow = dateNow.getDay();
+ var dispHourNow = dateNow.getHours();
+ var dispMinsNow = dateNow.getMinutes();
+ var dispSecsNow = dateNow.getSeconds();
+ 
+ var timezoneNow = dateNow.getTimezoneOffset();
+ var tzHours = (-1) * Math.floor(timezoneNow / 60);
+ var tzMins = Math.abs(timezoneNow) % 60;
+ 
+ var tzDisp = "UTC"+((timezoneNow < 0) ? "+" : "-")+tzHours+":"+((tzMins < 10) ? "0"+tzMins : tzMins);
+ 
+  
+ var dispDateTime = "현재 시간 : "+yearNow+"년 "+monthNow+"월 "+dayNow+"일 ("+weekdayNames[weekdayNow]+"요일) "+((dispHourNow < 10) ? "0"+dispHourNow : dispHourNow)+":"+((dispMinsNow < 10) ? "0"+dispMinsNow : dispMinsNow)+":"+((dispSecsNow < 10) ? "0"+dispSecsNow : dispSecsNow)+" ("+tzDisp+")";
+  
+ document.getElementById("date_now").innerHTML = dispDateTime;
+};
+
 var requestPage = {
  makeRequest : function(){return new XMLHttpRequest();}
 };

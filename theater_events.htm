@@ -15,6 +15,9 @@
 <script type="text/javascript" src="./js/imas_events.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
+ // 현재 시간
+ setInterval("dispDateNow();",100);
+
  // 일본어판
  showRemainingTime.showRemainingTD();
  setInterval("showRemainingTime.showRemainingTD();",600 * 1000);
@@ -68,6 +71,8 @@ $(document).ready(function(){
 <ul>
  <li>같이 보기 : <a href="./theater_gachas.htm">가챠 갱신 목록</a>, <a href="./starlight_events.htm">데레스테 이벤트 목록</a>, <a href="./theater_anniversaries.htm">n주년 이벤트 관련 데이터</a></li>
 </ul>
+
+<div id="date_now"></div>
 
 <table id="theaterdays_clients_status" style="border: none; text-align: center; margin: auto;">
 <tr>
